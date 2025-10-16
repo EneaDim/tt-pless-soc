@@ -14,6 +14,6 @@ set non_clock_inputs [all_inputs -no_clocks]
 set_input_delay [expr $clk_period * $clk_io_pct] -clock $clk_name $non_clock_inputs
 set_output_delay [expr $clk_period * $clk_io_pct] -clock $clk_name [all_outputs]
 
-set_driving_cell -lib_cell sky130_fd_sc_hd__buf_4 -pin $in_drv_pin $non_clock_inputs
+set_driving_cell -lib_cell sky130_fd_sc_hd__buf_4 -pin X $non_clock_inputs
 
 set_load 0.01 [all_outputs]

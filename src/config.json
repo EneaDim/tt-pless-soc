@@ -56,7 +56,7 @@
     "ips/prim",
     "ips/prim_opentitan",
     "ips/tlul",
-    "rtl"
+    "src"
   ],
   
   "VERILOG_DEFINES": [
