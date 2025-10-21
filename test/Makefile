@@ -137,9 +137,13 @@ VERILOG_SOURCES += $(PWD)/gate_level_netlist.v
 endif
 
 # Allow sharing configuration between design and testbench via `include`:
-COMPILE_ARGS 		+= -Wno-WIDTHEXPAND --timing --trace-fst --sv -I$(SRC_DIR) -I$(ROOT)/rtl -I$(ROOT)/ips/pkgs -I$(ROOT)/ips/prim -I$(ROOT)/ips/prim_opentitan -I$(ROOT)/ips/tlul
-VERILATOR_TRACE=1
-TRACE_FILE=dump.fst
+COMPILE_ARGS 		+= -Wno-WIDTHEXPAND --timing --trace-fst --trace-structs --trace-depth 2 --sv -I$(SRC_DIR) -I$(ROOT)/rtl -I$(ROOT)/ips/pkgs -I$(ROOT)/ips/prim -I$(ROOT)/ips/prim_opentitan -I$(ROOT)/ips/tlul
+
+COCOTB_RESULTS_FILE ?= $(abspath results.xml)
+export COCOTB_RESULTS_FILE
+
+VERILATOR_TRACE ?= 1
+TRACE_FILE      ?= dump.fst
 
 # Include the testbench sources:
 VERILOG_SOURCES += $(PWD)/tb.v

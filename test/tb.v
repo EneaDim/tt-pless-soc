@@ -14,14 +14,22 @@ module tb ();
   end
 
   // Wire up the inputs and outputs:
-  reg clk;
-  reg rst_n;
-  reg ena;
-  reg [7:0] ui_in;
-  reg [7:0] uio_in;
+  reg clk    /* verilator public_flat */;
+  reg rst_n  /* verilator public_flat */;
+  reg ena    /* verilator public_flat */;
+  reg [7:0] ui_in   /* verilator public_flat */;
+  reg [7:0] uio_in  /* verilator public_flat */;
   wire [7:0] uo_out;
   wire [7:0] uio_out;
   wire [7:0] uio_oe;
+
+  initial begin
+    clk    = 1'b0;
+    rst_n  = 1'b0;
+    ena    = 1'b1;
+    ui_in  = '0;
+    uio_in = '0;
+  end
 `ifdef GL_TEST
   wire VPWR = 1'b1;
   wire VGND = 1'b0;
