@@ -12,8 +12,6 @@ module pwm_reg_top
 (
   input logic clk_i,
   input logic rst_ni,
-  input logic clk_core_i,
-  input logic rst_core_ni,
   // From TLUL
   input  tlul_pkg::tl_h2d_t tl_i,
   output tlul_pkg::tl_d2h_t tl_o,
@@ -24,7 +22,7 @@ module pwm_reg_top
   input logic devmode_i // If 1, explicit error return for unmapped register access
 );
 
-  localparam int AW = 6;
+  localparam int AW = 5;
   localparam int DW = 32;
   localparam int DBW = DW/8;                    // Byte Width
 
@@ -99,10 +97,10 @@ module pwm_reg_top
   logic [31:0] cfg_qs;
   logic cfg_busy;
   logic pwm_en_we;
-  logic [3:0] pwm_en_qs;
+  logic [1:0] pwm_en_qs;
   logic pwm_en_busy;
   logic invert_we;
-  logic [3:0] invert_qs;
+  logic [1:0] invert_qs;
   logic invert_busy;
   logic pwm_param_0_we;
   logic [31:0] pwm_param_0_qs;
@@ -110,53 +108,23 @@ module pwm_reg_top
   logic pwm_param_1_we;
   logic [31:0] pwm_param_1_qs;
   logic pwm_param_1_busy;
-  logic pwm_param_2_we;
-  logic [31:0] pwm_param_2_qs;
-  logic pwm_param_2_busy;
-  logic pwm_param_3_we;
-  logic [31:0] pwm_param_3_qs;
-  logic pwm_param_3_busy;
-  logic duty_cycle_0_we;
-  logic [31:0] duty_cycle_0_qs;
-  logic duty_cycle_0_busy;
-  logic duty_cycle_1_we;
-  logic [31:0] duty_cycle_1_qs;
-  logic duty_cycle_1_busy;
-  logic duty_cycle_2_we;
-  logic [31:0] duty_cycle_2_qs;
-  logic duty_cycle_2_busy;
-  logic duty_cycle_3_we;
-  logic [31:0] duty_cycle_3_qs;
-  logic duty_cycle_3_busy;
-  logic blink_param_0_we;
-  logic [31:0] blink_param_0_qs;
-  logic blink_param_0_busy;
-  logic blink_param_1_we;
-  logic [31:0] blink_param_1_qs;
-  logic blink_param_1_busy;
-  logic blink_param_2_we;
-  logic [31:0] blink_param_2_qs;
-  logic blink_param_2_busy;
-  logic blink_param_3_we;
-  logic [31:0] blink_param_3_qs;
-  logic blink_param_3_busy;
   // Define register CDC handling.
   // CDC handling is done on a per-reg instead of per-field boundary.
 
-  logic [26:0]  core_cfg_clk_div_qs_int;
-  logic [3:0]  core_cfg_dc_resn_qs_int;
-  logic  core_cfg_cntr_en_qs_int;
-  logic [31:0] core_cfg_qs;
-  logic [31:0] core_cfg_wdata;
-  logic core_cfg_we;
-  logic unused_core_cfg_wdata;
-  logic core_cfg_regwen;
+  logic [26:0]  _cfg_clk_div_qs_int;
+  logic [3:0]  _cfg_dc_resn_qs_int;
+  logic  _cfg_cntr_en_qs_int;
+  logic [31:0] _cfg_qs;
+  logic [31:0] _cfg_wdata;
+  logic _cfg_we;
+  logic unused__cfg_wdata;
+  logic _cfg_regwen;
 
   always_comb begin
-    core_cfg_qs = 32'h38008000;
-    core_cfg_qs[26:0] = core_cfg_clk_div_qs_int;
-    core_cfg_qs[30:27] = core_cfg_dc_resn_qs_int;
-    core_cfg_qs[31] = core_cfg_cntr_en_qs_int;
+    _cfg_qs = 32'h38008000;
+    _cfg_qs[26:0] = _cfg_clk_div_qs_int;
+    _cfg_qs[30:27] = _cfg_dc_resn_qs_int;
+    _cfg_qs[31] = _cfg_cntr_en_qs_int;
   end
 
   prim_reg_cdc #(
@@ -167,8 +135,8 @@ module pwm_reg_top
   ) u_cfg_cdc (
     .clk_src_i    (clk_i),
     .rst_src_ni   (rst_ni),
-    .clk_dst_i    (clk_core_i),
-    .rst_dst_ni   (rst_core_ni),
+    .clk_dst_i    (clk_i),
+    .rst_dst_ni   (rst_ni),
     .src_regwen_i (regwen_qs),
     .src_we_i     (cfg_we),
     .src_re_i     ('0),
@@ -177,131 +145,121 @@ module pwm_reg_top
     .src_qs_o     (cfg_qs), // for software read back
     .dst_update_i ('0),
     .dst_ds_i     ('0),
-    .dst_qs_i     (core_cfg_qs),
-    .dst_we_o     (core_cfg_we),
+    .dst_qs_i     (_cfg_qs),
+    .dst_we_o     (_cfg_we),
     .dst_re_o     (),
-    .dst_regwen_o (core_cfg_regwen),
-    .dst_wd_o     (core_cfg_wdata)
+    .dst_regwen_o (_cfg_regwen),
+    .dst_wd_o     (_cfg_wdata)
   );
-  assign unused_core_cfg_wdata =
-      ^core_cfg_wdata;
+  assign unused__cfg_wdata =
+      ^_cfg_wdata;
 
-  logic  core_pwm_en_en_0_qs_int;
-  logic  core_pwm_en_en_1_qs_int;
-  logic  core_pwm_en_en_2_qs_int;
-  logic  core_pwm_en_en_3_qs_int;
-  logic [3:0] core_pwm_en_qs;
-  logic [3:0] core_pwm_en_wdata;
-  logic core_pwm_en_we;
-  logic unused_core_pwm_en_wdata;
-  logic core_pwm_en_regwen;
+  logic  _pwm_en_en_0_qs_int;
+  logic  _pwm_en_en_1_qs_int;
+  logic [1:0] _pwm_en_qs;
+  logic [1:0] _pwm_en_wdata;
+  logic _pwm_en_we;
+  logic unused__pwm_en_wdata;
+  logic _pwm_en_regwen;
 
   always_comb begin
-    core_pwm_en_qs = 4'h0;
-    core_pwm_en_qs[0] = core_pwm_en_en_0_qs_int;
-    core_pwm_en_qs[1] = core_pwm_en_en_1_qs_int;
-    core_pwm_en_qs[2] = core_pwm_en_en_2_qs_int;
-    core_pwm_en_qs[3] = core_pwm_en_en_3_qs_int;
+    _pwm_en_qs = 2'h0;
+    _pwm_en_qs[0] = _pwm_en_en_0_qs_int;
+    _pwm_en_qs[1] = _pwm_en_en_1_qs_int;
   end
 
   prim_reg_cdc #(
-    .DataWidth(4),
-    .ResetVal(4'h0),
-    .BitMask(4'hf),
+    .DataWidth(2),
+    .ResetVal(2'h0),
+    .BitMask(2'h3),
     .DstWrReq(0)
   ) u_pwm_en_cdc (
     .clk_src_i    (clk_i),
     .rst_src_ni   (rst_ni),
-    .clk_dst_i    (clk_core_i),
-    .rst_dst_ni   (rst_core_ni),
+    .clk_dst_i    (clk_i),
+    .rst_dst_ni   (rst_ni),
     .src_regwen_i (regwen_qs),
     .src_we_i     (pwm_en_we),
     .src_re_i     ('0),
-    .src_wd_i     (reg_wdata[3:0]),
+    .src_wd_i     (reg_wdata[1:0]),
     .src_busy_o   (pwm_en_busy),
     .src_qs_o     (pwm_en_qs), // for software read back
     .dst_update_i ('0),
     .dst_ds_i     ('0),
-    .dst_qs_i     (core_pwm_en_qs),
-    .dst_we_o     (core_pwm_en_we),
+    .dst_qs_i     (_pwm_en_qs),
+    .dst_we_o     (_pwm_en_we),
     .dst_re_o     (),
-    .dst_regwen_o (core_pwm_en_regwen),
-    .dst_wd_o     (core_pwm_en_wdata)
+    .dst_regwen_o (_pwm_en_regwen),
+    .dst_wd_o     (_pwm_en_wdata)
   );
-  assign unused_core_pwm_en_wdata =
-      ^core_pwm_en_wdata;
+  assign unused__pwm_en_wdata =
+      ^_pwm_en_wdata;
 
-  logic  core_invert_invert_0_qs_int;
-  logic  core_invert_invert_1_qs_int;
-  logic  core_invert_invert_2_qs_int;
-  logic  core_invert_invert_3_qs_int;
-  logic [3:0] core_invert_qs;
-  logic [3:0] core_invert_wdata;
-  logic core_invert_we;
-  logic unused_core_invert_wdata;
-  logic core_invert_regwen;
+  logic  _invert_invert_0_qs_int;
+  logic  _invert_invert_1_qs_int;
+  logic [1:0] _invert_qs;
+  logic [1:0] _invert_wdata;
+  logic _invert_we;
+  logic unused__invert_wdata;
+  logic _invert_regwen;
 
   always_comb begin
-    core_invert_qs = 4'h0;
-    core_invert_qs[0] = core_invert_invert_0_qs_int;
-    core_invert_qs[1] = core_invert_invert_1_qs_int;
-    core_invert_qs[2] = core_invert_invert_2_qs_int;
-    core_invert_qs[3] = core_invert_invert_3_qs_int;
+    _invert_qs = 2'h0;
+    _invert_qs[0] = _invert_invert_0_qs_int;
+    _invert_qs[1] = _invert_invert_1_qs_int;
   end
 
   prim_reg_cdc #(
-    .DataWidth(4),
-    .ResetVal(4'h0),
-    .BitMask(4'hf),
+    .DataWidth(2),
+    .ResetVal(2'h0),
+    .BitMask(2'h3),
     .DstWrReq(0)
   ) u_invert_cdc (
     .clk_src_i    (clk_i),
     .rst_src_ni   (rst_ni),
-    .clk_dst_i    (clk_core_i),
-    .rst_dst_ni   (rst_core_ni),
+    .clk_dst_i    (clk_i),
+    .rst_dst_ni   (rst_ni),
     .src_regwen_i (regwen_qs),
     .src_we_i     (invert_we),
     .src_re_i     ('0),
-    .src_wd_i     (reg_wdata[3:0]),
+    .src_wd_i     (reg_wdata[1:0]),
     .src_busy_o   (invert_busy),
     .src_qs_o     (invert_qs), // for software read back
     .dst_update_i ('0),
     .dst_ds_i     ('0),
-    .dst_qs_i     (core_invert_qs),
-    .dst_we_o     (core_invert_we),
+    .dst_qs_i     (_invert_qs),
+    .dst_we_o     (_invert_we),
     .dst_re_o     (),
-    .dst_regwen_o (core_invert_regwen),
-    .dst_wd_o     (core_invert_wdata)
+    .dst_regwen_o (_invert_regwen),
+    .dst_wd_o     (_invert_wdata)
   );
-  assign unused_core_invert_wdata =
-      ^core_invert_wdata;
+  assign unused__invert_wdata =
+      ^_invert_wdata;
 
-  logic [15:0]  core_pwm_param_0_phase_delay_0_qs_int;
-  logic  core_pwm_param_0_htbt_en_0_qs_int;
-  logic  core_pwm_param_0_blink_en_0_qs_int;
-  logic [31:0] core_pwm_param_0_qs;
-  logic [31:0] core_pwm_param_0_wdata;
-  logic core_pwm_param_0_we;
-  logic unused_core_pwm_param_0_wdata;
-  logic core_pwm_param_0_regwen;
+  logic [15:0]  _pwm_param_0_duty_cycle_0_qs_int;
+  logic [15:0]  _pwm_param_0_phase_delay_0_qs_int;
+  logic [31:0] _pwm_param_0_qs;
+  logic [31:0] _pwm_param_0_wdata;
+  logic _pwm_param_0_we;
+  logic unused__pwm_param_0_wdata;
+  logic _pwm_param_0_regwen;
 
   always_comb begin
-    core_pwm_param_0_qs = 32'h0;
-    core_pwm_param_0_qs[15:0] = core_pwm_param_0_phase_delay_0_qs_int;
-    core_pwm_param_0_qs[30] = core_pwm_param_0_htbt_en_0_qs_int;
-    core_pwm_param_0_qs[31] = core_pwm_param_0_blink_en_0_qs_int;
+    _pwm_param_0_qs = 32'h7fff;
+    _pwm_param_0_qs[15:0] = _pwm_param_0_duty_cycle_0_qs_int;
+    _pwm_param_0_qs[31:16] = _pwm_param_0_phase_delay_0_qs_int;
   end
 
   prim_reg_cdc #(
     .DataWidth(32),
-    .ResetVal(32'h0),
-    .BitMask(32'hc000ffff),
+    .ResetVal(32'h7fff),
+    .BitMask(32'hffffffff),
     .DstWrReq(0)
   ) u_pwm_param_0_cdc (
     .clk_src_i    (clk_i),
     .rst_src_ni   (rst_ni),
-    .clk_dst_i    (clk_core_i),
-    .rst_dst_ni   (rst_core_ni),
+    .clk_dst_i    (clk_i),
+    .rst_dst_ni   (rst_ni),
     .src_regwen_i (regwen_qs),
     .src_we_i     (pwm_param_0_we),
     .src_re_i     ('0),
@@ -310,41 +268,39 @@ module pwm_reg_top
     .src_qs_o     (pwm_param_0_qs), // for software read back
     .dst_update_i ('0),
     .dst_ds_i     ('0),
-    .dst_qs_i     (core_pwm_param_0_qs),
-    .dst_we_o     (core_pwm_param_0_we),
+    .dst_qs_i     (_pwm_param_0_qs),
+    .dst_we_o     (_pwm_param_0_we),
     .dst_re_o     (),
-    .dst_regwen_o (core_pwm_param_0_regwen),
-    .dst_wd_o     (core_pwm_param_0_wdata)
+    .dst_regwen_o (_pwm_param_0_regwen),
+    .dst_wd_o     (_pwm_param_0_wdata)
   );
-  assign unused_core_pwm_param_0_wdata =
-      ^core_pwm_param_0_wdata;
+  assign unused__pwm_param_0_wdata =
+      ^_pwm_param_0_wdata;
 
-  logic [15:0]  core_pwm_param_1_phase_delay_1_qs_int;
-  logic  core_pwm_param_1_htbt_en_1_qs_int;
-  logic  core_pwm_param_1_blink_en_1_qs_int;
-  logic [31:0] core_pwm_param_1_qs;
-  logic [31:0] core_pwm_param_1_wdata;
-  logic core_pwm_param_1_we;
-  logic unused_core_pwm_param_1_wdata;
-  logic core_pwm_param_1_regwen;
+  logic [15:0]  _pwm_param_1_duty_cycle_1_qs_int;
+  logic [15:0]  _pwm_param_1_phase_delay_1_qs_int;
+  logic [31:0] _pwm_param_1_qs;
+  logic [31:0] _pwm_param_1_wdata;
+  logic _pwm_param_1_we;
+  logic unused__pwm_param_1_wdata;
+  logic _pwm_param_1_regwen;
 
   always_comb begin
-    core_pwm_param_1_qs = 32'h0;
-    core_pwm_param_1_qs[15:0] = core_pwm_param_1_phase_delay_1_qs_int;
-    core_pwm_param_1_qs[30] = core_pwm_param_1_htbt_en_1_qs_int;
-    core_pwm_param_1_qs[31] = core_pwm_param_1_blink_en_1_qs_int;
+    _pwm_param_1_qs = 32'h7fff;
+    _pwm_param_1_qs[15:0] = _pwm_param_1_duty_cycle_1_qs_int;
+    _pwm_param_1_qs[31:16] = _pwm_param_1_phase_delay_1_qs_int;
   end
 
   prim_reg_cdc #(
     .DataWidth(32),
-    .ResetVal(32'h0),
-    .BitMask(32'hc000ffff),
+    .ResetVal(32'h7fff),
+    .BitMask(32'hffffffff),
     .DstWrReq(0)
   ) u_pwm_param_1_cdc (
     .clk_src_i    (clk_i),
     .rst_src_ni   (rst_ni),
-    .clk_dst_i    (clk_core_i),
-    .rst_dst_ni   (rst_core_ni),
+    .clk_dst_i    (clk_i),
+    .rst_dst_ni   (rst_ni),
     .src_regwen_i (regwen_qs),
     .src_we_i     (pwm_param_1_we),
     .src_re_i     ('0),
@@ -353,428 +309,14 @@ module pwm_reg_top
     .src_qs_o     (pwm_param_1_qs), // for software read back
     .dst_update_i ('0),
     .dst_ds_i     ('0),
-    .dst_qs_i     (core_pwm_param_1_qs),
-    .dst_we_o     (core_pwm_param_1_we),
+    .dst_qs_i     (_pwm_param_1_qs),
+    .dst_we_o     (_pwm_param_1_we),
     .dst_re_o     (),
-    .dst_regwen_o (core_pwm_param_1_regwen),
-    .dst_wd_o     (core_pwm_param_1_wdata)
+    .dst_regwen_o (_pwm_param_1_regwen),
+    .dst_wd_o     (_pwm_param_1_wdata)
   );
-  assign unused_core_pwm_param_1_wdata =
-      ^core_pwm_param_1_wdata;
-
-  logic [15:0]  core_pwm_param_2_phase_delay_2_qs_int;
-  logic  core_pwm_param_2_htbt_en_2_qs_int;
-  logic  core_pwm_param_2_blink_en_2_qs_int;
-  logic [31:0] core_pwm_param_2_qs;
-  logic [31:0] core_pwm_param_2_wdata;
-  logic core_pwm_param_2_we;
-  logic unused_core_pwm_param_2_wdata;
-  logic core_pwm_param_2_regwen;
-
-  always_comb begin
-    core_pwm_param_2_qs = 32'h0;
-    core_pwm_param_2_qs[15:0] = core_pwm_param_2_phase_delay_2_qs_int;
-    core_pwm_param_2_qs[30] = core_pwm_param_2_htbt_en_2_qs_int;
-    core_pwm_param_2_qs[31] = core_pwm_param_2_blink_en_2_qs_int;
-  end
-
-  prim_reg_cdc #(
-    .DataWidth(32),
-    .ResetVal(32'h0),
-    .BitMask(32'hc000ffff),
-    .DstWrReq(0)
-  ) u_pwm_param_2_cdc (
-    .clk_src_i    (clk_i),
-    .rst_src_ni   (rst_ni),
-    .clk_dst_i    (clk_core_i),
-    .rst_dst_ni   (rst_core_ni),
-    .src_regwen_i (regwen_qs),
-    .src_we_i     (pwm_param_2_we),
-    .src_re_i     ('0),
-    .src_wd_i     (reg_wdata[31:0]),
-    .src_busy_o   (pwm_param_2_busy),
-    .src_qs_o     (pwm_param_2_qs), // for software read back
-    .dst_update_i ('0),
-    .dst_ds_i     ('0),
-    .dst_qs_i     (core_pwm_param_2_qs),
-    .dst_we_o     (core_pwm_param_2_we),
-    .dst_re_o     (),
-    .dst_regwen_o (core_pwm_param_2_regwen),
-    .dst_wd_o     (core_pwm_param_2_wdata)
-  );
-  assign unused_core_pwm_param_2_wdata =
-      ^core_pwm_param_2_wdata;
-
-  logic [15:0]  core_pwm_param_3_phase_delay_3_qs_int;
-  logic  core_pwm_param_3_htbt_en_3_qs_int;
-  logic  core_pwm_param_3_blink_en_3_qs_int;
-  logic [31:0] core_pwm_param_3_qs;
-  logic [31:0] core_pwm_param_3_wdata;
-  logic core_pwm_param_3_we;
-  logic unused_core_pwm_param_3_wdata;
-  logic core_pwm_param_3_regwen;
-
-  always_comb begin
-    core_pwm_param_3_qs = 32'h0;
-    core_pwm_param_3_qs[15:0] = core_pwm_param_3_phase_delay_3_qs_int;
-    core_pwm_param_3_qs[30] = core_pwm_param_3_htbt_en_3_qs_int;
-    core_pwm_param_3_qs[31] = core_pwm_param_3_blink_en_3_qs_int;
-  end
-
-  prim_reg_cdc #(
-    .DataWidth(32),
-    .ResetVal(32'h0),
-    .BitMask(32'hc000ffff),
-    .DstWrReq(0)
-  ) u_pwm_param_3_cdc (
-    .clk_src_i    (clk_i),
-    .rst_src_ni   (rst_ni),
-    .clk_dst_i    (clk_core_i),
-    .rst_dst_ni   (rst_core_ni),
-    .src_regwen_i (regwen_qs),
-    .src_we_i     (pwm_param_3_we),
-    .src_re_i     ('0),
-    .src_wd_i     (reg_wdata[31:0]),
-    .src_busy_o   (pwm_param_3_busy),
-    .src_qs_o     (pwm_param_3_qs), // for software read back
-    .dst_update_i ('0),
-    .dst_ds_i     ('0),
-    .dst_qs_i     (core_pwm_param_3_qs),
-    .dst_we_o     (core_pwm_param_3_we),
-    .dst_re_o     (),
-    .dst_regwen_o (core_pwm_param_3_regwen),
-    .dst_wd_o     (core_pwm_param_3_wdata)
-  );
-  assign unused_core_pwm_param_3_wdata =
-      ^core_pwm_param_3_wdata;
-
-  logic [15:0]  core_duty_cycle_0_a_0_qs_int;
-  logic [15:0]  core_duty_cycle_0_b_0_qs_int;
-  logic [31:0] core_duty_cycle_0_qs;
-  logic [31:0] core_duty_cycle_0_wdata;
-  logic core_duty_cycle_0_we;
-  logic unused_core_duty_cycle_0_wdata;
-  logic core_duty_cycle_0_regwen;
-
-  always_comb begin
-    core_duty_cycle_0_qs = 32'h7fff7fff;
-    core_duty_cycle_0_qs[15:0] = core_duty_cycle_0_a_0_qs_int;
-    core_duty_cycle_0_qs[31:16] = core_duty_cycle_0_b_0_qs_int;
-  end
-
-  prim_reg_cdc #(
-    .DataWidth(32),
-    .ResetVal(32'h7fff7fff),
-    .BitMask(32'hffffffff),
-    .DstWrReq(0)
-  ) u_duty_cycle_0_cdc (
-    .clk_src_i    (clk_i),
-    .rst_src_ni   (rst_ni),
-    .clk_dst_i    (clk_core_i),
-    .rst_dst_ni   (rst_core_ni),
-    .src_regwen_i (regwen_qs),
-    .src_we_i     (duty_cycle_0_we),
-    .src_re_i     ('0),
-    .src_wd_i     (reg_wdata[31:0]),
-    .src_busy_o   (duty_cycle_0_busy),
-    .src_qs_o     (duty_cycle_0_qs), // for software read back
-    .dst_update_i ('0),
-    .dst_ds_i     ('0),
-    .dst_qs_i     (core_duty_cycle_0_qs),
-    .dst_we_o     (core_duty_cycle_0_we),
-    .dst_re_o     (),
-    .dst_regwen_o (core_duty_cycle_0_regwen),
-    .dst_wd_o     (core_duty_cycle_0_wdata)
-  );
-  assign unused_core_duty_cycle_0_wdata =
-      ^core_duty_cycle_0_wdata;
-
-  logic [15:0]  core_duty_cycle_1_a_1_qs_int;
-  logic [15:0]  core_duty_cycle_1_b_1_qs_int;
-  logic [31:0] core_duty_cycle_1_qs;
-  logic [31:0] core_duty_cycle_1_wdata;
-  logic core_duty_cycle_1_we;
-  logic unused_core_duty_cycle_1_wdata;
-  logic core_duty_cycle_1_regwen;
-
-  always_comb begin
-    core_duty_cycle_1_qs = 32'h7fff7fff;
-    core_duty_cycle_1_qs[15:0] = core_duty_cycle_1_a_1_qs_int;
-    core_duty_cycle_1_qs[31:16] = core_duty_cycle_1_b_1_qs_int;
-  end
-
-  prim_reg_cdc #(
-    .DataWidth(32),
-    .ResetVal(32'h7fff7fff),
-    .BitMask(32'hffffffff),
-    .DstWrReq(0)
-  ) u_duty_cycle_1_cdc (
-    .clk_src_i    (clk_i),
-    .rst_src_ni   (rst_ni),
-    .clk_dst_i    (clk_core_i),
-    .rst_dst_ni   (rst_core_ni),
-    .src_regwen_i (regwen_qs),
-    .src_we_i     (duty_cycle_1_we),
-    .src_re_i     ('0),
-    .src_wd_i     (reg_wdata[31:0]),
-    .src_busy_o   (duty_cycle_1_busy),
-    .src_qs_o     (duty_cycle_1_qs), // for software read back
-    .dst_update_i ('0),
-    .dst_ds_i     ('0),
-    .dst_qs_i     (core_duty_cycle_1_qs),
-    .dst_we_o     (core_duty_cycle_1_we),
-    .dst_re_o     (),
-    .dst_regwen_o (core_duty_cycle_1_regwen),
-    .dst_wd_o     (core_duty_cycle_1_wdata)
-  );
-  assign unused_core_duty_cycle_1_wdata =
-      ^core_duty_cycle_1_wdata;
-
-  logic [15:0]  core_duty_cycle_2_a_2_qs_int;
-  logic [15:0]  core_duty_cycle_2_b_2_qs_int;
-  logic [31:0] core_duty_cycle_2_qs;
-  logic [31:0] core_duty_cycle_2_wdata;
-  logic core_duty_cycle_2_we;
-  logic unused_core_duty_cycle_2_wdata;
-  logic core_duty_cycle_2_regwen;
-
-  always_comb begin
-    core_duty_cycle_2_qs = 32'h7fff7fff;
-    core_duty_cycle_2_qs[15:0] = core_duty_cycle_2_a_2_qs_int;
-    core_duty_cycle_2_qs[31:16] = core_duty_cycle_2_b_2_qs_int;
-  end
-
-  prim_reg_cdc #(
-    .DataWidth(32),
-    .ResetVal(32'h7fff7fff),
-    .BitMask(32'hffffffff),
-    .DstWrReq(0)
-  ) u_duty_cycle_2_cdc (
-    .clk_src_i    (clk_i),
-    .rst_src_ni   (rst_ni),
-    .clk_dst_i    (clk_core_i),
-    .rst_dst_ni   (rst_core_ni),
-    .src_regwen_i (regwen_qs),
-    .src_we_i     (duty_cycle_2_we),
-    .src_re_i     ('0),
-    .src_wd_i     (reg_wdata[31:0]),
-    .src_busy_o   (duty_cycle_2_busy),
-    .src_qs_o     (duty_cycle_2_qs), // for software read back
-    .dst_update_i ('0),
-    .dst_ds_i     ('0),
-    .dst_qs_i     (core_duty_cycle_2_qs),
-    .dst_we_o     (core_duty_cycle_2_we),
-    .dst_re_o     (),
-    .dst_regwen_o (core_duty_cycle_2_regwen),
-    .dst_wd_o     (core_duty_cycle_2_wdata)
-  );
-  assign unused_core_duty_cycle_2_wdata =
-      ^core_duty_cycle_2_wdata;
-
-  logic [15:0]  core_duty_cycle_3_a_3_qs_int;
-  logic [15:0]  core_duty_cycle_3_b_3_qs_int;
-  logic [31:0] core_duty_cycle_3_qs;
-  logic [31:0] core_duty_cycle_3_wdata;
-  logic core_duty_cycle_3_we;
-  logic unused_core_duty_cycle_3_wdata;
-  logic core_duty_cycle_3_regwen;
-
-  always_comb begin
-    core_duty_cycle_3_qs = 32'h7fff7fff;
-    core_duty_cycle_3_qs[15:0] = core_duty_cycle_3_a_3_qs_int;
-    core_duty_cycle_3_qs[31:16] = core_duty_cycle_3_b_3_qs_int;
-  end
-
-  prim_reg_cdc #(
-    .DataWidth(32),
-    .ResetVal(32'h7fff7fff),
-    .BitMask(32'hffffffff),
-    .DstWrReq(0)
-  ) u_duty_cycle_3_cdc (
-    .clk_src_i    (clk_i),
-    .rst_src_ni   (rst_ni),
-    .clk_dst_i    (clk_core_i),
-    .rst_dst_ni   (rst_core_ni),
-    .src_regwen_i (regwen_qs),
-    .src_we_i     (duty_cycle_3_we),
-    .src_re_i     ('0),
-    .src_wd_i     (reg_wdata[31:0]),
-    .src_busy_o   (duty_cycle_3_busy),
-    .src_qs_o     (duty_cycle_3_qs), // for software read back
-    .dst_update_i ('0),
-    .dst_ds_i     ('0),
-    .dst_qs_i     (core_duty_cycle_3_qs),
-    .dst_we_o     (core_duty_cycle_3_we),
-    .dst_re_o     (),
-    .dst_regwen_o (core_duty_cycle_3_regwen),
-    .dst_wd_o     (core_duty_cycle_3_wdata)
-  );
-  assign unused_core_duty_cycle_3_wdata =
-      ^core_duty_cycle_3_wdata;
-
-  logic [15:0]  core_blink_param_0_x_0_qs_int;
-  logic [15:0]  core_blink_param_0_y_0_qs_int;
-  logic [31:0] core_blink_param_0_qs;
-  logic [31:0] core_blink_param_0_wdata;
-  logic core_blink_param_0_we;
-  logic unused_core_blink_param_0_wdata;
-  logic core_blink_param_0_regwen;
-
-  always_comb begin
-    core_blink_param_0_qs = 32'h0;
-    core_blink_param_0_qs[15:0] = core_blink_param_0_x_0_qs_int;
-    core_blink_param_0_qs[31:16] = core_blink_param_0_y_0_qs_int;
-  end
-
-  prim_reg_cdc #(
-    .DataWidth(32),
-    .ResetVal(32'h0),
-    .BitMask(32'hffffffff),
-    .DstWrReq(0)
-  ) u_blink_param_0_cdc (
-    .clk_src_i    (clk_i),
-    .rst_src_ni   (rst_ni),
-    .clk_dst_i    (clk_core_i),
-    .rst_dst_ni   (rst_core_ni),
-    .src_regwen_i (regwen_qs),
-    .src_we_i     (blink_param_0_we),
-    .src_re_i     ('0),
-    .src_wd_i     (reg_wdata[31:0]),
-    .src_busy_o   (blink_param_0_busy),
-    .src_qs_o     (blink_param_0_qs), // for software read back
-    .dst_update_i ('0),
-    .dst_ds_i     ('0),
-    .dst_qs_i     (core_blink_param_0_qs),
-    .dst_we_o     (core_blink_param_0_we),
-    .dst_re_o     (),
-    .dst_regwen_o (core_blink_param_0_regwen),
-    .dst_wd_o     (core_blink_param_0_wdata)
-  );
-  assign unused_core_blink_param_0_wdata =
-      ^core_blink_param_0_wdata;
-
-  logic [15:0]  core_blink_param_1_x_1_qs_int;
-  logic [15:0]  core_blink_param_1_y_1_qs_int;
-  logic [31:0] core_blink_param_1_qs;
-  logic [31:0] core_blink_param_1_wdata;
-  logic core_blink_param_1_we;
-  logic unused_core_blink_param_1_wdata;
-  logic core_blink_param_1_regwen;
-
-  always_comb begin
-    core_blink_param_1_qs = 32'h0;
-    core_blink_param_1_qs[15:0] = core_blink_param_1_x_1_qs_int;
-    core_blink_param_1_qs[31:16] = core_blink_param_1_y_1_qs_int;
-  end
-
-  prim_reg_cdc #(
-    .DataWidth(32),
-    .ResetVal(32'h0),
-    .BitMask(32'hffffffff),
-    .DstWrReq(0)
-  ) u_blink_param_1_cdc (
-    .clk_src_i    (clk_i),
-    .rst_src_ni   (rst_ni),
-    .clk_dst_i    (clk_core_i),
-    .rst_dst_ni   (rst_core_ni),
-    .src_regwen_i (regwen_qs),
-    .src_we_i     (blink_param_1_we),
-    .src_re_i     ('0),
-    .src_wd_i     (reg_wdata[31:0]),
-    .src_busy_o   (blink_param_1_busy),
-    .src_qs_o     (blink_param_1_qs), // for software read back
-    .dst_update_i ('0),
-    .dst_ds_i     ('0),
-    .dst_qs_i     (core_blink_param_1_qs),
-    .dst_we_o     (core_blink_param_1_we),
-    .dst_re_o     (),
-    .dst_regwen_o (core_blink_param_1_regwen),
-    .dst_wd_o     (core_blink_param_1_wdata)
-  );
-  assign unused_core_blink_param_1_wdata =
-      ^core_blink_param_1_wdata;
-
-  logic [15:0]  core_blink_param_2_x_2_qs_int;
-  logic [15:0]  core_blink_param_2_y_2_qs_int;
-  logic [31:0] core_blink_param_2_qs;
-  logic [31:0] core_blink_param_2_wdata;
-  logic core_blink_param_2_we;
-  logic unused_core_blink_param_2_wdata;
-  logic core_blink_param_2_regwen;
-
-  always_comb begin
-    core_blink_param_2_qs = 32'h0;
-    core_blink_param_2_qs[15:0] = core_blink_param_2_x_2_qs_int;
-    core_blink_param_2_qs[31:16] = core_blink_param_2_y_2_qs_int;
-  end
-
-  prim_reg_cdc #(
-    .DataWidth(32),
-    .ResetVal(32'h0),
-    .BitMask(32'hffffffff),
-    .DstWrReq(0)
-  ) u_blink_param_2_cdc (
-    .clk_src_i    (clk_i),
-    .rst_src_ni   (rst_ni),
-    .clk_dst_i    (clk_core_i),
-    .rst_dst_ni   (rst_core_ni),
-    .src_regwen_i (regwen_qs),
-    .src_we_i     (blink_param_2_we),
-    .src_re_i     ('0),
-    .src_wd_i     (reg_wdata[31:0]),
-    .src_busy_o   (blink_param_2_busy),
-    .src_qs_o     (blink_param_2_qs), // for software read back
-    .dst_update_i ('0),
-    .dst_ds_i     ('0),
-    .dst_qs_i     (core_blink_param_2_qs),
-    .dst_we_o     (core_blink_param_2_we),
-    .dst_re_o     (),
-    .dst_regwen_o (core_blink_param_2_regwen),
-    .dst_wd_o     (core_blink_param_2_wdata)
-  );
-  assign unused_core_blink_param_2_wdata =
-      ^core_blink_param_2_wdata;
-
-  logic [15:0]  core_blink_param_3_x_3_qs_int;
-  logic [15:0]  core_blink_param_3_y_3_qs_int;
-  logic [31:0] core_blink_param_3_qs;
-  logic [31:0] core_blink_param_3_wdata;
-  logic core_blink_param_3_we;
-  logic unused_core_blink_param_3_wdata;
-  logic core_blink_param_3_regwen;
-
-  always_comb begin
-    core_blink_param_3_qs = 32'h0;
-    core_blink_param_3_qs[15:0] = core_blink_param_3_x_3_qs_int;
-    core_blink_param_3_qs[31:16] = core_blink_param_3_y_3_qs_int;
-  end
-
-  prim_reg_cdc #(
-    .DataWidth(32),
-    .ResetVal(32'h0),
-    .BitMask(32'hffffffff),
-    .DstWrReq(0)
-  ) u_blink_param_3_cdc (
-    .clk_src_i    (clk_i),
-    .rst_src_ni   (rst_ni),
-    .clk_dst_i    (clk_core_i),
-    .rst_dst_ni   (rst_core_ni),
-    .src_regwen_i (regwen_qs),
-    .src_we_i     (blink_param_3_we),
-    .src_re_i     ('0),
-    .src_wd_i     (reg_wdata[31:0]),
-    .src_busy_o   (blink_param_3_busy),
-    .src_qs_o     (blink_param_3_qs), // for software read back
-    .dst_update_i ('0),
-    .dst_ds_i     ('0),
-    .dst_qs_i     (core_blink_param_3_qs),
-    .dst_we_o     (core_blink_param_3_we),
-    .dst_re_o     (),
-    .dst_regwen_o (core_blink_param_3_regwen),
-    .dst_wd_o     (core_blink_param_3_wdata)
-  );
-  assign unused_core_blink_param_3_wdata =
-      ^core_blink_param_3_wdata;
+  assign unused__pwm_param_1_wdata =
+      ^_pwm_param_1_wdata;
 
   // Register instances
   // R[regwen]: V(False)
@@ -812,14 +354,14 @@ module pwm_reg_top
     .Width(1),
     .ResetValue(0)
   ) u_cfg0_qe (
-    .clk_i(clk_core_i),
-    .rst_ni(rst_core_ni),
+    .clk_i(clk_i),
+    .rst_ni(rst_ni),
     .d_i(&cfg_flds_we),
     .q_o(cfg_qe)
   );
   // Create REGWEN-gated WE signal
-  logic core_cfg_gated_we;
-  assign core_cfg_gated_we = core_cfg_we & core_cfg_regwen;
+  logic _cfg_gated_we;
+  assign _cfg_gated_we = _cfg_we & _cfg_regwen;
   //   F[clk_div]: 26:0
   prim_subreg #(
     .DW      (27),
@@ -827,12 +369,12 @@ module pwm_reg_top
     .RESVAL  (27'h8000),
     .Mubi    (1'b0)
   ) u_cfg_clk_div (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
+    .clk_i   (clk_i),
+    .rst_ni  (rst_ni),
 
     // from register interface
-    .we     (core_cfg_gated_we),
-    .wd     (core_cfg_wdata[26:0]),
+    .we     (_cfg_gated_we),
+    .wd     (_cfg_wdata[26:0]),
 
     // from internal hardware
     .de     (1'b0),
@@ -844,7 +386,7 @@ module pwm_reg_top
     .ds     (),
 
     // to register interface (read)
-    .qs     (core_cfg_clk_div_qs_int)
+    .qs     (_cfg_clk_div_qs_int)
   );
   assign reg2hw.cfg.clk_div.qe = cfg_qe;
 
@@ -855,12 +397,12 @@ module pwm_reg_top
     .RESVAL  (4'h7),
     .Mubi    (1'b0)
   ) u_cfg_dc_resn (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
+    .clk_i   (clk_i),
+    .rst_ni  (rst_ni),
 
     // from register interface
-    .we     (core_cfg_gated_we),
-    .wd     (core_cfg_wdata[30:27]),
+    .we     (_cfg_gated_we),
+    .wd     (_cfg_wdata[30:27]),
 
     // from internal hardware
     .de     (1'b0),
@@ -872,7 +414,7 @@ module pwm_reg_top
     .ds     (),
 
     // to register interface (read)
-    .qs     (core_cfg_dc_resn_qs_int)
+    .qs     (_cfg_dc_resn_qs_int)
   );
   assign reg2hw.cfg.dc_resn.qe = cfg_qe;
 
@@ -883,12 +425,12 @@ module pwm_reg_top
     .RESVAL  (1'h0),
     .Mubi    (1'b0)
   ) u_cfg_cntr_en (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
+    .clk_i   (clk_i),
+    .rst_ni  (rst_ni),
 
     // from register interface
-    .we     (core_cfg_gated_we),
-    .wd     (core_cfg_wdata[31]),
+    .we     (_cfg_gated_we),
+    .wd     (_cfg_wdata[31]),
 
     // from internal hardware
     .de     (1'b0),
@@ -900,7 +442,7 @@ module pwm_reg_top
     .ds     (),
 
     // to register interface (read)
-    .qs     (core_cfg_cntr_en_qs_int)
+    .qs     (_cfg_cntr_en_qs_int)
   );
   assign reg2hw.cfg.cntr_en.qe = cfg_qe;
 
@@ -908,19 +450,19 @@ module pwm_reg_top
   // Subregister 0 of Multireg pwm_en
   // R[pwm_en]: V(False)
   logic pwm_en_qe;
-  logic [3:0] pwm_en_flds_we;
+  logic [1:0] pwm_en_flds_we;
   prim_flop #(
     .Width(1),
     .ResetValue(0)
   ) u_pwm_en0_qe (
-    .clk_i(clk_core_i),
-    .rst_ni(rst_core_ni),
+    .clk_i(clk_i),
+    .rst_ni(rst_ni),
     .d_i(&pwm_en_flds_we),
     .q_o(pwm_en_qe)
   );
   // Create REGWEN-gated WE signal
-  logic core_pwm_en_gated_we;
-  assign core_pwm_en_gated_we = core_pwm_en_we & core_pwm_en_regwen;
+  logic _pwm_en_gated_we;
+  assign _pwm_en_gated_we = _pwm_en_we & _pwm_en_regwen;
   //   F[en_0]: 0:0
   prim_subreg #(
     .DW      (1),
@@ -928,12 +470,12 @@ module pwm_reg_top
     .RESVAL  (1'h0),
     .Mubi    (1'b0)
   ) u_pwm_en_en_0 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
+    .clk_i   (clk_i),
+    .rst_ni  (rst_ni),
 
     // from register interface
-    .we     (core_pwm_en_gated_we),
-    .wd     (core_pwm_en_wdata[0]),
+    .we     (_pwm_en_gated_we),
+    .wd     (_pwm_en_wdata[0]),
 
     // from internal hardware
     .de     (1'b0),
@@ -945,7 +487,7 @@ module pwm_reg_top
     .ds     (),
 
     // to register interface (read)
-    .qs     (core_pwm_en_en_0_qs_int)
+    .qs     (_pwm_en_en_0_qs_int)
   );
   assign reg2hw.pwm_en[0].qe = pwm_en_qe;
 
@@ -956,12 +498,12 @@ module pwm_reg_top
     .RESVAL  (1'h0),
     .Mubi    (1'b0)
   ) u_pwm_en_en_1 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
+    .clk_i   (clk_i),
+    .rst_ni  (rst_ni),
 
     // from register interface
-    .we     (core_pwm_en_gated_we),
-    .wd     (core_pwm_en_wdata[1]),
+    .we     (_pwm_en_gated_we),
+    .wd     (_pwm_en_wdata[1]),
 
     // from internal hardware
     .de     (1'b0),
@@ -973,83 +515,27 @@ module pwm_reg_top
     .ds     (),
 
     // to register interface (read)
-    .qs     (core_pwm_en_en_1_qs_int)
+    .qs     (_pwm_en_en_1_qs_int)
   );
   assign reg2hw.pwm_en[1].qe = pwm_en_qe;
-
-  //   F[en_2]: 2:2
-  prim_subreg #(
-    .DW      (1),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (1'h0),
-    .Mubi    (1'b0)
-  ) u_pwm_en_en_2 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_pwm_en_gated_we),
-    .wd     (core_pwm_en_wdata[2]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (pwm_en_flds_we[2]),
-    .q      (reg2hw.pwm_en[2].q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_pwm_en_en_2_qs_int)
-  );
-  assign reg2hw.pwm_en[2].qe = pwm_en_qe;
-
-  //   F[en_3]: 3:3
-  prim_subreg #(
-    .DW      (1),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (1'h0),
-    .Mubi    (1'b0)
-  ) u_pwm_en_en_3 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_pwm_en_gated_we),
-    .wd     (core_pwm_en_wdata[3]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (pwm_en_flds_we[3]),
-    .q      (reg2hw.pwm_en[3].q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_pwm_en_en_3_qs_int)
-  );
-  assign reg2hw.pwm_en[3].qe = pwm_en_qe;
 
 
   // Subregister 0 of Multireg invert
   // R[invert]: V(False)
   logic invert_qe;
-  logic [3:0] invert_flds_we;
+  logic [1:0] invert_flds_we;
   prim_flop #(
     .Width(1),
     .ResetValue(0)
   ) u_invert0_qe (
-    .clk_i(clk_core_i),
-    .rst_ni(rst_core_ni),
+    .clk_i(clk_i),
+    .rst_ni(rst_ni),
     .d_i(&invert_flds_we),
     .q_o(invert_qe)
   );
   // Create REGWEN-gated WE signal
-  logic core_invert_gated_we;
-  assign core_invert_gated_we = core_invert_we & core_invert_regwen;
+  logic _invert_gated_we;
+  assign _invert_gated_we = _invert_we & _invert_regwen;
   //   F[invert_0]: 0:0
   prim_subreg #(
     .DW      (1),
@@ -1057,12 +543,12 @@ module pwm_reg_top
     .RESVAL  (1'h0),
     .Mubi    (1'b0)
   ) u_invert_invert_0 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
+    .clk_i   (clk_i),
+    .rst_ni  (rst_ni),
 
     // from register interface
-    .we     (core_invert_gated_we),
-    .wd     (core_invert_wdata[0]),
+    .we     (_invert_gated_we),
+    .wd     (_invert_wdata[0]),
 
     // from internal hardware
     .de     (1'b0),
@@ -1074,7 +560,7 @@ module pwm_reg_top
     .ds     (),
 
     // to register interface (read)
-    .qs     (core_invert_invert_0_qs_int)
+    .qs     (_invert_invert_0_qs_int)
   );
   assign reg2hw.invert[0].qe = invert_qe;
 
@@ -1085,12 +571,12 @@ module pwm_reg_top
     .RESVAL  (1'h0),
     .Mubi    (1'b0)
   ) u_invert_invert_1 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
+    .clk_i   (clk_i),
+    .rst_ni  (rst_ni),
 
     // from register interface
-    .we     (core_invert_gated_we),
-    .wd     (core_invert_wdata[1]),
+    .we     (_invert_gated_we),
+    .wd     (_invert_wdata[1]),
 
     // from internal hardware
     .de     (1'b0),
@@ -1102,96 +588,40 @@ module pwm_reg_top
     .ds     (),
 
     // to register interface (read)
-    .qs     (core_invert_invert_1_qs_int)
+    .qs     (_invert_invert_1_qs_int)
   );
   assign reg2hw.invert[1].qe = invert_qe;
-
-  //   F[invert_2]: 2:2
-  prim_subreg #(
-    .DW      (1),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (1'h0),
-    .Mubi    (1'b0)
-  ) u_invert_invert_2 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_invert_gated_we),
-    .wd     (core_invert_wdata[2]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (invert_flds_we[2]),
-    .q      (reg2hw.invert[2].q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_invert_invert_2_qs_int)
-  );
-  assign reg2hw.invert[2].qe = invert_qe;
-
-  //   F[invert_3]: 3:3
-  prim_subreg #(
-    .DW      (1),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (1'h0),
-    .Mubi    (1'b0)
-  ) u_invert_invert_3 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_invert_gated_we),
-    .wd     (core_invert_wdata[3]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (invert_flds_we[3]),
-    .q      (reg2hw.invert[3].q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_invert_invert_3_qs_int)
-  );
-  assign reg2hw.invert[3].qe = invert_qe;
 
 
   // Subregister 0 of Multireg pwm_param
   // R[pwm_param_0]: V(False)
   logic pwm_param_0_qe;
-  logic [2:0] pwm_param_0_flds_we;
+  logic [1:0] pwm_param_0_flds_we;
   prim_flop #(
     .Width(1),
     .ResetValue(0)
   ) u_pwm_param0_qe (
-    .clk_i(clk_core_i),
-    .rst_ni(rst_core_ni),
+    .clk_i(clk_i),
+    .rst_ni(rst_ni),
     .d_i(&pwm_param_0_flds_we),
     .q_o(pwm_param_0_qe)
   );
   // Create REGWEN-gated WE signal
-  logic core_pwm_param_0_gated_we;
-  assign core_pwm_param_0_gated_we = core_pwm_param_0_we & core_pwm_param_0_regwen;
-  //   F[phase_delay_0]: 15:0
+  logic _pwm_param_0_gated_we;
+  assign _pwm_param_0_gated_we = _pwm_param_0_we & _pwm_param_0_regwen;
+  //   F[duty_cycle_0]: 15:0
   prim_subreg #(
     .DW      (16),
     .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (16'h0),
+    .RESVAL  (16'h7fff),
     .Mubi    (1'b0)
-  ) u_pwm_param_0_phase_delay_0 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
+  ) u_pwm_param_0_duty_cycle_0 (
+    .clk_i   (clk_i),
+    .rst_ni  (rst_ni),
 
     // from register interface
-    .we     (core_pwm_param_0_gated_we),
-    .wd     (core_pwm_param_0_wdata[15:0]),
+    .we     (_pwm_param_0_gated_we),
+    .wd     (_pwm_param_0_wdata[15:0]),
 
     // from internal hardware
     .de     (1'b0),
@@ -1199,27 +629,27 @@ module pwm_reg_top
 
     // to internal hardware
     .qe     (pwm_param_0_flds_we[0]),
-    .q      (reg2hw.pwm_param[0].phase_delay.q),
+    .q      (reg2hw.pwm_param[0].duty_cycle.q),
     .ds     (),
 
     // to register interface (read)
-    .qs     (core_pwm_param_0_phase_delay_0_qs_int)
+    .qs     (_pwm_param_0_duty_cycle_0_qs_int)
   );
-  assign reg2hw.pwm_param[0].phase_delay.qe = pwm_param_0_qe;
+  assign reg2hw.pwm_param[0].duty_cycle.qe = pwm_param_0_qe;
 
-  //   F[htbt_en_0]: 30:30
+  //   F[phase_delay_0]: 31:16
   prim_subreg #(
-    .DW      (1),
+    .DW      (16),
     .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (1'h0),
+    .RESVAL  (16'h0),
     .Mubi    (1'b0)
-  ) u_pwm_param_0_htbt_en_0 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
+  ) u_pwm_param_0_phase_delay_0 (
+    .clk_i   (clk_i),
+    .rst_ni  (rst_ni),
 
     // from register interface
-    .we     (core_pwm_param_0_gated_we),
-    .wd     (core_pwm_param_0_wdata[30]),
+    .we     (_pwm_param_0_gated_we),
+    .wd     (_pwm_param_0_wdata[31:16]),
 
     // from internal hardware
     .de     (1'b0),
@@ -1227,72 +657,44 @@ module pwm_reg_top
 
     // to internal hardware
     .qe     (pwm_param_0_flds_we[1]),
-    .q      (reg2hw.pwm_param[0].htbt_en.q),
+    .q      (reg2hw.pwm_param[0].phase_delay.q),
     .ds     (),
 
     // to register interface (read)
-    .qs     (core_pwm_param_0_htbt_en_0_qs_int)
+    .qs     (_pwm_param_0_phase_delay_0_qs_int)
   );
-  assign reg2hw.pwm_param[0].htbt_en.qe = pwm_param_0_qe;
-
-  //   F[blink_en_0]: 31:31
-  prim_subreg #(
-    .DW      (1),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (1'h0),
-    .Mubi    (1'b0)
-  ) u_pwm_param_0_blink_en_0 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_pwm_param_0_gated_we),
-    .wd     (core_pwm_param_0_wdata[31]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (pwm_param_0_flds_we[2]),
-    .q      (reg2hw.pwm_param[0].blink_en.q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_pwm_param_0_blink_en_0_qs_int)
-  );
-  assign reg2hw.pwm_param[0].blink_en.qe = pwm_param_0_qe;
+  assign reg2hw.pwm_param[0].phase_delay.qe = pwm_param_0_qe;
 
 
   // Subregister 1 of Multireg pwm_param
   // R[pwm_param_1]: V(False)
   logic pwm_param_1_qe;
-  logic [2:0] pwm_param_1_flds_we;
+  logic [1:0] pwm_param_1_flds_we;
   prim_flop #(
     .Width(1),
     .ResetValue(0)
   ) u_pwm_param1_qe (
-    .clk_i(clk_core_i),
-    .rst_ni(rst_core_ni),
+    .clk_i(clk_i),
+    .rst_ni(rst_ni),
     .d_i(&pwm_param_1_flds_we),
     .q_o(pwm_param_1_qe)
   );
   // Create REGWEN-gated WE signal
-  logic core_pwm_param_1_gated_we;
-  assign core_pwm_param_1_gated_we = core_pwm_param_1_we & core_pwm_param_1_regwen;
-  //   F[phase_delay_1]: 15:0
+  logic _pwm_param_1_gated_we;
+  assign _pwm_param_1_gated_we = _pwm_param_1_we & _pwm_param_1_regwen;
+  //   F[duty_cycle_1]: 15:0
   prim_subreg #(
     .DW      (16),
     .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (16'h0),
+    .RESVAL  (16'h7fff),
     .Mubi    (1'b0)
-  ) u_pwm_param_1_phase_delay_1 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
+  ) u_pwm_param_1_duty_cycle_1 (
+    .clk_i   (clk_i),
+    .rst_ni  (rst_ni),
 
     // from register interface
-    .we     (core_pwm_param_1_gated_we),
-    .wd     (core_pwm_param_1_wdata[15:0]),
+    .we     (_pwm_param_1_gated_we),
+    .wd     (_pwm_param_1_wdata[15:0]),
 
     // from internal hardware
     .de     (1'b0),
@@ -1300,27 +702,27 @@ module pwm_reg_top
 
     // to internal hardware
     .qe     (pwm_param_1_flds_we[0]),
-    .q      (reg2hw.pwm_param[1].phase_delay.q),
+    .q      (reg2hw.pwm_param[1].duty_cycle.q),
     .ds     (),
 
     // to register interface (read)
-    .qs     (core_pwm_param_1_phase_delay_1_qs_int)
+    .qs     (_pwm_param_1_duty_cycle_1_qs_int)
   );
-  assign reg2hw.pwm_param[1].phase_delay.qe = pwm_param_1_qe;
+  assign reg2hw.pwm_param[1].duty_cycle.qe = pwm_param_1_qe;
 
-  //   F[htbt_en_1]: 30:30
+  //   F[phase_delay_1]: 31:16
   prim_subreg #(
-    .DW      (1),
+    .DW      (16),
     .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (1'h0),
+    .RESVAL  (16'h0),
     .Mubi    (1'b0)
-  ) u_pwm_param_1_htbt_en_1 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
+  ) u_pwm_param_1_phase_delay_1 (
+    .clk_i   (clk_i),
+    .rst_ni  (rst_ni),
 
     // from register interface
-    .we     (core_pwm_param_1_gated_we),
-    .wd     (core_pwm_param_1_wdata[30]),
+    .we     (_pwm_param_1_gated_we),
+    .wd     (_pwm_param_1_wdata[31:16]),
 
     // from internal hardware
     .de     (1'b0),
@@ -1328,849 +730,25 @@ module pwm_reg_top
 
     // to internal hardware
     .qe     (pwm_param_1_flds_we[1]),
-    .q      (reg2hw.pwm_param[1].htbt_en.q),
+    .q      (reg2hw.pwm_param[1].phase_delay.q),
     .ds     (),
 
     // to register interface (read)
-    .qs     (core_pwm_param_1_htbt_en_1_qs_int)
+    .qs     (_pwm_param_1_phase_delay_1_qs_int)
   );
-  assign reg2hw.pwm_param[1].htbt_en.qe = pwm_param_1_qe;
+  assign reg2hw.pwm_param[1].phase_delay.qe = pwm_param_1_qe;
 
-  //   F[blink_en_1]: 31:31
-  prim_subreg #(
-    .DW      (1),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (1'h0),
-    .Mubi    (1'b0)
-  ) u_pwm_param_1_blink_en_1 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
 
-    // from register interface
-    .we     (core_pwm_param_1_gated_we),
-    .wd     (core_pwm_param_1_wdata[31]),
 
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (pwm_param_1_flds_we[2]),
-    .q      (reg2hw.pwm_param[1].blink_en.q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_pwm_param_1_blink_en_1_qs_int)
-  );
-  assign reg2hw.pwm_param[1].blink_en.qe = pwm_param_1_qe;
-
-
-  // Subregister 2 of Multireg pwm_param
-  // R[pwm_param_2]: V(False)
-  logic pwm_param_2_qe;
-  logic [2:0] pwm_param_2_flds_we;
-  prim_flop #(
-    .Width(1),
-    .ResetValue(0)
-  ) u_pwm_param2_qe (
-    .clk_i(clk_core_i),
-    .rst_ni(rst_core_ni),
-    .d_i(&pwm_param_2_flds_we),
-    .q_o(pwm_param_2_qe)
-  );
-  // Create REGWEN-gated WE signal
-  logic core_pwm_param_2_gated_we;
-  assign core_pwm_param_2_gated_we = core_pwm_param_2_we & core_pwm_param_2_regwen;
-  //   F[phase_delay_2]: 15:0
-  prim_subreg #(
-    .DW      (16),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (16'h0),
-    .Mubi    (1'b0)
-  ) u_pwm_param_2_phase_delay_2 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_pwm_param_2_gated_we),
-    .wd     (core_pwm_param_2_wdata[15:0]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (pwm_param_2_flds_we[0]),
-    .q      (reg2hw.pwm_param[2].phase_delay.q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_pwm_param_2_phase_delay_2_qs_int)
-  );
-  assign reg2hw.pwm_param[2].phase_delay.qe = pwm_param_2_qe;
-
-  //   F[htbt_en_2]: 30:30
-  prim_subreg #(
-    .DW      (1),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (1'h0),
-    .Mubi    (1'b0)
-  ) u_pwm_param_2_htbt_en_2 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_pwm_param_2_gated_we),
-    .wd     (core_pwm_param_2_wdata[30]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (pwm_param_2_flds_we[1]),
-    .q      (reg2hw.pwm_param[2].htbt_en.q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_pwm_param_2_htbt_en_2_qs_int)
-  );
-  assign reg2hw.pwm_param[2].htbt_en.qe = pwm_param_2_qe;
-
-  //   F[blink_en_2]: 31:31
-  prim_subreg #(
-    .DW      (1),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (1'h0),
-    .Mubi    (1'b0)
-  ) u_pwm_param_2_blink_en_2 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_pwm_param_2_gated_we),
-    .wd     (core_pwm_param_2_wdata[31]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (pwm_param_2_flds_we[2]),
-    .q      (reg2hw.pwm_param[2].blink_en.q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_pwm_param_2_blink_en_2_qs_int)
-  );
-  assign reg2hw.pwm_param[2].blink_en.qe = pwm_param_2_qe;
-
-
-  // Subregister 3 of Multireg pwm_param
-  // R[pwm_param_3]: V(False)
-  logic pwm_param_3_qe;
-  logic [2:0] pwm_param_3_flds_we;
-  prim_flop #(
-    .Width(1),
-    .ResetValue(0)
-  ) u_pwm_param3_qe (
-    .clk_i(clk_core_i),
-    .rst_ni(rst_core_ni),
-    .d_i(&pwm_param_3_flds_we),
-    .q_o(pwm_param_3_qe)
-  );
-  // Create REGWEN-gated WE signal
-  logic core_pwm_param_3_gated_we;
-  assign core_pwm_param_3_gated_we = core_pwm_param_3_we & core_pwm_param_3_regwen;
-  //   F[phase_delay_3]: 15:0
-  prim_subreg #(
-    .DW      (16),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (16'h0),
-    .Mubi    (1'b0)
-  ) u_pwm_param_3_phase_delay_3 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_pwm_param_3_gated_we),
-    .wd     (core_pwm_param_3_wdata[15:0]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (pwm_param_3_flds_we[0]),
-    .q      (reg2hw.pwm_param[3].phase_delay.q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_pwm_param_3_phase_delay_3_qs_int)
-  );
-  assign reg2hw.pwm_param[3].phase_delay.qe = pwm_param_3_qe;
-
-  //   F[htbt_en_3]: 30:30
-  prim_subreg #(
-    .DW      (1),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (1'h0),
-    .Mubi    (1'b0)
-  ) u_pwm_param_3_htbt_en_3 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_pwm_param_3_gated_we),
-    .wd     (core_pwm_param_3_wdata[30]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (pwm_param_3_flds_we[1]),
-    .q      (reg2hw.pwm_param[3].htbt_en.q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_pwm_param_3_htbt_en_3_qs_int)
-  );
-  assign reg2hw.pwm_param[3].htbt_en.qe = pwm_param_3_qe;
-
-  //   F[blink_en_3]: 31:31
-  prim_subreg #(
-    .DW      (1),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (1'h0),
-    .Mubi    (1'b0)
-  ) u_pwm_param_3_blink_en_3 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_pwm_param_3_gated_we),
-    .wd     (core_pwm_param_3_wdata[31]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (pwm_param_3_flds_we[2]),
-    .q      (reg2hw.pwm_param[3].blink_en.q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_pwm_param_3_blink_en_3_qs_int)
-  );
-  assign reg2hw.pwm_param[3].blink_en.qe = pwm_param_3_qe;
-
-
-  // Subregister 0 of Multireg duty_cycle
-  // R[duty_cycle_0]: V(False)
-  logic duty_cycle_0_qe;
-  logic [1:0] duty_cycle_0_flds_we;
-  prim_flop #(
-    .Width(1),
-    .ResetValue(0)
-  ) u_duty_cycle0_qe (
-    .clk_i(clk_core_i),
-    .rst_ni(rst_core_ni),
-    .d_i(&duty_cycle_0_flds_we),
-    .q_o(duty_cycle_0_qe)
-  );
-  // Create REGWEN-gated WE signal
-  logic core_duty_cycle_0_gated_we;
-  assign core_duty_cycle_0_gated_we = core_duty_cycle_0_we & core_duty_cycle_0_regwen;
-  //   F[a_0]: 15:0
-  prim_subreg #(
-    .DW      (16),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (16'h7fff),
-    .Mubi    (1'b0)
-  ) u_duty_cycle_0_a_0 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_duty_cycle_0_gated_we),
-    .wd     (core_duty_cycle_0_wdata[15:0]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (duty_cycle_0_flds_we[0]),
-    .q      (reg2hw.duty_cycle[0].a.q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_duty_cycle_0_a_0_qs_int)
-  );
-  assign reg2hw.duty_cycle[0].a.qe = duty_cycle_0_qe;
-
-  //   F[b_0]: 31:16
-  prim_subreg #(
-    .DW      (16),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (16'h7fff),
-    .Mubi    (1'b0)
-  ) u_duty_cycle_0_b_0 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_duty_cycle_0_gated_we),
-    .wd     (core_duty_cycle_0_wdata[31:16]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (duty_cycle_0_flds_we[1]),
-    .q      (reg2hw.duty_cycle[0].b.q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_duty_cycle_0_b_0_qs_int)
-  );
-  assign reg2hw.duty_cycle[0].b.qe = duty_cycle_0_qe;
-
-
-  // Subregister 1 of Multireg duty_cycle
-  // R[duty_cycle_1]: V(False)
-  logic duty_cycle_1_qe;
-  logic [1:0] duty_cycle_1_flds_we;
-  prim_flop #(
-    .Width(1),
-    .ResetValue(0)
-  ) u_duty_cycle1_qe (
-    .clk_i(clk_core_i),
-    .rst_ni(rst_core_ni),
-    .d_i(&duty_cycle_1_flds_we),
-    .q_o(duty_cycle_1_qe)
-  );
-  // Create REGWEN-gated WE signal
-  logic core_duty_cycle_1_gated_we;
-  assign core_duty_cycle_1_gated_we = core_duty_cycle_1_we & core_duty_cycle_1_regwen;
-  //   F[a_1]: 15:0
-  prim_subreg #(
-    .DW      (16),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (16'h7fff),
-    .Mubi    (1'b0)
-  ) u_duty_cycle_1_a_1 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_duty_cycle_1_gated_we),
-    .wd     (core_duty_cycle_1_wdata[15:0]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (duty_cycle_1_flds_we[0]),
-    .q      (reg2hw.duty_cycle[1].a.q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_duty_cycle_1_a_1_qs_int)
-  );
-  assign reg2hw.duty_cycle[1].a.qe = duty_cycle_1_qe;
-
-  //   F[b_1]: 31:16
-  prim_subreg #(
-    .DW      (16),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (16'h7fff),
-    .Mubi    (1'b0)
-  ) u_duty_cycle_1_b_1 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_duty_cycle_1_gated_we),
-    .wd     (core_duty_cycle_1_wdata[31:16]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (duty_cycle_1_flds_we[1]),
-    .q      (reg2hw.duty_cycle[1].b.q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_duty_cycle_1_b_1_qs_int)
-  );
-  assign reg2hw.duty_cycle[1].b.qe = duty_cycle_1_qe;
-
-
-  // Subregister 2 of Multireg duty_cycle
-  // R[duty_cycle_2]: V(False)
-  logic duty_cycle_2_qe;
-  logic [1:0] duty_cycle_2_flds_we;
-  prim_flop #(
-    .Width(1),
-    .ResetValue(0)
-  ) u_duty_cycle2_qe (
-    .clk_i(clk_core_i),
-    .rst_ni(rst_core_ni),
-    .d_i(&duty_cycle_2_flds_we),
-    .q_o(duty_cycle_2_qe)
-  );
-  // Create REGWEN-gated WE signal
-  logic core_duty_cycle_2_gated_we;
-  assign core_duty_cycle_2_gated_we = core_duty_cycle_2_we & core_duty_cycle_2_regwen;
-  //   F[a_2]: 15:0
-  prim_subreg #(
-    .DW      (16),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (16'h7fff),
-    .Mubi    (1'b0)
-  ) u_duty_cycle_2_a_2 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_duty_cycle_2_gated_we),
-    .wd     (core_duty_cycle_2_wdata[15:0]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (duty_cycle_2_flds_we[0]),
-    .q      (reg2hw.duty_cycle[2].a.q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_duty_cycle_2_a_2_qs_int)
-  );
-  assign reg2hw.duty_cycle[2].a.qe = duty_cycle_2_qe;
-
-  //   F[b_2]: 31:16
-  prim_subreg #(
-    .DW      (16),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (16'h7fff),
-    .Mubi    (1'b0)
-  ) u_duty_cycle_2_b_2 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_duty_cycle_2_gated_we),
-    .wd     (core_duty_cycle_2_wdata[31:16]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (duty_cycle_2_flds_we[1]),
-    .q      (reg2hw.duty_cycle[2].b.q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_duty_cycle_2_b_2_qs_int)
-  );
-  assign reg2hw.duty_cycle[2].b.qe = duty_cycle_2_qe;
-
-
-  // Subregister 3 of Multireg duty_cycle
-  // R[duty_cycle_3]: V(False)
-  logic duty_cycle_3_qe;
-  logic [1:0] duty_cycle_3_flds_we;
-  prim_flop #(
-    .Width(1),
-    .ResetValue(0)
-  ) u_duty_cycle3_qe (
-    .clk_i(clk_core_i),
-    .rst_ni(rst_core_ni),
-    .d_i(&duty_cycle_3_flds_we),
-    .q_o(duty_cycle_3_qe)
-  );
-  // Create REGWEN-gated WE signal
-  logic core_duty_cycle_3_gated_we;
-  assign core_duty_cycle_3_gated_we = core_duty_cycle_3_we & core_duty_cycle_3_regwen;
-  //   F[a_3]: 15:0
-  prim_subreg #(
-    .DW      (16),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (16'h7fff),
-    .Mubi    (1'b0)
-  ) u_duty_cycle_3_a_3 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_duty_cycle_3_gated_we),
-    .wd     (core_duty_cycle_3_wdata[15:0]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (duty_cycle_3_flds_we[0]),
-    .q      (reg2hw.duty_cycle[3].a.q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_duty_cycle_3_a_3_qs_int)
-  );
-  assign reg2hw.duty_cycle[3].a.qe = duty_cycle_3_qe;
-
-  //   F[b_3]: 31:16
-  prim_subreg #(
-    .DW      (16),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (16'h7fff),
-    .Mubi    (1'b0)
-  ) u_duty_cycle_3_b_3 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_duty_cycle_3_gated_we),
-    .wd     (core_duty_cycle_3_wdata[31:16]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (duty_cycle_3_flds_we[1]),
-    .q      (reg2hw.duty_cycle[3].b.q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_duty_cycle_3_b_3_qs_int)
-  );
-  assign reg2hw.duty_cycle[3].b.qe = duty_cycle_3_qe;
-
-
-  // Subregister 0 of Multireg blink_param
-  // R[blink_param_0]: V(False)
-  logic blink_param_0_qe;
-  logic [1:0] blink_param_0_flds_we;
-  prim_flop #(
-    .Width(1),
-    .ResetValue(0)
-  ) u_blink_param0_qe (
-    .clk_i(clk_core_i),
-    .rst_ni(rst_core_ni),
-    .d_i(&blink_param_0_flds_we),
-    .q_o(blink_param_0_qe)
-  );
-  // Create REGWEN-gated WE signal
-  logic core_blink_param_0_gated_we;
-  assign core_blink_param_0_gated_we = core_blink_param_0_we & core_blink_param_0_regwen;
-  //   F[x_0]: 15:0
-  prim_subreg #(
-    .DW      (16),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (16'h0),
-    .Mubi    (1'b0)
-  ) u_blink_param_0_x_0 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_blink_param_0_gated_we),
-    .wd     (core_blink_param_0_wdata[15:0]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (blink_param_0_flds_we[0]),
-    .q      (reg2hw.blink_param[0].x.q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_blink_param_0_x_0_qs_int)
-  );
-  assign reg2hw.blink_param[0].x.qe = blink_param_0_qe;
-
-  //   F[y_0]: 31:16
-  prim_subreg #(
-    .DW      (16),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (16'h0),
-    .Mubi    (1'b0)
-  ) u_blink_param_0_y_0 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_blink_param_0_gated_we),
-    .wd     (core_blink_param_0_wdata[31:16]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (blink_param_0_flds_we[1]),
-    .q      (reg2hw.blink_param[0].y.q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_blink_param_0_y_0_qs_int)
-  );
-  assign reg2hw.blink_param[0].y.qe = blink_param_0_qe;
-
-
-  // Subregister 1 of Multireg blink_param
-  // R[blink_param_1]: V(False)
-  logic blink_param_1_qe;
-  logic [1:0] blink_param_1_flds_we;
-  prim_flop #(
-    .Width(1),
-    .ResetValue(0)
-  ) u_blink_param1_qe (
-    .clk_i(clk_core_i),
-    .rst_ni(rst_core_ni),
-    .d_i(&blink_param_1_flds_we),
-    .q_o(blink_param_1_qe)
-  );
-  // Create REGWEN-gated WE signal
-  logic core_blink_param_1_gated_we;
-  assign core_blink_param_1_gated_we = core_blink_param_1_we & core_blink_param_1_regwen;
-  //   F[x_1]: 15:0
-  prim_subreg #(
-    .DW      (16),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (16'h0),
-    .Mubi    (1'b0)
-  ) u_blink_param_1_x_1 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_blink_param_1_gated_we),
-    .wd     (core_blink_param_1_wdata[15:0]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (blink_param_1_flds_we[0]),
-    .q      (reg2hw.blink_param[1].x.q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_blink_param_1_x_1_qs_int)
-  );
-  assign reg2hw.blink_param[1].x.qe = blink_param_1_qe;
-
-  //   F[y_1]: 31:16
-  prim_subreg #(
-    .DW      (16),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (16'h0),
-    .Mubi    (1'b0)
-  ) u_blink_param_1_y_1 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_blink_param_1_gated_we),
-    .wd     (core_blink_param_1_wdata[31:16]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (blink_param_1_flds_we[1]),
-    .q      (reg2hw.blink_param[1].y.q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_blink_param_1_y_1_qs_int)
-  );
-  assign reg2hw.blink_param[1].y.qe = blink_param_1_qe;
-
-
-  // Subregister 2 of Multireg blink_param
-  // R[blink_param_2]: V(False)
-  logic blink_param_2_qe;
-  logic [1:0] blink_param_2_flds_we;
-  prim_flop #(
-    .Width(1),
-    .ResetValue(0)
-  ) u_blink_param2_qe (
-    .clk_i(clk_core_i),
-    .rst_ni(rst_core_ni),
-    .d_i(&blink_param_2_flds_we),
-    .q_o(blink_param_2_qe)
-  );
-  // Create REGWEN-gated WE signal
-  logic core_blink_param_2_gated_we;
-  assign core_blink_param_2_gated_we = core_blink_param_2_we & core_blink_param_2_regwen;
-  //   F[x_2]: 15:0
-  prim_subreg #(
-    .DW      (16),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (16'h0),
-    .Mubi    (1'b0)
-  ) u_blink_param_2_x_2 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_blink_param_2_gated_we),
-    .wd     (core_blink_param_2_wdata[15:0]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (blink_param_2_flds_we[0]),
-    .q      (reg2hw.blink_param[2].x.q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_blink_param_2_x_2_qs_int)
-  );
-  assign reg2hw.blink_param[2].x.qe = blink_param_2_qe;
-
-  //   F[y_2]: 31:16
-  prim_subreg #(
-    .DW      (16),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (16'h0),
-    .Mubi    (1'b0)
-  ) u_blink_param_2_y_2 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_blink_param_2_gated_we),
-    .wd     (core_blink_param_2_wdata[31:16]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (blink_param_2_flds_we[1]),
-    .q      (reg2hw.blink_param[2].y.q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_blink_param_2_y_2_qs_int)
-  );
-  assign reg2hw.blink_param[2].y.qe = blink_param_2_qe;
-
-
-  // Subregister 3 of Multireg blink_param
-  // R[blink_param_3]: V(False)
-  logic blink_param_3_qe;
-  logic [1:0] blink_param_3_flds_we;
-  prim_flop #(
-    .Width(1),
-    .ResetValue(0)
-  ) u_blink_param3_qe (
-    .clk_i(clk_core_i),
-    .rst_ni(rst_core_ni),
-    .d_i(&blink_param_3_flds_we),
-    .q_o(blink_param_3_qe)
-  );
-  // Create REGWEN-gated WE signal
-  logic core_blink_param_3_gated_we;
-  assign core_blink_param_3_gated_we = core_blink_param_3_we & core_blink_param_3_regwen;
-  //   F[x_3]: 15:0
-  prim_subreg #(
-    .DW      (16),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (16'h0),
-    .Mubi    (1'b0)
-  ) u_blink_param_3_x_3 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_blink_param_3_gated_we),
-    .wd     (core_blink_param_3_wdata[15:0]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (blink_param_3_flds_we[0]),
-    .q      (reg2hw.blink_param[3].x.q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_blink_param_3_x_3_qs_int)
-  );
-  assign reg2hw.blink_param[3].x.qe = blink_param_3_qe;
-
-  //   F[y_3]: 31:16
-  prim_subreg #(
-    .DW      (16),
-    .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (16'h0),
-    .Mubi    (1'b0)
-  ) u_blink_param_3_y_3 (
-    .clk_i   (clk_core_i),
-    .rst_ni  (rst_core_ni),
-
-    // from register interface
-    .we     (core_blink_param_3_gated_we),
-    .wd     (core_blink_param_3_wdata[31:16]),
-
-    // from internal hardware
-    .de     (1'b0),
-    .d      ('0),
-
-    // to internal hardware
-    .qe     (blink_param_3_flds_we[1]),
-    .q      (reg2hw.blink_param[3].y.q),
-    .ds     (),
-
-    // to register interface (read)
-    .qs     (core_blink_param_3_y_3_qs_int)
-  );
-  assign reg2hw.blink_param[3].y.qe = blink_param_3_qe;
-
-
-
-  logic [15:0] addr_hit;
+  logic [5:0] addr_hit;
   always_comb begin
     addr_hit = '0;
-    addr_hit[ 0] = (reg_addr == PWM_REGWEN_OFFSET);
-    addr_hit[ 1] = (reg_addr == PWM_CFG_OFFSET);
-    addr_hit[ 2] = (reg_addr == PWM_PWM_EN_OFFSET);
-    addr_hit[ 3] = (reg_addr == PWM_INVERT_OFFSET);
-    addr_hit[ 4] = (reg_addr == PWM_PWM_PARAM_0_OFFSET);
-    addr_hit[ 5] = (reg_addr == PWM_PWM_PARAM_1_OFFSET);
-    addr_hit[ 6] = (reg_addr == PWM_PWM_PARAM_2_OFFSET);
-    addr_hit[ 7] = (reg_addr == PWM_PWM_PARAM_3_OFFSET);
-    addr_hit[ 8] = (reg_addr == PWM_DUTY_CYCLE_0_OFFSET);
-    addr_hit[ 9] = (reg_addr == PWM_DUTY_CYCLE_1_OFFSET);
-    addr_hit[10] = (reg_addr == PWM_DUTY_CYCLE_2_OFFSET);
-    addr_hit[11] = (reg_addr == PWM_DUTY_CYCLE_3_OFFSET);
-    addr_hit[12] = (reg_addr == PWM_BLINK_PARAM_0_OFFSET);
-    addr_hit[13] = (reg_addr == PWM_BLINK_PARAM_1_OFFSET);
-    addr_hit[14] = (reg_addr == PWM_BLINK_PARAM_2_OFFSET);
-    addr_hit[15] = (reg_addr == PWM_BLINK_PARAM_3_OFFSET);
+    addr_hit[0] = (reg_addr == PWM_REGWEN_OFFSET);
+    addr_hit[1] = (reg_addr == PWM_CFG_OFFSET);
+    addr_hit[2] = (reg_addr == PWM_PWM_EN_OFFSET);
+    addr_hit[3] = (reg_addr == PWM_INVERT_OFFSET);
+    addr_hit[4] = (reg_addr == PWM_PWM_PARAM_0_OFFSET);
+    addr_hit[5] = (reg_addr == PWM_PWM_PARAM_1_OFFSET);
   end
 
   assign addrmiss = (reg_re || reg_we) ? ~|addr_hit : 1'b0 ;
@@ -2178,22 +756,12 @@ module pwm_reg_top
   // Check sub-word write is permitted
   always_comb begin
     wr_err = (reg_we &
-              ((addr_hit[ 0] & (|(PWM_PERMIT[ 0] & ~reg_be))) |
-               (addr_hit[ 1] & (|(PWM_PERMIT[ 1] & ~reg_be))) |
-               (addr_hit[ 2] & (|(PWM_PERMIT[ 2] & ~reg_be))) |
-               (addr_hit[ 3] & (|(PWM_PERMIT[ 3] & ~reg_be))) |
-               (addr_hit[ 4] & (|(PWM_PERMIT[ 4] & ~reg_be))) |
-               (addr_hit[ 5] & (|(PWM_PERMIT[ 5] & ~reg_be))) |
-               (addr_hit[ 6] & (|(PWM_PERMIT[ 6] & ~reg_be))) |
-               (addr_hit[ 7] & (|(PWM_PERMIT[ 7] & ~reg_be))) |
-               (addr_hit[ 8] & (|(PWM_PERMIT[ 8] & ~reg_be))) |
-               (addr_hit[ 9] & (|(PWM_PERMIT[ 9] & ~reg_be))) |
-               (addr_hit[10] & (|(PWM_PERMIT[10] & ~reg_be))) |
-               (addr_hit[11] & (|(PWM_PERMIT[11] & ~reg_be))) |
-               (addr_hit[12] & (|(PWM_PERMIT[12] & ~reg_be))) |
-               (addr_hit[13] & (|(PWM_PERMIT[13] & ~reg_be))) |
-               (addr_hit[14] & (|(PWM_PERMIT[14] & ~reg_be))) |
-               (addr_hit[15] & (|(PWM_PERMIT[15] & ~reg_be)))));
+              ((addr_hit[0] & (|(PWM_PERMIT[0] & ~reg_be))) |
+               (addr_hit[1] & (|(PWM_PERMIT[1] & ~reg_be))) |
+               (addr_hit[2] & (|(PWM_PERMIT[2] & ~reg_be))) |
+               (addr_hit[3] & (|(PWM_PERMIT[3] & ~reg_be))) |
+               (addr_hit[4] & (|(PWM_PERMIT[4] & ~reg_be))) |
+               (addr_hit[5] & (|(PWM_PERMIT[5] & ~reg_be)))));
   end
 
   // Generate write-enables
@@ -2207,51 +775,13 @@ module pwm_reg_top
   assign pwm_en_we = addr_hit[2] & reg_we & !reg_error;
 
 
-
-
   assign invert_we = addr_hit[3] & reg_we & !reg_error;
-
-
 
 
   assign pwm_param_0_we = addr_hit[4] & reg_we & !reg_error;
 
 
-
   assign pwm_param_1_we = addr_hit[5] & reg_we & !reg_error;
-
-
-
-  assign pwm_param_2_we = addr_hit[6] & reg_we & !reg_error;
-
-
-
-  assign pwm_param_3_we = addr_hit[7] & reg_we & !reg_error;
-
-
-
-  assign duty_cycle_0_we = addr_hit[8] & reg_we & !reg_error;
-
-
-  assign duty_cycle_1_we = addr_hit[9] & reg_we & !reg_error;
-
-
-  assign duty_cycle_2_we = addr_hit[10] & reg_we & !reg_error;
-
-
-  assign duty_cycle_3_we = addr_hit[11] & reg_we & !reg_error;
-
-
-  assign blink_param_0_we = addr_hit[12] & reg_we & !reg_error;
-
-
-  assign blink_param_1_we = addr_hit[13] & reg_we & !reg_error;
-
-
-  assign blink_param_2_we = addr_hit[14] & reg_we & !reg_error;
-
-
-  assign blink_param_3_we = addr_hit[15] & reg_we & !reg_error;
 
 
 
@@ -2277,36 +807,6 @@ module pwm_reg_top
       end
       addr_hit[5]: begin
         reg_rdata_next = DW'(pwm_param_1_qs);
-      end
-      addr_hit[6]: begin
-        reg_rdata_next = DW'(pwm_param_2_qs);
-      end
-      addr_hit[7]: begin
-        reg_rdata_next = DW'(pwm_param_3_qs);
-      end
-      addr_hit[8]: begin
-        reg_rdata_next = DW'(duty_cycle_0_qs);
-      end
-      addr_hit[9]: begin
-        reg_rdata_next = DW'(duty_cycle_1_qs);
-      end
-      addr_hit[10]: begin
-        reg_rdata_next = DW'(duty_cycle_2_qs);
-      end
-      addr_hit[11]: begin
-        reg_rdata_next = DW'(duty_cycle_3_qs);
-      end
-      addr_hit[12]: begin
-        reg_rdata_next = DW'(blink_param_0_qs);
-      end
-      addr_hit[13]: begin
-        reg_rdata_next = DW'(blink_param_1_qs);
-      end
-      addr_hit[14]: begin
-        reg_rdata_next = DW'(blink_param_2_qs);
-      end
-      addr_hit[15]: begin
-        reg_rdata_next = DW'(blink_param_3_qs);
       end
       default: begin
         reg_rdata_next = '1;
@@ -2338,36 +838,6 @@ module pwm_reg_top
       end
       addr_hit[5]: begin
         reg_busy_sel = pwm_param_1_busy;
-      end
-      addr_hit[6]: begin
-        reg_busy_sel = pwm_param_2_busy;
-      end
-      addr_hit[7]: begin
-        reg_busy_sel = pwm_param_3_busy;
-      end
-      addr_hit[8]: begin
-        reg_busy_sel = duty_cycle_0_busy;
-      end
-      addr_hit[9]: begin
-        reg_busy_sel = duty_cycle_1_busy;
-      end
-      addr_hit[10]: begin
-        reg_busy_sel = duty_cycle_2_busy;
-      end
-      addr_hit[11]: begin
-        reg_busy_sel = duty_cycle_3_busy;
-      end
-      addr_hit[12]: begin
-        reg_busy_sel = blink_param_0_busy;
-      end
-      addr_hit[13]: begin
-        reg_busy_sel = blink_param_1_busy;
-      end
-      addr_hit[14]: begin
-        reg_busy_sel = blink_param_2_busy;
-      end
-      addr_hit[15]: begin
-        reg_busy_sel = blink_param_3_busy;
       end
       default: begin
         reg_busy_sel  = '0;

@@ -17,3 +17,5 @@ set_output_delay [expr $clk_period * $clk_io_pct] -clock $clk_name [all_outputs]
 set_driving_cell -lib_cell sky130_fd_sc_hd__buf_4 -pin X $non_clock_inputs
 
 set_load 0.01 [all_outputs]
+
+set_max_fanout 4 [current_design]

@@ -24,22 +24,6 @@ module pwm_core #(
 
   assign clr_phase_cntr = reg2hw.cfg.clk_div.qe | reg2hw.cfg.dc_resn.qe | reg2hw.cfg.cntr_en.qe;
 
-  for (genvar ii = 0; ii < NOutputs; ii++) begin : gen_chan_clr
-
-    // Though it may be a bit overkill, we reset the internal blink counters whenever any channel
-    // specific parameters change.
-
-    assign clr_blink_cntr[ii] = reg2hw.pwm_en[ii].qe | reg2hw.invert[ii].qe |
-                                reg2hw.pwm_param[ii].phase_delay.qe |
-                                reg2hw.pwm_param[ii].htbt_en.qe |
-                                reg2hw.pwm_param[ii].blink_en.qe |
-                                reg2hw.duty_cycle[ii].a.qe |
-                                reg2hw.duty_cycle[ii].b.qe |
-                                reg2hw.blink_param[ii].x.qe |
-                                reg2hw.blink_param[ii].y.qe;
-
-  end : gen_chan_clr
-
   //
   // Beat and phase counters (in core clock domain)
   //
@@ -108,14 +92,8 @@ module pwm_core #(
       .pwm_en_i         (reg2hw.pwm_en[ii].q),
       .invert_i         (reg2hw.invert[ii].q),
       .phase_delay_i    (reg2hw.pwm_param[ii].phase_delay.q),
-      .blink_en_i       (reg2hw.pwm_param[ii].blink_en.q),
-      .htbt_en_i        (reg2hw.pwm_param[ii].htbt_en.q),
-      .duty_cycle_a_i   (reg2hw.duty_cycle[ii].a.q),
-      .duty_cycle_b_i   (reg2hw.duty_cycle[ii].b.q),
-      .blink_param_x_i  (reg2hw.blink_param[ii].x.q),
-      .blink_param_y_i  (reg2hw.blink_param[ii].y.q),
+      .duty_cycle_a_i   (reg2hw.pwm_param[ii].duty_cycle.q),
       .phase_ctr_i      (phase_ctr_q),
-      .clr_blink_cntr_i (clr_blink_cntr[ii]),
       .cycle_end_i      (cycle_end),
       .dc_resn_i        (dc_resn),
       .pwm_o            (pwm_o[ii])

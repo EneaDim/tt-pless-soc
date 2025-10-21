@@ -9,8 +9,8 @@ module soc #(
   output logic cio_tx_o,
   output logic cio_tx_en_o,
 
-  output logic [3:0] cio_pwm_o,
-  output logic [3:0] cio_pwm_en_o,
+  output logic [1:0] cio_pwm_o,
+  output logic [1:0] cio_pwm_en_o,
   input logic [3:0] cio_gpio_i,
   output logic [3:0] cio_gpio_o,
   output logic [3:0] cio_gpio_en_o,

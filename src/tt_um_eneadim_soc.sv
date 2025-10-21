@@ -27,8 +27,8 @@ module tt_um_eneadim_soc (
   wire spi_sdioz;  // 1 = high-Z request from SoC
 
   // PWM
-  wire [3:0] pwm;
-  wire [3:0] pwm_en;  // opzionale, non esposto
+  wire [1:0] pwm;
+  wire [1:0] pwm_en;  // opzionale, non esposto
 
   // GPIO (bidir su uio[4:1])
   wire [3:0] gpio_in  = uio_in [4:1];
@@ -94,7 +94,7 @@ module tt_um_eneadim_soc (
   assign uo_int[0] = uart_tx;
   assign uo_int[1] = spi_sclk;
   assign uo_int[2] = spi_cs;
-  assign uo_int[6:3] = pwm[3:0];
+  assign uo_int[6:3] = {pwm_en[1:0], pwm[1:0]};
   assign uo_int[7] = uart_tx_en;
 
   // Quando il tile non è selezionato, metti in safe state

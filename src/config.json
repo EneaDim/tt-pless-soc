@@ -5,12 +5,12 @@
   "//": "If you get stuck, open an issue or ask on Discord.",
 
   "//": "Placement density. If Global Placement fails (GPL-0302), try raising to 65–80.",
-  "PL_TARGET_DENSITY_PCT": 75,
+  "PL_TARGET_DENSITY_PCT": 65,
 
-  "FP_CORE_UTIL": 8,
+  "FP_CORE_UTIL": 15,
 
   "//": "Clock period in ns (20 ns = 50 MHz). If you see setup violations, increase to 25–40.",
-  "CLOCK_PERIOD": 20,
+  "CLOCK_PERIOD": 25,
 
   "//": "Setup slack margins — increase slightly if you see setup violations.",
   "PL_RESIZER_SETUP_SLACK_MARGIN": 0.15,
@@ -34,20 +34,29 @@
 
   "RUN_RESIZER_TIMING": 1,
   "RUN_RESIZER_HOLD": 1,
+  "RUN_RESIZER_MAX_SLEW": 1,
+  "RUN_RESIZER_MAX_CAP": 1,
+
+  "RSZ_MAX_SLEW_MARGIN": 0.10,
+  "RSZ_MAX_CAP_MARGIN": 0.10,  
 
   "REPAIR_ANTENNAS_CELL": "sky130_fd_sc_hd__diode",
   "REPAIR_ANTENNAS_PIN":  "DIODE",
 
   "GLB_RT_ANTENNACELL":     "sky130_fd_sc_hd__diode",
   "GLB_RT_ANTENNACELL_PIN": "DIODE",
+  
+  "GPL_CELL_PADDING": 2,
+  "DPL_CELL_PADDING": 2,
 
-  "RUN_REPAIR_ANTENNAS": 1,
-  "DRT_RUN_ANTENNA_CHECK": 1,
+  "RUN_REPAIR_ANTENNAS": 2,
+  "DRT_RUN_ANTENNA_CHECK": 2,
   "DIODE_INSERTION_STRATEGY": 4,
-  "REPAIR_ANTENNAS_MAX_ITERS": 50,
+  "REPAIR_ANTENNAS_MAX_ITERS": 150,
 
   "SYNTH_NO_FLAT": 1,
-  "SYNTH_STRATEGY": "DELAY 4",
+    "SYNTH_STRATEGY": "AREA 3",
+    "MAX_FANOUT_CONSTRAINT": 4,
 
   "USE_SYNLIG": true,
 
