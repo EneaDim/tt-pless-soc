@@ -125,7 +125,7 @@ else
 SIM_BUILD				= sim_build/gl
 COMPILE_ARGS    += -DGL_TEST
 COMPILE_ARGS    += -DFUNCTIONAL
-COMPILE_ARGS    += -DUSE_POWER_PINS
+#COMPILE_ARGS    += -DUSE_POWER_PINS
 COMPILE_ARGS    += -DSIM
 COMPILE_ARGS    += -DUNIT_DELAY=\#1
 VERILOG_SOURCES += $(PDK_ROOT)/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v
@@ -142,6 +142,10 @@ COMPILE_ARGS    += --sv --timing
 COMPILE_ARGS    += --trace --trace-fst --trace-structs 
 COMPILE_ARGS    += -I$(SRC_DIR) -I$(ROOT)/rtl -I$(ROOT)/ips/pkgs \
 									 -I$(ROOT)/ips/prim -I$(ROOT)/ips/prim_opentitan -I$(ROOT)/ips/tlul
+
+COMPILE_ARGS += -Wno-UNOPTFLAT
+COMPILE_ARGS += -Wno-PINMISSING
+
 
 export COCOTB_RESULTS_FILE ?= $(abspath results.xml)
 
