@@ -152,5 +152,61 @@ TOPLEVEL = tb
 # List test modules to run, separated by commas and without the .py suffix:
 MODULE = test
 
+# ---- CI-only Verilator bootstrap (no workflow change) ----
+# Only run on GitHub Actions
+ifeq ($(GITHUB_ACTIONS),true)
+
+TOOLS_DIR     := $(PWD)/.tools
+TOOLS_BIN     := $(TOOLS_DIR)/bin
+VERILATOR_MIN := 5.036
+
+# Put our local tools first so cocotb picks them up
+export PATH := $(TOOLS_BIN):$(PATH)
+
+# DO NOT set VERILATOR_ROOT; Verilator warns to leave it unset
+# export VERILATOR_ROOT := ...   # <-- intentionally omitted
+
+# Detect version (if any)
+VERILATOR_CUR := $(shell bash -lc 'verilator --version 2>/dev/null | sed -n "s/.*Verilator \([0-9.]*\).*/\1/p"')
+VERILATOR_OK  := $(shell bash -lc 'v="$(VERILATOR_CUR)"; [ -n "$$v" ] && [ $$(printf "%s\n%s\n" "$(VERILATOR_MIN)" "$$v" | sort -V | tail -1) = "$$v" ] && echo yes || echo no')
+
+# If missing/too old, build it locally into .tools/
+ifeq ($(VERILATOR_OK),no)
+TOOLS_BOOTSTRAP := $(TOOLS_DIR)/.verilator-ready
+.PHONY: tools
+tools: $(TOOLS_BOOTSTRAP)
+
+$(TOOLS_DIR)/.verilator-ready:
+	@set -e; \
+	echo "[tools] Installing Verilator >= $(VERILATOR_MIN) into $(TOOLS_DIR) ..."; \
+	sudo apt-get update; \
+	sudo apt-get install -y git make g++ autoconf flex bison libfl2 libfl-dev zlib1g-dev help2man ccache; \
+	tmpdir=$$(mktemp -d); \
+	cd "$$tmpdir"; \
+	git clone --depth=1 https://github.com/verilator/verilator.git; \
+	cd verilator; \
+	autoconf; \
+	./configure --prefix="$(TOOLS_DIR)"; \
+	make -j$$(nproc); \
+	make install; \
+	rm -rf "$$tmpdir"; \
+	echo "[tools] Using $$(which verilator)"; verilator --version; \
+	touch "$@"
+else
+.PHONY: tools
+tools:
+	@echo "[tools] System Verilator ($(VERILATOR_CUR)) is OK"
+endif
+
+# Ensure we build tools before running the simulator
+.DEFAULT_GOAL := all
+.PHONY: all
+all: tools sim
+
+endif
+# ---- end CI-only bootstrap ----
+
+
+
 # include cocotb's make rules to take care of the simulator setup
 include $(shell cocotb-config --makefiles)/Makefile.sim
