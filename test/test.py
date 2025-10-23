@@ -15,7 +15,7 @@ async def uart_send_bit(dut, bit_val):
         dut.ui_in.value = curr | 0x1
     else:
         dut.ui_in.value = curr & ~0x1
-    await Timer(bit_time_ps, units="ps")
+    await Timer(bit_time_ps, unit="ps")
 
 async def uart_send_byte(dut, byte):
     await uart_send_bit(dut, 0)  # start
@@ -48,7 +48,7 @@ async def uart_read32(dut, addr):
 @cocotb.test()
 async def test_uart_program_soc(dut):
     # ---- clock 10ns (100 MHz) – adatta se serve ----
-    cocotb.start_soon(Clock(dut.clk, 10, units="ns").start())
+    cocotb.start_soon(Clock(dut.clk, 10, unit="ns").start())
 
     # ---- init IOs ----
     dut.ena.value   = 1
@@ -93,4 +93,7 @@ async def test_uart_program_soc(dut):
 
     # lascia RX in idle alto
     dut.ui_in.value = int(dut.ui_in.value) | 0x01
+
+    # attesa per propagazione
+    await ClockCycles(dut.clk, 10000)
 

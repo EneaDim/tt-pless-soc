@@ -137,20 +137,21 @@ VERILOG_SOURCES += $(PWD)/gate_level_netlist.v
 endif
 
 # Allow sharing configuration between design and testbench via `include`:
-COMPILE_ARGS 		+= -Wno-WIDTHEXPAND --timing --trace-fst --trace-structs --trace-depth 2 --sv -I$(SRC_DIR) -I$(ROOT)/rtl -I$(ROOT)/ips/pkgs -I$(ROOT)/ips/prim -I$(ROOT)/ips/prim_opentitan -I$(ROOT)/ips/tlul
+COMPILE_ARGS 		+= -Wno-WIDTHEXPAND
+COMPILE_ARGS    += --sv --timing 
+COMPILE_ARGS    += --trace --trace-fst --trace-structs 
+COMPILE_ARGS    += -I$(SRC_DIR) -I$(ROOT)/rtl -I$(ROOT)/ips/pkgs \
+									 -I$(ROOT)/ips/prim -I$(ROOT)/ips/prim_opentitan -I$(ROOT)/ips/tlul
 
 COCOTB_RESULTS_FILE ?= $(abspath results.xml)
-export COCOTB_RESULTS_FILE
 
-VERILATOR_TRACE ?= 1
-TRACE_FILE      ?= dump.fst
+export COCOTB_RESULTS_FILE
 
 # Include the testbench sources:
 VERILOG_SOURCES += $(PWD)/tb.v
 TOPLEVEL = tb
 
 # List test modules to run, separated by commas and without the .py suffix:
-COCOTB_TEST_MODULES = test
 MODULE = test
 
 # include cocotb's make rules to take care of the simulator setup
