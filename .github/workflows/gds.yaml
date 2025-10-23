@@ -31,6 +31,24 @@ jobs:
     needs: gds
     runs-on: ubuntu-24.04
     steps:
+      - name: Install Verilator (source build)
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git make g++ autoconf flex bison libfl2 libfl-dev zlib1g-dev help2man ccache
+          tmpdir="$(mktemp -d)"
+          git clone --depth=1 https://github.com/verilator/verilator.git "$tmpdir/verilator"
+          pushd "$tmpdir/verilator"
+          autoconf
+          ./configure --prefix="$HOME/.local"
+          make -j"$(nproc)"
+          make install
+          popd
+          rm -rf "$tmpdir"
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          which verilator
+          verilator --version
+      
       - name: checkout repo
         uses: actions/checkout@v4
         with:
