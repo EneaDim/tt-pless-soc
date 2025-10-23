@@ -143,7 +143,7 @@ COMPILE_ARGS    += --trace --trace-fst --trace-structs
 COMPILE_ARGS    += -I$(SRC_DIR) -I$(ROOT)/rtl -I$(ROOT)/ips/pkgs \
 									 -I$(ROOT)/ips/prim -I$(ROOT)/ips/prim_opentitan -I$(ROOT)/ips/tlul
 
-export COCOTB_RESULTS_FILE := results.xml
+export COCOTB_RESULTS_FILE ?= $(abspath results.xml)
 
 # Include the testbench sources:
 VERILOG_SOURCES += $(PWD)/tb.v
