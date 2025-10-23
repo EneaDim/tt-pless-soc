@@ -162,8 +162,8 @@ module uart_core (
     if (!rst_ni) begin
       nco_sum_q <= '0;
     end else if (tx_enable || rx_enable) begin
-      //nco_sum_q <= {1'b0,nco_sum_q[NcoWidth-1:0]} + {1'b0,reg2hw.ctrl.nco.q[NcoWidth-1:0]};
-      nco_sum_q <= {1'b0,nco_sum_q[NcoWidth-1:0]} + {1'b0, 16'h04B8};
+      nco_sum_q <= {1'b0,nco_sum_q[NcoWidth-1:0]} + {1'b0,reg2hw.ctrl.nco.q[NcoWidth-1:0]};
+      //nco_sum_q <= {1'b0,nco_sum_q[NcoWidth-1:0]} + {1'b0, 16'h0BCB};
     end
   end
 

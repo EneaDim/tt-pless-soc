@@ -48,7 +48,7 @@ async def uart_read32(dut, addr):
 @cocotb.test()
 async def test_uart_program_soc(dut):
     # ---- clock 10ns (100 MHz) – adatta se serve ----
-    cocotb.start_soon(Clock(dut.clk, 10, unit="ns").start())
+    cocotb.start_soon(Clock(dut.clk, 25, unit="ns").start())
 
     # ---- init IOs ----
     dut.ena.value   = 1
@@ -74,7 +74,7 @@ async def test_uart_program_soc(dut):
     UART_CTRL_OFF = 0x0000_0010
 
     # 1) abilita UART TX (e RX) via write al CTRL (placeholder)
-    await uart_write32(dut, UART_BASE + UART_CTRL_OFF, 0x0000_0001, be=0xF)
+    await uart_write32(dut, UART_BASE + UART_CTRL_OFF, 0x0BCB_0001, be=0xF)
 
     # 2) configura PWM (placeholder valori)
     await uart_write32(dut, PWM_BASE + PWM_CFG_OFF,   0xB800_0010, be=0xF)

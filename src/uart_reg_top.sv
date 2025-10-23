@@ -1072,7 +1072,7 @@ module uart_reg_top
   prim_subreg #(
     .DW      (16),
     .SwAccess(prim_subreg_pkg::SwAccessRW),
-    .RESVAL  (16'h0),
+    .RESVAL  (16'h0BCB),
     .Mubi    (1'b0)
   ) u_ctrl_nco (
     .clk_i   (clk_i),
