@@ -2,15 +2,35 @@
 # See https://docs.cocotb.org/en/stable/quickstart.html for more info
 
 # defaults
+SIM ?= verilator
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
+PROJECT_SOURCES = tt_um_eneadim_soc.sv
 ROOT := $(abspath ..)
+
+# Forza Icarus quando il goal è di pulizia (non tocca il workflow)
+ifneq ($(filter clean veryclean distclean,$(MAKECMDGOALS)),)
+  SIM := icarus
+endif
+
+ifeq ($(GATES),yes)
+  SIM := icarus
+else
+  SIM ?= verilator
+endif
+
+# Directory usate dagli `include "..."` (vale per Verilator e Icarus)
+VERILOG_INCLUDE_DIRS += $(SRC_DIR)
+VERILOG_INCLUDE_DIRS += $(ROOT)/rtl
+VERILOG_INCLUDE_DIRS += $(ROOT)/ips/pkgs
+VERILOG_INCLUDE_DIRS += $(ROOT)/ips/prim
+VERILOG_INCLUDE_DIRS += $(ROOT)/ips/prim_opentitan
+VERILOG_INCLUDE_DIRS += $(ROOT)/ips/tlul
 
 ifneq ($(GATES),yes)
 
 # RTL simulation:
-SIM             ?= verilator 
-SIM_BUILD				:= sim_build/rtl
+SIM_BUILD = sim_build/rtl
 VERILOG_SOURCES := \
   $(ROOT)/ips/pkgs/top_pkg.sv \
   $(ROOT)/ips/prim/prim_reg_pkg.sv \
@@ -19,7 +39,6 @@ VERILOG_SOURCES := \
   $(ROOT)/ips/pkgs/prim_subreg_pkg.sv \
   $(ROOT)/ips/pkgs/prim_util_pkg.sv \
   $(ROOT)/ips/pkgs/tlul_pkg.sv \
-  $(ROOT)/ips/pkgs/prim_assert.sv \
   $(ROOT)/ips/pkgs/prim_count_pkg.sv \
   $(ROOT)/ips/pkgs/prim_flop_macros.sv \
   $(ROOT)/ips/pkgs/prim_alert_pkg.sv \
@@ -118,20 +137,22 @@ VERILOG_SOURCES := \
   $(ROOT)/src/xbar_main.sv \
   $(ROOT)/src/soc.sv
 
-COMPILE_ARGS 		+= -Wno-WIDTHEXPAND
-COMPILE_ARGS    += --sv --timing 
-COMPILE_ARGS    += --trace --trace-fst --trace-structs 
+# (Questi flag erano globali: li spostiamo qui e li passiamo a Verilator soltanto)
+COMPILE_ARGS += --sv --timing
+COMPILE_ARGS += --trace --trace-fst --trace-structs
+COMPILE_ARGS += -Wno-WIDTHEXPAND
 
 else
 
 # Gate level simulation:
-SIM             ?= icarus
-SIM_BUILD				:= sim_build/gl
+SIM_BUILD = sim_build/gl
 COMPILE_ARGS    += -DGL_TEST
 COMPILE_ARGS    += -DFUNCTIONAL
 COMPILE_ARGS    += -DUSE_POWER_PINS
 COMPILE_ARGS    += -DSIM
 COMPILE_ARGS    += -DUNIT_DELAY=\#1
+COMPILE_ARGS    += -Wno-UNOPTFLAT
+COMPILE_ARGS    += -Wno-PINMISSING
 
 VERILOG_SOURCES += $(PDK_ROOT)/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v
 VERILOG_SOURCES += $(PDK_ROOT)/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v
@@ -143,10 +164,9 @@ VERILOG_SOURCES += $(PWD)/gate_level_netlist.v
 
 endif
 
-# Allow sharing configuration between design and testbench via `include`:
-COMPILE_ARGS    += -I$(SRC_DIR) -I$(ROOT)/rtl -I$(ROOT)/ips/pkgs \
-									 -I$(ROOT)/ips/prim -I$(ROOT)/ips/prim_opentitan -I$(ROOT)/ips/tlul
-
+# (RIMOSSO) include paths come opzioni -I: ora usiamo VERILOG_INCLUDE_DIRS
+# COMPILE_ARGS += -I$(SRC_DIR) -I$(ROOT)/rtl -I$(ROOT)/ips/pkgs \
+# 							 -I$(ROOT)/ips/prim -I$(ROOT)/ips/prim_opentitan -I$(ROOT)/ips/tlul
 
 export COCOTB_RESULTS_FILE ?= $(abspath results.xml)
 
@@ -159,3 +179,4 @@ MODULE = test
 
 # include cocotb's make rules to take care of the simulator setup
 include $(shell cocotb-config --makefiles)/Makefile.sim
+
