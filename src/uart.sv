@@ -15,16 +15,16 @@ module uart import uart_reg_pkg::*; (
   output tlul_pkg::tl_d2h_t tl_o,
 
   // ===== Verso tlul_adapter_host 
-  output logic        req_i,
-  input  logic        gnt_o,
-  output logic [31:0] addr_i,
-  output logic        we_i,
-  output logic [31:0] wdata_i,
-  output logic [3:0]  be_i,
-  input  logic        valid_o,
-  input  logic [31:0] rdata_o,
-  input  logic        err_o,
-  input  logic        intg_err_o,
+  output logic        req_o,
+  input  logic        gnt_i,
+  output logic [31:0] addr_o,
+  output logic        we_o,
+  output logic [31:0] wdata_o,
+  output logic [3:0]  be_o,
+  input  logic        valid_i,
+  input  logic [31:0] rdata_i,
+  input  logic        err_i,
+  input  logic        intg_err_i,
 
   // Generic IO
   input           cio_rx_i,
@@ -102,18 +102,18 @@ module uart import uart_reg_pkg::*; (
     .rx_pop_o   (rx_pop_i),
 
     // → tlul_adapter_host nel top
-    .req_o   (req_i),
-    .gnt_i   (gnt_o),
-    .addr_o  (addr_i),
-    .we_o    (we_i),
-    .wdata_o (wdata_i),
-    .be_o    (be_i),
+    .req_o,
+    .gnt_i,
+    .addr_o,
+    .we_o,
+    .wdata_o,
+    .be_o,
 
     // ← risposta dall'adapter
-    .valid_i    (valid_o),
-    .rdata_i    (rdata_o),
-    .err_i      (err_o),
-    .intg_err_i (intg_err_o)
+    .valid_i,
+    .rdata_i,
+    .err_i,
+    .intg_err_i
   );
 
 endmodule
