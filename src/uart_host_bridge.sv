@@ -29,7 +29,15 @@ module uart_host_bridge (
   // --------------------------
   // Parser richiesta (frame)
   // --------------------------
-  typedef enum logic [2:0] {RXF_IDLE, RXF_HDR, RXF_ADDR, RXF_WDATA, RXF_LAUNCH, RXF_WAIT_GNT} rxf_e;
+  typedef enum logic [2:0] {
+    RXF_IDLE     = 3'b000, 
+    RXF_HDR      = 3'b001,
+    RXF_ADDR     = 3'b010,
+    RXF_WDATA    = 3'b011,
+    RXF_LAUNCH   = 3'b100,
+    RXF_WAIT_GNT = 3'b101
+  } rxf_e;
+
   rxf_e rxf_st_q, rxf_st_d;
 
   logic [1:0]  idx_q, idx_d;
@@ -148,7 +156,7 @@ module uart_host_bridge (
       RXF_WAIT_GNT: begin
         if (req_q && gnt_i) begin
           req_d    = 1'b0;     // abbassa dopo grant
-          we_d     = 1'b0;      // read
+          we_d     = 1'b0;     // read
           rxf_st_d = RXF_IDLE; // parser può iniziare un nuovo comando
         end
       end
