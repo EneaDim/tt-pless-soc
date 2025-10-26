@@ -5,10 +5,10 @@
   "//": "If you get stuck, open an issue or ask on Discord.",
 
   "//": "Placement density. If Global Placement fails (GPL-0302), try raising to 65–80.",
-  "PL_TARGET_DENSITY_PCT": 65,
+  "PL_TARGET_DENSITY_PCT": 60,
 
   "//": "Clock period in ns (20 ns = 50 MHz). If you see setup violations, increase to 25–40.",
-  "CLOCK_PERIOD": 20,
+  "CLOCK_PERIOD": 25,
 
   "//": "Linter settings (keeping it ON is recommended).",
   "RUN_LINTER": 1,
