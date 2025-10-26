@@ -61,7 +61,7 @@ async def test_uart_program_soc(dut):
     cocotb.start_soon(Clock(dut.clk, 25, unit="ns").start())
 
     # Lascia assestare le 'initial' del tb.v (evita 0.00 ns con X/Z)
-    await Timer(1, units="ns")
+    await Timer(1, unit="ns")
 
     shadow = InputsShadow()
 
