@@ -57,7 +57,7 @@ async def test_uart_program_soc(dut):
     await Timer(12, unit="ns")
 
     # Clock a 40 MHz: il tb.v tiene clk=0, qui lo facciamo correre
-    cocotb.start_soon(Clock(dut.clk, 25, unit="ns").start())
+    cocotb.start_soon(Clock(dut.clk, 20, unit="ns").start())
 
     # Iniziali noti (tutti applicati su falling)
     await apply_inputs(dut, ena=1, rst_n=0, ui_in=0x00, uio_in=0x00)
@@ -78,7 +78,7 @@ async def test_uart_program_soc(dut):
     UART_CTRL_OFF = 0x0000_0010
 
     # 1) abilita UART
-    await uart_write32(dut, UART_BASE + UART_CTRL_OFF, 0x0BCB_0001, be=0xF)
+    await uart_write32(dut, UART_BASE + UART_CTRL_OFF, 0x0970_0001, be=0xF)
 
     # 2) configura PWM
     await uart_write32(dut, PWM_BASE + PWM_CFG_OFF,   0xB800_0010, be=0xF)
@@ -86,7 +86,7 @@ async def test_uart_program_soc(dut):
     await uart_write32(dut, PWM_BASE + PWM_EN_OFF,    0x0000_0001, be=0xF)
 
     # Propagazione
-    await ClockCycles(dut.clk, 1000)
+    await ClockCycles(dut.clk, 20000)
 
     # Check base sulle uscite
     uo = to_int_safe(dut.uo_out)

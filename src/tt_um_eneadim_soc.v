@@ -2,39 +2,39 @@
 // Tiny Tapeout wrapper for your processor-less SoC
 // Top name must start with tt_um_
 module tt_um_eneadim_soc (
-  input  logic [7:0] ui_in,    // inputs
-  output logic [7:0] uo_out,   // outputs
-  input  logic [7:0] uio_in,   // bidir in
-  output logic [7:0] uio_out,  // bidir out
-  output logic [7:0] uio_oe,   // bidir oe (1=drive)
-  input  logic       ena,      // tile enable
-  input  logic       clk,      // system clock
-  input  logic       rst_n     // async reset, active-low
+  input  wire [7:0] ui_in,    // inputs
+  output wire [7:0] uo_out,   // outputs
+  input  wire [7:0] uio_in,   // bidir in
+  output wire [7:0] uio_out,  // bidir out
+  output wire [7:0] uio_oe,   // bidir oe (1=drive)
+  input  wire       ena,      // tile enable
+  input  wire       clk,      // system clock
+  input  wire       rst_n     // async reset, active-low
 );
 
   // ------------------------
   // Internal nets
   // ------------------------
   // UART
-  logic uart_rx;
-  logic uart_tx;
-  logic uart_tx_en;
+  wire uart_rx;
+  wire uart_tx;
+  wire uart_tx_en;
 
   // SPI
-  logic spi_cs;
-  logic spi_sclk;
-  logic spi_sdio_o;
-  logic spi_sdio_i;
-  logic spi_sdioz;  // 1 = high-Z request from SoC
+  wire spi_cs;
+  wire spi_sclk;
+  wire spi_sdio_o;
+  wire spi_sdio_i;
+  wire spi_sdioz;  // 1 = high-Z request from SoC
 
   // PWM
-  logic [1:0] pwm;
-  logic [1:0] pwm_en;  // opzionale, non esposto
+  wire [1:0] pwm;
+  wire [1:0] pwm_en;  // opzionale, non esposto
 
   // GPIO (bidir su uio[4:1])
-  logic [3:0] gpio_in;
-  logic [3:0] gpio_out;
-  logic [3:0] gpio_oe_i; // from SoC
+  wire [3:0] gpio_in;
+  wire [3:0] gpio_out;
+  wire [3:0] gpio_oe_i; // from SoC
 
   // Alias dagli ingressi fisici
   assign uart_rx = ui_in[0];
@@ -43,9 +43,7 @@ module tt_um_eneadim_soc (
   // ------------------------
   // SoC instance
   // ------------------------
-  soc #(
-    .SramInitFile("")
-  ) u_soc (
+  soc u_soc (
     .clk_i         (clk),
     .rst_ni        (rst_n),
 
@@ -95,7 +93,7 @@ module tt_um_eneadim_soc (
   // uo_out[2] = SPI CS
   // uo_out[6:3] = {PWM_EN[1:0], PWM[1:0]}
   // uo_out[7] = UART TX EN (opzionale)
-  logic [7:0] uo_int;
+  wire [7:0] uo_int;
   assign uo_int[0]   = uart_tx;
   assign uo_int[1]   = spi_sclk;
   assign uo_int[2]   = spi_cs;

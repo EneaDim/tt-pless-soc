@@ -5,10 +5,10 @@
   "//": "If you get stuck, open an issue or ask on Discord.",
 
   "//": "Placement density. If Global Placement fails (GPL-0302), try raising to 65–80.",
-  "PL_TARGET_DENSITY_PCT": 65,
+  "PL_TARGET_DENSITY_PCT": 70,
 
   "//": "Clock period in ns (20 ns = 50 MHz). If you see setup violations, increase to 25–40.",
-  "CLOCK_PERIOD": 25,
+  "CLOCK_PERIOD": 20,
 
   "//": "Linter settings (keeping it ON is recommended).",
   "RUN_LINTER": 1,
@@ -34,18 +34,6 @@
   "MAX_FANOUT_CONSTRAINT": 4,
 
   "USE_SYNLIG": false,
-
-  "VERILOG_INCLUDE_DIRS": [
-    "ips/pkgs",
-    "ips/prim",
-    "ips/prim_opentitan",
-    "ips/tlul",
-    "src"
-  ],
-  
-  "VERILOG_DEFINES": [
-    "SYNTHESIS"
-  ],
 
   "//": "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
   "//": "!!! DO NOT CHANGE ANYTHING BELOW THIS POINT !!!",
