@@ -141,6 +141,8 @@ VERILOG_SOURCES := \
 COMPILE_ARGS += --sv --timing
 COMPILE_ARGS += --trace --trace-fst --trace-structs
 COMPILE_ARGS += -Wno-WIDTHEXPAND
+COMPILE_ARGS += -I$(SRC_DIR) -I$(ROOT)/rtl -I$(ROOT)/ips/pkgs \
+							  -I$(ROOT)/ips/prim -I$(ROOT)/ips/prim_opentitan -I$(ROOT)/ips/tlul
 
 else
 
@@ -148,25 +150,29 @@ else
 SIM_BUILD = sim_build/gl
 COMPILE_ARGS    += -DGL_TEST
 COMPILE_ARGS    += -DFUNCTIONAL
-COMPILE_ARGS    += -DUSE_POWER_PINS
 COMPILE_ARGS    += -DSIM
 COMPILE_ARGS    += -DUNIT_DELAY=\#1
-COMPILE_ARGS    += -Wno-UNOPTFLAT
-COMPILE_ARGS    += -Wno-PINMISSING
 
-VERILOG_SOURCES += $(PDK_ROOT)/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v
-VERILOG_SOURCES += $(PDK_ROOT)/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v
-VERILOG_SOURCES += $(PWD)/gate_level_netlist.v
+#VERILOG_SOURCES += $(PDK_ROOT)/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v
+#VERILOG_SOURCES += $(PDK_ROOT)/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v
+#VERILOG_SOURCES += $(PWD)/gate_level_netlist.v
 
-#VERILOG_SOURCES += ../../flexsoc/verilog/primitives.v
-#VERILOG_SOURCES += ../../flexsoc/verilog/sky130_fd_sc_hd.v
-#VERILOG_SOURCES += ../runs/wokwi/51-openroad-fillinsertion/tt_um_eneadim_soc.pnl.v
+VERILOG_SOURCES += ../../flexsoc/verilog/primitives.v
+VERILOG_SOURCES += ../../flexsoc/verilog/sky130_fd_sc_hd.v
+VERILOG_SOURCES += ../runs/wokwi/final/nl/tt_um_eneadim_soc.nl.v
 
 endif
 
-# (RIMOSSO) include paths come opzioni -I: ora usiamo VERILOG_INCLUDE_DIRS
-# COMPILE_ARGS += -I$(SRC_DIR) -I$(ROOT)/rtl -I$(ROOT)/ips/pkgs \
-# 							 -I$(ROOT)/ips/prim -I$(ROOT)/ips/prim_opentitan -I$(ROOT)/ips/tlul
+export ITF ?= tlul
+export NBIT ?= 32
+export N_OP ?= 10
+export CLK_PERIOD_NS ?= 20.0
+export TB_CLK ?= clk_i
+export TB_RST ?= rst_ni
+export TB_RST_ACTIVE ?= low
+export TB_TL_A_PREFIX ?= tl_i
+export TB_TL_D_PREFIX ?= tl_o
+export TB_TL_SCOPE ?=
 
 export COCOTB_RESULTS_FILE ?= $(abspath results.xml)
 
