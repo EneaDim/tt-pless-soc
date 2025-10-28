@@ -37,16 +37,16 @@ else
 
 # Gate level simulation:
 SIM_BUILD = sim_build/gl
-COMPILE_ARGS    += -gspecify
 COMPILE_ARGS    += -DGL_TEST
 COMPILE_ARGS    += -DUSE_POWER_PINS
 COMPILE_ARGS    += -DSIM
 COMPILE_ARGS    += -DUNIT_DELAY=\#1
-VVP_ARGS        += -sdf-verbose
 VERILOG_SOURCES += $(PDK_ROOT)/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v
 VERILOG_SOURCES += $(PDK_ROOT)/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v
 VERILOG_SOURCES += $(PWD)/gate_level_netlist.v
 
+#COMPILE_ARGS    += -gspecify
+#VVP_ARGS        += -sdf-verbose
 #VERILOG_SOURCES += ../../flexsoc/verilog/primitives.v
 #VERILOG_SOURCES += ../../flexsoc/verilog/sky130_fd_sc_hd.v
 #VERILOG_SOURCES += ../runs/wokwi/final/pnl/tt_um_eneadim_soc.pnl.v
