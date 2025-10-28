@@ -91,7 +91,7 @@ async def test_uart_program_soc(dut):
     # Check base sulle uscite
     uo = to_int_safe(dut.uo_out)
     dut._log.info(f"uo_out=0x{uo:02X}")
-    assert ((uo >> 3) & 0b1100) != 0, "PWM enable non sembra attivo"
+    assert ((uo << 4) & 0b11110000) != 0, "PWM enable non sembra attivo"
 
     # Lascia RX idle alto
     await apply_inputs(dut, ui_in=(int(dut.ui_in.value) | 0x01))

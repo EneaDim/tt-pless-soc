@@ -21,17 +21,17 @@ module tt_um_eneadim_soc (
   wire uart_tx_en;
 
   // PWM
-  wire [1:0] pwm;
-  wire [1:0] pwm_en;  // opzionale, non esposto
+  wire pwm;
+  wire pwm_en;  // opzionale, non esposto
 
   // GPIO (bidir su uio[4:1])
-  wire [3:0] gpio_in;
-  wire [3:0] gpio_out;
-  wire [3:0] gpio_oe_i; // from SoC
+  wire [1:0] gpio_in;
+  wire [1:0] gpio_out;
+  wire [1:0] gpio_oe_i; // from SoC
 
   // Alias dagli ingressi fisici
   assign uart_rx = ui_in[0];
-  assign gpio_in = uio_in[4:1];
+  assign gpio_in = uio_in[2:1];
 
   // ------------------------
   // SoC instance
@@ -64,12 +64,12 @@ module tt_um_eneadim_soc (
   assign uio_oe [0] = ena;
 
   // uio[4:1] = GPIO[3:0]
-  assign uio_out[4:1] = gpio_out;
-  assign uio_oe [4:1] = gpio_oe_i & {4{ena}};
+  assign uio_out[2:1] = gpio_out;
+  assign uio_oe [2:1] = gpio_oe_i & {2{ena}};
 
   // uio[7:5] non usati
-  assign uio_out[7:5] = 3'b000;
-  assign uio_oe [7:5] = 3'b000;
+  assign uio_out[7:3] = 5'b000;
+  assign uio_oe [7:3] = 5'b000;
 
   // ------------------------
   // Pure outputs mapping
@@ -81,9 +81,9 @@ module tt_um_eneadim_soc (
   // uo_out[7] = UART TX EN (opzionale)
   wire [7:0] uo_int;
   assign uo_int[0]   = uart_tx;
-  assign uo_int[2:1] = 2'b00;
-  assign uo_int[6:3] = {pwm_en[1:0], pwm[1:0]};
-  assign uo_int[7]   = uart_tx_en;
+  assign uo_int[2:1] = {pwm_en, pwm};
+  assign uo_int[3]   = uart_tx_en;
+  assign uo_int[7:4] = 4'h0;
 
   // Quando il tile non è selezionato, metti in safe state
   assign uo_out = ena ? uo_int : 8'b0;
