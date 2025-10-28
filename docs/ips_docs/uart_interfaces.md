@@ -3,6 +3,9 @@ Referring to the [Comportable guideline for peripheral device functionality](htt
 - Other Clocks: *none*
 - Bus Device Interfaces (TL-UL): **`tl`**
 - Bus Host Interfaces (TL-UL): *none*
+- Interrupts: *none*
+- Security Alerts: *none*
+- Security Countermeasures: *none*
 
 ## Peripheral Pins for Chip IO
 
@@ -16,30 +19,4 @@ Referring to the [Comportable guideline for peripheral device functionality](htt
 | Port Name   | Package::Struct   | Type    | Act   |   Width | Description   |
 |:------------|:------------------|:--------|:------|--------:|:--------------|
 | tl          | tlul_pkg::tl      | req_rsp | rsp   |       1 |               |
-
-## Interrupts
-
-| Interrupt Name   | Type   | Description                                                                                                    |
-|:-----------------|:-------|:---------------------------------------------------------------------------------------------------------------|
-| tx_watermark     | Status | raised if the transmit FIFO is past the high-water mark.                                                       |
-| rx_watermark     | Status | raised if the receive FIFO is past the high-water mark.                                                        |
-| tx_done          | Event  | raised if the transmit FIFO has emptied and no transmit is ongoing.                                            |
-| rx_overflow      | Event  | raised if the receive FIFO has overflowed.                                                                     |
-| rx_frame_err     | Event  | raised if a framing error has been detected on receive.                                                        |
-| rx_break_err     | Event  | raised if break condition has been detected on receive.                                                        |
-| rx_timeout       | Event  | raised if RX FIFO has characters remaining in the FIFO without being retrieved for the programmed time period. |
-| rx_parity_err    | Event  | raised if the receiver has detected a parity error.                                                            |
-| tx_empty         | Status | raised if the transmit FIFO is empty.                                                                          |
-
-## Security Alerts
-
-| Alert Name   | Description                                                                       |
-|:-------------|:----------------------------------------------------------------------------------|
-| fatal_fault  | This fatal alert is triggered when a fatal TL-UL bus integrity fault is detected. |
-
-## Security Countermeasures
-
-| Countermeasure ID   | Description                      |
-|:--------------------|:---------------------------------|
-| UART.BUS.INTEGRITY  | End-to-end bus integrity scheme. |
 
