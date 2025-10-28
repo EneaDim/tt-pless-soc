@@ -23,6 +23,7 @@ module tb ();
   wire [7:0] uio_out;
   wire [7:0] uio_oe;
 
+  // Initialize inputs
   initial begin
     clk    = 1'b0;
     rst_n  = 1'b0;
@@ -30,9 +31,19 @@ module tb ();
     ui_in  = '0;
     uio_in = '0;
   end
+  
+  // POWER PINS
+`ifdef GL_TEST
+  wire VPWR = 1'b1;
+  wire VGND = 1'b0;
+`endif
 
-  // Replace tt_um_eneadim_soc with your module name:
+  // TOP instance
   tt_um_eneadim_soc user_project (
+`ifdef GL_TEST
+      .VPWR(VPWR),
+      .VGND(VGND),
+`endif
       .ui_in  (ui_in),    // Dedicated inputs
       .uo_out (uo_out),   // Dedicated outputs
       .uio_in (uio_in),   // IOs: Input path
