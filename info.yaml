@@ -1,12 +1,12 @@
 # Tiny Tapeout project information
 project:
   title:        "Processor-less SoC (UART/SPI/GPIO/PWM demo)"
-  author:       "<il_tuo_nome>"
+  author:       "Enea Dimroci"
   discord:      ""
-  description:  "SoC senza CPU: UART, SPI SDIO, 4xGPIO bidir, 4xPWM"
+  description:  "SoC no CPU: UART, 4xGPIO bidir, 2xPWM, TIMER"
   language:     "Verilog"
   clock_hz:     0
-  tiles:        "4x4"     # cambia dopo una stima area, se necessario
+  tiles:        "4x2"     # cambia dopo una stima area, se necessario
   top_module:   "tt_um_eneadim_soc"
 
   # Elenca TUTTI i file in ./src (uno per riga). Mantieni l'ordine (pkg prima dei moduli).
@@ -28,8 +28,8 @@ pinout:
 
   # Outputs
   uo[0]: "UART_TX"
-  uo[1]: "SPI_SCLK"
-  uo[2]: "SPI_CS"
+  uo[1]: ""
+  uo[2]: ""
   uo[3]: "PWM[0]"
   uo[4]: "PWM[1]"
   uo[5]: "PWM[2]"
@@ -37,7 +37,7 @@ pinout:
   uo[7]: "UART_TX_EN"
 
   # Bidirectional pins
-  uio[0]: "SPI_SDIO (bidir)"
+  uio[0]: ""
   uio[1]: "GPIO[0]"
   uio[2]: "GPIO[1]"
   uio[3]: "GPIO[2]"

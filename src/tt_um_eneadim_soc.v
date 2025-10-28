@@ -20,13 +20,6 @@ module tt_um_eneadim_soc (
   wire uart_tx;
   wire uart_tx_en;
 
-  // SPI
-  wire spi_cs;
-  wire spi_sclk;
-  wire spi_sdio_o;
-  wire spi_sdio_i;
-  wire spi_sdioz;  // 1 = high-Z request from SoC
-
   // PWM
   wire [1:0] pwm;
   wire [1:0] pwm_en;  // opzionale, non esposto
@@ -59,23 +52,16 @@ module tt_um_eneadim_soc (
     // GPIO
     .cio_gpio_i    (gpio_in),
     .cio_gpio_o    (gpio_out),
-    .cio_gpio_en_o (gpio_oe_i),
+    .cio_gpio_en_o (gpio_oe_i)
 
-    // SPI
-    .spi_cs_o      (spi_cs),
-    .spi_sclk_o    (spi_sclk),
-    .spi_sdioz_o   (spi_sdioz),
-    .spi_sdio_i    (spi_sdio_i),
-    .spi_sdio_o    (spi_sdio_o)
   );
 
   // ------------------------
   // Bidirectional mapping
   // ------------------------
   // uio[0] = SPI SDIO bidirezionale
-  assign uio_out[0] = spi_sdio_o;
-  assign uio_oe [0] = ena & ~spi_sdioz;   // drive quando non in Z
-  assign spi_sdio_i  = uio_in[0];
+  assign uio_out[0] = 1'b1;
+  assign uio_oe [0] = ena;
 
   // uio[4:1] = GPIO[3:0]
   assign uio_out[4:1] = gpio_out;
@@ -95,8 +81,7 @@ module tt_um_eneadim_soc (
   // uo_out[7] = UART TX EN (opzionale)
   wire [7:0] uo_int;
   assign uo_int[0]   = uart_tx;
-  assign uo_int[1]   = spi_sclk;
-  assign uo_int[2]   = spi_cs;
+  assign uo_int[2:1] = 2'b00;
   assign uo_int[6:3] = {pwm_en[1:0], pwm[1:0]};
   assign uo_int[7]   = uart_tx_en;
 

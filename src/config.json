@@ -5,7 +5,7 @@
   "//": "If you get stuck, open an issue or ask on Discord.",
 
   "//": "Placement density. If Global Placement fails (GPL-0302), try raising to 65–80.",
-  "PL_TARGET_DENSITY_PCT": 70,
+  "PL_TARGET_DENSITY_PCT": 73,
 
   "//": "Clock period in ns (20 ns = 50 MHz). If you see setup violations, increase to 25–40.",
   "CLOCK_PERIOD": 20,
@@ -25,13 +25,13 @@
   "REPAIR_ANTENNAS_CELL": "SKY130_FD_SC_HD__DIODE",
   "REPAIR_ANTENNAS_PIN":  "DIODE",
 
-  "RUN_REPAIR_ANTENNAS": 2,
-  "DRT_RUN_ANTENNA_CHECK": 2,
+  "RUN_REPAIR_ANTENNAS": 3,
+  "DRT_RUN_ANTENNA_CHECK": 3,
   "DIODE_INSERTION_STRATEGY": 4,
-  "REPAIR_ANTENNAS_MAX_ITERS": 150,
+  "REPAIR_ANTENNAS_MAX_ITERS": 200,
 
   "SYNTH_STRATEGY": "AREA 3",
-  "MAX_FANOUT_CONSTRAINT": 4,
+  "MAX_FANOUT_CONSTRAINT": 8,
 
   "USE_SYNLIG": false,
 
