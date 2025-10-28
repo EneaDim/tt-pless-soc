@@ -5,7 +5,7 @@
   "//": "If you get stuck, open an issue or ask on Discord.",
 
   "//": "Placement density. If Global Placement fails (GPL-0302), try raising to 65–80.",
-  "PL_TARGET_DENSITY_PCT": 73,
+  "PL_TARGET_DENSITY_PCT": 78,
 
   "//": "Clock period in ns (20 ns = 50 MHz). If you see setup violations, increase to 25–40.",
   "CLOCK_PERIOD": 20,
@@ -31,7 +31,7 @@
   "REPAIR_ANTENNAS_MAX_ITERS": 200,
 
   "SYNTH_STRATEGY": "AREA 3",
-  "MAX_FANOUT_CONSTRAINT": 8,
+  "MAX_FANOUT_CONSTRAINT": 12,
 
   "USE_SYNLIG": false,
 
