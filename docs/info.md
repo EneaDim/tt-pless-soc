@@ -1,13 +1,13 @@
-# TT-PLESS-SoC
+# Processor-Less-SoC
 
-**TT-PLESS-SoC** is a **processor-less System-on-Chip** fully generated through **[FlexSoC](https://github.com/EneaDim/flexsoc)** —  
+**Processor-Less-SoC** is a **processor-less System-on-Chip** fully generated through **[FlexSoC](https://github.com/EneaDim/flexsoc)** —  
 an open-source framework for **digital IP development and SoC integration**, built on **OpenTitan primitives**, **Yosys**, and **OpenROAD Flow Scripts (ORFS)**.
 
 ---
 
 ## 🚀 Overview
 
-**TT-PLESS-SoC** demonstrates a complete SoC architecture without a processor.  
+**Processor-Less-SoC** demonstrates a complete SoC architecture without a processor.  
 All on-chip peripherals are controlled and monitored through **UART**, which acts as the external host interface.
 
 ### Integrated Peripherals
