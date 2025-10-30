@@ -5,7 +5,7 @@
   "//": "If you get stuck, open an issue or ask on Discord.",
 
   "//": "Placement density. If Global Placement fails (GPL-0302), try raising to 65–80.",
-  "PL_TARGET_DENSITY_PCT": 78,
+  "PL_TARGET_DENSITY_PCT": 75,
 
   "//": "Clock period in ns (20 ns = 50 MHz). If you see setup violations, increase to 25–40.",
   "CLOCK_PERIOD": 20,
@@ -19,17 +19,16 @@
 
   "//": "LibreLane configuration reference: https://librelane.readthedocs.io/en/latest/reference/configuration.html",
 
+  "//": "SDC file",
   "PNR_SDC_FILE": "src/tt_soc.sdc",
   "SIGNOFF_SDC_FILE": "src/tt_soc.sdc",
 
-  "REPAIR_ANTENNAS_CELL": "SKY130_FD_SC_HD__DIODE",
-  "REPAIR_ANTENNAS_PIN":  "DIODE",
+  "//": "Antenna and Diodes Strategy",
+  "RUN_HEURISTIC_DIODE_INSERTION": true,
+  "GRT_ANTENNA_ITERS": 5,
+  "GRT_ANTENNA_MARGIN": 8,
 
-  "RUN_REPAIR_ANTENNAS": 3,
-  "DRT_RUN_ANTENNA_CHECK": 3,
-  "DIODE_INSERTION_STRATEGY": 4,
-  "REPAIR_ANTENNAS_MAX_ITERS": 200,
-
+  "//": "Synthesis Strategy",
   "SYNTH_STRATEGY": "AREA 3",
   "MAX_FANOUT_CONSTRAINT": 12,
 

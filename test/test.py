@@ -38,16 +38,33 @@ async def uart_send_word32(dut, w):
     for sh in (0, 8, 16, 24):
         await uart_send_byte(dut, (w >> sh) & 0xFF)
 
-async def uart_write32(dut, addr, data, be):
-    for b in (0xA5, 0x01, 0x01, (be & 0xF) & 0xFF):
-        await uart_send_byte(dut, b)
+async def uart_write32(dut, addr: int, data: int, be: int):
+    # A5 | 01 | 01(WRITE) | {0000,BE} | ADDR(4B LSB-first) | DATA(4B LSB-first)
+    await uart_send_byte(dut, 0xA5)
+    await uart_send_byte(dut, 0x01)
+    await uart_send_byte(dut, ((be & 0xF) | 0x00) & 0xFF)
     await uart_send_word32(dut, addr)
     await uart_send_word32(dut, data)
 
-async def uart_read32(dut, addr):
-    for b in (0xA5, 0x01, 0x00, 0x0F, 0x00):
-        await uart_send_byte(dut, b)
+async def uart_read32(dut, addr: int):
+    # A5 | 01 | 00(READ) | 0x0F | 00 | ADDR(4B LSB-first)
+    await uart_send_byte(dut, 0xA5)
+    await uart_send_byte(dut, 0x00)
+    await uart_send_byte(dut, 0x0F)
     await uart_send_word32(dut, addr)
+
+#
+#
+#async def uart_write32(dut, addr, data, be):
+#    for b in (0xA5, 0x01, (be & 0xF) & 0xFF):
+#        await uart_send_byte(dut, b)
+#    await uart_send_word32(dut, addr)
+#    await uart_send_word32(dut, data)
+#
+#async def uart_read32(dut, addr):
+#    for b in (0xA5, 0x00, 0x0F, 0x00):
+#        await uart_send_byte(dut, b)
+#    await uart_send_word32(dut, addr)
 
 # --- test ---
 
@@ -69,24 +86,27 @@ async def test_uart_program_soc(dut):
     await apply_inputs(dut, rst_n=1)
     await ClockCycles(dut.clk, 32)  # un po' di margine
 
-    # ---- indirizzi di esempio (adattali) ----
+    # ---- indirizzi di esempio (adatta ai tuoi reali) ----
     UART_BASE     = 0x8000_0000
+    UART_CTRL_OFF = 0x0000_0000
     PWM_BASE      = 0x8002_0000
     PWM_EN_OFF    = 0x0000_0008
     PWM_CFG_OFF   = 0x0000_0004
     PWM_PHASE_OFF = 0x0000_0010
-    UART_CTRL_OFF = 0x0000_0010
 
-    # 1) abilita UART
+    # 1) abilita UART TX/RX (placeholder)
     await uart_write32(dut, UART_BASE + UART_CTRL_OFF, 0x0970_0001, be=0xF)
 
-    # 2) configura PWM
+    # 2) configura PWM (placeholder valori)
     await uart_write32(dut, PWM_BASE + PWM_CFG_OFF,   0xB800_0010, be=0xF)
     await uart_write32(dut, PWM_BASE + PWM_PHASE_OFF, 0x0000_7FFF, be=0xF)
     await uart_write32(dut, PWM_BASE + PWM_EN_OFF,    0x0000_0001, be=0xF)
 
-    # Propagazione
-    await ClockCycles(dut.clk, 20000)
+    # attesa per propagazione
+    await ClockCycles(dut.clk, 1000)
+
+    await uart_read32(dut, UART_BASE + UART_CTRL_OFF)
+    await ClockCycles(dut.clk, 43000)
 
     # Check base sulle uscite
     uo = to_int_safe(dut.uo_out)
@@ -96,5 +116,5 @@ async def test_uart_program_soc(dut):
     # Lascia RX idle alto
     await apply_inputs(dut, ui_in=(int(dut.ui_in.value) | 0x01))
 
-    await ClockCycles(dut.clk, 10_000)
+    await ClockCycles(dut.clk, 2000)
 
