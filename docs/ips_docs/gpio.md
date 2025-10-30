@@ -1,22 +1,14 @@
 ## Summary
 
-| Name                                                 | Offset   |   Length | Description                                   |
-|:-----------------------------------------------------|:---------|---------:|:----------------------------------------------|
-| gpio.[`INTR_STATE`](#intr_state)                     | 0x0      |        4 | Interrupt State Register                      |
-| gpio.[`INTR_ENABLE`](#intr_enable)                   | 0x4      |        4 | Interrupt Enable Register                     |
-| gpio.[`INTR_TEST`](#intr_test)                       | 0x8      |        4 | Interrupt Test Register                       |
-| gpio.[`DATA_IN`](#data_in)                           | 0xc      |        4 | GPIO Input data read value                    |
-| gpio.[`DIRECT_OUT`](#direct_out)                     | 0x10     |        4 | GPIO direct output data write value           |
-| gpio.[`MASKED_OUT_LOWER`](#masked_out_lower)         | 0x14     |        4 | GPIO write data lower with mask.              |
-| gpio.[`MASKED_OUT_UPPER`](#masked_out_upper)         | 0x18     |        4 | GPIO write data upper with mask.              |
-| gpio.[`DIRECT_OE`](#direct_oe)                       | 0x1c     |        4 | GPIO Output Enable.                           |
-| gpio.[`MASKED_OE_LOWER`](#masked_oe_lower)           | 0x20     |        4 | GPIO write Output Enable lower with mask.     |
-| gpio.[`MASKED_OE_UPPER`](#masked_oe_upper)           | 0x24     |        4 | GPIO write Output Enable upper with mask.     |
-| gpio.[`INTR_CTRL_EN_RISING`](#intr_ctrl_en_rising)   | 0x28     |        4 | GPIO interrupt enable for GPIO, rising edge.  |
-| gpio.[`INTR_CTRL_EN_FALLING`](#intr_ctrl_en_falling) | 0x2c     |        4 | GPIO interrupt enable for GPIO, falling edge. |
-| gpio.[`INTR_CTRL_EN_LVLHIGH`](#intr_ctrl_en_lvlhigh) | 0x30     |        4 | GPIO interrupt enable for GPIO, level high.   |
-| gpio.[`INTR_CTRL_EN_LVLLOW`](#intr_ctrl_en_lvllow)   | 0x34     |        4 | GPIO interrupt enable for GPIO, level low.    |
-| gpio.[`CTRL_EN_INPUT_FILTER`](#ctrl_en_input_filter) | 0x38     |        4 | filter enable for GPIO input bits.            |
+| Name                                                 | Offset   |   Length | Description                                           |
+|:-----------------------------------------------------|:---------|---------:|:------------------------------------------------------|
+| gpio.[`INTR_STATE`](#intr_state)                     | 0x0      |        4 | Interrupt State Register                              |
+| gpio.[`INTR_ENABLE`](#intr_enable)                   | 0x4      |        4 | Interrupt Enable Register                             |
+| gpio.[`INTR_TEST`](#intr_test)                       | 0x8      |        4 | Interrupt Test Register                               |
+| gpio.[`DATA_IN`](#data_in)                           | 0xc      |        4 | GPIO Input data read value                            |
+| gpio.[`DIRECT`](#direct)                             | 0x10     |        4 | GPIO direct output data write value and Output Enable |
+| gpio.[`INTR_CTRL`](#intr_ctrl)                       | 0x14     |        4 | Combined GPIO interrupt control enables.              |
+| gpio.[`CTRL_EN_INPUT_FILTER`](#ctrl_en_input_filter) | 0x18     |        4 | filter enable for GPIO input bits.                    |
 
 ## INTR_STATE
 Interrupt State Register
@@ -86,249 +78,68 @@ GPIO Input data read value
 |  31:2  |        |         |         | Reserved      |
 |  1:0   |   ro   |    x    | DATA_IN |               |
 
-## DIRECT_OUT
-GPIO direct output data write value
+## DIRECT
+GPIO direct output data write value and Output Enable
 - Offset: `0x10`
 - Reset default: `0x0`
-- Reset mask: `0x3`
+- Reset mask: `0xf`
 
 ### Fields
 
 ```wavejson
-{"reg": [{"name": "DIRECT_OUT", "bits": 2, "attr": ["rw"], "rotate": -90}, {"bits": 30}], "config": {"lanes": 1, "fontsize": 10, "vspace": 120}}
+{"reg": [{"name": "GPIO_O", "bits": 2, "attr": ["rw"], "rotate": -90}, {"name": "GPIO_OE", "bits": 2, "attr": ["rw"], "rotate": -90}, {"bits": 28}], "config": {"lanes": 1, "fontsize": 10, "vspace": 90}}
 ```
 
-|  Bits  |  Type  |  Reset  | Name       | Description   |
-|:------:|:------:|:-------:|:-----------|:--------------|
-|  31:2  |        |         |            | Reserved      |
-|  1:0   |   rw   |    x    | DIRECT_OUT |               |
+|  Bits  |  Type  |  Reset  | Name    | Description        |
+|:------:|:------:|:-------:|:--------|:-------------------|
+|  31:4  |        |         |         | Reserved           |
+|  3:2   |   rw   |    x    | GPIO_OE | GPIO output enable |
+|  1:0   |   rw   |    x    | GPIO_O  | GPIO output value  |
 
-## MASKED_OUT_LOWER
-GPIO write data lower with mask.
-
-Masked write for DATA_OUT[15:0].
-
-Upper 16 bits of this register are used as mask. Writing
-lower 16 bits of the register changes DATA_OUT[15:0] value
-if mask bits are set.
-
-Read-back of this register returns upper 16 bits as zero
-and lower 16 bits as DATA_OUT[15:0].
+## INTR_CTRL
+Combined GPIO interrupt control enables.
+   If [`INTR_ENABLE`](#intr_enable)[i] is true, setting:
+     - [`EN_RISING`](#en_rising)[i]   enables rising-edge interrupt detection on GPIO[i].
+     - [`EN_FALLING`](#en_falling)[i]  enables falling-edge interrupt detection on GPIO[i].
+     - [`EN_LVLHIGH`](#en_lvlhigh)[i]  enables level-high interrupt detection on GPIO[i].
+     - [`EN_LVLLOW`](#en_lvllow)[i]   enables level-low interrupt detection on GPIO[i].
+   If [`EN_INPUT_FILTER`](#en_input_filter)[i] is true, input bit [i] must be stable for 16 cycles before transitioning.
 - Offset: `0x14`
 - Reset default: `0x0`
-- Reset mask: `0x3`
+- Reset mask: `0x3ff`
 
 ### Fields
 
 ```wavejson
-{"reg": [{"name": "data", "bits": 1, "attr": ["rw"], "rotate": -90}, {"name": "mask", "bits": 1, "attr": ["wo"], "rotate": -90}, {"bits": 30}], "config": {"lanes": 1, "fontsize": 10, "vspace": 80}}
+{"reg": [{"name": "EN_RISING", "bits": 2, "attr": ["rw"], "rotate": -90}, {"name": "EN_FALLING", "bits": 2, "attr": ["rw"], "rotate": -90}, {"name": "EN_LVLHIGH", "bits": 2, "attr": ["rw"], "rotate": -90}, {"name": "EN_LVLLOW", "bits": 2, "attr": ["rw"], "rotate": -90}, {"name": "EN_INPUT_FILTER", "bits": 2, "attr": ["rw"], "rotate": -90}, {"bits": 22}], "config": {"lanes": 1, "fontsize": 10, "vspace": 170}}
 ```
 
-|  Bits  |  Type  |  Reset  | Name   | Description                                                                                     |
-|:------:|:------:|:-------:|:-------|:------------------------------------------------------------------------------------------------|
-|  31:2  |        |         |        | Reserved                                                                                        |
-|   1    |   wo   |    x    | mask   | Write data mask[15:0]. A value of 1 in mask[i] allows the updating of DATA_OUT[i], 0 <= i <= 15 |
-|   0    |   rw   |    x    | data   | Write data value[15:0]. Value to write into DATA_OUT[i], valid in the presence of mask[i]==1    |
-
-## MASKED_OUT_UPPER
-GPIO write data upper with mask.
-
-Masked write for DATA_OUT[31:16].
-
-Upper 16 bits of this register are used as mask. Writing
-lower 16 bits of the register changes DATA_OUT[31:16] value
-if mask bits are set.
-
-Read-back of this register returns upper 16 bits as zero
-and lower 16 bits as DATA_OUT[31:16].
-- Offset: `0x18`
-- Reset default: `0x0`
-- Reset mask: `0x3`
-
-### Fields
-
-```wavejson
-{"reg": [{"name": "data", "bits": 1, "attr": ["rw"], "rotate": -90}, {"name": "mask", "bits": 1, "attr": ["wo"], "rotate": -90}, {"bits": 30}], "config": {"lanes": 1, "fontsize": 10, "vspace": 80}}
-```
-
-|  Bits  |  Type  |  Reset  | Name   | Description                                                                                       |
-|:------:|:------:|:-------:|:-------|:--------------------------------------------------------------------------------------------------|
-|  31:2  |        |         |        | Reserved                                                                                          |
-|   1    |   wo   |    x    | mask   | Write data mask[31:16]. A value of 1 in mask[i] allows the updating of DATA_OUT[i], 16 <= i <= 31 |
-|   0    |   rw   |    x    | data   | Write data value[31:16]. Value to write into DATA_OUT[i], valid in the presence of mask[i]==1     |
-
-## DIRECT_OE
-GPIO Output Enable.
-
-Setting direct_oe[i] to 1 enables output mode for GPIO[i]
-- Offset: `0x1c`
-- Reset default: `0x0`
-- Reset mask: `0x3`
-
-### Fields
-
-```wavejson
-{"reg": [{"name": "DIRECT_OE", "bits": 2, "attr": ["rw"], "rotate": -90}, {"bits": 30}], "config": {"lanes": 1, "fontsize": 10, "vspace": 110}}
-```
-
-|  Bits  |  Type  |  Reset  | Name      | Description   |
-|:------:|:------:|:-------:|:----------|:--------------|
-|  31:2  |        |         |           | Reserved      |
-|  1:0   |   rw   |    x    | DIRECT_OE |               |
-
-## MASKED_OE_LOWER
-GPIO write Output Enable lower with mask.
-
-Masked write for DATA_OE[15:0], the register that controls
-output mode for GPIO pins [15:0].
-
-Upper 16 bits of this register are used as mask. Writing
-lower 16 bits of the register changes DATA_OE[15:0] value
-if mask bits are set.
-
-Read-back of this register returns upper 16 bits as zero
-and lower 16 bits as DATA_OE[15:0].
-- Offset: `0x20`
-- Reset default: `0x0`
-- Reset mask: `0x3`
-
-### Fields
-
-```wavejson
-{"reg": [{"name": "data", "bits": 1, "attr": ["rw"], "rotate": -90}, {"name": "mask", "bits": 1, "attr": ["rw"], "rotate": -90}, {"bits": 30}], "config": {"lanes": 1, "fontsize": 10, "vspace": 80}}
-```
-
-|  Bits  |  Type  |  Reset  | Name   | Description                                                                                  |
-|:------:|:------:|:-------:|:-------|:---------------------------------------------------------------------------------------------|
-|  31:2  |        |         |        | Reserved                                                                                     |
-|   1    |   rw   |    x    | mask   | Write OE mask[15:0]. A value of 1 in mask[i] allows the updating of DATA_OE[i], 0 <= i <= 15 |
-|   0    |   rw   |    x    | data   | Write OE value[15:0]. Value to write into DATA_OE[i], valid in the presence of mask[i]==1    |
-
-## MASKED_OE_UPPER
-GPIO write Output Enable upper with mask.
-
-Masked write for DATA_OE[31:16], the register that controls
-output mode for GPIO pins [31:16].
-
-Upper 16 bits of this register are used as mask. Writing
-lower 16 bits of the register changes DATA_OE[31:16] value
-if mask bits are set.
-
-Read-back of this register returns upper 16 bits as zero
-and lower 16 bits as DATA_OE[31:16].
-- Offset: `0x24`
-- Reset default: `0x0`
-- Reset mask: `0x3`
-
-### Fields
-
-```wavejson
-{"reg": [{"name": "data", "bits": 1, "attr": ["rw"], "rotate": -90}, {"name": "mask", "bits": 1, "attr": ["rw"], "rotate": -90}, {"bits": 30}], "config": {"lanes": 1, "fontsize": 10, "vspace": 80}}
-```
-
-|  Bits  |  Type  |  Reset  | Name   | Description                                                                                    |
-|:------:|:------:|:-------:|:-------|:-----------------------------------------------------------------------------------------------|
-|  31:2  |        |         |        | Reserved                                                                                       |
-|   1    |   rw   |    x    | mask   | Write OE mask[31:16]. A value of 1 in mask[i] allows the updating of DATA_OE[i], 16 <= i <= 31 |
-|   0    |   rw   |    x    | data   | Write OE value[31:16]. Value to write into DATA_OE[i], valid in the presence of mask[i]==1     |
-
-## INTR_CTRL_EN_RISING
-GPIO interrupt enable for GPIO, rising edge.
-
-If [`INTR_ENABLE`](#intr_enable)[i] is true, a value of 1 on [`INTR_CTRL_EN_RISING`](#intr_ctrl_en_rising)[i]
-enables rising-edge interrupt detection on GPIO[i].
-- Offset: `0x28`
-- Reset default: `0x0`
-- Reset mask: `0x3`
-
-### Fields
-
-```wavejson
-{"reg": [{"name": "INTR_CTRL_EN_RISING", "bits": 2, "attr": ["rw"], "rotate": -90}, {"bits": 30}], "config": {"lanes": 1, "fontsize": 10, "vspace": 210}}
-```
-
-|  Bits  |  Type  |  Reset  | Name                | Description   |
-|:------:|:------:|:-------:|:--------------------|:--------------|
-|  31:2  |        |         |                     | Reserved      |
-|  1:0   |   rw   |   0x0   | INTR_CTRL_EN_RISING |               |
-
-## INTR_CTRL_EN_FALLING
-GPIO interrupt enable for GPIO, falling edge.
-
-If [`INTR_ENABLE`](#intr_enable)[i] is true, a value of 1 on [`INTR_CTRL_EN_FALLING`](#intr_ctrl_en_falling)[i]
-enables falling-edge interrupt detection on GPIO[i].
-- Offset: `0x2c`
-- Reset default: `0x0`
-- Reset mask: `0x3`
-
-### Fields
-
-```wavejson
-{"reg": [{"name": "INTR_CTRL_EN_FALLING", "bits": 2, "attr": ["rw"], "rotate": -90}, {"bits": 30}], "config": {"lanes": 1, "fontsize": 10, "vspace": 220}}
-```
-
-|  Bits  |  Type  |  Reset  | Name                 | Description   |
-|:------:|:------:|:-------:|:---------------------|:--------------|
-|  31:2  |        |         |                      | Reserved      |
-|  1:0   |   rw   |   0x0   | INTR_CTRL_EN_FALLING |               |
-
-## INTR_CTRL_EN_LVLHIGH
-GPIO interrupt enable for GPIO, level high.
-
-If [`INTR_ENABLE`](#intr_enable)[i] is true, a value of 1 on [`INTR_CTRL_EN_LVLHIGH`](#intr_ctrl_en_lvlhigh)[i]
-enables level high interrupt detection on GPIO[i].
-- Offset: `0x30`
-- Reset default: `0x0`
-- Reset mask: `0x3`
-
-### Fields
-
-```wavejson
-{"reg": [{"name": "INTR_CTRL_EN_LVLHIGH", "bits": 2, "attr": ["rw"], "rotate": -90}, {"bits": 30}], "config": {"lanes": 1, "fontsize": 10, "vspace": 220}}
-```
-
-|  Bits  |  Type  |  Reset  | Name                 | Description   |
-|:------:|:------:|:-------:|:---------------------|:--------------|
-|  31:2  |        |         |                      | Reserved      |
-|  1:0   |   rw   |   0x0   | INTR_CTRL_EN_LVLHIGH |               |
-
-## INTR_CTRL_EN_LVLLOW
-GPIO interrupt enable for GPIO, level low.
-
-If [`INTR_ENABLE`](#intr_enable)[i] is true, a value of 1 on [`INTR_CTRL_EN_LVLLOW`](#intr_ctrl_en_lvllow)[i]
-enables level low interrupt detection on GPIO[i].
-- Offset: `0x34`
-- Reset default: `0x0`
-- Reset mask: `0x3`
-
-### Fields
-
-```wavejson
-{"reg": [{"name": "INTR_CTRL_EN_LVLLOW", "bits": 2, "attr": ["rw"], "rotate": -90}, {"bits": 30}], "config": {"lanes": 1, "fontsize": 10, "vspace": 210}}
-```
-
-|  Bits  |  Type  |  Reset  | Name                | Description   |
-|:------:|:------:|:-------:|:--------------------|:--------------|
-|  31:2  |        |         |                     | Reserved      |
-|  1:0   |   rw   |   0x0   | INTR_CTRL_EN_LVLLOW |               |
+|  Bits  |  Type  |  Reset  | Name            | Description                                                                                                                                                                                                        |
+|:------:|:------:|:-------:|:----------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 31:10  |        |         |                 | Reserved                                                                                                                                                                                                           |
+|  9:8   |   rw   |   0x0   | EN_INPUT_FILTER | filter enable for GPIO input bits. If [`CTRL_EN_INPUT_FILTER`](#ctrl_en_input_filter)[i] is true, a value of input bit [i] must be stable for 16 cycles before transitioning.                                      |
+|  7:6   |   rw   |   0x0   | EN_LVLLOW       | GPIO interrupt enable for GPIO, level low. If [`INTR_ENABLE`](#intr_enable)[i] is true, a value of 1 on [`INTR_CTRL_EN_LVLLOW`](#intr_ctrl_en_lvllow)[i] enables level low interrupt detection on GPIO[i].         |
+|  5:4   |   rw   |   0x0   | EN_LVLHIGH      | GPIO interrupt enable for GPIO, level high. If [`INTR_ENABLE`](#intr_enable)[i] is true, a value of 1 on [`INTR_CTRL_EN_LVLHIGH`](#intr_ctrl_en_lvlhigh)[i] enables level high interrupt detection on GPIO[i].     |
+|  3:2   |   rw   |   0x0   | EN_FALLING      | GPIO interrupt enable for GPIO, falling edge. If [`INTR_ENABLE`](#intr_enable)[i] is true, a value of 1 on [`INTR_CTRL_EN_FALLING`](#intr_ctrl_en_falling)[i] enables falling-edge interrupt detection on GPIO[i]. |
+|  1:0   |   rw   |   0x0   | EN_RISING       | GPIO interrupt enable for GPIO, rising edge. If [`INTR_ENABLE`](#intr_enable)[i] is true, a value of 1 on [`INTR_CTRL_EN_RISING`](#intr_ctrl_en_rising)[i] enables rising-edge interrupt detection on GPIO[i].     |
 
 ## CTRL_EN_INPUT_FILTER
 filter enable for GPIO input bits.
 
 If [`CTRL_EN_INPUT_FILTER`](#ctrl_en_input_filter)[i] is true, a value of input bit [i]
 must be stable for 16 cycles before transitioning.
-- Offset: `0x38`
+- Offset: `0x18`
 - Reset default: `0x0`
-- Reset mask: `0x3`
+- Reset mask: `0xf`
 
 ### Fields
 
 ```wavejson
-{"reg": [{"name": "CTRL_EN_INPUT_FILTER", "bits": 2, "attr": ["rw"], "rotate": -90}, {"bits": 30}], "config": {"lanes": 1, "fontsize": 10, "vspace": 220}}
+{"reg": [{"name": "CTRL_EN_INPUT_FILTER", "bits": 4, "attr": ["rw"], "rotate": -90}, {"bits": 28}], "config": {"lanes": 1, "fontsize": 10, "vspace": 220}}
 ```
 
 |  Bits  |  Type  |  Reset  | Name                 | Description   |
 |:------:|:------:|:-------:|:---------------------|:--------------|
-|  31:2  |        |         |                      | Reserved      |
-|  1:0   |   rw   |   0x0   | CTRL_EN_INPUT_FILTER |               |
+|  31:4  |        |         |                      | Reserved      |
+|  3:0   |   rw   |   0x0   | CTRL_EN_INPUT_FILTER |               |
 

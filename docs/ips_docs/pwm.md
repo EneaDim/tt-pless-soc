@@ -5,10 +5,9 @@
 | pwm.[`REGWEN`](#regwen)           | 0x0      |        4 | Register write enable for all control registers |
 | pwm.[`CFG`](#cfg)                 | 0x4      |        4 | Configuration register                          |
 | pwm.[`PWM_EN`](#pwm_en)           | 0x8      |        4 | Enable PWM operation for each channel           |
-| pwm.[`INVERT`](#invert)           | 0xc      |        4 | Invert the PWM output for each channel          |
-| pwm.[`PWM_PARAM`](#pwm_param)     | 0x10     |        4 | Basic PWM Channel Parameters                    |
-| pwm.[`DUTY_CYCLE`](#duty_cycle)   | 0x14     |        4 | Controls the duty_cycle of each channel.        |
-| pwm.[`BLINK_PARAM`](#blink_param) | 0x18     |        4 | Hardware controlled blink/heartbeat parameters. |
+| pwm.[`PWM_PARAM`](#pwm_param)     | 0xc      |        4 | Basic PWM Channel Parameters                    |
+| pwm.[`DUTY_CYCLE`](#duty_cycle)   | 0x10     |        4 | Controls the duty_cycle of each channel.        |
+| pwm.[`BLINK_PARAM`](#blink_param) | 0x14     |        4 | Hardware controlled blink/heartbeat parameters. |
 
 ## REGWEN
 Register write enable for all control registers
@@ -83,24 +82,6 @@ Enable PWM operation for each channel
 |  31:1  |        |         |        | Reserved                                                               |
 |   0    |   rw   |   0x0   | EN_0   | Write 1 to this bit to enable PWM pulses on the corresponding channel. |
 
-## INVERT
-Invert the PWM output for each channel
-- Offset: `0xc`
-- Reset default: `0x0`
-- Reset mask: `0x1`
-- Register enable: [`REGWEN`](#regwen)
-
-### Fields
-
-```wavejson
-{"reg": [{"name": "INVERT_0", "bits": 1, "attr": ["rw"], "rotate": -90}, {"bits": 31}], "config": {"lanes": 1, "fontsize": 10, "vspace": 100}}
-```
-
-|  Bits  |  Type  |  Reset  | Name     | Description                                                                                                |
-|:------:|:------:|:-------:|:---------|:-----------------------------------------------------------------------------------------------------------|
-|  31:1  |        |         |          | Reserved                                                                                                   |
-|   0    |   rw   |   0x0   | INVERT_0 | Write 1 to this bit to invert the output for each channel, so that the corresponding output is active-low. |
-
 ## PWM_PARAM
 Basic PWM Channel Parameters
 - Reset default: `0x0`
@@ -111,7 +92,7 @@ Basic PWM Channel Parameters
 
 | Name      | Offset   |
 |:----------|:---------|
-| PWM_PARAM | 0x10     |
+| PWM_PARAM | 0xc      |
 
 
 ### Fields
@@ -158,7 +139,7 @@ Controls the duty_cycle of each channel.
 
 | Name       | Offset   |
 |:-----------|:---------|
-| DUTY_CYCLE | 0x14     |
+| DUTY_CYCLE | 0x10     |
 
 
 ### Fields
@@ -196,7 +177,7 @@ Hardware controlled blink/heartbeat parameters.
 
 | Name        | Offset   |
 |:------------|:---------|
-| BLINK_PARAM | 0x18     |
+| BLINK_PARAM | 0x14     |
 
 
 ### Fields
