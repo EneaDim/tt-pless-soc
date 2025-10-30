@@ -18,4 +18,4 @@ set_driving_cell -lib_cell sky130_fd_sc_hd__buf_4 -pin X $non_clock_inputs
 
 set_load 0.01 [all_outputs]
 
-set_max_fanout 12 [current_design]
+set_max_fanout 16 [current_design]

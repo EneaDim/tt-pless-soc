@@ -6,7 +6,7 @@ project:
   description:  "SoC no CPU: UART, 4xGPIO bidir, 1xPWM, TIMER"
   language:     "Verilog"
   clock_hz:     0
-  tiles:        "3x2"     # cambia dopo una stima area, se necessario
+  tiles:        "2x2"     # cambia dopo una stima area, se necessario
   top_module:   "tt_um_eneadim_soc"
 
   # Elenca TUTTI i file in ./src (uno per riga). Mantieni l'ordine (pkg prima dei moduli).

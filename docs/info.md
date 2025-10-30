@@ -1,7 +1,8 @@
 # Processor-Less-SoC
 
-**Processor-Less-SoC** is a **processor-less System-on-Chip** fully generated through **[FlexSoC](https://github.com/EneaDim/flexsoc)** —  
-an open-source framework for **digital IP development and SoC integration**, built on **OpenTitan primitives**, **Yosys**, and **OpenROAD Flow Scripts (ORFS)**.
+**Processor-Less-SoC** is a **processor-less System-on-Chip** fully generated through **[FlexSoC](https://github.com/EneaDim/flexsoc)**, an open-source framework for **digital IP development and SoC integration**, built on **OpenTitan primitives**, **Yosys**, and **OpenROAD Flow Scripts (ORFS)**.
+
+You can find the RTL files and the whole flow scripts, results and reports **[here](https://github.com/EneaDim/flexsoc/ips/tiny-soc)**.
 
 ---
 

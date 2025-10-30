@@ -90,23 +90,23 @@ async def test_uart_program_soc(dut):
     UART_BASE     = 0x8000_0000
     UART_CTRL_OFF = 0x0000_0000
     PWM_BASE      = 0x8002_0000
-    PWM_EN_OFF    = 0x0000_0008
-    PWM_CFG_OFF   = 0x0000_0004
-    PWM_PHASE_OFF = 0x0000_0010
+    PWM_CFG_OFF   = 0x0000_0000
+    PWM_EN_OFF    = 0x0000_0004
+    PWM_PARAM_OFF = 0x0000_0008
 
     # 1) abilita UART TX/RX (placeholder)
     await uart_write32(dut, UART_BASE + UART_CTRL_OFF, 0x0970_0001, be=0xF)
 
     # 2) configura PWM (placeholder valori)
-    await uart_write32(dut, PWM_BASE + PWM_CFG_OFF,   0xB800_0010, be=0xF)
-    await uart_write32(dut, PWM_BASE + PWM_PHASE_OFF, 0x0000_7FFF, be=0xF)
+    await uart_write32(dut, PWM_BASE + PWM_PARAM_OFF, 0x7FFF_7FFF, be=0xF)
     await uart_write32(dut, PWM_BASE + PWM_EN_OFF,    0x0000_0001, be=0xF)
+    await uart_write32(dut, PWM_BASE + PWM_CFG_OFF,   0xB800_0010, be=0xF)
 
     # attesa per propagazione
     await ClockCycles(dut.clk, 1000)
 
     await uart_read32(dut, UART_BASE + UART_CTRL_OFF)
-    await ClockCycles(dut.clk, 43000)
+    await ClockCycles(dut.clk, 42000)
 
     # Check base sulle uscite
     uo = to_int_safe(dut.uo_out)
@@ -116,5 +116,5 @@ async def test_uart_program_soc(dut):
     # Lascia RX idle alto
     await apply_inputs(dut, ui_in=(int(dut.ui_in.value) | 0x01))
 
-    await ClockCycles(dut.clk, 2000)
+    await ClockCycles(dut.clk, 3000)
 

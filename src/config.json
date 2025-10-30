@@ -5,7 +5,7 @@
   "//": "If you get stuck, open an issue or ask on Discord.",
 
   "//": "Placement density. If Global Placement fails (GPL-0302), try raising to 65–80.",
-  "PL_TARGET_DENSITY_PCT": 75,
+  "PL_TARGET_DENSITY_PCT": 89,
 
   "//": "Clock period in ns (20 ns = 50 MHz). If you see setup violations, increase to 25–40.",
   "CLOCK_PERIOD": 20,
@@ -25,12 +25,11 @@
 
   "//": "Antenna and Diodes Strategy",
   "RUN_HEURISTIC_DIODE_INSERTION": true,
-  "GRT_ANTENNA_ITERS": 5,
-  "GRT_ANTENNA_MARGIN": 8,
+  "GRT_ANTENNA_ITERS": 8,
 
   "//": "Synthesis Strategy",
   "SYNTH_STRATEGY": "AREA 3",
-  "MAX_FANOUT_CONSTRAINT": 12,
+  "MAX_FANOUT_CONSTRAINT": 16,
 
   "USE_SYNLIG": false,
 
