@@ -12,7 +12,7 @@
 ## CTRL
 UART control register
 - Offset: `0x0`
-- Reset default: `0x9700000`
+- Reset default: `0x4b7f0000`
 - Reset mask: `0xffff00f7`
 
 ### Fields
@@ -23,7 +23,7 @@ UART control register
 
 |  Bits  |  Type  |  Reset  | Name       | Description                                                                                                                                                                                                    |
 |:------:|:------:|:-------:|:-----------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 31:16  |   rw   |  0x970  | NCO        | BAUD clock rate control. Reset value for 115200 baud at 100MHz                                                                                                                                                 |
+| 31:16  |   rw   | 0x4b7f  | NCO        | BAUD clock rate control. Reset value for 115200 baud at 100MHz                                                                                                                                                 |
 |  15:8  |        |         |            | Reserved                                                                                                                                                                                                       |
 |   7    |   rw   |   0x0   | PARITY_ODD | If PARITY_EN is true, this determines the type, 1 for odd parity, 0 for even.                                                                                                                                  |
 |   6    |   rw   |   0x0   | PARITY_EN  | If true, parity is enabled in both RX and TX directions.                                                                                                                                                       |

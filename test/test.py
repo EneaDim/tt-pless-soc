@@ -2,7 +2,7 @@ import cocotb
 from cocotb.clock import Clock
 from cocotb.triggers import ClockCycles, FallingEdge, Timer
 
-BAUD = 115_200
+BAUD = 921_600
 BIT_TIME_PS = int(round(1e12 / BAUD))
 
 # --- utility ---
@@ -88,30 +88,71 @@ async def test_uart_program_soc(dut):
 
     # ---- indirizzi di esempio (adatta ai tuoi reali) ----
     UART_BASE     = 0x8000_0000
-    UART_CTRL_OFF = 0x0000_0000
     PWM_BASE      = 0x8002_0000
+    GPIO_BASE     = 0x8004_0000
+    TIMER_BASE    = 0x8006_0000
+
+    # -------------------------
+    UART_CTRL_OFF = 0x0000_0000
+    # -------------------------
     PWM_CFG_OFF   = 0x0000_0000
     PWM_EN_OFF    = 0x0000_0004
     PWM_PARAM_OFF = 0x0000_0008
+    # -------------------------
+    GPIO_INT_CTRL = 0x0000_0008
+    # -------------------------
+    TIMER_CTRL    = 0x0000_0000
+    TIMER_VALUE   = 0x0000_0014
+    # -------------------------
 
     # 1) abilita UART TX/RX (placeholder)
-    await uart_write32(dut, UART_BASE + UART_CTRL_OFF, 0x0970_0001, be=0xF)
+    await uart_write32(dut, UART_BASE + UART_CTRL_OFF, 0x4B7F_0001, be=0xF)
+    # Read back
+    await uart_read32(dut, UART_BASE + UART_CTRL_OFF)
 
     # 2) configura PWM (placeholder valori)
-    await uart_write32(dut, PWM_BASE + PWM_PARAM_OFF, 0x7FFF_7FFF, be=0xF)
-    await uart_write32(dut, PWM_BASE + PWM_EN_OFF,    0x0000_0001, be=0xF)
-    await uart_write32(dut, PWM_BASE + PWM_CFG_OFF,   0xB800_0010, be=0xF)
+    await uart_write32(dut, PWM_BASE + PWM_PARAM_OFF,  0x7FFF_7FFF, be=0xF)
+    await uart_write32(dut, PWM_BASE + PWM_EN_OFF,     0x0000_0001, be=0xF)
+    await uart_write32(dut, PWM_BASE + PWM_CFG_OFF,    0xB800_0010, be=0xF)
 
-    # attesa per propagazione
-    await ClockCycles(dut.clk, 1000)
+    # 3) GPIO + TIMER for input capture rise - fall
+    await uart_write32(dut, GPIO_BASE + GPIO_INT_CTRL, 0x0000_0005, be=0xF)
+    await uart_write32(dut, TIMER_BASE + TIMER_CTRL,   0x0000_0002, be=0xF)
+    # Drive GPIO
+    await apply_inputs(dut, uio_in=(int(dut.uio_in.value) | 0x02))
+    await ClockCycles(dut.clk, 2000)
+    await apply_inputs(dut, uio_in=(int(dut.uio_in.value) & ~0x02))
+    await ClockCycles(dut.clk, 2000)
+    # Read back
+    await uart_read32(dut, TIMER_BASE + TIMER_VALUE)
+    await ClockCycles(dut.clk, 2000)
+    # Reset Timer
+    await uart_write32(dut, TIMER_BASE + TIMER_VALUE,   0x0000_0000, be=0xF)
 
-    await uart_read32(dut, UART_BASE + UART_CTRL_OFF)
+    # 4) GPIO + TIMER for input capture rise-rise
+    await uart_write32(dut, GPIO_BASE + GPIO_INT_CTRL, 0x0000_0001, be=0xF)
+    await uart_write32(dut, TIMER_BASE + TIMER_CTRL,   0x0000_0002, be=0xF)
+    # Drive GPIO
+    await apply_inputs(dut, uio_in=(int(dut.uio_in.value) | 0x02))
+    await ClockCycles(dut.clk, 2000)
+    await apply_inputs(dut, uio_in=(int(dut.uio_in.value) & ~0x02))
+    await ClockCycles(dut.clk, 2000)
+    await apply_inputs(dut, uio_in=(int(dut.uio_in.value) | 0x02))
+    await ClockCycles(dut.clk, 2000)
+    await apply_inputs(dut, uio_in=(int(dut.uio_in.value) & ~0x02))
+    await ClockCycles(dut.clk, 2000)
+    # Read back
+    await uart_read32(dut, TIMER_BASE + TIMER_VALUE)
+    # Reset Timer
+    await uart_write32(dut, TIMER_BASE + TIMER_VALUE,   0x0000_0000, be=0xF)
+
+    # Wait
     await ClockCycles(dut.clk, 42000)
 
     # Check base sulle uscite
     uo = to_int_safe(dut.uo_out)
     dut._log.info(f"uo_out=0x{uo:02X}")
-    assert ((uo << 4) & 0b11110000) != 0, "PWM enable non sembra attivo"
+    assert (uo & 0x0F) == 0x0F, "PWM enable non sembra attivo"
 
     # Lascia RX idle alto
     await apply_inputs(dut, ui_in=(int(dut.ui_in.value) | 0x01))

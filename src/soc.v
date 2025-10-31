@@ -54,86 +54,72 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   wire [1:0] \$1228y ;
   wire [1:0] \$1229y ;
   wire [1:0] \$1241y ;
-  wire [1:0] \$1249y ;
+  wire [1:0] \$1242y ;
+  wire [1:0] \$1244y ;
+  wire [1:0] \$1245y ;
   wire [1:0] \$1250y ;
-  wire [1:0] \$1252y ;
-  wire [1:0] \$1253y ;
-  wire [1:0] \$1258y ;
-  wire [1:0] \$1259y ;
-  wire \$1266y ;
-  wire [2:0] \$1282y ;
-  wire \$1290y ;
-  wire [31:0] \$1291y ;
-  wire [1:0] \$1375y ;
-  wire [1:0] \$1376y ;
-  wire [1:0] \$1377y ;
-  wire \$1455y ;
+  wire [1:0] \$1251y ;
+  wire \$1258y ;
+  wire [2:0] \$1274y ;
+  wire \$1282y ;
+  wire [31:0] \$1283y ;
+  wire \$1425y ;
+  wire \$1426y ;
+  wire \$1427y ;
+  wire \$1433y ;
+  wire \$1438y ;
+  wire \$1441y ;
+  wire \$1442y ;
+  wire \$1443y ;
+  wire \$1447y ;
+  wire \$1448y ;
+  wire \$1451y ;
+  wire \$1453y ;
   wire \$1456y ;
-  wire \$1457y ;
-  wire \$1463y ;
-  wire \$1467y ;
+  wire \$1459y ;
   wire \$1468y ;
-  wire \$1472y ;
-  wire \$1473y ;
-  wire \$1477y ;
-  wire \$1478y ;
+  wire \$1470y ;
   wire \$1482y ;
-  wire \$1483y ;
+  wire [11:0] \$1483y ;
   wire \$1486y ;
-  wire \$1487y ;
-  wire \$1488y ;
-  wire \$1492y ;
-  wire \$1493y ;
-  wire \$1495y ;
-  wire \$1496y ;
-  wire \$1498y ;
-  wire \$1501y ;
-  wire \$1507y ;
-  wire \$1510y ;
-  wire \$1513y ;
-  wire \$1522y ;
-  wire \$1524y ;
-  wire \$1536y ;
-  wire [11:0] \$1537y ;
-  wire \$1540y ;
-  wire \$1543y ;
-  wire [2:0] \$1566y ;
-  wire \$1574y ;
-  wire [31:0] \$1575y ;
-  wire \$1675y ;
-  wire \$1676y ;
-  wire \$1677y ;
-  wire \$1751y ;
-  wire \$1752y ;
-  wire \$1753y ;
-  wire \$1759y ;
+  wire \$1489y ;
+  wire [2:0] \$1512y ;
+  wire \$1520y ;
+  wire [31:0] \$1521y ;
+  wire \$1637y ;
+  wire \$1638y ;
+  wire \$1639y ;
+  wire \$1691y ;
+  wire \$1692y ;
+  wire \$1693y ;
+  wire \$1699y ;
+  wire \$1703y ;
+  wire \$1704y ;
+  wire \$1708y ;
+  wire \$1709y ;
+  wire \$1713y ;
+  wire \$1714y ;
+  wire \$1717y ;
+  wire \$1718y ;
+  wire \$1719y ;
+  wire \$1723y ;
+  wire \$1724y ;
+  wire \$1728y ;
+  wire \$1729y ;
+  wire \$1731y ;
+  wire \$1732y ;
+  wire \$1734y ;
+  wire \$1737y ;
+  wire \$1740y ;
+  wire \$1743y ;
+  wire \$1746y ;
+  wire \$1749y ;
+  wire \$1756y ;
+  wire \$1758y ;
+  wire \$1760y ;
+  wire \$1761y ;
+  wire \$1762y ;
   wire \$1763y ;
-  wire \$1764y ;
-  wire \$1768y ;
-  wire \$1769y ;
-  wire \$1773y ;
-  wire \$1774y ;
-  wire \$1777y ;
-  wire \$1778y ;
-  wire \$1779y ;
-  wire \$1783y ;
-  wire \$1784y ;
-  wire \$1788y ;
-  wire \$1789y ;
-  wire \$1793y ;
-  wire \$1794y ;
-  wire \$1798y ;
-  wire \$1799y ;
-  wire \$1801y ;
-  wire \$1802y ;
-  wire \$1804y ;
-  wire \$1807y ;
-  wire \$1810y ;
-  wire \$1813y ;
-  wire \$1816y ;
-  wire \$1819y ;
-  wire \$1822y ;
-  wire \$1825y ;
   wire \$216y ;
   wire \$217y ;
   wire \$218y ;
@@ -142,6 +128,7 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   wire \$229y ;
   wire \$234y ;
   wire \$239y ;
+  wire \$243y ;
   wire \$244y ;
   wire \$248y ;
   wire \$249y ;
@@ -279,237 +266,238 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   wire \$912y ;
   wire \$950y ;
   wire \$967y ;
+  wire [31:0] \$auto$bmuxmap.cc:84:execute$1943 ;
+  wire [15:0] \$auto$bmuxmap.cc:84:execute$1948 ;
+  wire [7:0] \$auto$bmuxmap.cc:84:execute$1951 ;
+  wire [63:0] \$auto$bmuxmap.cc:84:execute$1953 ;
   wire [31:0] \$auto$bmuxmap.cc:84:execute$1962 ;
   wire [15:0] \$auto$bmuxmap.cc:84:execute$1967 ;
   wire [7:0] \$auto$bmuxmap.cc:84:execute$1970 ;
-  wire [63:0] \$auto$bmuxmap.cc:84:execute$1972 ;
-  wire [31:0] \$auto$bmuxmap.cc:84:execute$1981 ;
-  wire [15:0] \$auto$bmuxmap.cc:84:execute$1986 ;
-  wire [7:0] \$auto$bmuxmap.cc:84:execute$1989 ;
-  wire \$auto$demuxmap.cc:63:execute$1991 ;
-  wire \$auto$demuxmap.cc:63:execute$1994 ;
-  wire \$auto$demuxmap.cc:63:execute$1997 ;
-  wire \$auto$demuxmap.cc:63:execute$2000 ;
-  wire \$auto$demuxmap.cc:63:execute$2003 ;
-  wire \$auto$demuxmap.cc:63:execute$2006 ;
-  wire \$auto$demuxmap.cc:63:execute$2009 ;
-  wire \$auto$demuxmap.cc:63:execute$2012 ;
-  wire \$auto$demuxmap.cc:63:execute$2015 ;
-  wire \$auto$demuxmap.cc:63:execute$2018 ;
-  wire \$auto$demuxmap.cc:63:execute$2021 ;
-  wire \$auto$demuxmap.cc:63:execute$2024 ;
-  wire \$auto$demuxmap.cc:63:execute$2027 ;
-  wire \$auto$demuxmap.cc:63:execute$2030 ;
-  wire \$auto$demuxmap.cc:63:execute$2033 ;
-  wire \$auto$demuxmap.cc:63:execute$2036 ;
-  wire \$auto$demuxmap.cc:63:execute$2039 ;
-  wire \$auto$demuxmap.cc:63:execute$2042 ;
-  wire \$auto$demuxmap.cc:63:execute$2045 ;
-  wire \$auto$demuxmap.cc:63:execute$2048 ;
-  wire \$auto$demuxmap.cc:63:execute$2051 ;
-  wire \$auto$demuxmap.cc:63:execute$2054 ;
-  wire \$auto$demuxmap.cc:63:execute$2057 ;
-  wire \$auto$demuxmap.cc:63:execute$2060 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1658 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1660 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1687 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1689 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1694 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1701 ;
+  wire \$auto$demuxmap.cc:63:execute$1972 ;
+  wire \$auto$demuxmap.cc:63:execute$1975 ;
+  wire \$auto$demuxmap.cc:63:execute$1978 ;
+  wire \$auto$demuxmap.cc:63:execute$1981 ;
+  wire \$auto$demuxmap.cc:63:execute$1984 ;
+  wire \$auto$demuxmap.cc:63:execute$1987 ;
+  wire \$auto$demuxmap.cc:63:execute$1990 ;
+  wire \$auto$demuxmap.cc:63:execute$1993 ;
+  wire \$auto$demuxmap.cc:63:execute$1996 ;
+  wire \$auto$demuxmap.cc:63:execute$1999 ;
+  wire \$auto$demuxmap.cc:63:execute$2002 ;
+  wire \$auto$demuxmap.cc:63:execute$2005 ;
+  wire \$auto$demuxmap.cc:63:execute$2008 ;
+  wire \$auto$demuxmap.cc:63:execute$2011 ;
+  wire \$auto$demuxmap.cc:63:execute$2014 ;
+  wire \$auto$demuxmap.cc:63:execute$2017 ;
+  wire \$auto$demuxmap.cc:63:execute$2020 ;
+  wire \$auto$demuxmap.cc:63:execute$2023 ;
+  wire \$auto$demuxmap.cc:63:execute$2026 ;
+  wire \$auto$demuxmap.cc:63:execute$2029 ;
+  wire \$auto$demuxmap.cc:63:execute$2032 ;
+  wire \$auto$demuxmap.cc:63:execute$2035 ;
+  wire \$auto$demuxmap.cc:63:execute$2038 ;
+  wire \$auto$demuxmap.cc:63:execute$2041 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1641 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1643 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1670 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1672 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1677 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1684 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1686 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1697 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1700 ;
   wire \$auto$opt_dff.cc:247:make_patterns_logic$1703 ;
   wire \$auto$opt_dff.cc:247:make_patterns_logic$1714 ;
   wire \$auto$opt_dff.cc:247:make_patterns_logic$1717 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1720 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1731 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1734 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1769 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1771 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1773 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1775 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1752 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1754 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1756 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1758 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1760 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1762 ;
   wire \$auto$opt_dff.cc:247:make_patterns_logic$1777 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1779 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1794 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1782 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1784 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1793 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1795 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1797 ;
   wire \$auto$opt_dff.cc:247:make_patterns_logic$1799 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1801 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1810 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1805 ;
   wire \$auto$opt_dff.cc:247:make_patterns_logic$1812 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1814 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1816 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1822 ;
   wire \$auto$opt_dff.cc:247:make_patterns_logic$1829 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1846 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1848 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1850 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1900 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1906 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1909 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1915 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1922 ;
-  wire \$auto$opt_dff.cc:247:make_patterns_logic$1928 ;
-  wire \$auto$opt_dff.cc:272:make_patterns_logic$1662 ;
-  wire \$auto$opt_dff.cc:272:make_patterns_logic$1667 ;
-  wire \$auto$opt_dff.cc:272:make_patterns_logic$1691 ;
-  wire \$auto$opt_dff.cc:272:make_patterns_logic$1705 ;
-  wire \$auto$opt_dff.cc:272:make_patterns_logic$1781 ;
-  wire \$auto$opt_dff.cc:272:make_patterns_logic$1796 ;
-  wire \$auto$opt_dff.cc:272:make_patterns_logic$1803 ;
-  wire \$auto$opt_dff.cc:272:make_patterns_logic$1824 ;
-  wire \$auto$opt_dff.cc:272:make_patterns_logic$1831 ;
-  wire \$auto$opt_dff.cc:272:make_patterns_logic$1834 ;
-  wire \$auto$opt_dff.cc:272:make_patterns_logic$1837 ;
-  wire \$auto$opt_dff.cc:272:make_patterns_logic$1852 ;
-  wire \$auto$opt_dff.cc:272:make_patterns_logic$1855 ;
-  wire \$auto$opt_dff.cc:272:make_patterns_logic$1876 ;
-  wire \$auto$opt_reduce.cc:137:opt_pmux$1626 ;
-  wire \$auto$opt_reduce.cc:137:opt_pmux$1628 ;
-  wire \$auto$opt_reduce.cc:137:opt_pmux$1630 ;
-  wire \$auto$opt_reduce.cc:137:opt_pmux$1632 ;
-  wire \$auto$opt_reduce.cc:137:opt_pmux$1634 ;
-  wire \$auto$opt_reduce.cc:137:opt_pmux$1642 ;
-  wire \$auto$opt_reduce.cc:137:opt_pmux$1644 ;
-  wire \$auto$opt_reduce.cc:137:opt_pmux$1646 ;
-  wire \$auto$opt_reduce.cc:137:opt_pmux$1648 ;
-  wire \$auto$opt_reduce.cc:137:opt_pmux$1652 ;
-  wire \$auto$opt_reduce.cc:137:opt_pmux$1656 ;
-  wire [63:0] \$auto$rtlil.cc:3097:Not$1949 ;
-  wire [127:0] \$auto$rtlil.cc:3097:Not$1956 ;
-  wire [63:0] \$auto$rtlil.cc:3144:And$1951 ;
-  wire [63:0] \$auto$rtlil.cc:3144:And$1953 ;
-  wire [127:0] \$auto$rtlil.cc:3144:And$1958 ;
-  wire [127:0] \$auto$rtlil.cc:3144:And$1960 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1831 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1833 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1883 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1889 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1892 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1898 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1905 ;
+  wire \$auto$opt_dff.cc:247:make_patterns_logic$1911 ;
+  wire \$auto$opt_dff.cc:272:make_patterns_logic$1645 ;
+  wire \$auto$opt_dff.cc:272:make_patterns_logic$1650 ;
+  wire \$auto$opt_dff.cc:272:make_patterns_logic$1674 ;
+  wire \$auto$opt_dff.cc:272:make_patterns_logic$1688 ;
+  wire \$auto$opt_dff.cc:272:make_patterns_logic$1764 ;
+  wire \$auto$opt_dff.cc:272:make_patterns_logic$1779 ;
+  wire \$auto$opt_dff.cc:272:make_patterns_logic$1786 ;
+  wire \$auto$opt_dff.cc:272:make_patterns_logic$1807 ;
+  wire \$auto$opt_dff.cc:272:make_patterns_logic$1814 ;
+  wire \$auto$opt_dff.cc:272:make_patterns_logic$1817 ;
+  wire \$auto$opt_dff.cc:272:make_patterns_logic$1820 ;
+  wire \$auto$opt_dff.cc:272:make_patterns_logic$1835 ;
+  wire \$auto$opt_dff.cc:272:make_patterns_logic$1838 ;
+  wire \$auto$opt_dff.cc:272:make_patterns_logic$1859 ;
+  wire \$auto$opt_reduce.cc:137:opt_pmux$1607 ;
+  wire \$auto$opt_reduce.cc:137:opt_pmux$1611 ;
+  wire \$auto$opt_reduce.cc:137:opt_pmux$1613 ;
+  wire \$auto$opt_reduce.cc:137:opt_pmux$1615 ;
+  wire \$auto$opt_reduce.cc:137:opt_pmux$1617 ;
+  wire \$auto$opt_reduce.cc:137:opt_pmux$1619 ;
+  wire \$auto$opt_reduce.cc:137:opt_pmux$1621 ;
+  wire \$auto$opt_reduce.cc:137:opt_pmux$1625 ;
+  wire \$auto$opt_reduce.cc:137:opt_pmux$1629 ;
+  wire \$auto$opt_reduce.cc:137:opt_pmux$1633 ;
+  wire \$auto$opt_reduce.cc:137:opt_pmux$1639 ;
+  wire [63:0] \$auto$rtlil.cc:3097:Not$1930 ;
+  wire [127:0] \$auto$rtlil.cc:3097:Not$1937 ;
+  wire [63:0] \$auto$rtlil.cc:3144:And$1932 ;
+  wire [63:0] \$auto$rtlil.cc:3144:And$1934 ;
+  wire [127:0] \$auto$rtlil.cc:3144:And$1939 ;
+  wire [127:0] \$auto$rtlil.cc:3144:And$1941 ;
   wire \$procmux$1000_CMP ;
-  wire [4:0] \$procmux$1005_Y ;
-  wire [4:0] \$procmux$1015_Y ;
-  wire [4:0] \$procmux$1022_Y ;
-  wire [4:0] \$procmux$1024_Y ;
-  wire [4:0] \$procmux$1034_Y ;
-  wire [4:0] \$procmux$1041_Y ;
-  wire \$procmux$1043_Y ;
-  wire \$procmux$1082_Y ;
-  wire [3:0] \$procmux$1093_Y ;
-  wire [10:0] \$procmux$1104_Y ;
-  wire \$procmux$1115_Y ;
-  wire [3:0] \$procmux$1124_Y ;
-  wire [10:0] \$procmux$1133_Y ;
-  wire \$procmux$1176_Y ;
-  wire [3:0] \$procmux$1181_Y ;
-  wire [2:0] \$procmux$120_Y ;
-  wire [31:0] \$procmux$125_Y ;
-  wire \$procmux$1305_Y ;
-  wire \$procmux$1307_Y ;
-  wire [10:0] \$procmux$1315_Y ;
-  wire [3:0] \$procmux$1323_Y ;
-  wire [2:0] \$procmux$132_Y ;
-  wire [10:0] \$procmux$1333_Y ;
-  wire [3:0] \$procmux$1340_Y ;
-  wire \$procmux$1347_Y ;
-  wire \$procmux$1368_Y ;
-  wire [31:0] \$procmux$136_Y ;
-  wire [3:0] \$procmux$1375_Y ;
-  wire [3:0] \$procmux$1385_Y ;
-  wire \$procmux$138_Y ;
-  wire [3:0] \$procmux$1392_Y ;
-  wire [3:0] \$procmux$1394_Y ;
-  wire [3:0] \$procmux$1404_Y ;
-  wire [3:0] \$procmux$1411_Y ;
-  wire \$procmux$1413_Y ;
-  wire \$procmux$145_Y ;
-  wire [2:0] \$procmux$1499_Y ;
-  wire [31:0] \$procmux$1504_Y ;
-  wire [2:0] \$procmux$1511_Y ;
-  wire [31:0] \$procmux$1515_Y ;
-  wire \$procmux$1569_Y ;
-  wire \$procmux$1576_Y ;
-  wire \$procmux$1585_Y ;
-  wire \$procmux$1615_Y ;
-  wire \$procmux$220_Y ;
-  wire \$procmux$229_Y ;
-  wire \$procmux$22_Y ;
-  wire \$procmux$251_Y ;
-  wire [11:0] \$procmux$25_Y ;
-  wire [65:0] \$procmux$273_Y ;
-  wire [65:0] \$procmux$276_Y ;
-  wire [65:0] \$procmux$278_Y ;
-  wire \$procmux$284_Y ;
-  wire \$procmux$287_Y ;
-  wire \$procmux$290_Y ;
-  wire \$procmux$292_Y ;
-  wire [8:0] \$procmux$296_Y ;
-  wire [8:0] \$procmux$304_Y ;
-  wire [8:0] \$procmux$307_Y ;
-  wire [2:0] \$procmux$315_Y ;
-  wire [2:0] \$procmux$328_Y ;
-  wire [11:0] \$procmux$32_Y ;
-  wire [2:0] \$procmux$338_Y ;
-  wire [2:0] \$procmux$34_Y ;
-  wire \$procmux$350_Y ;
-  wire [3:0] \$procmux$359_Y ;
-  wire [1:0] \$procmux$368_Y ;
-  wire [3:0] \$procmux$379_Y ;
-  wire [1:0] \$procmux$387_Y ;
-  wire [7:0] \$procmux$394_Y ;
-  wire \$procmux$396_CMP ;
-  wire \$procmux$397_CMP ;
-  wire \$procmux$398_CMP ;
-  wire \$procmux$39_Y ;
-  wire \$procmux$400_CMP ;
-  wire \$procmux$401_CMP ;
-  wire \$procmux$402_CMP ;
-  wire [3:0] \$procmux$408_Y ;
-  wire [1:0] \$procmux$413_Y ;
-  wire [7:0] \$procmux$418_Y ;
-  wire \$procmux$423_Y ;
-  wire \$procmux$448_CMP ;
-  wire [3:0] \$procmux$450_Y ;
-  wire [1:0] \$procmux$457_Y ;
-  wire [3:0] \$procmux$464_Y ;
-  wire [1:0] \$procmux$469_Y ;
-  wire [2:0] \$procmux$46_Y ;
-  wire [2:0] \$procmux$484_Y ;
-  wire \$procmux$489_Y ;
-  wire \$procmux$492_CMP ;
-  wire [2:0] \$procmux$494_Y ;
-  wire \$procmux$502_Y ;
-  wire \$procmux$507_CMP ;
-  wire \$procmux$50_Y ;
-  wire [3:0] \$procmux$512_Y ;
-  wire [31:0] \$procmux$522_Y ;
-  wire \$procmux$52_Y ;
-  wire [1:0] \$procmux$532_Y ;
-  wire [2:0] \$procmux$542_Y ;
-  wire \$procmux$552_Y ;
-  wire [3:0] \$procmux$560_Y ;
-  wire [31:0] \$procmux$568_Y ;
-  wire [31:0] \$procmux$576_Y ;
-  wire [1:0] \$procmux$584_Y ;
-  wire [2:0] \$procmux$592_Y ;
-  wire \$procmux$59_Y ;
-  wire [1:0] \$procmux$602_Y ;
-  wire \$procmux$607_CMP ;
-  wire [2:0] \$procmux$614_Y ;
-  wire \$procmux$628_Y ;
-  wire [3:0] \$procmux$642_Y ;
-  wire [31:0] \$procmux$656_Y ;
-  wire [1:0] \$procmux$670_Y ;
-  wire \$procmux$684_Y ;
-  wire [3:0] \$procmux$696_Y ;
-  wire [31:0] \$procmux$708_Y ;
-  wire [2:0] \$procmux$732_Y ;
-  wire \$procmux$743_Y ;
-  wire [3:0] \$procmux$752_Y ;
-  wire [31:0] \$procmux$761_Y ;
-  wire [1:0] \$procmux$788_Y ;
-  wire [2:0] \$procmux$797_Y ;
-  wire [1:0] \$procmux$807_Y ;
-  wire \$procmux$812_CMP ;
-  wire [2:0] \$procmux$820_Y ;
-  wire \$procmux$844_CMP ;
-  wire [1:0] \$procmux$875_Y ;
-  wire [2:0] \$procmux$885_Y ;
-  wire \$procmux$894_CMP ;
-  wire [2:0] \$procmux$909_Y ;
-  wire [3:0] \$procmux$914_Y ;
-  wire [1:0] \$procmux$917_Y ;
+  wire \$procmux$1002_CMP ;
+  wire \$procmux$1004_CMP ;
+  wire \$procmux$1014_CMP ;
+  wire [4:0] \$procmux$1055_Y ;
+  wire [2:0] \$procmux$105_Y ;
+  wire [4:0] \$procmux$1065_Y ;
+  wire [4:0] \$procmux$1072_Y ;
+  wire [4:0] \$procmux$1074_Y ;
+  wire [4:0] \$procmux$1084_Y ;
+  wire [4:0] \$procmux$1091_Y ;
+  wire \$procmux$1093_Y ;
+  wire \$procmux$1099_Y ;
+  wire [31:0] \$procmux$110_Y ;
+  wire [3:0] \$procmux$1110_Y ;
+  wire [10:0] \$procmux$1121_Y ;
+  wire \$procmux$1132_Y ;
+  wire [3:0] \$procmux$1141_Y ;
+  wire [10:0] \$procmux$1150_Y ;
+  wire [2:0] \$procmux$117_Y ;
+  wire \$procmux$1193_Y ;
+  wire [3:0] \$procmux$1198_Y ;
+  wire [31:0] \$procmux$121_Y ;
+  wire \$procmux$123_Y ;
+  wire \$procmux$1289_Y ;
+  wire \$procmux$1291_Y ;
+  wire [10:0] \$procmux$1299_Y ;
+  wire [3:0] \$procmux$1307_Y ;
+  wire \$procmux$130_Y ;
+  wire [10:0] \$procmux$1317_Y ;
+  wire [3:0] \$procmux$1324_Y ;
+  wire \$procmux$1331_Y ;
+  wire \$procmux$1355_Y ;
+  wire [3:0] \$procmux$1362_Y ;
+  wire [3:0] \$procmux$1372_Y ;
+  wire [3:0] \$procmux$1379_Y ;
+  wire [3:0] \$procmux$1381_Y ;
+  wire [3:0] \$procmux$1391_Y ;
+  wire [3:0] \$procmux$1398_Y ;
+  wire \$procmux$1400_Y ;
+  wire \$procmux$1475_Y ;
+  wire [2:0] \$procmux$1477_Y ;
+  wire [31:0] \$procmux$1482_Y ;
+  wire [2:0] \$procmux$1489_Y ;
+  wire [31:0] \$procmux$1493_Y ;
+  wire \$procmux$1499_Y ;
+  wire \$procmux$14_Y ;
+  wire \$procmux$1506_Y ;
+  wire \$procmux$1598_Y ;
+  wire [11:0] \$procmux$17_Y ;
+  wire \$procmux$202_Y ;
+  wire \$procmux$211_Y ;
+  wire \$procmux$233_Y ;
+  wire [11:0] \$procmux$24_Y ;
+  wire [65:0] \$procmux$255_Y ;
+  wire [65:0] \$procmux$258_Y ;
+  wire [65:0] \$procmux$260_Y ;
+  wire \$procmux$266_Y ;
+  wire \$procmux$269_Y ;
+  wire \$procmux$272_Y ;
+  wire \$procmux$274_Y ;
+  wire [8:0] \$procmux$278_Y ;
+  wire [8:0] \$procmux$286_Y ;
+  wire [8:0] \$procmux$289_Y ;
+  wire [2:0] \$procmux$28_Y ;
+  wire [2:0] \$procmux$297_Y ;
+  wire [2:0] \$procmux$310_Y ;
+  wire [2:0] \$procmux$320_Y ;
+  wire \$procmux$33_Y ;
+  wire \$procmux$366_Y ;
+  wire [3:0] \$procmux$375_Y ;
+  wire [1:0] \$procmux$384_Y ;
+  wire [3:0] \$procmux$395_Y ;
+  wire [1:0] \$procmux$403_Y ;
+  wire [2:0] \$procmux$40_Y ;
+  wire [7:0] \$procmux$410_Y ;
+  wire \$procmux$412_CMP ;
+  wire \$procmux$413_CMP ;
+  wire \$procmux$414_CMP ;
+  wire \$procmux$416_CMP ;
+  wire \$procmux$417_CMP ;
+  wire \$procmux$418_CMP ;
+  wire [3:0] \$procmux$424_Y ;
+  wire [1:0] \$procmux$429_Y ;
+  wire [7:0] \$procmux$434_Y ;
+  wire \$procmux$439_Y ;
+  wire \$procmux$44_Y ;
+  wire \$procmux$464_CMP ;
+  wire [3:0] \$procmux$466_Y ;
+  wire \$procmux$46_Y ;
+  wire [1:0] \$procmux$473_Y ;
+  wire [3:0] \$procmux$480_Y ;
+  wire [1:0] \$procmux$485_Y ;
+  wire [2:0] \$procmux$500_Y ;
+  wire \$procmux$505_Y ;
+  wire \$procmux$508_CMP ;
+  wire [2:0] \$procmux$510_Y ;
+  wire \$procmux$518_Y ;
+  wire [3:0] \$procmux$528_Y ;
+  wire [31:0] \$procmux$538_Y ;
+  wire \$procmux$53_Y ;
+  wire [1:0] \$procmux$548_Y ;
+  wire [2:0] \$procmux$558_Y ;
+  wire \$procmux$568_Y ;
+  wire [3:0] \$procmux$576_Y ;
+  wire [31:0] \$procmux$584_Y ;
+  wire [31:0] \$procmux$592_Y ;
+  wire [1:0] \$procmux$600_Y ;
+  wire [2:0] \$procmux$608_Y ;
+  wire [1:0] \$procmux$618_Y ;
+  wire [2:0] \$procmux$630_Y ;
+  wire \$procmux$644_Y ;
+  wire [3:0] \$procmux$658_Y ;
+  wire [31:0] \$procmux$672_Y ;
+  wire [1:0] \$procmux$686_Y ;
+  wire \$procmux$700_Y ;
+  wire [3:0] \$procmux$712_Y ;
+  wire [31:0] \$procmux$724_Y ;
+  wire [2:0] \$procmux$748_Y ;
+  wire \$procmux$759_Y ;
+  wire [3:0] \$procmux$768_Y ;
+  wire [31:0] \$procmux$777_Y ;
+  wire [1:0] \$procmux$804_Y ;
+  wire [2:0] \$procmux$813_Y ;
+  wire [1:0] \$procmux$823_Y ;
+  wire [2:0] \$procmux$836_Y ;
+  wire \$procmux$860_CMP ;
+  wire [1:0] \$procmux$891_Y ;
+  wire [2:0] \$procmux$901_Y ;
+  wire \$procmux$910_CMP ;
+  wire [2:0] \$procmux$925_Y ;
+  wire [3:0] \$procmux$930_Y ;
+  wire [1:0] \$procmux$933_Y ;
+  wire [1:0] gpio_intr;
   wire [65:0] tl_gpio_d2h;
   wire [108:0] tl_gpio_h2d;
   wire [65:0] tl_pwm_d2h;
@@ -530,7 +518,6 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   reg [1:0] \u_gpio.data_in_q ;
   wire [1:0] \u_gpio.event_intr_acthigh ;
   wire [1:0] \u_gpio.event_intr_actlow ;
-  wire [1:0] \u_gpio.event_intr_combined ;
   wire [1:0] \u_gpio.event_intr_fall ;
   wire [1:0] \u_gpio.event_intr_rise ;
   wire \u_gpio.gen_filter[0].u_filter.clk_i ;
@@ -587,23 +574,13 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   reg \u_gpio.gen_filter[1].u_filter.stored_value_q ;
   wire [1:0] \u_gpio.gen_filter[1].u_filter.thresh_i ;
   wire \u_gpio.gen_filter[1].u_filter.update_stored_value ;
-  wire [9:0] \u_gpio.hw2reg ;
-  wire \u_gpio.intr_hw.clk_i ;
-  wire [1:0] \u_gpio.intr_hw.event_intr_i ;
-  wire [1:0] \u_gpio.intr_hw.g_intr_event.new_event ;
-  wire [1:0] \u_gpio.intr_hw.hw2reg_intr_state_d_o ;
-  wire \u_gpio.intr_hw.hw2reg_intr_state_de_o ;
-  wire [1:0] \u_gpio.intr_hw.reg2hw_intr_enable_q_i ;
-  wire [1:0] \u_gpio.intr_hw.reg2hw_intr_state_q_i ;
-  wire [1:0] \u_gpio.intr_hw.reg2hw_intr_test_q_i ;
-  wire \u_gpio.intr_hw.reg2hw_intr_test_qe_i ;
-  wire \u_gpio.intr_hw.rst_ni ;
-  wire [1:0] \u_gpio.intr_hw.status ;
-  wire [26:0] \u_gpio.reg2hw ;
+  wire [6:0] \u_gpio.hw2reg ;
+  wire [1:0] \u_gpio.intr_gpio_o ;
+  wire [19:0] \u_gpio.reg2hw ;
   wire \u_gpio.rst_ni ;
   wire [108:0] \u_gpio.tl_i ;
   wire [65:0] \u_gpio.tl_o ;
-  wire [6:0] \u_gpio.u_reg.addr_hit ;
+  wire [3:0] \u_gpio.u_reg.addr_hit ;
   wire \u_gpio.u_reg.addrmiss ;
   wire \u_gpio.u_reg.clk_i ;
   wire [3:0] \u_gpio.u_reg.ctrl_en_input_filter_qs ;
@@ -618,7 +595,7 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   wire [1:0] \u_gpio.u_reg.direct_gpio_oe_wd ;
   wire \u_gpio.u_reg.direct_qe ;
   wire \u_gpio.u_reg.direct_we ;
-  wire [9:0] \u_gpio.u_reg.hw2reg ;
+  wire [6:0] \u_gpio.u_reg.hw2reg ;
   wire [1:0] \u_gpio.u_reg.intr_ctrl_en_falling_qs ;
   wire [1:0] \u_gpio.u_reg.intr_ctrl_en_falling_wd ;
   wire [1:0] \u_gpio.u_reg.intr_ctrl_en_input_filter_qs ;
@@ -630,18 +607,8 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   wire [1:0] \u_gpio.u_reg.intr_ctrl_en_rising_qs ;
   wire [1:0] \u_gpio.u_reg.intr_ctrl_en_rising_wd ;
   wire \u_gpio.u_reg.intr_ctrl_we ;
-  wire [1:0] \u_gpio.u_reg.intr_enable_qs ;
-  wire [1:0] \u_gpio.u_reg.intr_enable_wd ;
-  wire \u_gpio.u_reg.intr_enable_we ;
-  wire [1:0] \u_gpio.u_reg.intr_state_qs ;
-  wire [1:0] \u_gpio.u_reg.intr_state_wd ;
-  wire \u_gpio.u_reg.intr_state_we ;
-  wire \u_gpio.u_reg.intr_test_flds_we ;
-  wire \u_gpio.u_reg.intr_test_qe ;
-  wire [1:0] \u_gpio.u_reg.intr_test_wd ;
-  wire \u_gpio.u_reg.intr_test_we ;
-  wire [26:0] \u_gpio.u_reg.reg2hw ;
-  wire [4:0] \u_gpio.u_reg.reg_addr ;
+  wire [19:0] \u_gpio.u_reg.reg2hw ;
+  wire [3:0] \u_gpio.u_reg.reg_addr ;
   wire [3:0] \u_gpio.u_reg.reg_be ;
   wire \u_gpio.u_reg.reg_busy ;
   wire \u_gpio.u_reg.reg_error ;
@@ -807,55 +774,9 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   wire \u_gpio.u_reg.u_intr_ctrl_en_rising.wr_en_data_arb.we ;
   wire [1:0] \u_gpio.u_reg.u_intr_ctrl_en_rising.wr_en_data_arb.wr_data ;
   wire \u_gpio.u_reg.u_intr_ctrl_en_rising.wr_en_data_arb.wr_en ;
-  wire \u_gpio.u_reg.u_intr_enable.clk_i ;
-  wire [1:0] \u_gpio.u_reg.u_intr_enable.d ;
-  wire \u_gpio.u_reg.u_intr_enable.de ;
-  reg [1:0] \u_gpio.u_reg.u_intr_enable.q ;
-  wire \u_gpio.u_reg.u_intr_enable.qe ;
-  wire [1:0] \u_gpio.u_reg.u_intr_enable.qs ;
-  wire \u_gpio.u_reg.u_intr_enable.rst_ni ;
-  wire [1:0] \u_gpio.u_reg.u_intr_enable.wd ;
-  wire \u_gpio.u_reg.u_intr_enable.we ;
-  wire [1:0] \u_gpio.u_reg.u_intr_enable.wr_data ;
-  wire \u_gpio.u_reg.u_intr_enable.wr_en ;
-  wire [1:0] \u_gpio.u_reg.u_intr_enable.wr_en_data_arb.d ;
-  wire \u_gpio.u_reg.u_intr_enable.wr_en_data_arb.de ;
-  wire [1:0] \u_gpio.u_reg.u_intr_enable.wr_en_data_arb.gen_w.unused_q ;
-  wire [1:0] \u_gpio.u_reg.u_intr_enable.wr_en_data_arb.q ;
-  wire [1:0] \u_gpio.u_reg.u_intr_enable.wr_en_data_arb.wd ;
-  wire \u_gpio.u_reg.u_intr_enable.wr_en_data_arb.we ;
-  wire [1:0] \u_gpio.u_reg.u_intr_enable.wr_en_data_arb.wr_data ;
-  wire \u_gpio.u_reg.u_intr_enable.wr_en_data_arb.wr_en ;
-  wire \u_gpio.u_reg.u_intr_state.clk_i ;
-  wire [1:0] \u_gpio.u_reg.u_intr_state.d ;
-  wire \u_gpio.u_reg.u_intr_state.de ;
-  reg [1:0] \u_gpio.u_reg.u_intr_state.q ;
-  wire \u_gpio.u_reg.u_intr_state.qe ;
-  wire [1:0] \u_gpio.u_reg.u_intr_state.qs ;
-  wire \u_gpio.u_reg.u_intr_state.rst_ni ;
-  wire [1:0] \u_gpio.u_reg.u_intr_state.wd ;
-  wire \u_gpio.u_reg.u_intr_state.we ;
-  wire [1:0] \u_gpio.u_reg.u_intr_state.wr_data ;
-  wire \u_gpio.u_reg.u_intr_state.wr_en ;
-  wire [1:0] \u_gpio.u_reg.u_intr_state.wr_en_data_arb.d ;
-  wire \u_gpio.u_reg.u_intr_state.wr_en_data_arb.de ;
-  wire [1:0] \u_gpio.u_reg.u_intr_state.wr_en_data_arb.q ;
-  wire [1:0] \u_gpio.u_reg.u_intr_state.wr_en_data_arb.wd ;
-  wire \u_gpio.u_reg.u_intr_state.wr_en_data_arb.we ;
-  wire [1:0] \u_gpio.u_reg.u_intr_state.wr_en_data_arb.wr_data ;
-  wire \u_gpio.u_reg.u_intr_state.wr_en_data_arb.wr_en ;
-  wire [1:0] \u_gpio.u_reg.u_intr_test.d ;
-  wire [1:0] \u_gpio.u_reg.u_intr_test.ds ;
-  wire [1:0] \u_gpio.u_reg.u_intr_test.q ;
-  wire \u_gpio.u_reg.u_intr_test.qe ;
-  wire \u_gpio.u_reg.u_intr_test.qre ;
-  wire [1:0] \u_gpio.u_reg.u_intr_test.qs ;
-  wire \u_gpio.u_reg.u_intr_test.re ;
-  wire [1:0] \u_gpio.u_reg.u_intr_test.wd ;
-  wire \u_gpio.u_reg.u_intr_test.we ;
   wire \u_gpio.u_reg.u_reg_if.a_ack ;
   wire \u_gpio.u_reg.u_reg_if.addr_align_err ;
-  wire [4:0] \u_gpio.u_reg.u_reg_if.addr_o ;
+  wire [3:0] \u_gpio.u_reg.u_reg_if.addr_o ;
   wire [3:0] \u_gpio.u_reg.u_reg_if.be_o ;
   wire \u_gpio.u_reg.u_reg_if.busy_i ;
   wire \u_gpio.u_reg.u_reg_if.clk_i ;
@@ -1434,9 +1355,9 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   wire \u_rv_timer.gen_harts[0].u_core.active ;
   wire \u_rv_timer.gen_harts[0].u_core.clk_i ;
   wire \u_rv_timer.gen_harts[0].u_core.intr ;
-  wire [63:0] \u_rv_timer.gen_harts[0].u_core.mtime ;
-  wire [63:0] \u_rv_timer.gen_harts[0].u_core.mtime_d ;
-  wire [63:0] \u_rv_timer.gen_harts[0].u_core.mtimecmp ;
+  wire [31:0] \u_rv_timer.gen_harts[0].u_core.mtime ;
+  wire [31:0] \u_rv_timer.gen_harts[0].u_core.mtime_d ;
+  wire [31:0] \u_rv_timer.gen_harts[0].u_core.mtimecmp ;
   wire [11:0] \u_rv_timer.gen_harts[0].u_core.prescaler ;
   wire \u_rv_timer.gen_harts[0].u_core.rst_ni ;
   wire [7:0] \u_rv_timer.gen_harts[0].u_core.step ;
@@ -1453,7 +1374,10 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   wire \u_rv_timer.gen_harts[0].u_intr_hw.reg2hw_intr_test_qe_i ;
   wire \u_rv_timer.gen_harts[0].u_intr_hw.rst_ni ;
   wire \u_rv_timer.gen_harts[0].u_intr_hw.status ;
-  wire [67:0] \u_rv_timer.hw2reg ;
+  wire [1:0] \u_rv_timer.gpio_intr_i ;
+  wire [34:0] \u_rv_timer.hw2reg ;
+  wire \u_rv_timer.input_capture_active_d ;
+  reg \u_rv_timer.input_capture_active_q ;
   wire \u_rv_timer.intr_timer_en ;
   wire \u_rv_timer.intr_timer_set ;
   wire \u_rv_timer.intr_timer_state_d ;
@@ -1461,18 +1385,20 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   wire \u_rv_timer.intr_timer_state_q ;
   wire \u_rv_timer.intr_timer_test_q ;
   wire \u_rv_timer.intr_timer_test_qe ;
-  wire [63:0] \u_rv_timer.mtime ;
-  wire [63:0] \u_rv_timer.mtime_d ;
-  wire [63:0] \u_rv_timer.mtimecmp ;
+  wire [31:0] \u_rv_timer.mtime ;
+  wire [31:0] \u_rv_timer.mtime_d ;
+  wire [31:0] \u_rv_timer.mtimecmp ;
   wire \u_rv_timer.mtimecmp_update ;
   wire [11:0] \u_rv_timer.prescaler ;
-  wire [154:0] \u_rv_timer.reg2hw ;
+  wire [91:0] \u_rv_timer.reg2hw ;
   wire \u_rv_timer.rst_ni ;
+  wire \u_rv_timer.sel_gpio_intr_0 ;
+  wire \u_rv_timer.sel_gpio_intr_1 ;
   wire [7:0] \u_rv_timer.step ;
   wire \u_rv_timer.tick ;
   wire [108:0] \u_rv_timer.tl_i ;
   wire [65:0] \u_rv_timer.tl_o ;
-  wire [8:0] \u_rv_timer.u_reg.addr_hit ;
+  wire [6:0] \u_rv_timer.u_reg.addr_hit ;
   wire \u_rv_timer.u_reg.addrmiss ;
   wire [11:0] \u_rv_timer.u_reg.cfg0_prescale_qs ;
   wire [11:0] \u_rv_timer.u_reg.cfg0_prescale_wd ;
@@ -1480,21 +1406,20 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   wire [7:0] \u_rv_timer.u_reg.cfg0_step_wd ;
   wire \u_rv_timer.u_reg.cfg0_we ;
   wire \u_rv_timer.u_reg.clk_i ;
-  wire \u_rv_timer.u_reg.compare_lower0_0_flds_we ;
-  wire \u_rv_timer.u_reg.compare_lower0_0_qe ;
-  wire [31:0] \u_rv_timer.u_reg.compare_lower0_0_qs ;
-  wire [31:0] \u_rv_timer.u_reg.compare_lower0_0_wd ;
-  wire \u_rv_timer.u_reg.compare_lower0_0_we ;
-  wire \u_rv_timer.u_reg.compare_upper0_0_flds_we ;
-  wire \u_rv_timer.u_reg.compare_upper0_0_qe ;
-  wire [31:0] \u_rv_timer.u_reg.compare_upper0_0_qs ;
-  wire [31:0] \u_rv_timer.u_reg.compare_upper0_0_wd ;
-  wire \u_rv_timer.u_reg.compare_upper0_0_we ;
-  wire \u_rv_timer.u_reg.ctrl_qs ;
-  wire \u_rv_timer.u_reg.ctrl_wd ;
+  wire \u_rv_timer.u_reg.compare_v0_flds_we ;
+  wire \u_rv_timer.u_reg.compare_v0_qe ;
+  wire [31:0] \u_rv_timer.u_reg.compare_v0_qs ;
+  wire [31:0] \u_rv_timer.u_reg.compare_v0_wd ;
+  wire \u_rv_timer.u_reg.compare_v0_we ;
+  wire \u_rv_timer.u_reg.ctrl_active_0_qs ;
+  wire \u_rv_timer.u_reg.ctrl_active_0_wd ;
+  wire \u_rv_timer.u_reg.ctrl_gpio_intr_0_0_qs ;
+  wire \u_rv_timer.u_reg.ctrl_gpio_intr_0_0_wd ;
+  wire \u_rv_timer.u_reg.ctrl_gpio_intr_1_0_qs ;
+  wire \u_rv_timer.u_reg.ctrl_gpio_intr_1_0_wd ;
   wire \u_rv_timer.u_reg.ctrl_we ;
   wire \u_rv_timer.u_reg.devmode_i ;
-  wire [67:0] \u_rv_timer.u_reg.hw2reg ;
+  wire [34:0] \u_rv_timer.u_reg.hw2reg ;
   wire \u_rv_timer.u_reg.intr_enable0_qs ;
   wire \u_rv_timer.u_reg.intr_enable0_wd ;
   wire \u_rv_timer.u_reg.intr_enable0_we ;
@@ -1505,8 +1430,8 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   wire \u_rv_timer.u_reg.intr_test0_qe ;
   wire \u_rv_timer.u_reg.intr_test0_wd ;
   wire \u_rv_timer.u_reg.intr_test0_we ;
-  wire [154:0] \u_rv_timer.u_reg.reg2hw ;
-  wire [8:0] \u_rv_timer.u_reg.reg_addr ;
+  wire [91:0] \u_rv_timer.u_reg.reg2hw ;
+  wire [4:0] \u_rv_timer.u_reg.reg_addr ;
   wire [3:0] \u_rv_timer.u_reg.reg_be ;
   wire \u_rv_timer.u_reg.reg_busy ;
   wire \u_rv_timer.u_reg.reg_error ;
@@ -1517,12 +1442,9 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   wire \u_rv_timer.u_reg.reg_we ;
   wire \u_rv_timer.u_reg.rst_ni ;
   wire \u_rv_timer.u_reg.shadow_busy ;
-  wire [31:0] \u_rv_timer.u_reg.timer_v_lower0_qs ;
-  wire [31:0] \u_rv_timer.u_reg.timer_v_lower0_wd ;
-  wire \u_rv_timer.u_reg.timer_v_lower0_we ;
-  wire [31:0] \u_rv_timer.u_reg.timer_v_upper0_qs ;
-  wire [31:0] \u_rv_timer.u_reg.timer_v_upper0_wd ;
-  wire \u_rv_timer.u_reg.timer_v_upper0_we ;
+  wire [31:0] \u_rv_timer.u_reg.timer_v0_qs ;
+  wire [31:0] \u_rv_timer.u_reg.timer_v0_wd ;
+  wire \u_rv_timer.u_reg.timer_v0_we ;
   wire [108:0] \u_rv_timer.u_reg.tl_i ;
   wire [65:0] \u_rv_timer.u_reg.tl_o ;
   wire [65:0] \u_rv_timer.u_reg.tl_o_pre ;
@@ -1566,71 +1488,86 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   wire \u_rv_timer.u_reg.u_cfg0_step.wr_en_data_arb.we ;
   wire [7:0] \u_rv_timer.u_reg.u_cfg0_step.wr_en_data_arb.wr_data ;
   wire \u_rv_timer.u_reg.u_cfg0_step.wr_en_data_arb.wr_en ;
-  wire \u_rv_timer.u_reg.u_compare_lower0_0.clk_i ;
-  wire [31:0] \u_rv_timer.u_reg.u_compare_lower0_0.d ;
-  wire \u_rv_timer.u_reg.u_compare_lower0_0.de ;
-  reg [31:0] \u_rv_timer.u_reg.u_compare_lower0_0.q ;
-  wire \u_rv_timer.u_reg.u_compare_lower0_0.qe ;
-  wire [31:0] \u_rv_timer.u_reg.u_compare_lower0_0.qs ;
-  wire \u_rv_timer.u_reg.u_compare_lower0_0.rst_ni ;
-  wire [31:0] \u_rv_timer.u_reg.u_compare_lower0_0.wd ;
-  wire \u_rv_timer.u_reg.u_compare_lower0_0.we ;
-  wire [31:0] \u_rv_timer.u_reg.u_compare_lower0_0.wr_data ;
-  wire \u_rv_timer.u_reg.u_compare_lower0_0.wr_en ;
-  wire [31:0] \u_rv_timer.u_reg.u_compare_lower0_0.wr_en_data_arb.d ;
-  wire \u_rv_timer.u_reg.u_compare_lower0_0.wr_en_data_arb.de ;
-  wire [31:0] \u_rv_timer.u_reg.u_compare_lower0_0.wr_en_data_arb.gen_w.unused_q ;
-  wire [31:0] \u_rv_timer.u_reg.u_compare_lower0_0.wr_en_data_arb.q ;
-  wire [31:0] \u_rv_timer.u_reg.u_compare_lower0_0.wr_en_data_arb.wd ;
-  wire \u_rv_timer.u_reg.u_compare_lower0_0.wr_en_data_arb.we ;
-  wire [31:0] \u_rv_timer.u_reg.u_compare_lower0_0.wr_en_data_arb.wr_data ;
-  wire \u_rv_timer.u_reg.u_compare_lower0_0.wr_en_data_arb.wr_en ;
-  wire \u_rv_timer.u_reg.u_compare_lower0_00_qe.clk_i ;
-  wire \u_rv_timer.u_reg.u_compare_lower0_00_qe.d_i ;
-  reg \u_rv_timer.u_reg.u_compare_lower0_00_qe.q_o ;
-  wire \u_rv_timer.u_reg.u_compare_lower0_00_qe.rst_ni ;
-  wire \u_rv_timer.u_reg.u_compare_upper0_0.clk_i ;
-  wire [31:0] \u_rv_timer.u_reg.u_compare_upper0_0.d ;
-  wire \u_rv_timer.u_reg.u_compare_upper0_0.de ;
-  reg [31:0] \u_rv_timer.u_reg.u_compare_upper0_0.q ;
-  wire \u_rv_timer.u_reg.u_compare_upper0_0.qe ;
-  wire [31:0] \u_rv_timer.u_reg.u_compare_upper0_0.qs ;
-  wire \u_rv_timer.u_reg.u_compare_upper0_0.rst_ni ;
-  wire [31:0] \u_rv_timer.u_reg.u_compare_upper0_0.wd ;
-  wire \u_rv_timer.u_reg.u_compare_upper0_0.we ;
-  wire [31:0] \u_rv_timer.u_reg.u_compare_upper0_0.wr_data ;
-  wire \u_rv_timer.u_reg.u_compare_upper0_0.wr_en ;
-  wire [31:0] \u_rv_timer.u_reg.u_compare_upper0_0.wr_en_data_arb.d ;
-  wire \u_rv_timer.u_reg.u_compare_upper0_0.wr_en_data_arb.de ;
-  wire [31:0] \u_rv_timer.u_reg.u_compare_upper0_0.wr_en_data_arb.gen_w.unused_q ;
-  wire [31:0] \u_rv_timer.u_reg.u_compare_upper0_0.wr_en_data_arb.q ;
-  wire [31:0] \u_rv_timer.u_reg.u_compare_upper0_0.wr_en_data_arb.wd ;
-  wire \u_rv_timer.u_reg.u_compare_upper0_0.wr_en_data_arb.we ;
-  wire [31:0] \u_rv_timer.u_reg.u_compare_upper0_0.wr_en_data_arb.wr_data ;
-  wire \u_rv_timer.u_reg.u_compare_upper0_0.wr_en_data_arb.wr_en ;
-  wire \u_rv_timer.u_reg.u_compare_upper0_00_qe.clk_i ;
-  wire \u_rv_timer.u_reg.u_compare_upper0_00_qe.d_i ;
-  reg \u_rv_timer.u_reg.u_compare_upper0_00_qe.q_o ;
-  wire \u_rv_timer.u_reg.u_compare_upper0_00_qe.rst_ni ;
-  wire \u_rv_timer.u_reg.u_ctrl.clk_i ;
-  wire \u_rv_timer.u_reg.u_ctrl.d ;
-  wire \u_rv_timer.u_reg.u_ctrl.de ;
-  reg \u_rv_timer.u_reg.u_ctrl.q ;
-  wire \u_rv_timer.u_reg.u_ctrl.qe ;
-  wire \u_rv_timer.u_reg.u_ctrl.qs ;
-  wire \u_rv_timer.u_reg.u_ctrl.rst_ni ;
-  wire \u_rv_timer.u_reg.u_ctrl.wd ;
-  wire \u_rv_timer.u_reg.u_ctrl.we ;
-  wire \u_rv_timer.u_reg.u_ctrl.wr_data ;
-  wire \u_rv_timer.u_reg.u_ctrl.wr_en ;
-  wire \u_rv_timer.u_reg.u_ctrl.wr_en_data_arb.d ;
-  wire \u_rv_timer.u_reg.u_ctrl.wr_en_data_arb.de ;
-  wire \u_rv_timer.u_reg.u_ctrl.wr_en_data_arb.gen_w.unused_q ;
-  wire \u_rv_timer.u_reg.u_ctrl.wr_en_data_arb.q ;
-  wire \u_rv_timer.u_reg.u_ctrl.wr_en_data_arb.wd ;
-  wire \u_rv_timer.u_reg.u_ctrl.wr_en_data_arb.we ;
-  wire \u_rv_timer.u_reg.u_ctrl.wr_en_data_arb.wr_data ;
-  wire \u_rv_timer.u_reg.u_ctrl.wr_en_data_arb.wr_en ;
+  wire \u_rv_timer.u_reg.u_compare_v0.clk_i ;
+  wire [31:0] \u_rv_timer.u_reg.u_compare_v0.d ;
+  wire \u_rv_timer.u_reg.u_compare_v0.de ;
+  reg [31:0] \u_rv_timer.u_reg.u_compare_v0.q ;
+  wire \u_rv_timer.u_reg.u_compare_v0.qe ;
+  wire [31:0] \u_rv_timer.u_reg.u_compare_v0.qs ;
+  wire \u_rv_timer.u_reg.u_compare_v0.rst_ni ;
+  wire [31:0] \u_rv_timer.u_reg.u_compare_v0.wd ;
+  wire \u_rv_timer.u_reg.u_compare_v0.we ;
+  wire [31:0] \u_rv_timer.u_reg.u_compare_v0.wr_data ;
+  wire \u_rv_timer.u_reg.u_compare_v0.wr_en ;
+  wire [31:0] \u_rv_timer.u_reg.u_compare_v0.wr_en_data_arb.d ;
+  wire \u_rv_timer.u_reg.u_compare_v0.wr_en_data_arb.de ;
+  wire [31:0] \u_rv_timer.u_reg.u_compare_v0.wr_en_data_arb.gen_w.unused_q ;
+  wire [31:0] \u_rv_timer.u_reg.u_compare_v0.wr_en_data_arb.q ;
+  wire [31:0] \u_rv_timer.u_reg.u_compare_v0.wr_en_data_arb.wd ;
+  wire \u_rv_timer.u_reg.u_compare_v0.wr_en_data_arb.we ;
+  wire [31:0] \u_rv_timer.u_reg.u_compare_v0.wr_en_data_arb.wr_data ;
+  wire \u_rv_timer.u_reg.u_compare_v0.wr_en_data_arb.wr_en ;
+  wire \u_rv_timer.u_reg.u_compare_v00_qe.clk_i ;
+  wire \u_rv_timer.u_reg.u_compare_v00_qe.d_i ;
+  reg \u_rv_timer.u_reg.u_compare_v00_qe.q_o ;
+  wire \u_rv_timer.u_reg.u_compare_v00_qe.rst_ni ;
+  wire \u_rv_timer.u_reg.u_ctrl_active_0.clk_i ;
+  wire \u_rv_timer.u_reg.u_ctrl_active_0.d ;
+  wire \u_rv_timer.u_reg.u_ctrl_active_0.de ;
+  reg \u_rv_timer.u_reg.u_ctrl_active_0.q ;
+  wire \u_rv_timer.u_reg.u_ctrl_active_0.qe ;
+  wire \u_rv_timer.u_reg.u_ctrl_active_0.qs ;
+  wire \u_rv_timer.u_reg.u_ctrl_active_0.rst_ni ;
+  wire \u_rv_timer.u_reg.u_ctrl_active_0.wd ;
+  wire \u_rv_timer.u_reg.u_ctrl_active_0.we ;
+  wire \u_rv_timer.u_reg.u_ctrl_active_0.wr_data ;
+  wire \u_rv_timer.u_reg.u_ctrl_active_0.wr_en ;
+  wire \u_rv_timer.u_reg.u_ctrl_active_0.wr_en_data_arb.d ;
+  wire \u_rv_timer.u_reg.u_ctrl_active_0.wr_en_data_arb.de ;
+  wire \u_rv_timer.u_reg.u_ctrl_active_0.wr_en_data_arb.gen_w.unused_q ;
+  wire \u_rv_timer.u_reg.u_ctrl_active_0.wr_en_data_arb.q ;
+  wire \u_rv_timer.u_reg.u_ctrl_active_0.wr_en_data_arb.wd ;
+  wire \u_rv_timer.u_reg.u_ctrl_active_0.wr_en_data_arb.we ;
+  wire \u_rv_timer.u_reg.u_ctrl_active_0.wr_en_data_arb.wr_data ;
+  wire \u_rv_timer.u_reg.u_ctrl_active_0.wr_en_data_arb.wr_en ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.clk_i ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.d ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.de ;
+  reg \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.q ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.qe ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.qs ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.rst_ni ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.wd ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.we ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.wr_data ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.wr_en ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.wr_en_data_arb.d ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.wr_en_data_arb.de ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.wr_en_data_arb.gen_w.unused_q ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.wr_en_data_arb.q ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.wr_en_data_arb.wd ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.wr_en_data_arb.we ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.wr_en_data_arb.wr_data ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.wr_en_data_arb.wr_en ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.clk_i ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.d ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.de ;
+  reg \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.q ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.qe ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.qs ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.rst_ni ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.wd ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.we ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.wr_data ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.wr_en ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.wr_en_data_arb.d ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.wr_en_data_arb.de ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.wr_en_data_arb.gen_w.unused_q ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.wr_en_data_arb.q ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.wr_en_data_arb.wd ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.wr_en_data_arb.we ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.wr_en_data_arb.wr_data ;
+  wire \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.wr_en_data_arb.wr_en ;
   wire \u_rv_timer.u_reg.u_intr_enable0.clk_i ;
   wire \u_rv_timer.u_reg.u_intr_enable0.d ;
   wire \u_rv_timer.u_reg.u_intr_enable0.de ;
@@ -1679,7 +1616,7 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   wire \u_rv_timer.u_reg.u_intr_test0.we ;
   wire \u_rv_timer.u_reg.u_reg_if.a_ack ;
   wire \u_rv_timer.u_reg.u_reg_if.addr_align_err ;
-  wire [8:0] \u_rv_timer.u_reg.u_reg_if.addr_o ;
+  wire [4:0] \u_rv_timer.u_reg.u_reg_if.addr_o ;
   wire [3:0] \u_rv_timer.u_reg.u_reg_if.be_o ;
   wire \u_rv_timer.u_reg.u_reg_if.busy_i ;
   wire \u_rv_timer.u_reg.u_reg_if.clk_i ;
@@ -1718,44 +1655,25 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   wire \u_rv_timer.u_reg.u_reg_if.wr_req ;
   wire [65:0] \u_rv_timer.u_reg.u_rsp_intg_gen.tl_i ;
   wire [65:0] \u_rv_timer.u_reg.u_rsp_intg_gen.tl_o ;
-  wire \u_rv_timer.u_reg.u_timer_v_lower0.clk_i ;
-  wire [31:0] \u_rv_timer.u_reg.u_timer_v_lower0.d ;
-  wire \u_rv_timer.u_reg.u_timer_v_lower0.de ;
-  reg [31:0] \u_rv_timer.u_reg.u_timer_v_lower0.q ;
-  wire \u_rv_timer.u_reg.u_timer_v_lower0.qe ;
-  wire [31:0] \u_rv_timer.u_reg.u_timer_v_lower0.qs ;
-  wire \u_rv_timer.u_reg.u_timer_v_lower0.rst_ni ;
-  wire [31:0] \u_rv_timer.u_reg.u_timer_v_lower0.wd ;
-  wire \u_rv_timer.u_reg.u_timer_v_lower0.we ;
-  wire [31:0] \u_rv_timer.u_reg.u_timer_v_lower0.wr_data ;
-  wire \u_rv_timer.u_reg.u_timer_v_lower0.wr_en ;
-  wire [31:0] \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.d ;
-  wire \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.de ;
-  wire [31:0] \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.gen_w.unused_q ;
-  wire [31:0] \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.q ;
-  wire [31:0] \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd ;
-  wire \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.we ;
-  wire [31:0] \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wr_data ;
-  wire \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wr_en ;
-  wire \u_rv_timer.u_reg.u_timer_v_upper0.clk_i ;
-  wire [31:0] \u_rv_timer.u_reg.u_timer_v_upper0.d ;
-  wire \u_rv_timer.u_reg.u_timer_v_upper0.de ;
-  reg [31:0] \u_rv_timer.u_reg.u_timer_v_upper0.q ;
-  wire \u_rv_timer.u_reg.u_timer_v_upper0.qe ;
-  wire [31:0] \u_rv_timer.u_reg.u_timer_v_upper0.qs ;
-  wire \u_rv_timer.u_reg.u_timer_v_upper0.rst_ni ;
-  wire [31:0] \u_rv_timer.u_reg.u_timer_v_upper0.wd ;
-  wire \u_rv_timer.u_reg.u_timer_v_upper0.we ;
-  wire [31:0] \u_rv_timer.u_reg.u_timer_v_upper0.wr_data ;
-  wire \u_rv_timer.u_reg.u_timer_v_upper0.wr_en ;
-  wire [31:0] \u_rv_timer.u_reg.u_timer_v_upper0.wr_en_data_arb.d ;
-  wire \u_rv_timer.u_reg.u_timer_v_upper0.wr_en_data_arb.de ;
-  wire [31:0] \u_rv_timer.u_reg.u_timer_v_upper0.wr_en_data_arb.gen_w.unused_q ;
-  wire [31:0] \u_rv_timer.u_reg.u_timer_v_upper0.wr_en_data_arb.q ;
-  wire [31:0] \u_rv_timer.u_reg.u_timer_v_upper0.wr_en_data_arb.wd ;
-  wire \u_rv_timer.u_reg.u_timer_v_upper0.wr_en_data_arb.we ;
-  wire [31:0] \u_rv_timer.u_reg.u_timer_v_upper0.wr_en_data_arb.wr_data ;
-  wire \u_rv_timer.u_reg.u_timer_v_upper0.wr_en_data_arb.wr_en ;
+  wire \u_rv_timer.u_reg.u_timer_v0.clk_i ;
+  wire [31:0] \u_rv_timer.u_reg.u_timer_v0.d ;
+  wire \u_rv_timer.u_reg.u_timer_v0.de ;
+  reg [31:0] \u_rv_timer.u_reg.u_timer_v0.q ;
+  wire \u_rv_timer.u_reg.u_timer_v0.qe ;
+  wire [31:0] \u_rv_timer.u_reg.u_timer_v0.qs ;
+  wire \u_rv_timer.u_reg.u_timer_v0.rst_ni ;
+  wire [31:0] \u_rv_timer.u_reg.u_timer_v0.wd ;
+  wire \u_rv_timer.u_reg.u_timer_v0.we ;
+  wire [31:0] \u_rv_timer.u_reg.u_timer_v0.wr_data ;
+  wire \u_rv_timer.u_reg.u_timer_v0.wr_en ;
+  wire [31:0] \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.d ;
+  wire \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.de ;
+  wire [31:0] \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.gen_w.unused_q ;
+  wire [31:0] \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.q ;
+  wire [31:0] \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd ;
+  wire \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.we ;
+  wire [31:0] \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wr_data ;
+  wire \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wr_en ;
   wire \u_rv_timer.u_reg.wr_err ;
   wire [31:0] \u_uart.addr_o ;
   wire [3:0] \u_uart.be_o ;
@@ -2685,26 +2603,22 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   assign \$1022y  = \u_pwm.u_reg.u_pwm_param_cdc.u_arb.gen_passthru.u_dst_to_src_ack.src_level  ^ \u_pwm.u_reg.u_pwm_param_cdc.dst_req ;
   assign \u_pwm.u_reg.u_pwm_param_cdc.src_ack  = \u_pwm.u_reg.u_pwm_param_cdc.u_arb.gen_passthru.u_dst_to_src_ack.dst_level_q  ^ \u_pwm.u_reg.u_pwm_param_cdc.u_arb.gen_passthru.u_dst_to_src_ack.prim_flop_2sync.u_sync_2.q_o ;
   assign { \u_pwm.u_reg._pwm_param_we , \u_pwm.u_reg.u_pwm_param_cdc.dst_re_o , \u_pwm.u_reg.u_pwm_param_cdc.dst_regwen_o  } = \u_pwm.u_reg.u_pwm_param_cdc.txn_bits_q  & { \u_pwm.u_reg.u_pwm_param_cdc.dst_req , \u_pwm.u_reg.u_pwm_param_cdc.dst_req , \u_pwm.u_reg.u_pwm_param_cdc.dst_req  };
-  assign \u_pwm.u_reg.addr_hit [0] = ! { \u_uart.u_bridge.addr_q [3:2], 2'h0 };
-  assign \u_pwm.u_reg.addr_hit [1] = \u_uart.u_bridge.addr_q [3:2] == 2'h1;
-  assign \u_pwm.u_reg.addr_hit [2] = \u_uart.u_bridge.addr_q [3:2] == 2'h2;
   assign \$1101y  = \u_pwm.u_reg.reg_re  || \u_pwm.u_reg.reg_we ;
-  assign \$1102y  = | \u_pwm.u_reg.addr_hit ;
+  assign \$1102y  = | \u_gpio.u_reg.addr_hit [2:0];
   assign \$1103y  = ! \$1102y ;
   assign \u_pwm.u_reg.addrmiss  = \$1101y  ? \$1103y  : 1'h0;
-  assign \$1109y  = \u_pwm.u_reg.addr_hit [0] & \$1108y ;
-  assign \$1113y  = \u_pwm.u_reg.addr_hit [1] & \$1106y [0];
+  assign \$1109y  = \u_gpio.u_reg.addr_hit [0] & \$1108y ;
   assign \$1114y  = \$1109y  | \$1113y ;
   assign \$1108y  = | \$1106y ;
-  assign \$1118y  = \u_pwm.u_reg.addr_hit [2] & \$1108y ;
+  assign \$1118y  = \u_gpio.u_reg.addr_hit [2] & \$1108y ;
   assign \$1119y  = \$1114y  | \$1118y ;
   assign \u_uart.u_reg.reg_error  = \u_uart.u_reg.addrmiss  | \u_uart.u_reg.wr_err ;
   assign \u_pwm.u_reg.wr_err  = \u_pwm.u_reg.reg_we  & \$1119y ;
-  assign \$1121y  = \u_pwm.u_reg.addr_hit [0] & \u_pwm.u_reg.reg_we ;
+  assign \$1121y  = \u_gpio.u_reg.addr_hit [0] & \u_pwm.u_reg.reg_we ;
   assign \u_pwm.u_reg.u_cfg_cdc.u_src_to_dst_req.src_pulse_i  = \$1121y  & \$1122y ;
-  assign \$1124y  = \u_pwm.u_reg.addr_hit [1] & \u_pwm.u_reg.reg_we ;
+  assign \$1124y  = \u_gpio.u_reg.addr_hit [1] & \u_pwm.u_reg.reg_we ;
   assign \u_pwm.u_reg.u_pwm_en_cdc.u_src_to_dst_req.src_pulse_i  = \$1124y  & \$1122y ;
-  assign \$1127y  = \u_pwm.u_reg.addr_hit [2] & \u_pwm.u_reg.reg_we ;
+  assign \$1127y  = \u_gpio.u_reg.addr_hit [2] & \u_pwm.u_reg.reg_we ;
   assign \$1122y  = ! \u_pwm.u_reg.reg_error ;
   assign \u_pwm.u_reg.u_pwm_param_cdc.u_src_to_dst_req.src_pulse_i  = \$1127y  & \$1122y ;
   assign \$1140y  = \u_pwm.u_pwm_core.beat_ctr_q  + 27'h0000001;
@@ -2744,178 +2658,153 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   assign \$1229y  = \$1227y  ? 2'h3 : \$1228y ;
   assign \u_gpio.gen_filter[1].u_filter.diff_ctr_d  = \$1226y  ? 2'h0 : \$1229y ;
   assign \u_gpio.gen_filter[1].u_filter.filter_o  = \u_gpio.u_reg.u_ctrl_en_input_filter.q [1] ? \u_gpio.gen_filter[1].u_filter.stored_value_q  : \u_gpio.gen_filter[1].u_filter.gen_async.prim_flop_2sync.u_sync_2.q_o ;
-  assign \$1241y  = { \u_gpio.intr_hw.reg2hw_intr_test_qe_i , \u_gpio.intr_hw.reg2hw_intr_test_qe_i  } & \u_gpio.u_reg.reg_wdata [1:0];
-  assign \u_gpio.intr_hw.g_intr_event.new_event  = \$1241y  | \u_gpio.intr_hw.event_intr_i ;
-  assign \u_gpio.u_reg.u_intr_state.wr_en_data_arb.de  = | \u_gpio.intr_hw.g_intr_event.new_event ;
-  assign \u_gpio.u_reg.u_intr_state.wr_en_data_arb.d  = \u_gpio.intr_hw.g_intr_event.new_event  | \u_gpio.u_reg.u_intr_state.q ;
-  assign \$1249y  = ~ \u_gpio.data_in_q ;
-  assign \$1250y  = \$1249y  & { \u_gpio.gen_filter[1].u_filter.filter_o , \u_gpio.gen_filter[0].u_filter.filter_o  };
-  assign \u_gpio.event_intr_rise  = \$1250y  & \u_gpio.u_reg.u_intr_ctrl_en_rising.q ;
-  assign \$1253y  = \u_gpio.data_in_q  & \$1252y ;
-  assign \u_gpio.event_intr_fall  = \$1253y  & \u_gpio.u_reg.u_intr_ctrl_en_falling.q ;
+  assign \$1241y  = ~ \u_gpio.data_in_q ;
+  assign \$1242y  = \$1241y  & { \u_gpio.gen_filter[1].u_filter.filter_o , \u_gpio.gen_filter[0].u_filter.filter_o  };
+  assign \u_gpio.event_intr_rise  = \$1242y  & \u_gpio.u_reg.u_intr_ctrl_en_rising.q ;
+  assign \$1245y  = \u_gpio.data_in_q  & \$1244y ;
+  assign \u_gpio.event_intr_fall  = \$1245y  & \u_gpio.u_reg.u_intr_ctrl_en_falling.q ;
   assign \u_gpio.event_intr_acthigh  = { \u_gpio.gen_filter[1].u_filter.filter_o , \u_gpio.gen_filter[0].u_filter.filter_o  } & \u_gpio.u_reg.u_intr_ctrl_en_lvlhigh.q ;
-  assign \$1252y  = ~ { \u_gpio.gen_filter[1].u_filter.filter_o , \u_gpio.gen_filter[0].u_filter.filter_o  };
-  assign \u_gpio.event_intr_actlow  = \$1252y  & \u_gpio.u_reg.u_intr_ctrl_en_lvllow.q ;
-  assign \$1258y  = \u_gpio.event_intr_rise  | \u_gpio.event_intr_fall ;
-  assign \$1259y  = \$1258y  | \u_gpio.event_intr_actlow ;
-  assign \u_gpio.intr_hw.event_intr_i  = \$1259y  | \u_gpio.event_intr_acthigh ;
+  assign \$1244y  = ~ { \u_gpio.gen_filter[1].u_filter.filter_o , \u_gpio.gen_filter[0].u_filter.filter_o  };
+  assign \u_gpio.event_intr_actlow  = \$1244y  & \u_gpio.u_reg.u_intr_ctrl_en_lvllow.q ;
+  assign \$1250y  = \u_gpio.event_intr_rise  | \u_gpio.event_intr_fall ;
+  assign \$1251y  = \$1250y  | \u_gpio.event_intr_actlow ;
+  assign \u_rv_timer.gpio_intr_i  = \$1251y  | \u_gpio.event_intr_acthigh ;
   assign \u_gpio.u_reg.u_reg_if.a_ack  = \xbar.u_s1n_6.gen_dfifo[2].fifo_d.reqfifo.rvalid_o  & \xbar.u_s1n_6.gen_dfifo[2].fifo_d.reqfifo.full_o ;
-  assign \u_gpio.u_reg.reg_we  = \u_gpio.u_reg.u_reg_if.a_ack  & \$1266y ;
+  assign \u_gpio.u_reg.reg_we  = \u_gpio.u_reg.u_reg_if.a_ack  & \$1258y ;
   assign \u_gpio.u_reg.reg_re  = \u_gpio.u_reg.u_reg_if.a_ack  & \u_gpio.u_reg.u_reg_if.u_err.op_get ;
-  assign \$1282y  = \u_gpio.u_reg.reg_re  ? 3'h1 : 3'h0;
-  assign \$1290y  = \u_gpio.u_reg.reg_error  || \u_gpio.u_reg.reg_we ;
-  assign \$1291y  = \$1290y  ? 32'd4294967295 : \u_gpio.u_reg.u_reg_if.rdata_i ;
+  assign \$1274y  = \u_gpio.u_reg.reg_re  ? 3'h1 : 3'h0;
+  assign \$1282y  = \u_gpio.u_reg.reg_error  || \u_gpio.u_reg.reg_we ;
+  assign \$1283y  = \$1282y  ? 32'd4294967295 : \u_gpio.u_reg.u_reg_if.rdata_i ;
   assign \xbar.u_s1n_6.gen_dfifo[2].fifo_d.reqfifo.full_o  = ~ \u_gpio.u_reg.u_reg_if.outstanding_q ;
   assign \u_gpio.u_reg.reg_error  = \u_gpio.u_reg.addrmiss  | \u_gpio.u_reg.wr_err ;
-  assign \u_gpio.u_reg.u_intr_state.qe  = \u_gpio.u_reg.u_intr_state.wr_en_data_arb.we  | \u_gpio.u_reg.u_intr_state.wr_en_data_arb.de ;
-  assign \$1375y  = \u_gpio.u_reg.u_intr_state.wr_en_data_arb.de  ? \u_gpio.u_reg.u_intr_state.wr_en_data_arb.d  : \u_gpio.u_reg.u_intr_state.q ;
-  assign \$1376y  = ~ \u_gpio.u_reg.reg_wdata [1:0];
-  assign \$1377y  = \u_gpio.u_reg.u_intr_state.wr_en_data_arb.we  ? \$1376y  : 2'h3;
-  assign \u_gpio.u_reg.u_intr_state.wr_data  = \$1375y  & \$1377y ;
-  assign \u_gpio.u_reg.addr_hit [0] = ! { \u_uart.u_bridge.addr_q [4:2], 2'h0 };
-  assign \u_gpio.u_reg.addr_hit [1] = \u_uart.u_bridge.addr_q [4:2] == 3'h1;
-  assign \u_gpio.u_reg.addr_hit [2] = \u_uart.u_bridge.addr_q [4:2] == 3'h2;
-  assign \u_gpio.u_reg.addr_hit [3] = \u_uart.u_bridge.addr_q [4:2] == 3'h3;
-  assign \u_gpio.u_reg.addr_hit [4] = \u_uart.u_bridge.addr_q [4:2] == 3'h4;
-  assign \u_gpio.u_reg.addr_hit [5] = \u_uart.u_bridge.addr_q [4:2] == 3'h5;
-  assign \u_gpio.u_reg.addr_hit [6] = \u_uart.u_bridge.addr_q [4:2] == 3'h6;
-  assign \$1455y  = \u_gpio.u_reg.reg_re  || \u_gpio.u_reg.reg_we ;
-  assign \$1457y  = ! \$1456y ;
-  assign \u_gpio.u_reg.addrmiss  = \$1455y  ? \$1457y  : 1'h0;
-  assign \$1463y  = \u_gpio.u_reg.addr_hit [0] & \$1106y [0];
-  assign \$1467y  = \u_gpio.u_reg.addr_hit [1] & \$1106y [0];
-  assign \$1468y  = \$1463y  | \$1467y ;
-  assign \$1472y  = \u_gpio.u_reg.addr_hit [2] & \$1106y [0];
-  assign \$1473y  = \$1468y  | \$1472y ;
-  assign \$1477y  = \u_gpio.u_reg.addr_hit [3] & \$1106y [0];
-  assign \$1478y  = \$1473y  | \$1477y ;
-  assign \$1482y  = \u_gpio.u_reg.addr_hit [4] & \$1106y [0];
-  assign \$1483y  = \$1478y  | \$1482y ;
-  assign \$1486y  = | \$1106y [1:0];
-  assign \$1487y  = \u_gpio.u_reg.addr_hit [5] & \$1486y ;
-  assign \$1488y  = \$1483y  | \$1487y ;
-  assign \$1492y  = \u_gpio.u_reg.addr_hit [6] & \$1106y [0];
-  assign \$1493y  = \$1488y  | \$1492y ;
-  assign \u_gpio.u_reg.wr_err  = \u_gpio.u_reg.reg_we  & \$1493y ;
-  assign \$1495y  = \u_gpio.u_reg.addr_hit [0] & \u_gpio.u_reg.reg_we ;
-  assign \u_gpio.u_reg.u_intr_state.wr_en_data_arb.we  = \$1495y  & \$1496y ;
-  assign \$1498y  = \u_gpio.u_reg.addr_hit [1] & \u_gpio.u_reg.reg_we ;
-  assign \u_gpio.u_reg.intr_enable_we  = \$1498y  & \$1496y ;
-  assign \$1501y  = \u_gpio.u_reg.addr_hit [2] & \u_gpio.u_reg.reg_we ;
-  assign \u_gpio.intr_hw.reg2hw_intr_test_qe_i  = \$1501y  & \$1496y ;
-  assign \$1507y  = \u_gpio.u_reg.addr_hit [4] & \u_gpio.u_reg.reg_we ;
-  assign \u_gpio.u_reg.direct_qe  = \$1507y  & \$1496y ;
-  assign \$1510y  = \u_gpio.u_reg.addr_hit [5] & \u_gpio.u_reg.reg_we ;
-  assign \u_gpio.u_reg.intr_ctrl_we  = \$1510y  & \$1496y ;
-  assign \$1513y  = \u_gpio.u_reg.addr_hit [6] & \u_gpio.u_reg.reg_we ;
-  assign \$1496y  = ! \u_gpio.u_reg.reg_error ;
-  assign \u_gpio.u_reg.ctrl_en_input_filter_we  = \$1513y  & \$1496y ;
-  assign \u_rv_timer.mtimecmp_update  = \u_rv_timer.u_reg.u_compare_upper0_00_qe.q_o  | \u_rv_timer.u_reg.u_compare_lower0_00_qe.q_o ;
-  assign \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.de  = \u_rv_timer.gen_harts[0].u_intr_hw.g_intr_event.new_event  | \u_rv_timer.mtimecmp_update ;
-  assign \$1522y  = ~ \u_rv_timer.mtimecmp_update ;
-  assign \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.d  = \u_rv_timer.intr_timer_state_d  & \$1522y ;
-  assign \$1524y  = \u_rv_timer.gen_harts[0].u_intr_hw.reg2hw_intr_test_qe_i  & \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [0];
-  assign \u_rv_timer.gen_harts[0].u_intr_hw.g_intr_event.new_event  = \$1524y  | \u_rv_timer.gen_harts[0].u_intr_hw.event_intr_i ;
+  assign \u_gpio.u_reg.addr_hit [0] = ! { \u_uart.u_bridge.addr_q [3:2], 2'h0 };
+  assign \u_gpio.u_reg.addr_hit [1] = \u_uart.u_bridge.addr_q [3:2] == 2'h1;
+  assign \u_gpio.u_reg.addr_hit [2] = \u_uart.u_bridge.addr_q [3:2] == 2'h2;
+  assign \u_gpio.u_reg.addr_hit [3] = \u_uart.u_bridge.addr_q [3:2] == 2'h3;
+  assign \$1425y  = \u_gpio.u_reg.reg_re  || \u_gpio.u_reg.reg_we ;
+  assign \$1426y  = | \u_gpio.u_reg.addr_hit ;
+  assign \$1427y  = ! \$1426y ;
+  assign \u_gpio.u_reg.addrmiss  = \$1425y  ? \$1427y  : 1'h0;
+  assign \$1433y  = \u_gpio.u_reg.addr_hit [0] & \$1106y [0];
+  assign \$1113y  = \u_gpio.u_reg.addr_hit [1] & \$1106y [0];
+  assign \$1438y  = \$1433y  | \$1113y ;
+  assign \$1441y  = | \$1106y [1:0];
+  assign \$1442y  = \u_gpio.u_reg.addr_hit [2] & \$1441y ;
+  assign \$1443y  = \$1438y  | \$1442y ;
+  assign \$1447y  = \u_gpio.u_reg.addr_hit [3] & \$1106y [0];
+  assign \$1448y  = \$1443y  | \$1447y ;
+  assign \u_gpio.u_reg.wr_err  = \u_gpio.u_reg.reg_we  & \$1448y ;
+  assign \$1453y  = \u_gpio.u_reg.addr_hit [1] & \u_gpio.u_reg.reg_we ;
+  assign \u_gpio.u_reg.direct_qe  = \$1453y  & \$1451y ;
+  assign \$1456y  = \u_gpio.u_reg.addr_hit [2] & \u_gpio.u_reg.reg_we ;
+  assign \u_gpio.u_reg.intr_ctrl_we  = \$1456y  & \$1451y ;
+  assign \$1459y  = \u_gpio.u_reg.addr_hit [3] & \u_gpio.u_reg.reg_we ;
+  assign \$1451y  = ! \u_gpio.u_reg.reg_error ;
+  assign \u_gpio.u_reg.ctrl_en_input_filter_we  = \$1459y  & \$1451y ;
+  assign \u_rv_timer.gen_harts[0].u_core.active  = \u_rv_timer.u_reg.u_ctrl_active_0.q  || \u_rv_timer.input_capture_active_q ;
+  assign \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.de  = \u_rv_timer.gen_harts[0].u_intr_hw.g_intr_event.new_event  | \u_rv_timer.u_reg.u_compare_v00_qe.q_o ;
+  assign \$1468y  = ~ \u_rv_timer.u_reg.u_compare_v00_qe.q_o ;
+  assign \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.d  = \u_rv_timer.intr_timer_state_d  & \$1468y ;
+  assign \$1470y  = \u_rv_timer.gen_harts[0].u_intr_hw.reg2hw_intr_test_qe_i  & \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [0];
+  assign \u_rv_timer.gen_harts[0].u_intr_hw.g_intr_event.new_event  = \$1470y  | \u_rv_timer.gen_harts[0].u_intr_hw.event_intr_i ;
   assign \u_rv_timer.intr_timer_state_d  = \u_rv_timer.gen_harts[0].u_intr_hw.g_intr_event.new_event  | \u_rv_timer.u_reg.u_intr_state0.q ;
-  assign \$1536y  = \u_rv_timer.gen_harts[0].u_core.tick_count  == \u_rv_timer.u_reg.u_cfg0_prescale.q ;
-  assign \$1537y  = \u_rv_timer.gen_harts[0].u_core.tick_count  + 12'h001;
-  assign \$1540y  = \u_rv_timer.gen_harts[0].u_core.tick_count  >= \u_rv_timer.u_reg.u_cfg0_prescale.q ;
-  assign \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.de  = \u_rv_timer.u_reg.u_ctrl.q  & \$1540y ;
-  assign \u_rv_timer.gen_harts[0].u_core.mtime_d  = { \u_rv_timer.u_reg.u_timer_v_upper0.q , \u_rv_timer.u_reg.u_timer_v_lower0.q  } + { 56'h00000000000000, \u_rv_timer.u_reg.u_cfg0_step.q  };
-  assign \$1543y  = { \u_rv_timer.u_reg.u_timer_v_upper0.q , \u_rv_timer.u_reg.u_timer_v_lower0.q  } >= { \u_rv_timer.u_reg.u_compare_upper0_0.q , \u_rv_timer.u_reg.u_compare_lower0_0.q  };
-  assign \u_rv_timer.gen_harts[0].u_intr_hw.event_intr_i  = \u_rv_timer.u_reg.u_ctrl.q  & \$1543y ;
+  assign \$1482y  = \u_rv_timer.gen_harts[0].u_core.tick_count  == \u_rv_timer.u_reg.u_cfg0_prescale.q ;
+  assign \$1483y  = \u_rv_timer.gen_harts[0].u_core.tick_count  + 12'h001;
+  assign \$1486y  = \u_rv_timer.gen_harts[0].u_core.tick_count  >= \u_rv_timer.u_reg.u_cfg0_prescale.q ;
+  assign \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.de  = \u_rv_timer.gen_harts[0].u_core.active  & \$1486y ;
+  assign \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.d  = \u_rv_timer.u_reg.u_timer_v0.q  + { 24'h000000, \u_rv_timer.u_reg.u_cfg0_step.q  };
+  assign \$1489y  = \u_rv_timer.u_reg.u_timer_v0.q  >= \u_rv_timer.u_reg.u_compare_v0.q ;
+  assign \u_rv_timer.gen_harts[0].u_intr_hw.event_intr_i  = \u_rv_timer.gen_harts[0].u_core.active  & \$1489y ;
   assign \u_rv_timer.u_reg.u_reg_if.a_ack  = \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o  & \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o ;
-  assign \$1266y  = \u_gpio.u_reg.u_reg_if.u_err.op_full  | \u_gpio.u_reg.u_reg_if.u_err.op_partial ;
-  assign \u_rv_timer.u_reg.reg_we  = \u_rv_timer.u_reg.u_reg_if.a_ack  & \$1266y ;
+  assign \$1258y  = \u_gpio.u_reg.u_reg_if.u_err.op_full  | \u_gpio.u_reg.u_reg_if.u_err.op_partial ;
+  assign \u_rv_timer.u_reg.reg_we  = \u_rv_timer.u_reg.u_reg_if.a_ack  & \$1258y ;
   assign \u_rv_timer.u_reg.reg_re  = \u_rv_timer.u_reg.u_reg_if.a_ack  & \u_gpio.u_reg.u_reg_if.u_err.op_get ;
-  assign \$1566y  = \u_rv_timer.u_reg.reg_re  ? 3'h1 : 3'h0;
-  assign \$1574y  = \u_rv_timer.u_reg.reg_error  || \u_rv_timer.u_reg.reg_we ;
-  assign \$1575y  = \$1574y  ? 32'd4294967295 : \u_rv_timer.u_reg.u_reg_if.rdata_i ;
+  assign \$1512y  = \u_rv_timer.u_reg.reg_re  ? 3'h1 : 3'h0;
+  assign \$1520y  = \u_rv_timer.u_reg.reg_error  || \u_rv_timer.u_reg.reg_we ;
+  assign \$1521y  = \$1520y  ? 32'd4294967295 : \u_rv_timer.u_reg.u_reg_if.rdata_i ;
   assign \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o  = ~ \u_rv_timer.u_reg.u_reg_if.outstanding_q ;
   assign \u_gpio.u_reg.u_reg_if.u_err.op_full  = ! \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105];
   assign \u_gpio.u_reg.u_reg_if.u_err.op_partial  = \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105] == 3'h1;
   assign \u_gpio.u_reg.u_reg_if.u_err.op_get  = \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105] == 3'h4;
   assign \u_rv_timer.u_reg.reg_error  = \u_rv_timer.u_reg.addrmiss  | \u_rv_timer.u_reg.wr_err ;
   assign \u_rv_timer.u_reg.u_intr_state0.qe  = \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.we  | \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.de ;
-  assign \$1675y  = \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.de  ? \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.d  : \u_rv_timer.u_reg.u_intr_state0.q ;
-  assign \$1676y  = ~ \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [0];
-  assign \$1677y  = \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.we  ? \$1676y  : 1'h1;
-  assign \u_rv_timer.u_reg.u_intr_state0.wr_data  = \$1675y  & \$1677y ;
-  assign \u_rv_timer.u_reg.u_timer_v_lower0.qe  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.we  | \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.de ;
-  assign \u_rv_timer.u_reg.u_timer_v_lower0.wr_data  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.we  ? \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd  : \u_rv_timer.gen_harts[0].u_core.mtime_d [31:0];
-  assign \u_rv_timer.u_reg.u_timer_v_upper0.qe  = \u_rv_timer.u_reg.u_timer_v_upper0.wr_en_data_arb.we  | \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.de ;
-  assign \u_rv_timer.u_reg.u_timer_v_upper0.wr_data  = \u_rv_timer.u_reg.u_timer_v_upper0.wr_en_data_arb.we  ? \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd  : \u_rv_timer.gen_harts[0].u_core.mtime_d [63:32];
-  assign \u_rv_timer.u_reg.addr_hit [0] = ! { \u_uart.u_bridge.addr_q [8:2], 2'h0 };
-  assign \u_rv_timer.u_reg.addr_hit [1] = \u_uart.u_bridge.addr_q [8:2] == 7'h40;
-  assign \u_rv_timer.u_reg.addr_hit [2] = \u_uart.u_bridge.addr_q [8:2] == 7'h41;
-  assign \u_rv_timer.u_reg.addr_hit [3] = \u_uart.u_bridge.addr_q [8:2] == 7'h42;
-  assign \u_rv_timer.u_reg.addr_hit [4] = \u_uart.u_bridge.addr_q [8:2] == 7'h43;
-  assign \u_rv_timer.u_reg.addr_hit [5] = \u_uart.u_bridge.addr_q [8:2] == 7'h44;
-  assign \u_rv_timer.u_reg.addr_hit [6] = \u_uart.u_bridge.addr_q [8:2] == 7'h45;
-  assign \u_rv_timer.u_reg.addr_hit [7] = \u_uart.u_bridge.addr_q [8:2] == 7'h46;
-  assign \u_rv_timer.u_reg.addr_hit [8] = \u_uart.u_bridge.addr_q [8:2] == 7'h47;
-  assign \$1751y  = \u_rv_timer.u_reg.reg_re  || \u_rv_timer.u_reg.reg_we ;
-  assign \$1752y  = | \u_rv_timer.u_reg.addr_hit ;
-  assign \$1753y  = ! \$1752y ;
-  assign \u_rv_timer.u_reg.addrmiss  = \$1751y  ? \$1753y  : 1'h0;
-  assign \$1759y  = \u_rv_timer.u_reg.addr_hit [0] & \$1106y [0];
-  assign \$1763y  = \u_rv_timer.u_reg.addr_hit [1] & \$1106y [0];
-  assign \$1764y  = \$1759y  | \$1763y ;
-  assign \$1768y  = \u_rv_timer.u_reg.addr_hit [2] & \$1106y [0];
-  assign \$1769y  = \$1764y  | \$1768y ;
-  assign \$1773y  = \u_rv_timer.u_reg.addr_hit [3] & \$1106y [0];
-  assign \$1774y  = \$1769y  | \$1773y ;
-  assign \$1777y  = | \$1106y [2:0];
-  assign \$1778y  = \u_rv_timer.u_reg.addr_hit [4] & \$1777y ;
-  assign \$1779y  = \$1774y  | \$1778y ;
-  assign \$1783y  = \u_rv_timer.u_reg.addr_hit [5] & \$1108y ;
-  assign \$1784y  = \$1779y  | \$1783y ;
-  assign \$1788y  = \u_rv_timer.u_reg.addr_hit [6] & \$1108y ;
-  assign \$1789y  = \$1784y  | \$1788y ;
-  assign \$1793y  = \u_rv_timer.u_reg.addr_hit [7] & \$1108y ;
-  assign \$1794y  = \$1789y  | \$1793y ;
+  assign \$1637y  = \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.de  ? \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.d  : \u_rv_timer.u_reg.u_intr_state0.q ;
+  assign \$1638y  = ~ \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [0];
+  assign \$1639y  = \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.we  ? \$1638y  : 1'h1;
+  assign \u_rv_timer.u_reg.u_intr_state0.wr_data  = \$1637y  & \$1639y ;
+  assign \u_rv_timer.u_reg.u_timer_v0.qe  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.we  | \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.de ;
+  assign \u_rv_timer.u_reg.u_timer_v0.wr_data  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.we  ? \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd  : \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.d ;
+  assign \u_rv_timer.u_reg.addr_hit [0] = ! { \u_uart.u_bridge.addr_q [4:2], 2'h0 };
+  assign \u_rv_timer.u_reg.addr_hit [1] = \u_uart.u_bridge.addr_q [4:2] == 3'h1;
+  assign \u_rv_timer.u_reg.addr_hit [2] = \u_uart.u_bridge.addr_q [4:2] == 3'h2;
+  assign \u_rv_timer.u_reg.addr_hit [3] = \u_uart.u_bridge.addr_q [4:2] == 3'h3;
+  assign \u_rv_timer.u_reg.addr_hit [4] = \u_uart.u_bridge.addr_q [4:2] == 3'h4;
+  assign \u_rv_timer.u_reg.addr_hit [5] = \u_uart.u_bridge.addr_q [4:2] == 3'h5;
+  assign \u_rv_timer.u_reg.addr_hit [6] = \u_uart.u_bridge.addr_q [4:2] == 3'h6;
+  assign \$1691y  = \u_rv_timer.u_reg.reg_re  || \u_rv_timer.u_reg.reg_we ;
+  assign \$1692y  = | \u_rv_timer.u_reg.addr_hit ;
+  assign \$1693y  = ! \$1692y ;
+  assign \u_rv_timer.u_reg.addrmiss  = \$1691y  ? \$1693y  : 1'h0;
+  assign \$1699y  = \u_rv_timer.u_reg.addr_hit [0] & \$1106y [0];
+  assign \$1703y  = \u_rv_timer.u_reg.addr_hit [1] & \$1106y [0];
+  assign \$1704y  = \$1699y  | \$1703y ;
+  assign \$1708y  = \u_rv_timer.u_reg.addr_hit [2] & \$1106y [0];
+  assign \$1709y  = \$1704y  | \$1708y ;
+  assign \$1713y  = \u_rv_timer.u_reg.addr_hit [3] & \$1106y [0];
+  assign \$1714y  = \$1709y  | \$1713y ;
+  assign \$1717y  = | \$1106y [2:0];
+  assign \$1718y  = \u_rv_timer.u_reg.addr_hit [4] & \$1717y ;
+  assign \$1719y  = \$1714y  | \$1718y ;
+  assign \$1723y  = \u_rv_timer.u_reg.addr_hit [5] & \$1108y ;
+  assign \$1724y  = \$1719y  | \$1723y ;
   assign \$1106y  = ~ \u_rv_timer.u_reg.reg_be ;
-  assign \$1798y  = \u_rv_timer.u_reg.addr_hit [8] & \$1108y ;
-  assign \$1799y  = \$1794y  | \$1798y ;
-  assign \u_rv_timer.u_reg.wr_err  = \u_rv_timer.u_reg.reg_we  & \$1799y ;
-  assign \$1801y  = \u_rv_timer.u_reg.addr_hit [0] & \u_rv_timer.u_reg.reg_we ;
-  assign \u_rv_timer.u_reg.ctrl_we  = \$1801y  & \$1802y ;
-  assign \$1804y  = \u_rv_timer.u_reg.addr_hit [1] & \u_rv_timer.u_reg.reg_we ;
-  assign \u_rv_timer.u_reg.intr_enable0_we  = \$1804y  & \$1802y ;
-  assign \$1807y  = \u_rv_timer.u_reg.addr_hit [2] & \u_rv_timer.u_reg.reg_we ;
-  assign \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.we  = \$1807y  & \$1802y ;
-  assign \$1810y  = \u_rv_timer.u_reg.addr_hit [3] & \u_rv_timer.u_reg.reg_we ;
-  assign \u_rv_timer.gen_harts[0].u_intr_hw.reg2hw_intr_test_qe_i  = \$1810y  & \$1802y ;
-  assign \$1813y  = \u_rv_timer.u_reg.addr_hit [4] & \u_rv_timer.u_reg.reg_we ;
-  assign \u_rv_timer.u_reg.cfg0_we  = \$1813y  & \$1802y ;
-  assign \$1816y  = \u_rv_timer.u_reg.addr_hit [5] & \u_rv_timer.u_reg.reg_we ;
-  assign \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.we  = \$1816y  & \$1802y ;
-  assign \$1819y  = \u_rv_timer.u_reg.addr_hit [6] & \u_rv_timer.u_reg.reg_we ;
-  assign \u_rv_timer.u_reg.u_timer_v_upper0.wr_en_data_arb.we  = \$1819y  & \$1802y ;
-  assign \$1822y  = \u_rv_timer.u_reg.addr_hit [7] & \u_rv_timer.u_reg.reg_we ;
-  assign \u_rv_timer.u_reg.u_compare_lower0_00_qe.d_i  = \$1822y  & \$1802y ;
-  assign \$1825y  = \u_rv_timer.u_reg.addr_hit [8] & \u_rv_timer.u_reg.reg_we ;
-  assign \$1802y  = ! \u_rv_timer.u_reg.reg_error ;
-  assign \u_rv_timer.u_reg.u_compare_upper0_00_qe.d_i  = \$1825y  & \$1802y ;
+  assign \$1728y  = \u_rv_timer.u_reg.addr_hit [6] & \$1108y ;
+  assign \$1729y  = \$1724y  | \$1728y ;
+  assign \u_rv_timer.u_reg.wr_err  = \u_rv_timer.u_reg.reg_we  & \$1729y ;
+  assign \$1731y  = \u_rv_timer.u_reg.addr_hit [0] & \u_rv_timer.u_reg.reg_we ;
+  assign \u_rv_timer.u_reg.ctrl_we  = \$1731y  & \$1732y ;
+  assign \$1734y  = \u_rv_timer.u_reg.addr_hit [1] & \u_rv_timer.u_reg.reg_we ;
+  assign \u_rv_timer.u_reg.intr_enable0_we  = \$1734y  & \$1732y ;
+  assign \$1737y  = \u_rv_timer.u_reg.addr_hit [2] & \u_rv_timer.u_reg.reg_we ;
+  assign \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.we  = \$1737y  & \$1732y ;
+  assign \$1740y  = \u_rv_timer.u_reg.addr_hit [3] & \u_rv_timer.u_reg.reg_we ;
+  assign \u_rv_timer.gen_harts[0].u_intr_hw.reg2hw_intr_test_qe_i  = \$1740y  & \$1732y ;
+  assign \$1743y  = \u_rv_timer.u_reg.addr_hit [4] & \u_rv_timer.u_reg.reg_we ;
+  assign \u_rv_timer.u_reg.cfg0_we  = \$1743y  & \$1732y ;
+  assign \$1746y  = \u_rv_timer.u_reg.addr_hit [5] & \u_rv_timer.u_reg.reg_we ;
+  assign \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.we  = \$1746y  & \$1732y ;
+  assign \$1749y  = \u_rv_timer.u_reg.addr_hit [6] & \u_rv_timer.u_reg.reg_we ;
+  assign \$1732y  = ! \u_rv_timer.u_reg.reg_error ;
+  assign \u_rv_timer.u_reg.u_compare_v00_qe.d_i  = \$1749y  & \$1732y ;
+  assign \$1756y  = ! \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.q ;
+  assign \u_rv_timer.sel_gpio_intr_0  = \$1756y  && \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.q ;
+  assign \$1758y  = ! \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.q ;
+  assign \u_rv_timer.sel_gpio_intr_1  = \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.q  && \$1758y ;
+  assign \$1760y  = \u_rv_timer.input_capture_active_q  ^ \u_rv_timer.gpio_intr_i [0];
+  assign \$1761y  = \u_rv_timer.sel_gpio_intr_0  && \$1760y ;
+  assign \$1762y  = \u_rv_timer.input_capture_active_q  ^ \u_rv_timer.gpio_intr_i [1];
+  assign \$1763y  = \u_rv_timer.sel_gpio_intr_1  && \$1762y ;
+  assign \u_rv_timer.input_capture_active_d  = \$1761y  || \$1763y ;
   assign \$21y  = \u_uart.u_reg.reg_re  ? 3'h1 : 3'h0;
   assign \$216y  = \u_uart.u_reg.reg_re  || \u_uart.u_reg.reg_we ;
   assign \$218y  = ! \$217y ;
   assign \u_uart.u_reg.addrmiss  = \$216y  ? \$218y  : 1'h0;
-  assign \$224y  = \u_gpio.u_reg.addr_hit [0] & \$1108y ;
-  assign \$229y  = \$224y  | \$1467y ;
-  assign \$234y  = \$229y  | \$1472y ;
-  assign \$239y  = \$234y  | \$1477y ;
-  assign \$244y  = \$239y  | \$1482y ;
-  assign \$248y  = \u_gpio.u_reg.addr_hit [5] & \$1777y ;
+  assign \$224y  = \u_rv_timer.u_reg.addr_hit [0] & \$1108y ;
+  assign \$229y  = \$224y  | \$1703y ;
+  assign \$234y  = \$229y  | \$1708y ;
+  assign \$239y  = \$234y  | \$1713y ;
+  assign \$243y  = \u_rv_timer.u_reg.addr_hit [4] & \$1106y [0];
+  assign \$244y  = \$239y  | \$243y ;
+  assign \$248y  = \u_rv_timer.u_reg.addr_hit [5] & \$1717y ;
   assign \$249y  = \$244y  | \$248y ;
   assign \u_uart.u_reg.wr_err  = \u_uart.u_reg.reg_we  & \$249y ;
-  assign \$251y  = \u_gpio.u_reg.addr_hit [0] & \u_uart.u_reg.reg_we ;
+  assign \$251y  = \u_rv_timer.u_reg.addr_hit [0] & \u_uart.u_reg.reg_we ;
   assign \u_uart.u_reg.ctrl_we  = \$251y  & \$252y ;
-  assign \$257y  = \u_gpio.u_reg.addr_hit [2] & \u_uart.u_reg.reg_re ;
+  assign \$257y  = \u_rv_timer.u_reg.addr_hit [2] & \u_uart.u_reg.reg_re ;
   assign \u_uart.u_reg.rdata_re  = \$257y  & \$252y ;
-  assign \$260y  = \u_gpio.u_reg.addr_hit [3] & \u_uart.u_reg.reg_we ;
+  assign \$260y  = \u_rv_timer.u_reg.addr_hit [3] & \u_uart.u_reg.reg_we ;
   assign \u_uart.u_reg.u_wdata0_qe.d_i  = \$260y  & \$252y ;
-  assign \$263y  = \u_gpio.u_reg.addr_hit [4] & \u_uart.u_reg.reg_we ;
+  assign \$263y  = \u_rv_timer.u_reg.addr_hit [4] & \u_uart.u_reg.reg_we ;
   assign \u_uart.u_reg.u_fifo_ctrl0_qe.d_i  = \$263y  & \$252y ;
   assign \$252y  = ! \u_uart.u_reg.reg_error ;
   assign \u_uart.u_uart_core.u_uart_rxfifo.clr_i  = \u_uart.u_reg.u_fifo_ctrl_rxrst.q  & \u_uart.u_reg.u_fifo_ctrl0_qe.q_o ;
@@ -3042,12 +2931,11 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   assign \$530y  = \u_uart.u_bridge.idx_q  == 2'h3;
   assign \$523y  = \u_uart.u_bridge.idx_q  + 2'h1;
   assign \$590y  = \u_uart.u_bridge.tx_st_q  == 2'h1;
-  assign \$592y  = \u_uart.u_bridge.tx_idx_q  == 4'h7;
   assign \$593y  = \u_uart.u_bridge.tx_idx_q  + 4'h1;
   assign \$531y  = $signed(\u_uart.u_bridge.op_q ) == $signed(8'h01);
   assign \$595y  = \u_uart.u_bridge.tx_idx_q  == 4'h3;
   assign \$596y  = \$531y  && \$595y ;
-  assign \u_uart.u_reg.reg_we  = \u_uart.u_reg.u_reg_if.a_ack  & \$1266y ;
+  assign \u_uart.u_reg.reg_we  = \u_uart.u_reg.u_reg_if.a_ack  & \$1258y ;
   assign \$564y  = \u_uart.u_bridge.req_q  && \uart_host_adapter.gnt_o ;
   assign \$616y  = \uart_host_adapter.g_multiple_reqs.source_q  + 1'h1;
   assign \u_rv_timer.u_reg.reg_be  = \u_uart.u_bridge.we_q  ? \u_uart.u_bridge.be_q  : 4'hf;
@@ -3077,7 +2965,7 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   assign \u_gpio.u_reg.reg_wdata  = \xbar.u_s1n_6.gen_u_o[2].dev_select  ? \u_uart.u_bridge.wdata_q  : 32'd4294967295;
   assign \xbar.u_s1n_6.gen_u_o[3].dev_select  = \$698y  & \$681y ;
   assign \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o  = \u_uart.u_bridge.req_q  & \xbar.u_s1n_6.gen_u_o[3].dev_select ;
-  assign \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd  = \xbar.u_s1n_6.gen_u_o[3].dev_select  ? \u_uart.u_bridge.wdata_q  : 32'd4294967295;
+  assign \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd  = \xbar.u_s1n_6.gen_u_o[3].dev_select  ? \u_uart.u_bridge.wdata_q  : 32'd4294967295;
   assign \$680y  = ! \xbar.u_s1n_6.dev_select_t ;
   assign \$686y  = \xbar.u_s1n_6.dev_select_t  == 3'h1;
   assign \$692y  = \xbar.u_s1n_6.dev_select_t  == 3'h2;
@@ -3106,7 +2994,7 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   assign \$756y  = \xbar.u_s1n_6.gen_err_resp.err_resp.err_opcode  == 3'h4;
   assign \xbar.u_s1n_6.gen_err_resp.err_resp.tl_h_o [64:62] = \$756y  ? 3'h1 : 3'h0;
   assign \u_pwm.u_reg.u_reg_if.a_ack  = \xbar.u_s1n_6.gen_dfifo[1].fifo_d.reqfifo.rvalid_o  & \xbar.u_s1n_6.gen_dfifo[1].fifo_d.reqfifo.full_o ;
-  assign \u_pwm.u_reg.reg_we  = \u_pwm.u_reg.u_reg_if.a_ack  & \$1266y ;
+  assign \u_pwm.u_reg.reg_we  = \u_pwm.u_reg.u_reg_if.a_ack  & \$1258y ;
   assign \u_pwm.u_reg.reg_re  = \u_pwm.u_reg.u_reg_if.a_ack  & \u_gpio.u_reg.u_reg_if.u_err.op_get ;
   assign \$780y  = \u_pwm.u_reg.reg_re  ? 3'h1 : 3'h0;
   assign \$788y  = \u_pwm.u_reg.reg_error  || \u_pwm.u_reg.reg_we ;
@@ -3129,84 +3017,84 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   assign \u_pwm.u_reg.u_pwm_en_cdc.src_ack  = \u_pwm.u_reg.u_pwm_en_cdc.u_arb.gen_passthru.u_dst_to_src_ack.dst_level_q  ^ \u_pwm.u_reg.u_pwm_en_cdc.u_arb.gen_passthru.u_dst_to_src_ack.prim_flop_2sync.u_sync_2.q_o ;
   assign { \u_pwm.u_reg._pwm_en_we , \u_pwm.u_reg.u_pwm_en_cdc.dst_re_o , \u_pwm.u_reg.u_pwm_en_cdc.dst_regwen_o  } = \u_pwm.u_reg.u_pwm_en_cdc.txn_bits_q  & { \u_pwm.u_reg.u_pwm_en_cdc.dst_req , \u_pwm.u_reg.u_pwm_en_cdc.dst_req , \u_pwm.u_reg.u_pwm_en_cdc.dst_req  };
   assign \u_pwm.u_reg.u_pwm_param_cdc.dst_to_src  = \u_pwm.u_reg.u_pwm_param_cdc.src_busy_q  && \u_pwm.u_reg.u_pwm_param_cdc.src_ack ;
-  assign \$auto$bmuxmap.cc:84:execute$1962 [7:0] = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [0] ? \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.storage [15:8] : \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.storage [7:0];
-  assign \$auto$bmuxmap.cc:84:execute$1962 [15:8] = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [0] ? \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.storage [31:24] : \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.storage [23:16];
-  assign \$auto$bmuxmap.cc:84:execute$1962 [23:16] = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [0] ? \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.storage [47:40] : \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.storage [39:32];
-  assign \$auto$bmuxmap.cc:84:execute$1962 [31:24] = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [0] ? \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.storage [63:56] : \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.storage [55:48];
-  assign \$auto$bmuxmap.cc:84:execute$1967 [7:0] = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [1] ? \$auto$bmuxmap.cc:84:execute$1962 [15:8] : \$auto$bmuxmap.cc:84:execute$1962 [7:0];
-  assign \$auto$bmuxmap.cc:84:execute$1967 [15:8] = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [1] ? \$auto$bmuxmap.cc:84:execute$1962 [31:24] : \$auto$bmuxmap.cc:84:execute$1962 [23:16];
-  assign \$auto$bmuxmap.cc:84:execute$1970  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [2] ? \$auto$bmuxmap.cc:84:execute$1967 [15:8] : \$auto$bmuxmap.cc:84:execute$1967 [7:0];
-  assign \$auto$bmuxmap.cc:84:execute$1972 [7:0] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [0] ? \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [15:8] : \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [7:0];
-  assign \$auto$bmuxmap.cc:84:execute$1972 [15:8] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [0] ? \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [31:24] : \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [23:16];
-  assign \$auto$bmuxmap.cc:84:execute$1972 [23:16] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [0] ? \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [47:40] : \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [39:32];
-  assign \$auto$bmuxmap.cc:84:execute$1972 [31:24] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [0] ? \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [63:56] : \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [55:48];
-  assign \$auto$bmuxmap.cc:84:execute$1972 [39:32] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [0] ? \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [79:72] : \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [71:64];
-  assign \$auto$bmuxmap.cc:84:execute$1972 [47:40] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [0] ? \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [95:88] : \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [87:80];
-  assign \$auto$bmuxmap.cc:84:execute$1972 [55:48] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [0] ? \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [111:104] : \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [103:96];
-  assign \$auto$bmuxmap.cc:84:execute$1972 [63:56] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [0] ? \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [127:120] : \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [119:112];
-  assign \$auto$bmuxmap.cc:84:execute$1981 [7:0] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [1] ? \$auto$bmuxmap.cc:84:execute$1972 [15:8] : \$auto$bmuxmap.cc:84:execute$1972 [7:0];
-  assign \$auto$bmuxmap.cc:84:execute$1981 [15:8] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [1] ? \$auto$bmuxmap.cc:84:execute$1972 [31:24] : \$auto$bmuxmap.cc:84:execute$1972 [23:16];
-  assign \$auto$bmuxmap.cc:84:execute$1981 [23:16] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [1] ? \$auto$bmuxmap.cc:84:execute$1972 [47:40] : \$auto$bmuxmap.cc:84:execute$1972 [39:32];
-  assign \$auto$bmuxmap.cc:84:execute$1981 [31:24] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [1] ? \$auto$bmuxmap.cc:84:execute$1972 [63:56] : \$auto$bmuxmap.cc:84:execute$1972 [55:48];
-  assign \$auto$bmuxmap.cc:84:execute$1986 [7:0] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [2] ? \$auto$bmuxmap.cc:84:execute$1981 [15:8] : \$auto$bmuxmap.cc:84:execute$1981 [7:0];
-  assign \$auto$bmuxmap.cc:84:execute$1986 [15:8] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [2] ? \$auto$bmuxmap.cc:84:execute$1981 [31:24] : \$auto$bmuxmap.cc:84:execute$1981 [23:16];
-  assign \$auto$bmuxmap.cc:84:execute$1989  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [3] ? \$auto$bmuxmap.cc:84:execute$1986 [15:8] : \$auto$bmuxmap.cc:84:execute$1986 [7:0];
-  assign \$auto$rtlil.cc:3097:Not$1949  = ~ \$345y ;
-  assign \$auto$rtlil.cc:3097:Not$1956  = ~ \$506y ;
-  assign \$auto$rtlil.cc:3144:And$1951  = \$345y  & { \u_uart.u_uart_core.u_uart_txfifo.wdata_i , \u_uart.u_uart_core.u_uart_txfifo.wdata_i , \u_uart.u_uart_core.u_uart_txfifo.wdata_i , \u_uart.u_uart_core.u_uart_txfifo.wdata_i , \u_uart.u_uart_core.u_uart_txfifo.wdata_i , \u_uart.u_uart_core.u_uart_txfifo.wdata_i , \u_uart.u_uart_core.u_uart_txfifo.wdata_i , \u_uart.u_uart_core.u_uart_txfifo.wdata_i  };
-  assign \$auto$rtlil.cc:3144:And$1958  = \$506y  & { \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i  };
-  assign \$auto$rtlil.cc:3144:And$1953  = \$auto$rtlil.cc:3097:Not$1949  & \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.storage ;
-  assign \$auto$rtlil.cc:3144:And$1960  = \$auto$rtlil.cc:3097:Not$1956  & \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage ;
-  assign \$347y  = \$auto$rtlil.cc:3144:And$1953  | \$auto$rtlil.cc:3144:And$1951 ;
-  assign \$508y  = \$auto$rtlil.cc:3144:And$1960  | \$auto$rtlil.cc:3144:And$1958 ;
-  assign \$auto$demuxmap.cc:63:execute$1991  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [2:0] == 3'h0;
-  assign \$auto$demuxmap.cc:63:execute$1994  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [2:0] == 3'h1;
-  assign \$auto$demuxmap.cc:63:execute$1997  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [2:0] == 3'h2;
-  assign \$auto$demuxmap.cc:63:execute$2000  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [2:0] == 3'h3;
-  assign \$auto$demuxmap.cc:63:execute$2003  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [2:0] == 3'h4;
-  assign \$auto$demuxmap.cc:63:execute$2006  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [2:0] == 3'h5;
-  assign \$auto$demuxmap.cc:63:execute$2009  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [2:0] == 3'h6;
-  assign \$auto$demuxmap.cc:63:execute$2012  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [2:0] == 3'h7;
-  assign \$auto$demuxmap.cc:63:execute$2015  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'h0;
-  assign \$auto$demuxmap.cc:63:execute$2018  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'h1;
-  assign \$auto$demuxmap.cc:63:execute$2021  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'h2;
-  assign \$auto$demuxmap.cc:63:execute$2024  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'h3;
-  assign \$auto$demuxmap.cc:63:execute$2027  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'h4;
-  assign \$auto$demuxmap.cc:63:execute$2030  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'h5;
-  assign \$auto$demuxmap.cc:63:execute$2033  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'h6;
-  assign \$auto$demuxmap.cc:63:execute$2036  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'h7;
-  assign \$auto$demuxmap.cc:63:execute$2039  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'h8;
-  assign \$auto$demuxmap.cc:63:execute$2042  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'h9;
-  assign \$auto$demuxmap.cc:63:execute$2045  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'ha;
-  assign \$auto$demuxmap.cc:63:execute$2048  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'hb;
-  assign \$auto$demuxmap.cc:63:execute$2051  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'hc;
-  assign \$auto$demuxmap.cc:63:execute$2054  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'hd;
-  assign \$auto$demuxmap.cc:63:execute$2057  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'he;
-  assign \$auto$demuxmap.cc:63:execute$2060  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'hf;
-  assign \$345y [7:0] = \$auto$demuxmap.cc:63:execute$1991  ? \$344y  : 8'h00;
-  assign \$345y [15:8] = \$auto$demuxmap.cc:63:execute$1994  ? \$344y  : 8'h00;
-  assign \$345y [23:16] = \$auto$demuxmap.cc:63:execute$1997  ? \$344y  : 8'h00;
-  assign \$345y [31:24] = \$auto$demuxmap.cc:63:execute$2000  ? \$344y  : 8'h00;
-  assign \$345y [39:32] = \$auto$demuxmap.cc:63:execute$2003  ? \$344y  : 8'h00;
-  assign \$345y [47:40] = \$auto$demuxmap.cc:63:execute$2006  ? \$344y  : 8'h00;
-  assign \$345y [55:48] = \$auto$demuxmap.cc:63:execute$2009  ? \$344y  : 8'h00;
-  assign \$345y [63:56] = \$auto$demuxmap.cc:63:execute$2012  ? \$344y  : 8'h00;
-  assign \$506y [7:0] = \$auto$demuxmap.cc:63:execute$2015  ? \$505y  : 8'h00;
-  assign \$506y [15:8] = \$auto$demuxmap.cc:63:execute$2018  ? \$505y  : 8'h00;
-  assign \$506y [23:16] = \$auto$demuxmap.cc:63:execute$2021  ? \$505y  : 8'h00;
-  assign \$506y [31:24] = \$auto$demuxmap.cc:63:execute$2024  ? \$505y  : 8'h00;
-  assign \$506y [39:32] = \$auto$demuxmap.cc:63:execute$2027  ? \$505y  : 8'h00;
-  assign \$506y [47:40] = \$auto$demuxmap.cc:63:execute$2030  ? \$505y  : 8'h00;
-  assign \$506y [55:48] = \$auto$demuxmap.cc:63:execute$2033  ? \$505y  : 8'h00;
-  assign \$506y [63:56] = \$auto$demuxmap.cc:63:execute$2036  ? \$505y  : 8'h00;
-  assign \$506y [71:64] = \$auto$demuxmap.cc:63:execute$2039  ? \$505y  : 8'h00;
-  assign \$506y [79:72] = \$auto$demuxmap.cc:63:execute$2042  ? \$505y  : 8'h00;
-  assign \$506y [87:80] = \$auto$demuxmap.cc:63:execute$2045  ? \$505y  : 8'h00;
-  assign \$506y [95:88] = \$auto$demuxmap.cc:63:execute$2048  ? \$505y  : 8'h00;
-  assign \$506y [103:96] = \$auto$demuxmap.cc:63:execute$2051  ? \$505y  : 8'h00;
-  assign \$506y [111:104] = \$auto$demuxmap.cc:63:execute$2054  ? \$505y  : 8'h00;
-  assign \$506y [119:112] = \$auto$demuxmap.cc:63:execute$2057  ? \$505y  : 8'h00;
-  assign \$506y [127:120] = \$auto$demuxmap.cc:63:execute$2060  ? \$505y  : 8'h00;
+  assign \$auto$bmuxmap.cc:84:execute$1943 [7:0] = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [0] ? \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.storage [15:8] : \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.storage [7:0];
+  assign \$auto$bmuxmap.cc:84:execute$1943 [15:8] = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [0] ? \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.storage [31:24] : \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.storage [23:16];
+  assign \$auto$bmuxmap.cc:84:execute$1943 [23:16] = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [0] ? \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.storage [47:40] : \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.storage [39:32];
+  assign \$auto$bmuxmap.cc:84:execute$1943 [31:24] = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [0] ? \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.storage [63:56] : \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.storage [55:48];
+  assign \$auto$bmuxmap.cc:84:execute$1948 [7:0] = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [1] ? \$auto$bmuxmap.cc:84:execute$1943 [15:8] : \$auto$bmuxmap.cc:84:execute$1943 [7:0];
+  assign \$auto$bmuxmap.cc:84:execute$1948 [15:8] = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [1] ? \$auto$bmuxmap.cc:84:execute$1943 [31:24] : \$auto$bmuxmap.cc:84:execute$1943 [23:16];
+  assign \$auto$bmuxmap.cc:84:execute$1951  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [2] ? \$auto$bmuxmap.cc:84:execute$1948 [15:8] : \$auto$bmuxmap.cc:84:execute$1948 [7:0];
+  assign \$auto$bmuxmap.cc:84:execute$1953 [7:0] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [0] ? \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [15:8] : \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [7:0];
+  assign \$auto$bmuxmap.cc:84:execute$1953 [15:8] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [0] ? \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [31:24] : \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [23:16];
+  assign \$auto$bmuxmap.cc:84:execute$1953 [23:16] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [0] ? \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [47:40] : \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [39:32];
+  assign \$auto$bmuxmap.cc:84:execute$1953 [31:24] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [0] ? \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [63:56] : \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [55:48];
+  assign \$auto$bmuxmap.cc:84:execute$1953 [39:32] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [0] ? \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [79:72] : \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [71:64];
+  assign \$auto$bmuxmap.cc:84:execute$1953 [47:40] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [0] ? \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [95:88] : \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [87:80];
+  assign \$auto$bmuxmap.cc:84:execute$1953 [55:48] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [0] ? \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [111:104] : \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [103:96];
+  assign \$auto$bmuxmap.cc:84:execute$1953 [63:56] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [0] ? \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [127:120] : \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [119:112];
+  assign \$auto$bmuxmap.cc:84:execute$1962 [7:0] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [1] ? \$auto$bmuxmap.cc:84:execute$1953 [15:8] : \$auto$bmuxmap.cc:84:execute$1953 [7:0];
+  assign \$auto$bmuxmap.cc:84:execute$1962 [15:8] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [1] ? \$auto$bmuxmap.cc:84:execute$1953 [31:24] : \$auto$bmuxmap.cc:84:execute$1953 [23:16];
+  assign \$auto$bmuxmap.cc:84:execute$1962 [23:16] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [1] ? \$auto$bmuxmap.cc:84:execute$1953 [47:40] : \$auto$bmuxmap.cc:84:execute$1953 [39:32];
+  assign \$auto$bmuxmap.cc:84:execute$1962 [31:24] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [1] ? \$auto$bmuxmap.cc:84:execute$1953 [63:56] : \$auto$bmuxmap.cc:84:execute$1953 [55:48];
+  assign \$auto$bmuxmap.cc:84:execute$1967 [7:0] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [2] ? \$auto$bmuxmap.cc:84:execute$1962 [15:8] : \$auto$bmuxmap.cc:84:execute$1962 [7:0];
+  assign \$auto$bmuxmap.cc:84:execute$1967 [15:8] = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [2] ? \$auto$bmuxmap.cc:84:execute$1962 [31:24] : \$auto$bmuxmap.cc:84:execute$1962 [23:16];
+  assign \$auto$bmuxmap.cc:84:execute$1970  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [3] ? \$auto$bmuxmap.cc:84:execute$1967 [15:8] : \$auto$bmuxmap.cc:84:execute$1967 [7:0];
+  assign \$auto$rtlil.cc:3097:Not$1930  = ~ \$345y ;
+  assign \$auto$rtlil.cc:3097:Not$1937  = ~ \$506y ;
+  assign \$auto$rtlil.cc:3144:And$1932  = \$345y  & { \u_uart.u_uart_core.u_uart_txfifo.wdata_i , \u_uart.u_uart_core.u_uart_txfifo.wdata_i , \u_uart.u_uart_core.u_uart_txfifo.wdata_i , \u_uart.u_uart_core.u_uart_txfifo.wdata_i , \u_uart.u_uart_core.u_uart_txfifo.wdata_i , \u_uart.u_uart_core.u_uart_txfifo.wdata_i , \u_uart.u_uart_core.u_uart_txfifo.wdata_i , \u_uart.u_uart_core.u_uart_txfifo.wdata_i  };
+  assign \$auto$rtlil.cc:3144:And$1939  = \$506y  & { \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i , \u_uart.u_uart_core.u_uart_rxfifo.wdata_i  };
+  assign \$auto$rtlil.cc:3144:And$1934  = \$auto$rtlil.cc:3097:Not$1930  & \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.storage ;
+  assign \$auto$rtlil.cc:3144:And$1941  = \$auto$rtlil.cc:3097:Not$1937  & \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage ;
+  assign \$347y  = \$auto$rtlil.cc:3144:And$1934  | \$auto$rtlil.cc:3144:And$1932 ;
+  assign \$508y  = \$auto$rtlil.cc:3144:And$1941  | \$auto$rtlil.cc:3144:And$1939 ;
+  assign \$auto$demuxmap.cc:63:execute$1972  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [2:0] == 3'h0;
+  assign \$auto$demuxmap.cc:63:execute$1975  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [2:0] == 3'h1;
+  assign \$auto$demuxmap.cc:63:execute$1978  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [2:0] == 3'h2;
+  assign \$auto$demuxmap.cc:63:execute$1981  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [2:0] == 3'h3;
+  assign \$auto$demuxmap.cc:63:execute$1984  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [2:0] == 3'h4;
+  assign \$auto$demuxmap.cc:63:execute$1987  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [2:0] == 3'h5;
+  assign \$auto$demuxmap.cc:63:execute$1990  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [2:0] == 3'h6;
+  assign \$auto$demuxmap.cc:63:execute$1993  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [2:0] == 3'h7;
+  assign \$auto$demuxmap.cc:63:execute$1996  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'h0;
+  assign \$auto$demuxmap.cc:63:execute$1999  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'h1;
+  assign \$auto$demuxmap.cc:63:execute$2002  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'h2;
+  assign \$auto$demuxmap.cc:63:execute$2005  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'h3;
+  assign \$auto$demuxmap.cc:63:execute$2008  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'h4;
+  assign \$auto$demuxmap.cc:63:execute$2011  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'h5;
+  assign \$auto$demuxmap.cc:63:execute$2014  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'h6;
+  assign \$auto$demuxmap.cc:63:execute$2017  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'h7;
+  assign \$auto$demuxmap.cc:63:execute$2020  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'h8;
+  assign \$auto$demuxmap.cc:63:execute$2023  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'h9;
+  assign \$auto$demuxmap.cc:63:execute$2026  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'ha;
+  assign \$auto$demuxmap.cc:63:execute$2029  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'hb;
+  assign \$auto$demuxmap.cc:63:execute$2032  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'hc;
+  assign \$auto$demuxmap.cc:63:execute$2035  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'hd;
+  assign \$auto$demuxmap.cc:63:execute$2038  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'he;
+  assign \$auto$demuxmap.cc:63:execute$2041  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q [3:0] == 4'hf;
+  assign \$345y [7:0] = \$auto$demuxmap.cc:63:execute$1972  ? \$344y  : 8'h00;
+  assign \$345y [15:8] = \$auto$demuxmap.cc:63:execute$1975  ? \$344y  : 8'h00;
+  assign \$345y [23:16] = \$auto$demuxmap.cc:63:execute$1978  ? \$344y  : 8'h00;
+  assign \$345y [31:24] = \$auto$demuxmap.cc:63:execute$1981  ? \$344y  : 8'h00;
+  assign \$345y [39:32] = \$auto$demuxmap.cc:63:execute$1984  ? \$344y  : 8'h00;
+  assign \$345y [47:40] = \$auto$demuxmap.cc:63:execute$1987  ? \$344y  : 8'h00;
+  assign \$345y [55:48] = \$auto$demuxmap.cc:63:execute$1990  ? \$344y  : 8'h00;
+  assign \$345y [63:56] = \$auto$demuxmap.cc:63:execute$1993  ? \$344y  : 8'h00;
+  assign \$506y [7:0] = \$auto$demuxmap.cc:63:execute$1996  ? \$505y  : 8'h00;
+  assign \$506y [15:8] = \$auto$demuxmap.cc:63:execute$1999  ? \$505y  : 8'h00;
+  assign \$506y [23:16] = \$auto$demuxmap.cc:63:execute$2002  ? \$505y  : 8'h00;
+  assign \$506y [31:24] = \$auto$demuxmap.cc:63:execute$2005  ? \$505y  : 8'h00;
+  assign \$506y [39:32] = \$auto$demuxmap.cc:63:execute$2008  ? \$505y  : 8'h00;
+  assign \$506y [47:40] = \$auto$demuxmap.cc:63:execute$2011  ? \$505y  : 8'h00;
+  assign \$506y [55:48] = \$auto$demuxmap.cc:63:execute$2014  ? \$505y  : 8'h00;
+  assign \$506y [63:56] = \$auto$demuxmap.cc:63:execute$2017  ? \$505y  : 8'h00;
+  assign \$506y [71:64] = \$auto$demuxmap.cc:63:execute$2020  ? \$505y  : 8'h00;
+  assign \$506y [79:72] = \$auto$demuxmap.cc:63:execute$2023  ? \$505y  : 8'h00;
+  assign \$506y [87:80] = \$auto$demuxmap.cc:63:execute$2026  ? \$505y  : 8'h00;
+  assign \$506y [95:88] = \$auto$demuxmap.cc:63:execute$2029  ? \$505y  : 8'h00;
+  assign \$506y [103:96] = \$auto$demuxmap.cc:63:execute$2032  ? \$505y  : 8'h00;
+  assign \$506y [111:104] = \$auto$demuxmap.cc:63:execute$2035  ? \$505y  : 8'h00;
+  assign \$506y [119:112] = \$auto$demuxmap.cc:63:execute$2038  ? \$505y  : 8'h00;
+  assign \$506y [127:120] = \$auto$demuxmap.cc:63:execute$2041  ? \$505y  : 8'h00;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_pwm.u_pwm_core.beat_ctr_q  <= 27'h0000000;
     else if (\u_pwm.u_pwm_core.beat_ctr_en ) \u_pwm.u_pwm_core.beat_ctr_q  <= \u_pwm.u_pwm_core.beat_ctr_d ;
@@ -3215,55 +3103,55 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
     else if (\u_pwm.u_pwm_core.phase_ctr_en ) \u_pwm.u_pwm_core.phase_ctr_q  <= \u_pwm.u_pwm_core.phase_ctr_d ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \xbar.u_s1n_6.num_req_outstanding  <= 9'h000;
-    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1662 ) \xbar.u_s1n_6.num_req_outstanding  <= \$procmux$304_Y ;
+    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1645 ) \xbar.u_s1n_6.num_req_outstanding  <= \$procmux$286_Y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \xbar.u_s1n_6.gen_err_resp.err_resp.err_source  <= 8'h00;
-    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1667 ) \xbar.u_s1n_6.gen_err_resp.err_resp.err_source  <= { 7'h00, \uart_host_adapter.g_multiple_reqs.source_q  };
+    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1650 ) \xbar.u_s1n_6.gen_err_resp.err_resp.err_source  <= { 7'h00, \uart_host_adapter.g_multiple_reqs.source_q  };
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \xbar.u_s1n_6.gen_err_resp.err_resp.err_size  <= 2'h0;
-    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1667 ) \xbar.u_s1n_6.gen_err_resp.err_resp.err_size  <= 2'h2;
+    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1650 ) \xbar.u_s1n_6.gen_err_resp.err_resp.err_size  <= 2'h2;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \xbar.u_s1n_6.gen_err_resp.err_resp.err_opcode  <= 3'h4;
-    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1667 ) \xbar.u_s1n_6.gen_err_resp.err_resp.err_opcode  <= \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105];
+    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1650 ) \xbar.u_s1n_6.gen_err_resp.err_resp.err_opcode  <= \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105];
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \xbar.u_s1n_6.gen_err_resp.err_resp.err_instr_type  <= 4'h9;
-    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1667 ) \xbar.u_s1n_6.gen_err_resp.err_resp.err_instr_type  <= 4'h9;
+    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1650 ) \xbar.u_s1n_6.gen_err_resp.err_resp.err_instr_type  <= 4'h9;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \xbar.u_s1n_6.dev_select_outstanding  <= 3'h0;
     else if (\xbar.u_s1n_6.accept_t_req ) \xbar.u_s1n_6.dev_select_outstanding  <= \xbar.u_s1n_6.dev_select_t ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \uart_host_adapter.g_multiple_reqs.source_q  <= 1'h0;
-    else if (\$564y ) \uart_host_adapter.g_multiple_reqs.source_q  <= \$procmux$350_Y ;
+    else if (\$564y ) \uart_host_adapter.g_multiple_reqs.source_q  <= \$procmux$366_Y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_uart_core.uart_tx.tx_q  <= 1'h1;
-    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1691 ) \u_uart.u_uart_core.uart_tx.tx_q  <= \u_uart.u_uart_core.uart_tx.tx_d ;
+    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1674 ) \u_uart.u_uart_core.uart_tx.tx_q  <= \u_uart.u_uart_core.uart_tx.tx_d ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_uart_core.uart_tx.sreg_q  <= 11'h7ff;
-    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1694 ) \u_uart.u_uart_core.uart_tx.sreg_q  <= \u_uart.u_uart_core.uart_tx.sreg_d ;
+    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1677 ) \u_uart.u_uart_core.uart_tx.sreg_q  <= \u_uart.u_uart_core.uart_tx.sreg_d ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_uart_core.uart_tx.bit_cnt_q  <= 4'h0;
-    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1694 ) \u_uart.u_uart_core.uart_tx.bit_cnt_q  <= \u_uart.u_uart_core.uart_tx.bit_cnt_d ;
+    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1677 ) \u_uart.u_uart_core.uart_tx.bit_cnt_q  <= \u_uart.u_uart_core.uart_tx.bit_cnt_d ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_uart_core.uart_tx.baud_div_q  <= 4'h0;
     else if (\u_uart.u_uart_core.nco_sum_q [16]) \u_uart.u_uart_core.uart_tx.baud_div_q  <= \$353y [3:0];
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_uart_core.uart_rx.sreg_q  <= 11'h000;
-    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1705 ) \u_uart.u_uart_core.uart_rx.sreg_q  <= \u_uart.u_uart_core.uart_rx.sreg_d ;
+    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1688 ) \u_uart.u_uart_core.uart_rx.sreg_q  <= \u_uart.u_uart_core.uart_rx.sreg_d ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_uart_core.uart_rx.idle_q  <= 1'h1;
-    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1701 ) \u_uart.u_uart_core.uart_rx.idle_q  <= \u_uart.u_uart_core.uart_rx.idle_d ;
+    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1684 ) \u_uart.u_uart_core.uart_rx.idle_q  <= \u_uart.u_uart_core.uart_rx.idle_d ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_uart_core.uart_rx.bit_cnt_q  <= 4'h0;
-    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1701 ) \u_uart.u_uart_core.uart_rx.bit_cnt_q  <= \u_uart.u_uart_core.uart_rx.bit_cnt_d ;
+    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1684 ) \u_uart.u_uart_core.uart_rx.bit_cnt_q  <= \u_uart.u_uart_core.uart_rx.bit_cnt_d ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_uart_core.uart_rx.baud_div_q  <= 4'h0;
-    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1714 ) \u_uart.u_uart_core.uart_rx.baud_div_q  <= \u_uart.u_uart_core.uart_rx.baud_div_d ;
+    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1697 ) \u_uart.u_uart_core.uart_rx.baud_div_q  <= \u_uart.u_uart_core.uart_rx.baud_div_d ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q  <= 4'h0;
-    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1717 ) \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q  <= \$procmux$1411_Y ;
+    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1700 ) \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q  <= \$procmux$1398_Y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q  <= 4'h0;
-    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1720 ) \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q  <= \$procmux$1392_Y ;
+    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1703 ) \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q  <= \$procmux$1379_Y ;
   always @(posedge clk_i)
     if (\u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.incr_wptr_i ) \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.storage [63:56] <= \$347y [63:56];
   always @(posedge clk_i)
@@ -3282,10 +3170,10 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
     if (\u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.incr_wptr_i ) \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.storage [7:0] <= \$347y [7:0];
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q  <= 5'h00;
-    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1731 ) \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q  <= \$procmux$1041_Y ;
+    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1714 ) \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_cnt_q  <= \$procmux$1091_Y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q  <= 5'h00;
-    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1734 ) \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q  <= \$procmux$1022_Y ;
+    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1717 ) \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q  <= \$procmux$1072_Y ;
   always @(posedge clk_i)
     if (\u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.incr_wptr_i ) \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.storage [79:72] <= \$508y [79:72];
   always @(posedge clk_i)
@@ -3361,56 +3249,53 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
     if (!rst_ni) \u_uart.u_reg.u_ctrl_nf.q  <= 1'h0;
     else if (\u_uart.u_reg.ctrl_we ) \u_uart.u_reg.u_ctrl_nf.q  <= \u_uart.u_reg.reg_wdata [2];
   always @(posedge clk_i, negedge rst_ni)
-    if (!rst_ni) \u_uart.u_reg.u_ctrl_nco.q  <= 16'h0970;
+    if (!rst_ni) \u_uart.u_reg.u_ctrl_nco.q  <= 16'h4b7f;
     else if (\u_uart.u_reg.ctrl_we ) \u_uart.u_reg.u_ctrl_nco.q  <= \u_uart.u_reg.reg_wdata [31:16];
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_reg.u_ctrl_llpbk.q  <= 1'h0;
     else if (\u_uart.u_reg.ctrl_we ) \u_uart.u_reg.u_ctrl_llpbk.q  <= \u_uart.u_reg.reg_wdata [5];
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_bridge.we_q  <= 1'h0;
-    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1781 ) \u_uart.u_bridge.we_q  <= \u_uart.u_bridge.we_d ;
+    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1764 ) \u_uart.u_bridge.we_q  <= \u_uart.u_bridge.we_d ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_bridge.wdata_q  <= 32'd0;
-    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1796 ) \u_uart.u_bridge.wdata_q  <= \u_uart.u_bridge.wdata_d ;
+    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1779 ) \u_uart.u_bridge.wdata_q  <= \u_uart.u_bridge.wdata_d ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_bridge.sh_q  <= 32'd0;
-    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1803 ) \u_uart.u_bridge.sh_q  <= \u_uart.u_bridge.sh_d ;
+    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1786 ) \u_uart.u_bridge.sh_q  <= \u_uart.u_bridge.sh_d ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_bridge.rxf_st_q  <= 3'h0;
-    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1824 ) \u_uart.u_bridge.rxf_st_q  <= \u_uart.u_bridge.rxf_st_d ;
+    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1807 ) \u_uart.u_bridge.rxf_st_q  <= \u_uart.u_bridge.rxf_st_d ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_bridge.req_q  <= 1'h0;
-    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1831 ) \u_uart.u_bridge.req_q  <= \u_uart.u_bridge.req_d ;
+    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1814 ) \u_uart.u_bridge.req_q  <= \u_uart.u_bridge.req_d ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_bridge.rdata_q  <= 32'd0;
-    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1834 ) \u_uart.u_bridge.rdata_q  <= \u_uart.rdata_i ;
+    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1817 ) \u_uart.u_bridge.rdata_q  <= \u_uart.rdata_i ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_bridge.op_q  <= 8'h00;
-    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1837 ) \u_uart.u_bridge.op_q  <= \u_uart.u_bridge.rx_data_i ;
+    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1820 ) \u_uart.u_bridge.op_q  <= \u_uart.u_bridge.rx_data_i ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_bridge.idx_q  <= 2'h0;
-    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1852 ) \u_uart.u_bridge.idx_q  <= \u_uart.u_bridge.idx_d ;
+    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1835 ) \u_uart.u_bridge.idx_q  <= \u_uart.u_bridge.idx_d ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_bridge.bebyte_q  <= 8'h0f;
-    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1855 ) \u_uart.u_bridge.bebyte_q  <= \u_uart.u_bridge.rx_data_i ;
+    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1838 ) \u_uart.u_bridge.bebyte_q  <= \u_uart.u_bridge.rx_data_i ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_bridge.be_q  <= 4'hf;
-    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1796 ) \u_uart.u_bridge.be_q  <= \u_uart.u_bridge.be_d ;
+    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1779 ) \u_uart.u_bridge.be_q  <= \u_uart.u_bridge.be_d ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_bridge.any_err_q  <= 1'h0;
-    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1834 ) \u_uart.u_bridge.any_err_q  <= \xbar.u_s1n_6.tl_t_p [1];
+    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1817 ) \u_uart.u_bridge.any_err_q  <= \xbar.u_s1n_6.tl_t_p [1];
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_bridge.addr_q  <= 32'd0;
-    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1876 ) \u_uart.u_bridge.addr_q  <= { \u_uart.u_bridge.rx_data_i , \u_uart.u_bridge.sh_q [31:8] };
+    else if (\$auto$opt_dff.cc:272:make_patterns_logic$1859 ) \u_uart.u_bridge.addr_q  <= { \u_uart.u_bridge.rx_data_i , \u_uart.u_bridge.sh_q [31:8] };
   always @(posedge clk_i, negedge rst_ni)
-    if (!rst_ni) \u_rv_timer.u_reg.u_timer_v_upper0.q  <= 32'd0;
-    else if (\u_rv_timer.u_reg.u_timer_v_upper0.qe ) \u_rv_timer.u_reg.u_timer_v_upper0.q  <= \u_rv_timer.u_reg.u_timer_v_upper0.wr_data ;
-  always @(posedge clk_i, negedge rst_ni)
-    if (!rst_ni) \u_rv_timer.u_reg.u_timer_v_lower0.q  <= 32'd0;
-    else if (\u_rv_timer.u_reg.u_timer_v_lower0.qe ) \u_rv_timer.u_reg.u_timer_v_lower0.q  <= \u_rv_timer.u_reg.u_timer_v_lower0.wr_data ;
+    if (!rst_ni) \u_rv_timer.u_reg.u_timer_v0.q  <= 32'd0;
+    else if (\u_rv_timer.u_reg.u_timer_v0.qe ) \u_rv_timer.u_reg.u_timer_v0.q  <= \u_rv_timer.u_reg.u_timer_v0.wr_data ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_rv_timer.u_reg.u_reg_if.rspop_q  <= 3'h0;
-    else if (\u_rv_timer.u_reg.u_reg_if.a_ack ) \u_rv_timer.u_reg.u_reg_if.rspop_q  <= \$1566y ;
+    else if (\u_rv_timer.u_reg.u_reg_if.a_ack ) \u_rv_timer.u_reg.u_reg_if.rspop_q  <= \$1512y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_rv_timer.u_reg.u_reg_if.reqsz_q  <= 2'h0;
     else if (\u_rv_timer.u_reg.u_reg_if.a_ack ) \u_rv_timer.u_reg.u_reg_if.reqsz_q  <= 2'h2;
@@ -3419,7 +3304,7 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
     else if (\u_rv_timer.u_reg.u_reg_if.a_ack ) \u_rv_timer.u_reg.u_reg_if.reqid_q  <= { 7'h00, \uart_host_adapter.g_multiple_reqs.source_q  };
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_rv_timer.u_reg.u_reg_if.rdata_q  <= 32'd0;
-    else if (\u_rv_timer.u_reg.u_reg_if.a_ack ) \u_rv_timer.u_reg.u_reg_if.rdata_q  <= \$1575y ;
+    else if (\u_rv_timer.u_reg.u_reg_if.a_ack ) \u_rv_timer.u_reg.u_reg_if.rdata_q  <= \$1521y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_rv_timer.u_reg.u_reg_if.error_q  <= 1'h0;
     else if (\u_rv_timer.u_reg.u_reg_if.a_ack ) \u_rv_timer.u_reg.u_reg_if.error_q  <= \u_rv_timer.u_reg.reg_error ;
@@ -3428,22 +3313,25 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
     else if (\u_rv_timer.u_reg.u_intr_state0.qe ) \u_rv_timer.u_reg.u_intr_state0.q  <= \u_rv_timer.u_reg.u_intr_state0.wr_data ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_rv_timer.u_reg.u_intr_enable0.q  <= 1'h0;
-    else if (\u_rv_timer.u_reg.intr_enable0_we ) \u_rv_timer.u_reg.u_intr_enable0.q  <= \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [0];
+    else if (\u_rv_timer.u_reg.intr_enable0_we ) \u_rv_timer.u_reg.u_intr_enable0.q  <= \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [0];
   always @(posedge clk_i, negedge rst_ni)
-    if (!rst_ni) \u_rv_timer.u_reg.u_ctrl.q  <= 1'h0;
-    else if (\u_rv_timer.u_reg.ctrl_we ) \u_rv_timer.u_reg.u_ctrl.q  <= \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [0];
+    if (!rst_ni) \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.q  <= 1'h0;
+    else if (\u_rv_timer.u_reg.ctrl_we ) \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.q  <= \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [2];
   always @(posedge clk_i, negedge rst_ni)
-    if (!rst_ni) \u_rv_timer.u_reg.u_compare_upper0_0.q  <= 32'd4294967295;
-    else if (\u_rv_timer.u_reg.u_compare_upper0_00_qe.d_i ) \u_rv_timer.u_reg.u_compare_upper0_0.q  <= \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd ;
+    if (!rst_ni) \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.q  <= 1'h0;
+    else if (\u_rv_timer.u_reg.ctrl_we ) \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.q  <= \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [1];
   always @(posedge clk_i, negedge rst_ni)
-    if (!rst_ni) \u_rv_timer.u_reg.u_compare_lower0_0.q  <= 32'd4294967295;
-    else if (\u_rv_timer.u_reg.u_compare_lower0_00_qe.d_i ) \u_rv_timer.u_reg.u_compare_lower0_0.q  <= \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd ;
+    if (!rst_ni) \u_rv_timer.u_reg.u_ctrl_active_0.q  <= 1'h0;
+    else if (\u_rv_timer.u_reg.ctrl_we ) \u_rv_timer.u_reg.u_ctrl_active_0.q  <= \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [0];
+  always @(posedge clk_i, negedge rst_ni)
+    if (!rst_ni) \u_rv_timer.u_reg.u_compare_v0.q  <= 32'd4294967295;
+    else if (\u_rv_timer.u_reg.u_compare_v00_qe.d_i ) \u_rv_timer.u_reg.u_compare_v0.q  <= \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_rv_timer.u_reg.u_cfg0_step.q  <= 8'h01;
-    else if (\u_rv_timer.u_reg.cfg0_we ) \u_rv_timer.u_reg.u_cfg0_step.q  <= \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [23:16];
+    else if (\u_rv_timer.u_reg.cfg0_we ) \u_rv_timer.u_reg.u_cfg0_step.q  <= \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [23:16];
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_rv_timer.u_reg.u_cfg0_prescale.q  <= 12'h000;
-    else if (\u_rv_timer.u_reg.cfg0_we ) \u_rv_timer.u_reg.u_cfg0_prescale.q  <= \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [11:0];
+    else if (\u_rv_timer.u_reg.cfg0_we ) \u_rv_timer.u_reg.u_cfg0_prescale.q  <= \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [11:0];
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_pwm.u_reg.u_reg_if.rspop_q  <= 3'h0;
     else if (\u_pwm.u_reg.u_reg_if.a_ack ) \u_pwm.u_reg.u_reg_if.rspop_q  <= \$780y ;
@@ -3467,22 +3355,22 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
     else if (\u_pwm.u_reg._pwm_param_we ) \u_pwm.u_reg.u_pwm_param_duty_cycle_0.q  <= \u_pwm.u_reg.u_pwm_param_cdc.src_q [31:16];
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_pwm.u_reg.u_pwm_param_cdc.txn_bits_q  <= 3'h0;
-    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1900 ) \u_pwm.u_reg.u_pwm_param_cdc.txn_bits_q  <= \$procmux$1511_Y ;
+    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1883 ) \u_pwm.u_reg.u_pwm_param_cdc.txn_bits_q  <= \$procmux$1489_Y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_pwm.u_reg.u_pwm_param_cdc.src_q  <= 32'd2147418112;
-    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1900 ) \u_pwm.u_reg.u_pwm_param_cdc.src_q  <= \$procmux$1515_Y ;
+    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1883 ) \u_pwm.u_reg.u_pwm_param_cdc.src_q  <= \$procmux$1493_Y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_pwm.u_reg.u_pwm_param_cdc.src_busy_q  <= 1'h0;
-    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1906 ) \u_pwm.u_reg.u_pwm_param_cdc.src_busy_q  <= \$procmux$1576_Y ;
+    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1889 ) \u_pwm.u_reg.u_pwm_param_cdc.src_busy_q  <= \$procmux$1506_Y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_pwm.u_reg.u_pwm_en_cdc.txn_bits_q  <= 3'h0;
-    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1909 ) \u_pwm.u_reg.u_pwm_en_cdc.txn_bits_q  <= \$procmux$46_Y ;
+    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1892 ) \u_pwm.u_reg.u_pwm_en_cdc.txn_bits_q  <= \$procmux$40_Y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_pwm.u_reg.u_pwm_en_cdc.src_q  <= 1'h0;
-    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1909 ) \u_pwm.u_reg.u_pwm_en_cdc.src_q  <= \$procmux$50_Y ;
+    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1892 ) \u_pwm.u_reg.u_pwm_en_cdc.src_q  <= \$procmux$44_Y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_pwm.u_reg.u_pwm_en_cdc.src_busy_q  <= 1'h0;
-    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1915 ) \u_pwm.u_reg.u_pwm_en_cdc.src_busy_q  <= \$procmux$59_Y ;
+    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1898 ) \u_pwm.u_reg.u_pwm_en_cdc.src_busy_q  <= \$procmux$53_Y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_pwm.u_reg.u_pwm_en.q  <= 1'h0;
     else if (\u_pwm.u_reg._pwm_en_we ) \u_pwm.u_reg.u_pwm_en.q  <= \u_pwm.u_reg.u_pwm_en_cdc.src_q ;
@@ -3497,19 +3385,19 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
     else if (\u_pwm.u_reg.u_cfg0_qe.d_i ) \u_pwm.u_reg.u_cfg_clk_div.q  <= \u_pwm.u_reg.u_cfg_cdc.src_q [26:0];
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_pwm.u_reg.u_cfg_cdc.txn_bits_q  <= 3'h0;
-    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1922 ) \u_pwm.u_reg.u_cfg_cdc.txn_bits_q  <= \$procmux$132_Y ;
+    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1905 ) \u_pwm.u_reg.u_cfg_cdc.txn_bits_q  <= \$procmux$117_Y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_pwm.u_reg.u_cfg_cdc.src_q  <= 32'd939556864;
-    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1922 ) \u_pwm.u_reg.u_cfg_cdc.src_q  <= \$procmux$136_Y ;
+    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1905 ) \u_pwm.u_reg.u_cfg_cdc.src_q  <= \$procmux$121_Y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_pwm.u_reg.u_cfg_cdc.src_busy_q  <= 1'h0;
-    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1928 ) \u_pwm.u_reg.u_cfg_cdc.src_busy_q  <= \$procmux$145_Y ;
+    else if (\$auto$opt_dff.cc:247:make_patterns_logic$1911 ) \u_pwm.u_reg.u_cfg_cdc.src_busy_q  <= \$procmux$130_Y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_pwm.u_pwm_core.gen_chan_insts[0].u_chan.pwm_en_q  <= 1'h0;
     else if (!\u_pwm.u_pwm_core.gen_chan_insts[0].u_chan.pwm_d ) \u_pwm.u_pwm_core.gen_chan_insts[0].u_chan.pwm_en_q  <= \u_pwm.u_reg.u_pwm_en.q ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_gpio.u_reg.u_reg_if.rspop_q  <= 3'h0;
-    else if (\u_gpio.u_reg.u_reg_if.a_ack ) \u_gpio.u_reg.u_reg_if.rspop_q  <= \$1282y ;
+    else if (\u_gpio.u_reg.u_reg_if.a_ack ) \u_gpio.u_reg.u_reg_if.rspop_q  <= \$1274y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_gpio.u_reg.u_reg_if.reqsz_q  <= 2'h0;
     else if (\u_gpio.u_reg.u_reg_if.a_ack ) \u_gpio.u_reg.u_reg_if.reqsz_q  <= 2'h2;
@@ -3518,16 +3406,10 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
     else if (\u_gpio.u_reg.u_reg_if.a_ack ) \u_gpio.u_reg.u_reg_if.reqid_q  <= { 7'h00, \uart_host_adapter.g_multiple_reqs.source_q  };
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_gpio.u_reg.u_reg_if.rdata_q  <= 32'd0;
-    else if (\u_gpio.u_reg.u_reg_if.a_ack ) \u_gpio.u_reg.u_reg_if.rdata_q  <= \$1291y ;
+    else if (\u_gpio.u_reg.u_reg_if.a_ack ) \u_gpio.u_reg.u_reg_if.rdata_q  <= \$1283y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_gpio.u_reg.u_reg_if.error_q  <= 1'h0;
     else if (\u_gpio.u_reg.u_reg_if.a_ack ) \u_gpio.u_reg.u_reg_if.error_q  <= \u_gpio.u_reg.reg_error ;
-  always @(posedge clk_i, negedge rst_ni)
-    if (!rst_ni) \u_gpio.u_reg.u_intr_state.q  <= 2'h0;
-    else if (\u_gpio.u_reg.u_intr_state.qe ) \u_gpio.u_reg.u_intr_state.q  <= \u_gpio.u_reg.u_intr_state.wr_data ;
-  always @(posedge clk_i, negedge rst_ni)
-    if (!rst_ni) \u_gpio.u_reg.u_intr_enable.q  <= 2'h0;
-    else if (\u_gpio.u_reg.intr_enable_we ) \u_gpio.u_reg.u_intr_enable.q  <= \u_gpio.u_reg.reg_wdata [1:0];
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_gpio.u_reg.u_intr_ctrl_en_rising.q  <= 2'h0;
     else if (\u_gpio.u_reg.intr_ctrl_we ) \u_gpio.u_reg.u_intr_ctrl_en_rising.q  <= \u_gpio.u_reg.reg_wdata [1:0];
@@ -3558,71 +3440,70 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_gpio.cio_gpio_en_q  <= 2'h0;
     else if (\u_gpio.u_reg.direct_qe ) \u_gpio.cio_gpio_en_q  <= \u_gpio.u_reg.reg_wdata [3:2];
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1658  = | { \xbar.u_s1n_6.tl_t_p [65], \xbar.u_s1n_6.accept_t_req  };
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1660  = { \xbar.u_s1n_6.tl_t_p [65], \xbar.u_s1n_6.accept_t_req  } != 2'h3;
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1687  = { \u_uart.u_uart_core.u_uart_txfifo.rready_i , \u_uart.u_reg.u_ctrl_tx.q  } != 2'h3;
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1689  = { \$364y , \u_uart.u_reg.u_ctrl_tx.q  } != 2'h1;
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1694  = { \$364y , \u_uart.u_uart_core.u_uart_txfifo.rready_i , \u_uart.u_reg.u_ctrl_tx.q  } != 3'h1;
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1701  = | { \$414y , \$411y  };
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1703  = { \$417y , \$411y  } != 2'h2;
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1714  = | { \$411y , \u_uart.u_uart_core.nco_sum_q [16] };
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1717  = | { \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_set , \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.incr_wptr_i , \u_uart.u_uart_core.u_uart_txfifo.clr_i  };
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1720  = | { \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_set , \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.incr_rptr_i , \u_uart.u_uart_core.u_uart_txfifo.clr_i  };
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1731  = | { \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_set , \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.incr_wptr_i , \u_uart.u_uart_core.u_uart_rxfifo.clr_i  };
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1734  = | { \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_set , \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.incr_rptr_i , \u_uart.u_uart_core.u_uart_rxfifo.clr_i  };
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1769  = { \$procmux$507_CMP , \u_uart.u_bridge.rx_valid_i  } != 2'h2;
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1771  = { \$procmux$607_CMP , \u_uart.u_bridge.rx_valid_i  } != 2'h2;
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1773  = { \$procmux$507_CMP , \$530y  } != 2'h2;
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1775  = { \$procmux$607_CMP , \$530y  } != 2'h2;
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1777  = { \$procmux$607_CMP , \$531y  } != 2'h3;
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1779  = | { \$procmux$1000_CMP , \$procmux$607_CMP , \$procmux$507_CMP  };
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1794  = | { \$procmux$607_CMP , \$procmux$507_CMP  };
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1799  = { \$auto$opt_reduce.cc:137:opt_pmux$1656 , \u_uart.u_bridge.rx_valid_i  } != 2'h2;
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1801  = | { \$procmux$1000_CMP , \$auto$opt_reduce.cc:137:opt_pmux$1656  };
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1810  = { \$procmux$812_CMP , \u_uart.u_bridge.rx_valid_i  } != 2'h2;
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1812  = { \$procmux$448_CMP , \xbar.u_s1n_6.tl_t_p [65] } != 2'h2;
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1814  = { \$procmux$1000_CMP , \$518y  } != 2'h2;
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1816  = { \$procmux$812_CMP , \$522y  } != 2'h2;
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1822  = { \$procmux$492_CMP , \$564y  } != 2'h2;
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1829  = | { \$procmux$894_CMP , \$procmux$492_CMP  };
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1846  = { \$procmux$607_CMP , \$531y , \$530y  } != 3'h5;
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1848  = { \$procmux$507_CMP , \$530y  } != 2'h3;
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1850  = | { \$procmux$1000_CMP , \$procmux$812_CMP , \$procmux$607_CMP , \$procmux$507_CMP  };
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1900  = | { \u_pwm.u_reg.u_pwm_param_cdc.u_src_to_dst_req.src_pulse_i , \u_pwm.u_reg.u_pwm_param_cdc.dst_to_src  };
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1906  = | { \u_pwm.u_reg.u_pwm_param_cdc.u_src_to_dst_req.src_pulse_i , \u_pwm.u_reg.u_pwm_param_cdc.src_ack  };
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1909  = | { \u_pwm.u_reg.u_pwm_en_cdc.u_src_to_dst_req.src_pulse_i , \u_pwm.u_reg.u_pwm_en_cdc.dst_to_src  };
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1915  = | { \u_pwm.u_reg.u_pwm_en_cdc.u_src_to_dst_req.src_pulse_i , \u_pwm.u_reg.u_pwm_en_cdc.src_ack  };
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1922  = | { \u_pwm.u_reg.u_cfg_cdc.u_src_to_dst_req.src_pulse_i , \u_pwm.u_reg.u_cfg_cdc.dst_to_src  };
-  assign \$auto$opt_dff.cc:247:make_patterns_logic$1928  = | { \u_pwm.u_reg.u_cfg_cdc.u_src_to_dst_req.src_pulse_i , \u_pwm.u_reg.u_cfg_cdc.src_ack  };
-  assign \$auto$opt_dff.cc:272:make_patterns_logic$1662  = & { \$auto$opt_dff.cc:247:make_patterns_logic$1658 , \$auto$opt_dff.cc:247:make_patterns_logic$1660  };
-  assign \$auto$opt_dff.cc:272:make_patterns_logic$1667  = & { \$741y , \xbar.u_s1n_6.gen_err_resp.err_resp.tl_h_o_int [0] };
-  assign \$auto$opt_dff.cc:272:make_patterns_logic$1691  = & { \$auto$opt_dff.cc:247:make_patterns_logic$1687 , \$auto$opt_dff.cc:247:make_patterns_logic$1689  };
-  assign \$auto$opt_dff.cc:272:make_patterns_logic$1705  = & { \$auto$opt_dff.cc:247:make_patterns_logic$1701 , \$auto$opt_dff.cc:247:make_patterns_logic$1703  };
-  assign \$auto$opt_dff.cc:272:make_patterns_logic$1781  = & { \$auto$opt_dff.cc:247:make_patterns_logic$1769 , \$auto$opt_dff.cc:247:make_patterns_logic$1771 , \$auto$opt_dff.cc:247:make_patterns_logic$1773 , \$auto$opt_dff.cc:247:make_patterns_logic$1775 , \$auto$opt_dff.cc:247:make_patterns_logic$1777 , \$auto$opt_dff.cc:247:make_patterns_logic$1779  };
-  assign \$auto$opt_dff.cc:272:make_patterns_logic$1796  = & { \$auto$opt_dff.cc:247:make_patterns_logic$1769 , \$auto$opt_dff.cc:247:make_patterns_logic$1771 , \$auto$opt_dff.cc:247:make_patterns_logic$1773 , \$auto$opt_dff.cc:247:make_patterns_logic$1775 , \$auto$opt_dff.cc:247:make_patterns_logic$1777 , \$auto$opt_dff.cc:247:make_patterns_logic$1794  };
-  assign \$auto$opt_dff.cc:272:make_patterns_logic$1803  = & { \$auto$opt_dff.cc:247:make_patterns_logic$1799 , \$auto$opt_dff.cc:247:make_patterns_logic$1801  };
-  assign \$auto$opt_dff.cc:272:make_patterns_logic$1824  = & { \$auto$opt_dff.cc:247:make_patterns_logic$1769 , \$auto$opt_dff.cc:247:make_patterns_logic$1771 , \$auto$opt_dff.cc:247:make_patterns_logic$1773 , \$auto$opt_dff.cc:247:make_patterns_logic$1775 , \$auto$opt_dff.cc:247:make_patterns_logic$1810 , \$auto$opt_dff.cc:247:make_patterns_logic$1812 , \$auto$opt_dff.cc:247:make_patterns_logic$1814 , \$auto$opt_dff.cc:247:make_patterns_logic$1816 , \$auto$opt_dff.cc:247:make_patterns_logic$1822  };
-  assign \$auto$opt_dff.cc:272:make_patterns_logic$1831  = & { \$auto$opt_dff.cc:247:make_patterns_logic$1822 , \$auto$opt_dff.cc:247:make_patterns_logic$1829  };
-  assign \$auto$opt_dff.cc:272:make_patterns_logic$1834  = & { \$procmux$448_CMP , \xbar.u_s1n_6.tl_t_p [65] };
-  assign \$auto$opt_dff.cc:272:make_patterns_logic$1837  = & { \$procmux$844_CMP , \$procmux$812_CMP , \u_uart.u_bridge.rx_valid_i  };
-  assign \$auto$opt_dff.cc:272:make_patterns_logic$1852  = & { \$auto$opt_dff.cc:247:make_patterns_logic$1769 , \$auto$opt_dff.cc:247:make_patterns_logic$1771 , \$auto$opt_dff.cc:247:make_patterns_logic$1810 , \$auto$opt_dff.cc:247:make_patterns_logic$1846 , \$auto$opt_dff.cc:247:make_patterns_logic$1848 , \$auto$opt_dff.cc:247:make_patterns_logic$1850  };
-  assign \$auto$opt_dff.cc:272:make_patterns_logic$1855  = & { \$procmux$812_CMP , \$522y , \u_uart.u_bridge.rx_valid_i  };
-  assign \$auto$opt_dff.cc:272:make_patterns_logic$1876  = & { \$procmux$607_CMP , \$530y , \u_uart.u_bridge.rx_valid_i  };
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1641  = | { \xbar.u_s1n_6.tl_t_p [65], \xbar.u_s1n_6.accept_t_req  };
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1643  = { \xbar.u_s1n_6.tl_t_p [65], \xbar.u_s1n_6.accept_t_req  } != 2'h3;
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1670  = { \u_uart.u_uart_core.u_uart_txfifo.rready_i , \u_uart.u_reg.u_ctrl_tx.q  } != 2'h3;
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1672  = { \$364y , \u_uart.u_reg.u_ctrl_tx.q  } != 2'h1;
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1677  = { \$364y , \u_uart.u_uart_core.u_uart_txfifo.rready_i , \u_uart.u_reg.u_ctrl_tx.q  } != 3'h1;
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1684  = | { \$414y , \$411y  };
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1686  = { \$417y , \$411y  } != 2'h2;
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1697  = | { \$411y , \u_uart.u_uart_core.nco_sum_q [16] };
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1700  = | { \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_set , \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.incr_wptr_i , \u_uart.u_uart_core.u_uart_txfifo.clr_i  };
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1703  = | { \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_set , \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.incr_rptr_i , \u_uart.u_uart_core.u_uart_txfifo.clr_i  };
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1714  = | { \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_set , \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.incr_wptr_i , \u_uart.u_uart_core.u_uart_rxfifo.clr_i  };
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1717  = | { \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_set , \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.incr_rptr_i , \u_uart.u_uart_core.u_uart_rxfifo.clr_i  };
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1752  = { \$procmux$1000_CMP , \u_uart.u_bridge.rx_valid_i  } != 2'h2;
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1754  = { \$procmux$1002_CMP , \u_uart.u_bridge.rx_valid_i  } != 2'h2;
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1756  = { \$procmux$1000_CMP , \$530y  } != 2'h2;
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1758  = { \$procmux$1002_CMP , \$530y  } != 2'h2;
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1760  = { \$procmux$1002_CMP , \$531y  } != 2'h3;
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1762  = | { \$procmux$1004_CMP , \$procmux$1002_CMP , \$procmux$1000_CMP  };
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1777  = | { \$procmux$1002_CMP , \$procmux$1000_CMP  };
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1782  = { \$auto$opt_reduce.cc:137:opt_pmux$1639 , \u_uart.u_bridge.rx_valid_i  } != 2'h2;
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1784  = | { \$procmux$1004_CMP , \$auto$opt_reduce.cc:137:opt_pmux$1639  };
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1793  = { \$procmux$1014_CMP , \u_uart.u_bridge.rx_valid_i  } != 2'h2;
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1795  = { \$procmux$464_CMP , \xbar.u_s1n_6.tl_t_p [65] } != 2'h2;
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1797  = { \$procmux$1004_CMP , \$518y  } != 2'h2;
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1799  = { \$procmux$1014_CMP , \$522y  } != 2'h2;
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1805  = { \$procmux$508_CMP , \$564y  } != 2'h2;
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1812  = | { \$procmux$910_CMP , \$procmux$508_CMP  };
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1829  = { \$procmux$1002_CMP , \$531y , \$530y  } != 3'h5;
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1831  = { \$procmux$1000_CMP , \$530y  } != 2'h3;
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1833  = | { \$procmux$1014_CMP , \$procmux$1004_CMP , \$procmux$1002_CMP , \$procmux$1000_CMP  };
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1883  = | { \u_pwm.u_reg.u_pwm_param_cdc.u_src_to_dst_req.src_pulse_i , \u_pwm.u_reg.u_pwm_param_cdc.dst_to_src  };
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1889  = | { \u_pwm.u_reg.u_pwm_param_cdc.u_src_to_dst_req.src_pulse_i , \u_pwm.u_reg.u_pwm_param_cdc.src_ack  };
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1892  = | { \u_pwm.u_reg.u_pwm_en_cdc.u_src_to_dst_req.src_pulse_i , \u_pwm.u_reg.u_pwm_en_cdc.dst_to_src  };
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1898  = | { \u_pwm.u_reg.u_pwm_en_cdc.u_src_to_dst_req.src_pulse_i , \u_pwm.u_reg.u_pwm_en_cdc.src_ack  };
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1905  = | { \u_pwm.u_reg.u_cfg_cdc.u_src_to_dst_req.src_pulse_i , \u_pwm.u_reg.u_cfg_cdc.dst_to_src  };
+  assign \$auto$opt_dff.cc:247:make_patterns_logic$1911  = | { \u_pwm.u_reg.u_cfg_cdc.u_src_to_dst_req.src_pulse_i , \u_pwm.u_reg.u_cfg_cdc.src_ack  };
+  assign \$auto$opt_dff.cc:272:make_patterns_logic$1645  = & { \$auto$opt_dff.cc:247:make_patterns_logic$1641 , \$auto$opt_dff.cc:247:make_patterns_logic$1643  };
+  assign \$auto$opt_dff.cc:272:make_patterns_logic$1650  = & { \$741y , \xbar.u_s1n_6.gen_err_resp.err_resp.tl_h_o_int [0] };
+  assign \$auto$opt_dff.cc:272:make_patterns_logic$1674  = & { \$auto$opt_dff.cc:247:make_patterns_logic$1670 , \$auto$opt_dff.cc:247:make_patterns_logic$1672  };
+  assign \$auto$opt_dff.cc:272:make_patterns_logic$1688  = & { \$auto$opt_dff.cc:247:make_patterns_logic$1684 , \$auto$opt_dff.cc:247:make_patterns_logic$1686  };
+  assign \$auto$opt_dff.cc:272:make_patterns_logic$1764  = & { \$auto$opt_dff.cc:247:make_patterns_logic$1752 , \$auto$opt_dff.cc:247:make_patterns_logic$1754 , \$auto$opt_dff.cc:247:make_patterns_logic$1756 , \$auto$opt_dff.cc:247:make_patterns_logic$1758 , \$auto$opt_dff.cc:247:make_patterns_logic$1760 , \$auto$opt_dff.cc:247:make_patterns_logic$1762  };
+  assign \$auto$opt_dff.cc:272:make_patterns_logic$1779  = & { \$auto$opt_dff.cc:247:make_patterns_logic$1752 , \$auto$opt_dff.cc:247:make_patterns_logic$1754 , \$auto$opt_dff.cc:247:make_patterns_logic$1756 , \$auto$opt_dff.cc:247:make_patterns_logic$1758 , \$auto$opt_dff.cc:247:make_patterns_logic$1760 , \$auto$opt_dff.cc:247:make_patterns_logic$1777  };
+  assign \$auto$opt_dff.cc:272:make_patterns_logic$1786  = & { \$auto$opt_dff.cc:247:make_patterns_logic$1782 , \$auto$opt_dff.cc:247:make_patterns_logic$1784  };
+  assign \$auto$opt_dff.cc:272:make_patterns_logic$1807  = & { \$auto$opt_dff.cc:247:make_patterns_logic$1752 , \$auto$opt_dff.cc:247:make_patterns_logic$1754 , \$auto$opt_dff.cc:247:make_patterns_logic$1756 , \$auto$opt_dff.cc:247:make_patterns_logic$1758 , \$auto$opt_dff.cc:247:make_patterns_logic$1793 , \$auto$opt_dff.cc:247:make_patterns_logic$1795 , \$auto$opt_dff.cc:247:make_patterns_logic$1797 , \$auto$opt_dff.cc:247:make_patterns_logic$1799 , \$auto$opt_dff.cc:247:make_patterns_logic$1805  };
+  assign \$auto$opt_dff.cc:272:make_patterns_logic$1814  = & { \$auto$opt_dff.cc:247:make_patterns_logic$1805 , \$auto$opt_dff.cc:247:make_patterns_logic$1812  };
+  assign \$auto$opt_dff.cc:272:make_patterns_logic$1817  = & { \$procmux$464_CMP , \xbar.u_s1n_6.tl_t_p [65] };
+  assign \$auto$opt_dff.cc:272:make_patterns_logic$1820  = & { \$procmux$1014_CMP , \$procmux$860_CMP , \u_uart.u_bridge.rx_valid_i  };
+  assign \$auto$opt_dff.cc:272:make_patterns_logic$1835  = & { \$auto$opt_dff.cc:247:make_patterns_logic$1752 , \$auto$opt_dff.cc:247:make_patterns_logic$1754 , \$auto$opt_dff.cc:247:make_patterns_logic$1793 , \$auto$opt_dff.cc:247:make_patterns_logic$1829 , \$auto$opt_dff.cc:247:make_patterns_logic$1831 , \$auto$opt_dff.cc:247:make_patterns_logic$1833  };
+  assign \$auto$opt_dff.cc:272:make_patterns_logic$1838  = & { \$procmux$1014_CMP , \$522y , \u_uart.u_bridge.rx_valid_i  };
+  assign \$auto$opt_dff.cc:272:make_patterns_logic$1859  = & { \$procmux$1002_CMP , \$530y , \u_uart.u_bridge.rx_valid_i  };
   assign \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_set_cnt [4] = ~ \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [4];
   assign \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_set_cnt [3] = ~ \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_cnt_q [3];
-  assign \$217y  = | \u_gpio.u_reg.addr_hit [5:0];
-  assign \$auto$opt_reduce.cc:137:opt_pmux$1626  = | { \u_gpio.u_reg.addr_hit [4:3], \u_gpio.u_reg.addr_hit [0] };
-  assign \$auto$opt_reduce.cc:137:opt_pmux$1628  = | \u_gpio.u_reg.addr_hit [4:1];
-  assign \$auto$opt_reduce.cc:137:opt_pmux$1634  = | \u_gpio.u_reg.addr_hit [4:3];
-  assign \$auto$opt_reduce.cc:137:opt_pmux$1630  = | \u_rv_timer.u_reg.addr_hit [3:0];
-  assign \$auto$opt_reduce.cc:137:opt_pmux$1632  = | \u_rv_timer.u_reg.addr_hit [4:0];
-  assign \$auto$opt_reduce.cc:137:opt_pmux$1642  = | { \u_gpio.u_reg.addr_hit [6], \u_gpio.u_reg.addr_hit [4:0] };
-  assign \$auto$opt_reduce.cc:137:opt_pmux$1644  = | { \u_gpio.u_reg.addr_hit [5:3], \u_gpio.u_reg.addr_hit [1] };
-  assign \$auto$opt_reduce.cc:137:opt_pmux$1646  = | \u_gpio.u_reg.addr_hit [3:0];
-  assign \$auto$opt_reduce.cc:137:opt_pmux$1648  = | \u_gpio.u_reg.addr_hit [5:1];
-  assign \$1456y  = | \u_gpio.u_reg.addr_hit ;
-  assign \$auto$opt_reduce.cc:137:opt_pmux$1652  = | \u_gpio.u_reg.addr_hit [5:3];
-  assign \$auto$opt_reduce.cc:137:opt_pmux$1656  = | { \$procmux$607_CMP , \$procmux$507_CMP  };
+  assign \$auto$opt_reduce.cc:137:opt_pmux$1607  = | { \u_gpio.u_reg.addr_hit [3], \u_gpio.u_reg.addr_hit [1:0] };
+  assign \$auto$opt_reduce.cc:137:opt_pmux$1613  = | \u_rv_timer.u_reg.addr_hit [3:1];
+  assign \$auto$opt_reduce.cc:137:opt_pmux$1615  = | \u_rv_timer.u_reg.addr_hit [3:0];
+  assign \$auto$opt_reduce.cc:137:opt_pmux$1617  = | { \u_rv_timer.u_reg.addr_hit [4:3], \u_rv_timer.u_reg.addr_hit [0] };
+  assign \$auto$opt_reduce.cc:137:opt_pmux$1621  = | \u_rv_timer.u_reg.addr_hit [5:3];
+  assign \$auto$opt_reduce.cc:137:opt_pmux$1625  = | \u_rv_timer.u_reg.addr_hit [4:1];
+  assign \$auto$opt_reduce.cc:137:opt_pmux$1611  = | \u_rv_timer.u_reg.addr_hit [4:0];
+  assign \$auto$opt_reduce.cc:137:opt_pmux$1629  = | \u_rv_timer.u_reg.addr_hit [5:1];
+  assign \$217y  = | \u_rv_timer.u_reg.addr_hit [5:0];
+  assign \$auto$opt_reduce.cc:137:opt_pmux$1633  = | { \u_rv_timer.u_reg.addr_hit [5:3], \u_rv_timer.u_reg.addr_hit [1] };
+  assign \$auto$opt_reduce.cc:137:opt_pmux$1619  = | \u_rv_timer.u_reg.addr_hit [4:3];
+  assign \$auto$opt_reduce.cc:137:opt_pmux$1639  = | { \$procmux$1002_CMP , \$procmux$1000_CMP  };
   always @(posedge clk_i)
     \u_gpio.data_in_q  <= { \u_gpio.gen_filter[1].u_filter.filter_o , \u_gpio.gen_filter[0].u_filter.filter_o  };
   always @(posedge clk_i, negedge rst_ni)
@@ -3654,7 +3535,7 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
     else \u_gpio.u_reg.u_data_in.q  <= { \u_gpio.gen_filter[1].u_filter.filter_o , \u_gpio.gen_filter[0].u_filter.filter_o  };
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_gpio.u_reg.u_reg_if.outstanding_q  <= 1'h0;
-    else \u_gpio.u_reg.u_reg_if.outstanding_q  <= \$procmux$1585_Y ;
+    else \u_gpio.u_reg.u_reg_if.outstanding_q  <= \$procmux$1475_Y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_pwm.u_pwm_core.gen_chan_insts[0].u_chan.pwm_q  <= 1'h0;
     else \u_pwm.u_pwm_core.gen_chan_insts[0].u_chan.pwm_q  <= \u_pwm.u_pwm_core.gen_chan_insts[0].u_chan.pwm_d ;
@@ -3735,19 +3616,19 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
     else \u_pwm.u_reg.u_pwm_param_cdc.u_src_to_dst_req.src_level  <= \$1005y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_pwm.u_reg.u_reg_if.outstanding_q  <= 1'h0;
-    else \u_pwm.u_reg.u_reg_if.outstanding_q  <= \$procmux$220_Y ;
+    else \u_pwm.u_reg.u_reg_if.outstanding_q  <= \$procmux$202_Y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_rv_timer.gen_harts[0].u_core.tick_count  <= 12'h000;
-    else \u_rv_timer.gen_harts[0].u_core.tick_count  <= \$procmux$32_Y ;
+    else \u_rv_timer.gen_harts[0].u_core.tick_count  <= \$procmux$24_Y ;
   always @(posedge clk_i, negedge rst_ni)
-    if (!rst_ni) \u_rv_timer.u_reg.u_compare_lower0_00_qe.q_o  <= 1'h0;
-    else \u_rv_timer.u_reg.u_compare_lower0_00_qe.q_o  <= \u_rv_timer.u_reg.u_compare_lower0_00_qe.d_i ;
+    if (!rst_ni) \u_rv_timer.input_capture_active_q  <= 1'h0;
+    else \u_rv_timer.input_capture_active_q  <= \u_rv_timer.input_capture_active_d ;
   always @(posedge clk_i, negedge rst_ni)
-    if (!rst_ni) \u_rv_timer.u_reg.u_compare_upper0_00_qe.q_o  <= 1'h0;
-    else \u_rv_timer.u_reg.u_compare_upper0_00_qe.q_o  <= \u_rv_timer.u_reg.u_compare_upper0_00_qe.d_i ;
+    if (!rst_ni) \u_rv_timer.u_reg.u_compare_v00_qe.q_o  <= 1'h0;
+    else \u_rv_timer.u_reg.u_compare_v00_qe.q_o  <= \u_rv_timer.u_reg.u_compare_v00_qe.d_i ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_rv_timer.u_reg.u_reg_if.outstanding_q  <= 1'h0;
-    else \u_rv_timer.u_reg.u_reg_if.outstanding_q  <= \$procmux$22_Y ;
+    else \u_rv_timer.u_reg.u_reg_if.outstanding_q  <= \$procmux$14_Y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_bridge.tx_idx_q  <= 4'h0;
     else \u_uart.u_bridge.tx_idx_q  <= \u_uart.u_bridge.tx_idx_d ;
@@ -3759,7 +3640,7 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
     else \u_uart.u_reg.u_fifo_ctrl0_qe.q_o  <= \u_uart.u_reg.u_fifo_ctrl0_qe.d_i ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_reg.u_reg_if.outstanding_q  <= 1'h0;
-    else \u_uart.u_reg.u_reg_if.outstanding_q  <= \$procmux$1615_Y ;
+    else \u_uart.u_reg.u_reg_if.outstanding_q  <= \$procmux$1598_Y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_reg.u_wdata0_qe.q_o  <= 1'h0;
     else \u_uart.u_reg.u_wdata0_qe.q_o  <= \u_uart.u_reg.u_wdata0_qe.d_i ;
@@ -3780,13 +3661,13 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
     else \u_uart.u_uart_core.sync_rx.u_sync_2.q_o  <= \u_uart.u_uart_core.sync_rx.u_sync_1.q_o ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_uart_core.tx_out_q  <= 1'h1;
-    else \u_uart.u_uart_core.tx_out_q  <= \$procmux$1305_Y ;
+    else \u_uart.u_uart_core.tx_out_q  <= \$procmux$1289_Y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.under_rst  <= 1'h1;
-    else \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.under_rst  <= \$procmux$1043_Y ;
+    else \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.under_rst  <= \$procmux$1093_Y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.under_rst  <= 1'h1;
-    else \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.under_rst  <= \$procmux$1413_Y ;
+    else \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.under_rst  <= \$procmux$1400_Y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_uart_core.uart_rx.rx_valid_q  <= 1'h0;
     else \u_uart.u_uart_core.uart_rx.rx_valid_q  <= \$440y ;
@@ -3795,633 +3676,629 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
     else \u_uart.u_uart_core.uart_rx.tick_baud_q  <= \u_uart.u_uart_core.uart_rx.tick_baud_d ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \u_uart.u_uart_core.uart_tx.tick_baud_q  <= 1'h0;
-    else \u_uart.u_uart_core.uart_tx.tick_baud_q  <= \$procmux$1368_Y ;
+    else \u_uart.u_uart_core.uart_tx.tick_baud_q  <= \$procmux$1355_Y ;
   always @(posedge clk_i, negedge rst_ni)
     if (!rst_ni) \xbar.u_s1n_6.gen_err_resp.err_resp.err_rsp_pending  <= 1'h0;
-    else \xbar.u_s1n_6.gen_err_resp.err_resp.err_rsp_pending  <= \$procmux$251_Y ;
-  assign \$procmux$1005_Y  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.incr_rptr_i  ? \$488y  : 5'hxx;
-  assign \$procmux$1015_Y  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_set  ? { \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_set_cnt [4], 4'h0 } : \$procmux$1005_Y ;
-  assign \$procmux$1022_Y  = \u_uart.u_uart_core.u_uart_rxfifo.clr_i  ? 5'h00 : \$procmux$1015_Y ;
-  assign \$procmux$1024_Y  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.incr_wptr_i  ? \$481y  : 5'hxx;
-  assign \$procmux$1034_Y  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_set  ? { \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_set_cnt [4], 4'h0 } : \$procmux$1024_Y ;
-  assign \$procmux$1041_Y  = \u_uart.u_uart_core.u_uart_rxfifo.clr_i  ? 5'h00 : \$procmux$1034_Y ;
-  assign \$procmux$1043_Y  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.under_rst  ? \$455y  : 1'h0;
-  assign \$procmux$1082_Y  = \$417y  ? 1'h1 : \$419y ;
-  assign \$procmux$1093_Y  = \$417y  ? 4'h0 : \$418y ;
-  assign \$procmux$1104_Y  = \$417y  ? 11'hxxx : { \u_uart.u_uart_core.uart_rx.rx , \u_uart.u_uart_core.uart_rx.sreg_q [10:1] };
-  assign \$procmux$1115_Y  = \$414y  ? \$procmux$1082_Y  : 1'hx;
-  assign \$procmux$1124_Y  = \$414y  ? \$procmux$1093_Y  : 4'hx;
-  assign \$procmux$1133_Y  = \$414y  ? \$procmux$1104_Y  : 11'hxxx;
-  assign \u_uart.u_uart_core.uart_rx.idle_d  = \$411y  ? 1'h0 : \$procmux$1115_Y ;
-  assign \u_uart.u_uart_core.uart_rx.bit_cnt_d  = \$411y  ? \$362y  : \$procmux$1124_Y ;
-  assign \u_uart.u_uart_core.uart_rx.sreg_d  = \$411y  ? 11'h000 : \$procmux$1133_Y ;
-  function [0:0] \$procmux$116 ;
-    input [0:0] a;
-    input [2:0] b;
-    input [2:0] s;
+    else \xbar.u_s1n_6.gen_err_resp.err_resp.err_rsp_pending  <= \$procmux$233_Y ;
+  function [1:0] \$procmux$1009 ;
+    input [1:0] a;
+    input [7:0] b;
+    input [3:0] s;
     casez (s) // synopsys parallel_case
-      3'b??1:
-        \$procmux$116  = b[0:0];
-      3'b?1?:
-        \$procmux$116  = b[1:1];
-      3'b1??:
-        \$procmux$116  = b[2:2];
+      4'b???1:
+        \$procmux$1009  = b[1:0];
+      4'b??1?:
+        \$procmux$1009  = b[3:2];
+      4'b?1??:
+        \$procmux$1009  = b[5:4];
+      4'b1???:
+        \$procmux$1009  = b[7:6];
       default:
-        \$procmux$116  = a;
+        \$procmux$1009  = a;
     endcase
   endfunction
-  assign \u_pwm.u_reg.u_reg_if.busy_i  = \$procmux$116 (1'h0, { \u_pwm.u_reg.u_cfg_cdc.src_busy_q , \u_pwm.u_reg.u_pwm_en_cdc.src_busy_q , \u_pwm.u_reg.u_pwm_param_cdc.src_busy_q  }, { \u_pwm.u_reg.addr_hit [0], \u_pwm.u_reg.addr_hit [1], \u_pwm.u_reg.addr_hit [2] });
-  assign \u_uart.u_uart_core.uart_rx.tick_baud_d  = \$411y  ? 1'h0 : \$procmux$1176_Y ;
-  assign \u_uart.u_uart_core.uart_rx.baud_div_d  = \$411y  ? 4'h8 : \$procmux$1181_Y ;
-  assign \$procmux$1176_Y  = \u_uart.u_uart_core.nco_sum_q [16] ? \$407y [4] : 1'h0;
-  assign \$procmux$1181_Y  = \u_uart.u_uart_core.nco_sum_q [16] ? \$407y [3:0] : 4'hx;
-  assign \$procmux$120_Y  = \u_pwm.u_reg.u_cfg_cdc.dst_to_src  ? 3'h0 : 3'hx;
-  function [7:0] \$procmux$1248 ;
-    input [7:0] a;
-    input [39:0] b;
-    input [4:0] s;
-    casez (s) // synopsys parallel_case
-      5'b????1:
-        \$procmux$1248  = b[7:0];
-      5'b???1?:
-        \$procmux$1248  = b[15:8];
-      5'b??1??:
-        \$procmux$1248  = b[23:16];
-      5'b?1???:
-        \$procmux$1248  = b[31:24];
-      5'b1????:
-        \$procmux$1248  = b[39:32];
-      default:
-        \$procmux$1248  = a;
-    endcase
-  endfunction
-  assign \u_rv_timer.u_reg.u_reg_if.rdata_i [31:24] = \$procmux$1248 (8'hff, { 8'h00, \u_rv_timer.u_reg.u_timer_v_lower0.q [31:24], \u_rv_timer.u_reg.u_timer_v_upper0.q [31:24], \u_rv_timer.u_reg.u_compare_lower0_0.q [31:24], \u_rv_timer.u_reg.u_compare_upper0_0.q [31:24] }, { \$auto$opt_reduce.cc:137:opt_pmux$1632 , \u_rv_timer.u_reg.addr_hit [5], \u_rv_timer.u_reg.addr_hit [6], \u_rv_timer.u_reg.addr_hit [7], \u_rv_timer.u_reg.addr_hit [8] });
-  assign \$procmux$125_Y  = \u_pwm.u_reg.u_cfg_cdc.dst_to_src  ? { \u_pwm.u_reg.u_cfg_cntr_en.q , \u_pwm.u_reg.u_cfg_dc_resn.q , \u_pwm.u_reg.u_cfg_clk_div.q  } : 32'hxxxxxxxx;
-  function [3:0] \$procmux$1259 ;
-    input [3:0] a;
-    input [19:0] b;
-    input [4:0] s;
-    casez (s) // synopsys parallel_case
-      5'b????1:
-        \$procmux$1259  = b[3:0];
-      5'b???1?:
-        \$procmux$1259  = b[7:4];
-      5'b??1??:
-        \$procmux$1259  = b[11:8];
-      5'b?1???:
-        \$procmux$1259  = b[15:12];
-      5'b1????:
-        \$procmux$1259  = b[19:16];
-      default:
-        \$procmux$1259  = a;
-    endcase
-  endfunction
-  assign \u_rv_timer.u_reg.u_reg_if.rdata_i [15:12] = \$procmux$1259 (4'hf, { 4'h0, \u_rv_timer.u_reg.u_timer_v_lower0.q [15:12], \u_rv_timer.u_reg.u_timer_v_upper0.q [15:12], \u_rv_timer.u_reg.u_compare_lower0_0.q [15:12], \u_rv_timer.u_reg.u_compare_upper0_0.q [15:12] }, { \$auto$opt_reduce.cc:137:opt_pmux$1632 , \u_rv_timer.u_reg.addr_hit [5], \u_rv_timer.u_reg.addr_hit [6], \u_rv_timer.u_reg.addr_hit [7], \u_rv_timer.u_reg.addr_hit [8] });
-  function [10:0] \$procmux$1270 ;
-    input [10:0] a;
-    input [65:0] b;
-    input [5:0] s;
-    casez (s) // synopsys parallel_case
-      6'b?????1:
-        \$procmux$1270  = b[10:0];
-      6'b????1?:
-        \$procmux$1270  = b[21:11];
-      6'b???1??:
-        \$procmux$1270  = b[32:22];
-      6'b??1???:
-        \$procmux$1270  = b[43:33];
-      6'b?1????:
-        \$procmux$1270  = b[54:44];
-      6'b1?????:
-        \$procmux$1270  = b[65:55];
-      default:
-        \$procmux$1270  = a;
-    endcase
-  endfunction
-  assign \u_rv_timer.u_reg.u_reg_if.rdata_i [11:1] = \$procmux$1270 (11'h7ff, { 11'h000, \u_rv_timer.u_reg.u_cfg0_prescale.q [11:1], \u_rv_timer.u_reg.u_timer_v_lower0.q [11:1], \u_rv_timer.u_reg.u_timer_v_upper0.q [11:1], \u_rv_timer.u_reg.u_compare_lower0_0.q [11:1], \u_rv_timer.u_reg.u_compare_upper0_0.q [11:1] }, { \$auto$opt_reduce.cc:137:opt_pmux$1630 , \u_rv_timer.u_reg.addr_hit [4], \u_rv_timer.u_reg.addr_hit [5], \u_rv_timer.u_reg.addr_hit [6], \u_rv_timer.u_reg.addr_hit [7], \u_rv_timer.u_reg.addr_hit [8] });
-  function [0:0] \$procmux$1281 ;
-    input [0:0] a;
-    input [8:0] b;
-    input [8:0] s;
-    casez (s) // synopsys parallel_case
-      9'b????????1:
-        \$procmux$1281  = b[0:0];
-      9'b???????1?:
-        \$procmux$1281  = b[1:1];
-      9'b??????1??:
-        \$procmux$1281  = b[2:2];
-      9'b?????1???:
-        \$procmux$1281  = b[3:3];
-      9'b????1????:
-        \$procmux$1281  = b[4:4];
-      9'b???1?????:
-        \$procmux$1281  = b[5:5];
-      9'b??1??????:
-        \$procmux$1281  = b[6:6];
-      9'b?1???????:
-        \$procmux$1281  = b[7:7];
-      9'b1????????:
-        \$procmux$1281  = b[8:8];
-      default:
-        \$procmux$1281  = a;
-    endcase
-  endfunction
-  assign \u_rv_timer.u_reg.u_reg_if.rdata_i [0] = \$procmux$1281 (1'h1, { \u_rv_timer.u_reg.u_ctrl.q , \u_rv_timer.u_reg.u_intr_enable0.q , \u_rv_timer.u_reg.u_intr_state0.q , 1'h0, \u_rv_timer.u_reg.u_cfg0_prescale.q [0], \u_rv_timer.u_reg.u_timer_v_lower0.q [0], \u_rv_timer.u_reg.u_timer_v_upper0.q [0], \u_rv_timer.u_reg.u_compare_lower0_0.q [0], \u_rv_timer.u_reg.u_compare_upper0_0.q [0] }, { \u_rv_timer.u_reg.addr_hit [0], \u_rv_timer.u_reg.addr_hit [1], \u_rv_timer.u_reg.addr_hit [2], \u_rv_timer.u_reg.addr_hit [3], \u_rv_timer.u_reg.addr_hit [4], \u_rv_timer.u_reg.addr_hit [5], \u_rv_timer.u_reg.addr_hit [6], \u_rv_timer.u_reg.addr_hit [7], \u_rv_timer.u_reg.addr_hit [8] });
-  function [7:0] \$procmux$1292 ;
-    input [7:0] a;
-    input [47:0] b;
-    input [5:0] s;
-    casez (s) // synopsys parallel_case
-      6'b?????1:
-        \$procmux$1292  = b[7:0];
-      6'b????1?:
-        \$procmux$1292  = b[15:8];
-      6'b???1??:
-        \$procmux$1292  = b[23:16];
-      6'b??1???:
-        \$procmux$1292  = b[31:24];
-      6'b?1????:
-        \$procmux$1292  = b[39:32];
-      6'b1?????:
-        \$procmux$1292  = b[47:40];
-      default:
-        \$procmux$1292  = a;
-    endcase
-  endfunction
-  assign \u_rv_timer.u_reg.u_reg_if.rdata_i [23:16] = \$procmux$1292 (8'hff, { 8'h00, \u_rv_timer.u_reg.u_cfg0_step.q , \u_rv_timer.u_reg.u_timer_v_lower0.q [23:16], \u_rv_timer.u_reg.u_timer_v_upper0.q [23:16], \u_rv_timer.u_reg.u_compare_lower0_0.q [23:16], \u_rv_timer.u_reg.u_compare_upper0_0.q [23:16] }, { \$auto$opt_reduce.cc:137:opt_pmux$1630 , \u_rv_timer.u_reg.addr_hit [4], \u_rv_timer.u_reg.addr_hit [5], \u_rv_timer.u_reg.addr_hit [6], \u_rv_timer.u_reg.addr_hit [7], \u_rv_timer.u_reg.addr_hit [8] });
-  assign \$procmux$1305_Y  = \u_uart.u_reg.u_ctrl_slpbk.q  ? 1'h1 : \u_uart.u_uart_core.uart_tx.tx_q ;
-  assign \$procmux$1307_Y  = \$364y  ? \u_uart.u_uart_core.uart_tx.sreg_q [0] : 1'hx;
-  assign \$procmux$1315_Y  = \$364y  ? { 1'h1, \u_uart.u_uart_core.uart_tx.sreg_q [10:1] } : 11'hxxx;
-  assign \$procmux$132_Y  = \u_pwm.u_reg.u_cfg_cdc.u_src_to_dst_req.src_pulse_i  ? 3'h4 : \$procmux$120_Y ;
-  assign \$procmux$1323_Y  = \$364y  ? \$365y  : 4'hx;
-  assign \$procmux$1333_Y  = \u_uart.u_uart_core.u_uart_txfifo.rready_i  ? { 1'h1, \$361y , \u_uart.u_uart_core.tx_fifo_data , 1'h0 } : \$procmux$1315_Y ;
-  assign \$procmux$1340_Y  = \u_uart.u_uart_core.u_uart_txfifo.rready_i  ? \$362y  : \$procmux$1323_Y ;
-  assign \$procmux$1347_Y  = \u_uart.u_uart_core.u_uart_txfifo.rready_i  ? 1'hx : \$procmux$1307_Y ;
-  assign \u_uart.u_uart_core.uart_tx.tx_d  = \u_uart.u_reg.u_ctrl_tx.q  ? \$procmux$1347_Y  : 1'h1;
-  assign \u_uart.u_uart_core.uart_tx.sreg_d  = \u_uart.u_reg.u_ctrl_tx.q  ? \$procmux$1333_Y  : 11'h7ff;
-  assign \$procmux$136_Y  = \u_pwm.u_reg.u_cfg_cdc.u_src_to_dst_req.src_pulse_i  ? \u_pwm.u_reg.reg_wdata  : \$procmux$125_Y ;
-  assign \u_uart.u_uart_core.uart_tx.bit_cnt_d  = \u_uart.u_reg.u_ctrl_tx.q  ? \$procmux$1340_Y  : 4'h0;
-  assign \$procmux$1368_Y  = \u_uart.u_uart_core.nco_sum_q [16] ? \$353y [4] : 1'h0;
-  assign \$procmux$1375_Y  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.incr_rptr_i  ? \$327y  : 4'hx;
-  assign \$procmux$138_Y  = \u_pwm.u_reg.u_cfg_cdc.src_ack  ? 1'h0 : 1'hx;
-  assign \$procmux$1385_Y  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_set  ? { \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_set_cnt [3], 3'h0 } : \$procmux$1375_Y ;
-  assign \$procmux$1392_Y  = \u_uart.u_uart_core.u_uart_txfifo.clr_i  ? 4'h0 : \$procmux$1385_Y ;
-  assign \$procmux$1394_Y  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.incr_wptr_i  ? \$320y  : 4'hx;
-  assign \$procmux$1404_Y  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_set  ? { \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_set_cnt [3], 3'h0 } : \$procmux$1394_Y ;
-  assign \$procmux$1411_Y  = \u_uart.u_uart_core.u_uart_txfifo.clr_i  ? 4'h0 : \$procmux$1404_Y ;
-  assign \$procmux$1413_Y  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.under_rst  ? \$294y  : 1'h0;
-  function [7:0] \$procmux$1418 ;
-    input [7:0] a;
-    input [15:0] b;
-    input [1:0] s;
-    casez (s) // synopsys parallel_case
-      2'b?1:
-        \$procmux$1418  = b[7:0];
-      2'b1?:
-        \$procmux$1418  = b[15:8];
-      default:
-        \$procmux$1418  = a;
-    endcase
-  endfunction
-  assign \u_uart.u_reg.u_reg_if.rdata_i [31:24] = \$procmux$1418 (8'hff, { \u_uart.u_reg.u_ctrl_nco.q [15:8], 8'h00 }, { \u_gpio.u_reg.addr_hit [0], \$auto$opt_reduce.cc:137:opt_pmux$1648  });
-  assign \u_uart.u_reg.u_reg_if.rdata_i [15:8] = \$217y  ? 8'h00 : 8'hff;
-  function [7:0] \$procmux$1434 ;
+  assign \u_uart.u_bridge.idx_d  = \$procmux$1009 (2'hx, { 2'h0, \$procmux$891_Y , \$procmux$804_Y , \$procmux$600_Y  }, { \$procmux$1004_CMP , \$procmux$1014_CMP , \$procmux$1002_CMP , \$procmux$1000_CMP  });
+  assign \$procmux$105_Y  = \u_pwm.u_reg.u_cfg_cdc.dst_to_src  ? 3'h0 : 3'hx;
+  assign \$procmux$1055_Y  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.incr_rptr_i  ? \$488y  : 5'hxx;
+  assign \$procmux$1065_Y  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_set  ? { \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_set_cnt [4], 4'h0 } : \$procmux$1055_Y ;
+  assign \$procmux$1072_Y  = \u_uart.u_uart_core.u_uart_rxfifo.clr_i  ? 5'h00 : \$procmux$1065_Y ;
+  assign \$procmux$1074_Y  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.incr_wptr_i  ? \$481y  : 5'hxx;
+  assign \$procmux$1084_Y  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_set  ? { \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_set_cnt [4], 4'h0 } : \$procmux$1074_Y ;
+  assign \$procmux$1091_Y  = \u_uart.u_uart_core.u_uart_rxfifo.clr_i  ? 5'h00 : \$procmux$1084_Y ;
+  assign \$procmux$1093_Y  = \u_uart.u_uart_core.u_uart_rxfifo.gen_normal_fifo.under_rst  ? \$455y  : 1'h0;
+  assign \$procmux$1099_Y  = \$417y  ? 1'h1 : \$419y ;
+  assign \$procmux$110_Y  = \u_pwm.u_reg.u_cfg_cdc.dst_to_src  ? { \u_pwm.u_reg.u_cfg_cntr_en.q , \u_pwm.u_reg.u_cfg_dc_resn.q , \u_pwm.u_reg.u_cfg_clk_div.q  } : 32'hxxxxxxxx;
+  assign \$procmux$1110_Y  = \$417y  ? 4'h0 : \$418y ;
+  assign \$procmux$1121_Y  = \$417y  ? 11'hxxx : { \u_uart.u_uart_core.uart_rx.rx , \u_uart.u_uart_core.uart_rx.sreg_q [10:1] };
+  assign \$procmux$1132_Y  = \$414y  ? \$procmux$1099_Y  : 1'hx;
+  assign \$procmux$1141_Y  = \$414y  ? \$procmux$1110_Y  : 4'hx;
+  assign \$procmux$1150_Y  = \$414y  ? \$procmux$1121_Y  : 11'hxxx;
+  assign \u_uart.u_uart_core.uart_rx.idle_d  = \$411y  ? 1'h0 : \$procmux$1132_Y ;
+  assign \u_uart.u_uart_core.uart_rx.bit_cnt_d  = \$411y  ? \$362y  : \$procmux$1141_Y ;
+  assign \$procmux$117_Y  = \u_pwm.u_reg.u_cfg_cdc.u_src_to_dst_req.src_pulse_i  ? 3'h4 : \$procmux$105_Y ;
+  assign \u_uart.u_uart_core.uart_rx.sreg_d  = \$411y  ? 11'h000 : \$procmux$1150_Y ;
+  assign \u_uart.u_uart_core.uart_rx.tick_baud_d  = \$411y  ? 1'h0 : \$procmux$1193_Y ;
+  assign \u_uart.u_uart_core.uart_rx.baud_div_d  = \$411y  ? 4'h8 : \$procmux$1198_Y ;
+  assign \$procmux$1193_Y  = \u_uart.u_uart_core.nco_sum_q [16] ? \$407y [4] : 1'h0;
+  assign \$procmux$1198_Y  = \u_uart.u_uart_core.nco_sum_q [16] ? \$407y [3:0] : 4'hx;
+  assign \$procmux$121_Y  = \u_pwm.u_reg.u_cfg_cdc.u_src_to_dst_req.src_pulse_i  ? \u_pwm.u_reg.reg_wdata  : \$procmux$110_Y ;
+  function [7:0] \$procmux$1226 ;
     input [7:0] a;
     input [23:0] b;
     input [2:0] s;
     casez (s) // synopsys parallel_case
       3'b??1:
-        \$procmux$1434  = b[7:0];
+        \$procmux$1226  = b[7:0];
       3'b?1?:
-        \$procmux$1434  = b[15:8];
+        \$procmux$1226  = b[15:8];
       3'b1??:
-        \$procmux$1434  = b[23:16];
+        \$procmux$1226  = b[23:16];
       default:
-        \$procmux$1434  = a;
+        \$procmux$1226  = a;
     endcase
   endfunction
-  assign \u_uart.u_reg.u_reg_if.rdata_i [23:16] = \$procmux$1434 (8'hff, { \u_uart.u_reg.u_ctrl_nco.q [7:0], 11'h000, \u_uart.u_uart_core.rx_fifo_depth  }, { \u_gpio.u_reg.addr_hit [0], \$auto$opt_reduce.cc:137:opt_pmux$1628 , \u_gpio.u_reg.addr_hit [5] });
-  function [1:0] \$procmux$1442 ;
-    input [1:0] a;
-    input [5:0] b;
-    input [2:0] s;
-    casez (s) // synopsys parallel_case
-      3'b??1:
-        \$procmux$1442  = b[1:0];
-      3'b?1?:
-        \$procmux$1442  = b[3:2];
-      3'b1??:
-        \$procmux$1442  = b[5:4];
-      default:
-        \$procmux$1442  = a;
-    endcase
-  endfunction
-  assign \u_uart.u_reg.u_reg_if.rdata_i [7:6] = \$procmux$1442 (2'h3, { \u_uart.u_reg.u_ctrl_parity_odd.q , \u_uart.u_reg.u_ctrl_parity_en.q , \u_uart.u_bridge.rx_data_i [7:6], 2'h0 }, { \u_gpio.u_reg.addr_hit [0], \u_gpio.u_reg.addr_hit [2], \$auto$opt_reduce.cc:137:opt_pmux$1644  });
-  assign \$procmux$145_Y  = \u_pwm.u_reg.u_cfg_cdc.u_src_to_dst_req.src_pulse_i  ? 1'h1 : \$procmux$138_Y ;
-  function [0:0] \$procmux$1450 ;
-    input [0:0] a;
-    input [3:0] b;
-    input [3:0] s;
-    casez (s) // synopsys parallel_case
-      4'b???1:
-        \$procmux$1450  = b[0:0];
-      4'b??1?:
-        \$procmux$1450  = b[1:1];
-      4'b?1??:
-        \$procmux$1450  = b[2:2];
-      4'b1???:
-        \$procmux$1450  = b[3:3];
-      default:
-        \$procmux$1450  = a;
-    endcase
-  endfunction
-  assign \u_uart.u_reg.u_reg_if.rdata_i [3] = \$procmux$1450 (1'h1, { \u_uart.u_reg.status_txidle_qs , \u_uart.u_bridge.rx_data_i [3], 1'h0, \u_uart.u_uart_core.tx_fifo_depth [3] }, { \u_gpio.u_reg.addr_hit [1], \u_gpio.u_reg.addr_hit [2], \$auto$opt_reduce.cc:137:opt_pmux$1626 , \u_gpio.u_reg.addr_hit [5] });
-  function [0:0] \$procmux$1458 ;
-    input [0:0] a;
-    input [4:0] b;
-    input [4:0] s;
-    casez (s) // synopsys parallel_case
-      5'b????1:
-        \$procmux$1458  = b[0:0];
-      5'b???1?:
-        \$procmux$1458  = b[1:1];
-      5'b??1??:
-        \$procmux$1458  = b[2:2];
-      5'b?1???:
-        \$procmux$1458  = b[3:3];
-      5'b1????:
-        \$procmux$1458  = b[4:4];
-      default:
-        \$procmux$1458  = a;
-    endcase
-  endfunction
-  assign \u_uart.u_reg.u_reg_if.rdata_i [2] = \$procmux$1458 (1'h1, { \u_uart.u_reg.u_ctrl_nf.q , \u_uart.u_reg.status_txempty_qs , \u_uart.u_bridge.rx_data_i [2], 1'h0, \u_uart.u_uart_core.tx_fifo_depth [2] }, { \u_gpio.u_reg.addr_hit [0], \u_gpio.u_reg.addr_hit [1], \u_gpio.u_reg.addr_hit [2], \$auto$opt_reduce.cc:137:opt_pmux$1634 , \u_gpio.u_reg.addr_hit [5] });
-  function [1:0] \$procmux$1466 ;
+  assign \u_rv_timer.u_reg.u_reg_if.rdata_i [31:24] = \$procmux$1226 (8'hff, { 8'h00, \u_rv_timer.u_reg.u_timer_v0.q [31:24], \u_rv_timer.u_reg.u_compare_v0.q [31:24] }, { \$auto$opt_reduce.cc:137:opt_pmux$1611 , \u_rv_timer.u_reg.addr_hit [5], \u_rv_timer.u_reg.addr_hit [6] });
+  assign \$procmux$123_Y  = \u_pwm.u_reg.u_cfg_cdc.src_ack  ? 1'h0 : 1'hx;
+  function [1:0] \$procmux$1235 ;
     input [1:0] a;
     input [9:0] b;
     input [4:0] s;
     casez (s) // synopsys parallel_case
       5'b????1:
-        \$procmux$1466  = b[1:0];
+        \$procmux$1235  = b[1:0];
       5'b???1?:
-        \$procmux$1466  = b[3:2];
+        \$procmux$1235  = b[3:2];
       5'b??1??:
-        \$procmux$1466  = b[5:4];
+        \$procmux$1235  = b[5:4];
       5'b?1???:
-        \$procmux$1466  = b[7:6];
+        \$procmux$1235  = b[7:6];
       5'b1????:
-        \$procmux$1466  = b[9:8];
+        \$procmux$1235  = b[9:8];
       default:
-        \$procmux$1466  = a;
+        \$procmux$1235  = a;
     endcase
   endfunction
-  assign \u_uart.u_reg.u_reg_if.rdata_i [1:0] = \$procmux$1466 (2'h3, { \u_uart.u_reg.u_ctrl_rx.q , \u_uart.u_reg.u_ctrl_tx.q , \u_uart.u_reg.status_rxfull_qs , \u_uart.u_reg.status_txfull_qs , \u_uart.u_bridge.rx_data_i [1:0], 2'h0, \u_uart.u_uart_core.tx_fifo_depth [1:0] }, { \u_gpio.u_reg.addr_hit [0], \u_gpio.u_reg.addr_hit [1], \u_gpio.u_reg.addr_hit [2], \$auto$opt_reduce.cc:137:opt_pmux$1634 , \u_gpio.u_reg.addr_hit [5] });
-  function [1:0] \$procmux$1474 ;
+  assign \u_rv_timer.u_reg.u_reg_if.rdata_i [2:1] = \$procmux$1235 (2'h3, { \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.q , \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.q , 2'h0, \u_rv_timer.u_reg.u_cfg0_prescale.q [2:1], \u_rv_timer.u_reg.u_timer_v0.q [2:1], \u_rv_timer.u_reg.u_compare_v0.q [2:1] }, { \u_rv_timer.u_reg.addr_hit [0], \$auto$opt_reduce.cc:137:opt_pmux$1613 , \u_rv_timer.u_reg.addr_hit [4], \u_rv_timer.u_reg.addr_hit [5], \u_rv_timer.u_reg.addr_hit [6] });
+  function [0:0] \$procmux$1244 ;
+    input [0:0] a;
+    input [6:0] b;
+    input [6:0] s;
+    casez (s) // synopsys parallel_case
+      7'b??????1:
+        \$procmux$1244  = b[0:0];
+      7'b?????1?:
+        \$procmux$1244  = b[1:1];
+      7'b????1??:
+        \$procmux$1244  = b[2:2];
+      7'b???1???:
+        \$procmux$1244  = b[3:3];
+      7'b??1????:
+        \$procmux$1244  = b[4:4];
+      7'b?1?????:
+        \$procmux$1244  = b[5:5];
+      7'b1??????:
+        \$procmux$1244  = b[6:6];
+      default:
+        \$procmux$1244  = a;
+    endcase
+  endfunction
+  assign \u_rv_timer.u_reg.u_reg_if.rdata_i [0] = \$procmux$1244 (1'h1, { \u_rv_timer.u_reg.u_ctrl_active_0.q , \u_rv_timer.u_reg.u_intr_enable0.q , \u_rv_timer.u_reg.u_intr_state0.q , 1'h0, \u_rv_timer.u_reg.u_cfg0_prescale.q [0], \u_rv_timer.u_reg.u_timer_v0.q [0], \u_rv_timer.u_reg.u_compare_v0.q [0] }, { \u_rv_timer.u_reg.addr_hit [0], \u_rv_timer.u_reg.addr_hit [1], \u_rv_timer.u_reg.addr_hit [2], \u_rv_timer.u_reg.addr_hit [3], \u_rv_timer.u_reg.addr_hit [4], \u_rv_timer.u_reg.addr_hit [5], \u_rv_timer.u_reg.addr_hit [6] });
+  function [7:0] \$procmux$1253 ;
+    input [7:0] a;
+    input [31:0] b;
+    input [3:0] s;
+    casez (s) // synopsys parallel_case
+      4'b???1:
+        \$procmux$1253  = b[7:0];
+      4'b??1?:
+        \$procmux$1253  = b[15:8];
+      4'b?1??:
+        \$procmux$1253  = b[23:16];
+      4'b1???:
+        \$procmux$1253  = b[31:24];
+      default:
+        \$procmux$1253  = a;
+    endcase
+  endfunction
+  assign \u_rv_timer.u_reg.u_reg_if.rdata_i [23:16] = \$procmux$1253 (8'hff, { 8'h00, \u_rv_timer.u_reg.u_cfg0_step.q , \u_rv_timer.u_reg.u_timer_v0.q [23:16], \u_rv_timer.u_reg.u_compare_v0.q [23:16] }, { \$auto$opt_reduce.cc:137:opt_pmux$1615 , \u_rv_timer.u_reg.addr_hit [4], \u_rv_timer.u_reg.addr_hit [5], \u_rv_timer.u_reg.addr_hit [6] });
+  function [8:0] \$procmux$1262 ;
+    input [8:0] a;
+    input [35:0] b;
+    input [3:0] s;
+    casez (s) // synopsys parallel_case
+      4'b???1:
+        \$procmux$1262  = b[8:0];
+      4'b??1?:
+        \$procmux$1262  = b[17:9];
+      4'b?1??:
+        \$procmux$1262  = b[26:18];
+      4'b1???:
+        \$procmux$1262  = b[35:27];
+      default:
+        \$procmux$1262  = a;
+    endcase
+  endfunction
+  assign \u_rv_timer.u_reg.u_reg_if.rdata_i [11:3] = \$procmux$1262 (9'h1ff, { 9'h000, \u_rv_timer.u_reg.u_cfg0_prescale.q [11:3], \u_rv_timer.u_reg.u_timer_v0.q [11:3], \u_rv_timer.u_reg.u_compare_v0.q [11:3] }, { \$auto$opt_reduce.cc:137:opt_pmux$1615 , \u_rv_timer.u_reg.addr_hit [4], \u_rv_timer.u_reg.addr_hit [5], \u_rv_timer.u_reg.addr_hit [6] });
+  function [3:0] \$procmux$1271 ;
+    input [3:0] a;
+    input [11:0] b;
+    input [2:0] s;
+    casez (s) // synopsys parallel_case
+      3'b??1:
+        \$procmux$1271  = b[3:0];
+      3'b?1?:
+        \$procmux$1271  = b[7:4];
+      3'b1??:
+        \$procmux$1271  = b[11:8];
+      default:
+        \$procmux$1271  = a;
+    endcase
+  endfunction
+  assign \u_rv_timer.u_reg.u_reg_if.rdata_i [15:12] = \$procmux$1271 (4'hf, { 4'h0, \u_rv_timer.u_reg.u_timer_v0.q [15:12], \u_rv_timer.u_reg.u_compare_v0.q [15:12] }, { \$auto$opt_reduce.cc:137:opt_pmux$1611 , \u_rv_timer.u_reg.addr_hit [5], \u_rv_timer.u_reg.addr_hit [6] });
+  assign \$procmux$1289_Y  = \u_uart.u_reg.u_ctrl_slpbk.q  ? 1'h1 : \u_uart.u_uart_core.uart_tx.tx_q ;
+  assign \$procmux$1291_Y  = \$364y  ? \u_uart.u_uart_core.uart_tx.sreg_q [0] : 1'hx;
+  assign \$procmux$1299_Y  = \$364y  ? { 1'h1, \u_uart.u_uart_core.uart_tx.sreg_q [10:1] } : 11'hxxx;
+  assign \$procmux$130_Y  = \u_pwm.u_reg.u_cfg_cdc.u_src_to_dst_req.src_pulse_i  ? 1'h1 : \$procmux$123_Y ;
+  assign \$procmux$1307_Y  = \$364y  ? \$365y  : 4'hx;
+  assign \$procmux$1317_Y  = \u_uart.u_uart_core.u_uart_txfifo.rready_i  ? { 1'h1, \$361y , \u_uart.u_uart_core.tx_fifo_data , 1'h0 } : \$procmux$1299_Y ;
+  assign \$procmux$1324_Y  = \u_uart.u_uart_core.u_uart_txfifo.rready_i  ? \$362y  : \$procmux$1307_Y ;
+  assign \$procmux$1331_Y  = \u_uart.u_uart_core.u_uart_txfifo.rready_i  ? 1'hx : \$procmux$1291_Y ;
+  assign \u_uart.u_uart_core.uart_tx.tx_d  = \u_uart.u_reg.u_ctrl_tx.q  ? \$procmux$1331_Y  : 1'h1;
+  assign \u_uart.u_uart_core.uart_tx.sreg_d  = \u_uart.u_reg.u_ctrl_tx.q  ? \$procmux$1317_Y  : 11'h7ff;
+  assign \u_uart.u_uart_core.uart_tx.bit_cnt_d  = \u_uart.u_reg.u_ctrl_tx.q  ? \$procmux$1324_Y  : 4'h0;
+  assign \$procmux$1355_Y  = \u_uart.u_uart_core.nco_sum_q [16] ? \$353y [4] : 1'h0;
+  assign \$procmux$1362_Y  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.incr_rptr_i  ? \$327y  : 4'hx;
+  assign \$procmux$1372_Y  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_set  ? { \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.rptr_wrap_set_cnt [3], 3'h0 } : \$procmux$1362_Y ;
+  assign \$procmux$1379_Y  = \u_uart.u_uart_core.u_uart_txfifo.clr_i  ? 4'h0 : \$procmux$1372_Y ;
+  assign \$procmux$1381_Y  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.incr_wptr_i  ? \$320y  : 4'hx;
+  assign \$procmux$1391_Y  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_set  ? { \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.u_fifo_cnt.wptr_wrap_set_cnt [3], 3'h0 } : \$procmux$1381_Y ;
+  assign \$procmux$1398_Y  = \u_uart.u_uart_core.u_uart_txfifo.clr_i  ? 4'h0 : \$procmux$1391_Y ;
+  assign \$procmux$14_Y  = \u_rv_timer.u_reg.u_reg_if.a_ack  ? 1'h1 : 1'h0;
+  assign \$procmux$1400_Y  = \u_uart.u_uart_core.u_uart_txfifo.gen_normal_fifo.under_rst  ? \$294y  : 1'h0;
+  function [7:0] \$procmux$1405 ;
+    input [7:0] a;
+    input [15:0] b;
+    input [1:0] s;
+    casez (s) // synopsys parallel_case
+      2'b?1:
+        \$procmux$1405  = b[7:0];
+      2'b1?:
+        \$procmux$1405  = b[15:8];
+      default:
+        \$procmux$1405  = a;
+    endcase
+  endfunction
+  assign \u_uart.u_reg.u_reg_if.rdata_i [31:24] = \$procmux$1405 (8'hff, { \u_uart.u_reg.u_ctrl_nco.q [15:8], 8'h00 }, { \u_rv_timer.u_reg.addr_hit [0], \$auto$opt_reduce.cc:137:opt_pmux$1629  });
+  assign \u_uart.u_reg.u_reg_if.rdata_i [15:8] = \$217y  ? 8'h00 : 8'hff;
+  function [7:0] \$procmux$1421 ;
+    input [7:0] a;
+    input [23:0] b;
+    input [2:0] s;
+    casez (s) // synopsys parallel_case
+      3'b??1:
+        \$procmux$1421  = b[7:0];
+      3'b?1?:
+        \$procmux$1421  = b[15:8];
+      3'b1??:
+        \$procmux$1421  = b[23:16];
+      default:
+        \$procmux$1421  = a;
+    endcase
+  endfunction
+  assign \u_uart.u_reg.u_reg_if.rdata_i [23:16] = \$procmux$1421 (8'hff, { \u_uart.u_reg.u_ctrl_nco.q [7:0], 11'h000, \u_uart.u_uart_core.rx_fifo_depth  }, { \u_rv_timer.u_reg.addr_hit [0], \$auto$opt_reduce.cc:137:opt_pmux$1625 , \u_rv_timer.u_reg.addr_hit [5] });
+  function [1:0] \$procmux$1429 ;
+    input [1:0] a;
+    input [5:0] b;
+    input [2:0] s;
+    casez (s) // synopsys parallel_case
+      3'b??1:
+        \$procmux$1429  = b[1:0];
+      3'b?1?:
+        \$procmux$1429  = b[3:2];
+      3'b1??:
+        \$procmux$1429  = b[5:4];
+      default:
+        \$procmux$1429  = a;
+    endcase
+  endfunction
+  assign \u_uart.u_reg.u_reg_if.rdata_i [7:6] = \$procmux$1429 (2'h3, { \u_uart.u_reg.u_ctrl_parity_odd.q , \u_uart.u_reg.u_ctrl_parity_en.q , \u_uart.u_bridge.rx_data_i [7:6], 2'h0 }, { \u_rv_timer.u_reg.addr_hit [0], \u_rv_timer.u_reg.addr_hit [2], \$auto$opt_reduce.cc:137:opt_pmux$1633  });
+  function [0:0] \$procmux$1437 ;
+    input [0:0] a;
+    input [3:0] b;
+    input [3:0] s;
+    casez (s) // synopsys parallel_case
+      4'b???1:
+        \$procmux$1437  = b[0:0];
+      4'b??1?:
+        \$procmux$1437  = b[1:1];
+      4'b?1??:
+        \$procmux$1437  = b[2:2];
+      4'b1???:
+        \$procmux$1437  = b[3:3];
+      default:
+        \$procmux$1437  = a;
+    endcase
+  endfunction
+  assign \u_uart.u_reg.u_reg_if.rdata_i [3] = \$procmux$1437 (1'h1, { \u_uart.u_reg.status_txidle_qs , \u_uart.u_bridge.rx_data_i [3], 1'h0, \u_uart.u_uart_core.tx_fifo_depth [3] }, { \u_rv_timer.u_reg.addr_hit [1], \u_rv_timer.u_reg.addr_hit [2], \$auto$opt_reduce.cc:137:opt_pmux$1617 , \u_rv_timer.u_reg.addr_hit [5] });
+  function [0:0] \$procmux$1445 ;
+    input [0:0] a;
+    input [4:0] b;
+    input [4:0] s;
+    casez (s) // synopsys parallel_case
+      5'b????1:
+        \$procmux$1445  = b[0:0];
+      5'b???1?:
+        \$procmux$1445  = b[1:1];
+      5'b??1??:
+        \$procmux$1445  = b[2:2];
+      5'b?1???:
+        \$procmux$1445  = b[3:3];
+      5'b1????:
+        \$procmux$1445  = b[4:4];
+      default:
+        \$procmux$1445  = a;
+    endcase
+  endfunction
+  assign \u_uart.u_reg.u_reg_if.rdata_i [2] = \$procmux$1445 (1'h1, { \u_uart.u_reg.u_ctrl_nf.q , \u_uart.u_reg.status_txempty_qs , \u_uart.u_bridge.rx_data_i [2], 1'h0, \u_uart.u_uart_core.tx_fifo_depth [2] }, { \u_rv_timer.u_reg.addr_hit [0], \u_rv_timer.u_reg.addr_hit [1], \u_rv_timer.u_reg.addr_hit [2], \$auto$opt_reduce.cc:137:opt_pmux$1619 , \u_rv_timer.u_reg.addr_hit [5] });
+  function [1:0] \$procmux$1453 ;
+    input [1:0] a;
+    input [9:0] b;
+    input [4:0] s;
+    casez (s) // synopsys parallel_case
+      5'b????1:
+        \$procmux$1453  = b[1:0];
+      5'b???1?:
+        \$procmux$1453  = b[3:2];
+      5'b??1??:
+        \$procmux$1453  = b[5:4];
+      5'b?1???:
+        \$procmux$1453  = b[7:6];
+      5'b1????:
+        \$procmux$1453  = b[9:8];
+      default:
+        \$procmux$1453  = a;
+    endcase
+  endfunction
+  assign \u_uart.u_reg.u_reg_if.rdata_i [1:0] = \$procmux$1453 (2'h3, { \u_uart.u_reg.u_ctrl_rx.q , \u_uart.u_reg.u_ctrl_tx.q , \u_uart.u_reg.status_rxfull_qs , \u_uart.u_reg.status_txfull_qs , \u_uart.u_bridge.rx_data_i [1:0], 2'h0, \u_uart.u_uart_core.tx_fifo_depth [1:0] }, { \u_rv_timer.u_reg.addr_hit [0], \u_rv_timer.u_reg.addr_hit [1], \u_rv_timer.u_reg.addr_hit [2], \$auto$opt_reduce.cc:137:opt_pmux$1619 , \u_rv_timer.u_reg.addr_hit [5] });
+  function [1:0] \$procmux$1461 ;
     input [1:0] a;
     input [7:0] b;
     input [3:0] s;
     casez (s) // synopsys parallel_case
       4'b???1:
-        \$procmux$1474  = b[1:0];
+        \$procmux$1461  = b[1:0];
       4'b??1?:
-        \$procmux$1474  = b[3:2];
+        \$procmux$1461  = b[3:2];
       4'b?1??:
-        \$procmux$1474  = b[5:4];
+        \$procmux$1461  = b[5:4];
       4'b1???:
-        \$procmux$1474  = b[7:6];
+        \$procmux$1461  = b[7:6];
       default:
-        \$procmux$1474  = a;
+        \$procmux$1461  = a;
     endcase
   endfunction
-  assign \u_uart.u_reg.u_reg_if.rdata_i [5:4] = \$procmux$1474 (2'h3, { \u_uart.u_reg.u_ctrl_llpbk.q , \u_uart.u_reg.u_ctrl_slpbk.q , \u_uart.u_reg.status_rxempty_qs , \u_uart.u_uart_core.uart_rx.idle_q , \u_uart.u_bridge.rx_data_i [5:4], 2'h0 }, { \u_gpio.u_reg.addr_hit [0], \u_gpio.u_reg.addr_hit [1], \u_gpio.u_reg.addr_hit [2], \$auto$opt_reduce.cc:137:opt_pmux$1652  });
-  function [31:0] \$procmux$148 ;
-    input [31:0] a;
-    input [95:0] b;
-    input [2:0] s;
-    casez (s) // synopsys parallel_case
-      3'b??1:
-        \$procmux$148  = b[31:0];
-      3'b?1?:
-        \$procmux$148  = b[63:32];
-      3'b1??:
-        \$procmux$148  = b[95:64];
-      default:
-        \$procmux$148  = a;
-    endcase
-  endfunction
-  assign \u_pwm.u_reg.u_reg_if.rdata_i  = \$procmux$148 (32'd4294967295, { \u_pwm.u_reg.u_cfg_cdc.src_q , 31'h00000000, \u_pwm.u_reg.u_pwm_en_cdc.src_q , \u_pwm.u_reg.u_pwm_param_cdc.src_q  }, { \u_pwm.u_reg.addr_hit [0], \u_pwm.u_reg.addr_hit [1], \u_pwm.u_reg.addr_hit [2] });
-  assign \$procmux$1499_Y  = \u_pwm.u_reg.u_pwm_param_cdc.dst_to_src  ? 3'h0 : 3'hx;
-  assign \$procmux$1504_Y  = \u_pwm.u_reg.u_pwm_param_cdc.dst_to_src  ? { \u_pwm.u_reg.u_pwm_param_duty_cycle_0.q , \u_pwm.u_reg.u_pwm_param_phase_delay_0.q  } : 32'hxxxxxxxx;
-  assign \$procmux$1511_Y  = \u_pwm.u_reg.u_pwm_param_cdc.u_src_to_dst_req.src_pulse_i  ? 3'h4 : \$procmux$1499_Y ;
-  assign \$procmux$1515_Y  = \u_pwm.u_reg.u_pwm_param_cdc.u_src_to_dst_req.src_pulse_i  ? \u_pwm.u_reg.reg_wdata  : \$procmux$1504_Y ;
-  assign \$procmux$1569_Y  = \u_pwm.u_reg.u_pwm_param_cdc.src_ack  ? 1'h0 : 1'hx;
-  assign \$procmux$1576_Y  = \u_pwm.u_reg.u_pwm_param_cdc.u_src_to_dst_req.src_pulse_i  ? 1'h1 : \$procmux$1569_Y ;
-  assign \$procmux$1585_Y  = \u_gpio.u_reg.u_reg_if.a_ack  ? 1'h1 : 1'h0;
-  assign \$procmux$1615_Y  = \u_uart.u_reg.u_reg_if.a_ack  ? 1'h1 : 1'h0;
-  assign \$procmux$22_Y  = \u_rv_timer.u_reg.u_reg_if.a_ack  ? 1'h1 : 1'h0;
-  assign \$procmux$220_Y  = \u_pwm.u_reg.u_reg_if.a_ack  ? 1'h1 : 1'h0;
-  assign \$procmux$229_Y  = \$741y  ? 1'h1 : 1'h0;
-  assign \$procmux$25_Y  = \$1536y  ? 12'h000 : \$1537y ;
-  assign \$procmux$251_Y  = \xbar.u_s1n_6.gen_err_resp.err_resp.err_rsp_pending  ? 1'h0 : \$procmux$229_Y ;
-  assign \xbar.u_s1n_6.tl_t_p  = \$722y  ? { \u_rv_timer.u_reg.u_reg_if.outstanding_q , \u_rv_timer.u_reg.u_reg_if.rspop_q , 3'h0, \u_rv_timer.u_reg.u_reg_if.reqsz_q , \u_rv_timer.u_reg.u_reg_if.reqid_q , 1'h0, \xbar.u_s1n_6.gen_dfifo[3].fifo_d.rspfifo.rdata_o [47:16], 14'h0000, \u_rv_timer.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o  } : \$procmux$273_Y ;
-  assign \$procmux$273_Y  = \$720y  ? { \u_gpio.u_reg.u_reg_if.outstanding_q , \u_gpio.u_reg.u_reg_if.rspop_q , 3'h0, \u_gpio.u_reg.u_reg_if.reqsz_q , \u_gpio.u_reg.u_reg_if.reqid_q , 1'h0, \xbar.u_s1n_6.gen_dfifo[2].fifo_d.rspfifo.rdata_o [47:16], 14'h0000, \u_gpio.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[2].fifo_d.reqfifo.full_o  } : \$procmux$276_Y ;
-  assign \$procmux$276_Y  = \$718y  ? { \u_pwm.u_reg.u_reg_if.outstanding_q , \u_pwm.u_reg.u_reg_if.rspop_q , 3'h0, \u_pwm.u_reg.u_reg_if.reqsz_q , \u_pwm.u_reg.u_reg_if.reqid_q , 1'h0, \xbar.u_s1n_6.gen_dfifo[1].fifo_d.rspfifo.rdata_o [47:16], 14'h0000, \u_pwm.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[1].fifo_d.reqfifo.full_o  } : \$procmux$278_Y ;
-  assign \$procmux$278_Y  = \$716y  ? { \u_uart.u_reg.u_reg_if.outstanding_q , \u_uart.u_reg.u_reg_if.rspop_q , 3'h0, \u_uart.u_reg.u_reg_if.reqsz_q , \u_uart.u_reg.u_reg_if.reqid_q , 1'h0, \xbar.u_s1n_6.gen_dfifo[0].fifo_d.rspfifo.rdata_o [47:16], 14'h0000, \u_uart.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[0].fifo_d.reqfifo.full_o  } : { \xbar.u_s1n_6.gen_err_resp.err_resp.err_rsp_pending , \xbar.u_s1n_6.gen_err_resp.err_resp.tl_h_o [64:62], 3'h0, \xbar.u_s1n_6.gen_err_resp.err_resp.err_size , \xbar.u_s1n_6.gen_err_resp.err_resp.err_source , 1'h0, \xbar.u_s1n_6.gen_err_resp.err_resp.tl_h_o [47:16], 15'h0001, \xbar.u_s1n_6.gen_err_resp.err_resp.tl_h_o_int [0] };
-  assign \xbar.u_s1n_6.hfifo_reqready  = \xbar.u_s1n_6.hold_all_requests  ? 1'h0 : \$procmux$284_Y ;
-  assign \$procmux$284_Y  = \$698y  ? \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o  : \$procmux$287_Y ;
-  assign \$procmux$287_Y  = \$692y  ? \xbar.u_s1n_6.gen_dfifo[2].fifo_d.reqfifo.full_o  : \$procmux$290_Y ;
-  assign \$procmux$290_Y  = \$686y  ? \xbar.u_s1n_6.gen_dfifo[1].fifo_d.reqfifo.full_o  : \$procmux$292_Y ;
-  assign \$procmux$292_Y  = \$680y  ? \xbar.u_s1n_6.gen_dfifo[0].fifo_d.reqfifo.full_o  : \xbar.u_s1n_6.gen_err_resp.err_resp.tl_h_o_int [0];
-  assign \$procmux$296_Y  = \xbar.u_s1n_6.tl_t_p [65] ? \$655y  : 9'hxxx;
-  assign \$procmux$304_Y  = \xbar.u_s1n_6.accept_t_req  ? \$procmux$307_Y  : \$procmux$296_Y ;
-  assign \$procmux$307_Y  = \xbar.u_s1n_6.tl_t_p [65] ? 9'hxxx : \$653y ;
-  assign \$procmux$315_Y  = \$640y  ? 3'h3 : 3'h5;
-  assign \$procmux$32_Y  = \u_rv_timer.u_reg.u_ctrl.q  ? \$procmux$25_Y  : 12'h000;
-  assign \$procmux$328_Y  = \$638y  ? 3'h2 : \$procmux$315_Y ;
-  assign \$procmux$338_Y  = \$636y  ? 3'h1 : \$procmux$328_Y ;
-  assign \$procmux$34_Y  = \u_pwm.u_reg.u_pwm_en_cdc.dst_to_src  ? 3'h0 : 3'hx;
-  assign \xbar.u_s1n_6.dev_select_t  = \$634y  ? 3'h0 : \$procmux$338_Y ;
-  assign \$procmux$350_Y  = \uart_host_adapter.g_multiple_reqs.source_q  ? 1'h0 : \$616y ;
-  assign \$procmux$359_Y  = \$596y  ? 4'h0 : \$593y ;
-  assign \$procmux$368_Y  = \$596y  ? 2'h0 : \$procmux$917_Y ;
-  assign \$procmux$379_Y  = \$592y  ? 4'h0 : \$procmux$359_Y ;
-  assign \$procmux$387_Y  = \$592y  ? 2'h0 : \$procmux$368_Y ;
-  assign \$procmux$39_Y  = \u_pwm.u_reg.u_pwm_en_cdc.dst_to_src  ? \u_pwm.u_reg.u_pwm_en.q  : 1'hx;
-  function [7:0] \$procmux$394 ;
+  assign \u_uart.u_reg.u_reg_if.rdata_i [5:4] = \$procmux$1461 (2'h3, { \u_uart.u_reg.u_ctrl_llpbk.q , \u_uart.u_reg.u_ctrl_slpbk.q , \u_uart.u_reg.status_rxempty_qs , \u_uart.u_uart_core.uart_rx.idle_q , \u_uart.u_bridge.rx_data_i [5:4], 2'h0 }, { \u_rv_timer.u_reg.addr_hit [0], \u_rv_timer.u_reg.addr_hit [1], \u_rv_timer.u_reg.addr_hit [2], \$auto$opt_reduce.cc:137:opt_pmux$1621  });
+  assign \$procmux$1475_Y  = \u_gpio.u_reg.u_reg_if.a_ack  ? 1'h1 : 1'h0;
+  assign \$procmux$1477_Y  = \u_pwm.u_reg.u_pwm_param_cdc.dst_to_src  ? 3'h0 : 3'hx;
+  assign \$procmux$1482_Y  = \u_pwm.u_reg.u_pwm_param_cdc.dst_to_src  ? { \u_pwm.u_reg.u_pwm_param_duty_cycle_0.q , \u_pwm.u_reg.u_pwm_param_phase_delay_0.q  } : 32'hxxxxxxxx;
+  assign \$procmux$1489_Y  = \u_pwm.u_reg.u_pwm_param_cdc.u_src_to_dst_req.src_pulse_i  ? 3'h4 : \$procmux$1477_Y ;
+  assign \$procmux$1493_Y  = \u_pwm.u_reg.u_pwm_param_cdc.u_src_to_dst_req.src_pulse_i  ? \u_pwm.u_reg.reg_wdata  : \$procmux$1482_Y ;
+  assign \$procmux$1499_Y  = \u_pwm.u_reg.u_pwm_param_cdc.src_ack  ? 1'h0 : 1'hx;
+  assign \$procmux$1506_Y  = \u_pwm.u_reg.u_pwm_param_cdc.u_src_to_dst_req.src_pulse_i  ? 1'h1 : \$procmux$1499_Y ;
+  assign \$procmux$1598_Y  = \u_uart.u_reg.u_reg_if.a_ack  ? 1'h1 : 1'h0;
+  assign \$procmux$17_Y  = \$1482y  ? 12'h000 : \$1483y ;
+  assign \$procmux$202_Y  = \u_pwm.u_reg.u_reg_if.a_ack  ? 1'h1 : 1'h0;
+  assign \$procmux$211_Y  = \$741y  ? 1'h1 : 1'h0;
+  assign \$procmux$233_Y  = \xbar.u_s1n_6.gen_err_resp.err_resp.err_rsp_pending  ? 1'h0 : \$procmux$211_Y ;
+  assign \$procmux$24_Y  = \u_rv_timer.gen_harts[0].u_core.active  ? \$procmux$17_Y  : 12'h000;
+  assign \xbar.u_s1n_6.tl_t_p  = \$722y  ? { \u_rv_timer.u_reg.u_reg_if.outstanding_q , \u_rv_timer.u_reg.u_reg_if.rspop_q , 3'h0, \u_rv_timer.u_reg.u_reg_if.reqsz_q , \u_rv_timer.u_reg.u_reg_if.reqid_q , 1'h0, \xbar.u_s1n_6.gen_dfifo[3].fifo_d.rspfifo.rdata_o [47:16], 14'h0000, \u_rv_timer.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o  } : \$procmux$255_Y ;
+  assign \$procmux$255_Y  = \$720y  ? { \u_gpio.u_reg.u_reg_if.outstanding_q , \u_gpio.u_reg.u_reg_if.rspop_q , 3'h0, \u_gpio.u_reg.u_reg_if.reqsz_q , \u_gpio.u_reg.u_reg_if.reqid_q , 1'h0, \xbar.u_s1n_6.gen_dfifo[2].fifo_d.rspfifo.rdata_o [47:16], 14'h0000, \u_gpio.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[2].fifo_d.reqfifo.full_o  } : \$procmux$258_Y ;
+  assign \$procmux$258_Y  = \$718y  ? { \u_pwm.u_reg.u_reg_if.outstanding_q , \u_pwm.u_reg.u_reg_if.rspop_q , 3'h0, \u_pwm.u_reg.u_reg_if.reqsz_q , \u_pwm.u_reg.u_reg_if.reqid_q , 1'h0, \xbar.u_s1n_6.gen_dfifo[1].fifo_d.rspfifo.rdata_o [47:16], 14'h0000, \u_pwm.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[1].fifo_d.reqfifo.full_o  } : \$procmux$260_Y ;
+  assign \$procmux$260_Y  = \$716y  ? { \u_uart.u_reg.u_reg_if.outstanding_q , \u_uart.u_reg.u_reg_if.rspop_q , 3'h0, \u_uart.u_reg.u_reg_if.reqsz_q , \u_uart.u_reg.u_reg_if.reqid_q , 1'h0, \xbar.u_s1n_6.gen_dfifo[0].fifo_d.rspfifo.rdata_o [47:16], 14'h0000, \u_uart.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[0].fifo_d.reqfifo.full_o  } : { \xbar.u_s1n_6.gen_err_resp.err_resp.err_rsp_pending , \xbar.u_s1n_6.gen_err_resp.err_resp.tl_h_o [64:62], 3'h0, \xbar.u_s1n_6.gen_err_resp.err_resp.err_size , \xbar.u_s1n_6.gen_err_resp.err_resp.err_source , 1'h0, \xbar.u_s1n_6.gen_err_resp.err_resp.tl_h_o [47:16], 15'h0001, \xbar.u_s1n_6.gen_err_resp.err_resp.tl_h_o_int [0] };
+  assign \xbar.u_s1n_6.hfifo_reqready  = \xbar.u_s1n_6.hold_all_requests  ? 1'h0 : \$procmux$266_Y ;
+  assign \$procmux$266_Y  = \$698y  ? \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o  : \$procmux$269_Y ;
+  assign \$procmux$269_Y  = \$692y  ? \xbar.u_s1n_6.gen_dfifo[2].fifo_d.reqfifo.full_o  : \$procmux$272_Y ;
+  assign \$procmux$272_Y  = \$686y  ? \xbar.u_s1n_6.gen_dfifo[1].fifo_d.reqfifo.full_o  : \$procmux$274_Y ;
+  assign \$procmux$274_Y  = \$680y  ? \xbar.u_s1n_6.gen_dfifo[0].fifo_d.reqfifo.full_o  : \xbar.u_s1n_6.gen_err_resp.err_resp.tl_h_o_int [0];
+  assign \$procmux$278_Y  = \xbar.u_s1n_6.tl_t_p [65] ? \$655y  : 9'hxxx;
+  assign \$procmux$28_Y  = \u_pwm.u_reg.u_pwm_en_cdc.dst_to_src  ? 3'h0 : 3'hx;
+  assign \$procmux$286_Y  = \xbar.u_s1n_6.accept_t_req  ? \$procmux$289_Y  : \$procmux$278_Y ;
+  assign \$procmux$289_Y  = \xbar.u_s1n_6.tl_t_p [65] ? 9'hxxx : \$653y ;
+  assign \$procmux$297_Y  = \$640y  ? 3'h3 : 3'h5;
+  assign \$procmux$310_Y  = \$638y  ? 3'h2 : \$procmux$297_Y ;
+  assign \$procmux$320_Y  = \$636y  ? 3'h1 : \$procmux$310_Y ;
+  assign \xbar.u_s1n_6.dev_select_t  = \$634y  ? 3'h0 : \$procmux$320_Y ;
+  assign \$procmux$33_Y  = \u_pwm.u_reg.u_pwm_en_cdc.dst_to_src  ? \u_pwm.u_reg.u_pwm_en.q  : 1'hx;
+  assign \$procmux$366_Y  = \uart_host_adapter.g_multiple_reqs.source_q  ? 1'h0 : \$616y ;
+  assign \$procmux$375_Y  = \$596y  ? 4'h0 : \$593y ;
+  assign \$procmux$384_Y  = \$596y  ? 2'h0 : \$procmux$933_Y ;
+  assign \$procmux$395_Y  = \$592y  ? 4'h0 : \$procmux$375_Y ;
+  assign \$procmux$40_Y  = \u_pwm.u_reg.u_pwm_en_cdc.u_src_to_dst_req.src_pulse_i  ? 3'h4 : \$procmux$28_Y ;
+  assign \$procmux$403_Y  = \$592y  ? 2'h0 : \$procmux$384_Y ;
+  function [7:0] \$procmux$410 ;
     input [7:0] a;
     input [63:0] b;
     input [7:0] s;
     casez (s) // synopsys parallel_case
       8'b???????1:
-        \$procmux$394  = b[7:0];
+        \$procmux$410  = b[7:0];
       8'b??????1?:
-        \$procmux$394  = b[15:8];
+        \$procmux$410  = b[15:8];
       8'b?????1??:
-        \$procmux$394  = b[23:16];
+        \$procmux$410  = b[23:16];
       8'b????1???:
-        \$procmux$394  = b[31:24];
+        \$procmux$410  = b[31:24];
       8'b???1????:
-        \$procmux$394  = b[39:32];
+        \$procmux$410  = b[39:32];
       8'b??1?????:
-        \$procmux$394  = b[47:40];
+        \$procmux$410  = b[47:40];
       8'b?1??????:
-        \$procmux$394  = b[55:48];
+        \$procmux$410  = b[55:48];
       8'b1???????:
-        \$procmux$394  = b[63:56];
+        \$procmux$410  = b[63:56];
       default:
-        \$procmux$394  = a;
+        \$procmux$410  = a;
     endcase
   endfunction
-  assign \$procmux$394_Y  = \$procmux$394 (8'h00, { 16'h5a01, \u_uart.u_bridge.op_q , 7'h00, \u_uart.u_bridge.any_err_q , \u_uart.u_bridge.rdata_q  }, { \$procmux$402_CMP , \$procmux$401_CMP , \$procmux$400_CMP , \$595y , \$procmux$398_CMP , \$procmux$397_CMP , \$procmux$396_CMP , \$592y  });
-  assign \$procmux$396_CMP  = \u_uart.u_bridge.tx_idx_q  == 4'h6;
-  assign \$procmux$397_CMP  = \u_uart.u_bridge.tx_idx_q  == 4'h5;
-  assign \$procmux$398_CMP  = \u_uart.u_bridge.tx_idx_q  == 4'h4;
-  assign \$procmux$400_CMP  = \u_uart.u_bridge.tx_idx_q  == 4'h2;
-  assign \$procmux$401_CMP  = \u_uart.u_bridge.tx_idx_q  == 4'h1;
-  assign \$procmux$402_CMP  = ! \u_uart.u_bridge.tx_idx_q ;
-  assign \$procmux$408_Y  = \u_uart.u_uart_core.tx_fifo_wready  ? \$procmux$379_Y  : \$procmux$914_Y ;
-  assign \$procmux$413_Y  = \u_uart.u_uart_core.tx_fifo_wready  ? \$procmux$387_Y  : \$procmux$917_Y ;
-  assign \$procmux$418_Y  = \u_uart.u_uart_core.tx_fifo_wready  ? \$procmux$394_Y  : 8'h00;
-  assign \$procmux$423_Y  = \u_uart.u_uart_core.tx_fifo_wready  ? 1'h1 : 1'h0;
-  assign \u_uart.u_bridge.tx_idx_d  = \$590y  ? \$procmux$408_Y  : \$procmux$914_Y ;
-  assign \u_uart.u_bridge.tx_st_d  = \$590y  ? \$procmux$413_Y  : \$procmux$917_Y ;
-  assign \u_uart.u_uart_core.tx_data_i  = \$590y  ? \$procmux$418_Y  : 8'h00;
-  assign \u_uart.u_uart_core.tx_valid_i  = \$590y  ? \$procmux$423_Y  : 1'h0;
-  assign \$procmux$448_CMP  = \u_uart.u_bridge.rxf_st_q  == 3'h6;
-  assign \$procmux$450_Y  = \$531y  ? \u_uart.u_bridge.tx_idx_q  : 4'h0;
-  assign \$procmux$457_Y  = \$531y  ? \u_uart.u_bridge.tx_st_q  : 2'h1;
-  assign \$procmux$46_Y  = \u_pwm.u_reg.u_pwm_en_cdc.u_src_to_dst_req.src_pulse_i  ? 3'h4 : \$procmux$34_Y ;
-  assign \$procmux$464_Y  = \xbar.u_s1n_6.tl_t_p [65] ? \$procmux$450_Y  : \u_uart.u_bridge.tx_idx_q ;
-  assign \$procmux$469_Y  = \xbar.u_s1n_6.tl_t_p [65] ? \$procmux$457_Y  : \u_uart.u_bridge.tx_st_q ;
-  assign \$procmux$484_Y  = \xbar.u_s1n_6.tl_t_p [65] ? 3'h0 : 3'hx;
-  assign \$procmux$489_Y  = \$564y  ? 1'h0 : 1'hx;
-  assign \$procmux$492_CMP  = \u_uart.u_bridge.rxf_st_q  == 3'h5;
-  assign \$procmux$494_Y  = \$564y  ? 3'h6 : 3'hx;
-  assign \$procmux$50_Y  = \u_pwm.u_reg.u_pwm_en_cdc.u_src_to_dst_req.src_pulse_i  ? \u_pwm.u_reg.reg_wdata [0] : \$procmux$39_Y ;
-  assign \$procmux$502_Y  = \$530y  ? 1'h1 : 1'hx;
-  assign \$procmux$507_CMP  = \u_uart.u_bridge.rxf_st_q  == 3'h3;
-  assign \$procmux$512_Y  = \$530y  ? \u_uart.u_bridge.bebyte_q [3:0] : 4'hx;
-  assign \$procmux$52_Y  = \u_pwm.u_reg.u_pwm_en_cdc.src_ack  ? 1'h0 : 1'hx;
-  assign \$procmux$522_Y  = \$530y  ? { \u_uart.u_bridge.rx_data_i , \u_uart.u_bridge.sh_q [31:8] } : 32'hxxxxxxxx;
-  assign \$procmux$532_Y  = \$530y  ? 2'hx : \$523y ;
-  assign \$procmux$542_Y  = \$530y  ? 3'h4 : 3'hx;
-  assign \$procmux$552_Y  = \u_uart.u_bridge.rx_valid_i  ? \$procmux$502_Y  : 1'hx;
-  assign \$procmux$560_Y  = \u_uart.u_bridge.rx_valid_i  ? \$procmux$512_Y  : 4'hx;
-  assign \$procmux$568_Y  = \u_uart.u_bridge.rx_valid_i  ? \$procmux$522_Y  : 32'hxxxxxxxx;
-  assign \$procmux$576_Y  = \u_uart.u_bridge.rx_valid_i  ? { \u_uart.u_bridge.rx_data_i , \u_uart.u_bridge.sh_q [31:8] } : 32'hxxxxxxxx;
-  assign \$procmux$584_Y  = \u_uart.u_bridge.rx_valid_i  ? \$procmux$532_Y  : 2'hx;
-  assign \$procmux$59_Y  = \u_pwm.u_reg.u_pwm_en_cdc.u_src_to_dst_req.src_pulse_i  ? 1'h1 : \$procmux$52_Y ;
-  assign \$procmux$592_Y  = \u_uart.u_bridge.rx_valid_i  ? \$procmux$542_Y  : 3'hx;
-  assign \$procmux$602_Y  = \$530y  ? \$procmux$670_Y  : \$523y ;
-  assign \$procmux$614_Y  = \$531y  ? 3'h3 : 3'h4;
-  assign \$procmux$628_Y  = \$531y  ? 1'hx : 1'h0;
-  assign \$procmux$642_Y  = \$531y  ? 4'hx : 4'hf;
-  assign \$procmux$607_CMP  = \u_uart.u_bridge.rxf_st_q  == 3'h2;
-  assign \$procmux$656_Y  = \$531y  ? 32'hxxxxxxxx : 32'd0;
-  assign \u_gpio.u_reg.u_reg_if.rdata_i [31:10] = \$1456y  ? 22'h000000 : 22'h3fffff;
-  assign \$procmux$670_Y  = \$531y  ? 2'h0 : 2'hx;
-  assign \$procmux$684_Y  = \$530y  ? \$procmux$628_Y  : 1'hx;
-  assign \$procmux$696_Y  = \$530y  ? \$procmux$642_Y  : 4'hx;
-  assign \$procmux$708_Y  = \$530y  ? \$procmux$656_Y  : 32'hxxxxxxxx;
-  assign \$procmux$732_Y  = \$530y  ? \$procmux$614_Y  : 3'hx;
-  assign \$procmux$743_Y  = \u_uart.u_bridge.rx_valid_i  ? \$procmux$684_Y  : 1'hx;
-  function [1:0] \$procmux$75 ;
+  assign \$procmux$410_Y  = \$procmux$410 (8'h00, { 16'h5a01, \u_uart.u_bridge.op_q , 7'h00, \u_uart.u_bridge.any_err_q , \u_uart.u_bridge.rdata_q  }, { \$procmux$418_CMP , \$procmux$417_CMP , \$procmux$416_CMP , \$595y , \$procmux$414_CMP , \$procmux$413_CMP , \$procmux$412_CMP , \$592y  });
+  assign \$592y  = \u_uart.u_bridge.tx_idx_q  == 4'h7;
+  assign \$procmux$412_CMP  = \u_uart.u_bridge.tx_idx_q  == 4'h6;
+  assign \$procmux$413_CMP  = \u_uart.u_bridge.tx_idx_q  == 4'h5;
+  assign \$procmux$414_CMP  = \u_uart.u_bridge.tx_idx_q  == 4'h4;
+  assign \$procmux$416_CMP  = \u_uart.u_bridge.tx_idx_q  == 4'h2;
+  assign \$procmux$417_CMP  = \u_uart.u_bridge.tx_idx_q  == 4'h1;
+  assign \$procmux$418_CMP  = ! \u_uart.u_bridge.tx_idx_q ;
+  assign \$procmux$424_Y  = \u_uart.u_uart_core.tx_fifo_wready  ? \$procmux$395_Y  : \$procmux$930_Y ;
+  assign \$procmux$429_Y  = \u_uart.u_uart_core.tx_fifo_wready  ? \$procmux$403_Y  : \$procmux$933_Y ;
+  assign \$procmux$434_Y  = \u_uart.u_uart_core.tx_fifo_wready  ? \$procmux$410_Y  : 8'h00;
+  assign \$procmux$439_Y  = \u_uart.u_uart_core.tx_fifo_wready  ? 1'h1 : 1'h0;
+  assign \$procmux$44_Y  = \u_pwm.u_reg.u_pwm_en_cdc.u_src_to_dst_req.src_pulse_i  ? \u_pwm.u_reg.reg_wdata [0] : \$procmux$33_Y ;
+  assign \u_uart.u_bridge.tx_idx_d  = \$590y  ? \$procmux$424_Y  : \$procmux$930_Y ;
+  assign \u_uart.u_bridge.tx_st_d  = \$590y  ? \$procmux$429_Y  : \$procmux$933_Y ;
+  assign \u_uart.u_uart_core.tx_data_i  = \$590y  ? \$procmux$434_Y  : 8'h00;
+  assign \u_uart.u_uart_core.tx_valid_i  = \$590y  ? \$procmux$439_Y  : 1'h0;
+  assign \$procmux$46_Y  = \u_pwm.u_reg.u_pwm_en_cdc.src_ack  ? 1'h0 : 1'hx;
+  assign \$procmux$466_Y  = \$531y  ? \u_uart.u_bridge.tx_idx_q  : 4'h0;
+  assign \$procmux$473_Y  = \$531y  ? \u_uart.u_bridge.tx_st_q  : 2'h1;
+  assign \$procmux$464_CMP  = \u_uart.u_bridge.rxf_st_q  == 3'h6;
+  assign \$procmux$480_Y  = \xbar.u_s1n_6.tl_t_p [65] ? \$procmux$466_Y  : \u_uart.u_bridge.tx_idx_q ;
+  assign \$procmux$485_Y  = \xbar.u_s1n_6.tl_t_p [65] ? \$procmux$473_Y  : \u_uart.u_bridge.tx_st_q ;
+  assign \$procmux$500_Y  = \xbar.u_s1n_6.tl_t_p [65] ? 3'h0 : 3'hx;
+  assign \$procmux$505_Y  = \$564y  ? 1'h0 : 1'hx;
+  assign \$procmux$508_CMP  = \u_uart.u_bridge.rxf_st_q  == 3'h5;
+  assign \$procmux$510_Y  = \$564y  ? 3'h6 : 3'hx;
+  assign \$procmux$518_Y  = \$530y  ? 1'h1 : 1'hx;
+  assign \$procmux$528_Y  = \$530y  ? \u_uart.u_bridge.bebyte_q [3:0] : 4'hx;
+  assign \$procmux$53_Y  = \u_pwm.u_reg.u_pwm_en_cdc.u_src_to_dst_req.src_pulse_i  ? 1'h1 : \$procmux$46_Y ;
+  assign \$procmux$538_Y  = \$530y  ? { \u_uart.u_bridge.rx_data_i , \u_uart.u_bridge.sh_q [31:8] } : 32'hxxxxxxxx;
+  assign \$procmux$548_Y  = \$530y  ? 2'hx : \$523y ;
+  assign \$procmux$558_Y  = \$530y  ? 3'h4 : 3'hx;
+  assign \$procmux$568_Y  = \u_uart.u_bridge.rx_valid_i  ? \$procmux$518_Y  : 1'hx;
+  assign \$procmux$576_Y  = \u_uart.u_bridge.rx_valid_i  ? \$procmux$528_Y  : 4'hx;
+  assign \$procmux$1000_CMP  = \u_uart.u_bridge.rxf_st_q  == 3'h3;
+  assign \u_gpio.u_reg.u_reg_if.rdata_i [31:10] = \$1426y  ? 22'h000000 : 22'h3fffff;
+  assign \$procmux$584_Y  = \u_uart.u_bridge.rx_valid_i  ? \$procmux$538_Y  : 32'hxxxxxxxx;
+  assign \$procmux$600_Y  = \u_uart.u_bridge.rx_valid_i  ? \$procmux$548_Y  : 2'hx;
+  assign \$procmux$608_Y  = \u_uart.u_bridge.rx_valid_i  ? \$procmux$558_Y  : 3'hx;
+  assign \$procmux$618_Y  = \$530y  ? \$procmux$686_Y  : \$523y ;
+  assign \$procmux$630_Y  = \$531y  ? 3'h3 : 3'h4;
+  function [1:0] \$procmux$64 ;
     input [1:0] a;
     input [7:0] b;
     input [3:0] s;
     casez (s) // synopsys parallel_case
       4'b???1:
-        \$procmux$75  = b[1:0];
+        \$procmux$64  = b[1:0];
       4'b??1?:
-        \$procmux$75  = b[3:2];
+        \$procmux$64  = b[3:2];
       4'b?1??:
-        \$procmux$75  = b[5:4];
+        \$procmux$64  = b[5:4];
       4'b1???:
-        \$procmux$75  = b[7:6];
+        \$procmux$64  = b[7:6];
       default:
-        \$procmux$75  = a;
+        \$procmux$64  = a;
     endcase
   endfunction
-  assign \u_gpio.u_reg.u_reg_if.rdata_i [3:2] = \$procmux$75 (2'h3, { 2'h0, \u_gpio.cio_gpio_en_q , \u_gpio.u_reg.u_intr_ctrl_en_falling.q , \u_gpio.u_reg.u_ctrl_en_input_filter.q [3:2] }, { \$auto$opt_reduce.cc:137:opt_pmux$1646 , \u_gpio.u_reg.addr_hit [4], \u_gpio.u_reg.addr_hit [5], \u_gpio.u_reg.addr_hit [6] });
-  assign \$procmux$752_Y  = \u_uart.u_bridge.rx_valid_i  ? \$procmux$696_Y  : 4'hx;
-  assign \$procmux$761_Y  = \u_uart.u_bridge.rx_valid_i  ? \$procmux$708_Y  : 32'hxxxxxxxx;
-  assign \$procmux$788_Y  = \u_uart.u_bridge.rx_valid_i  ? \$procmux$602_Y  : 2'hx;
-  assign \$procmux$797_Y  = \u_uart.u_bridge.rx_valid_i  ? \$procmux$732_Y  : 3'hx;
-  assign \$procmux$807_Y  = \$522y  ? 2'h0 : \$523y ;
-  assign \$procmux$812_CMP  = \u_uart.u_bridge.rxf_st_q  == 3'h1;
-  assign \$procmux$820_Y  = \$522y  ? 3'h2 : 3'hx;
-  assign \$522y  = \u_uart.u_bridge.idx_q  == 2'h2;
-  function [5:0] \$procmux$84 ;
+  assign \u_gpio.u_reg.u_reg_if.rdata_i [3:2] = \$procmux$64 (2'h3, { 2'h0, \u_gpio.cio_gpio_en_q , \u_gpio.u_reg.u_intr_ctrl_en_falling.q , \u_gpio.u_reg.u_ctrl_en_input_filter.q [3:2] }, { \u_gpio.u_reg.addr_hit [0], \u_gpio.u_reg.addr_hit [1], \u_gpio.u_reg.addr_hit [2], \u_gpio.u_reg.addr_hit [3] });
+  assign \$procmux$644_Y  = \$531y  ? 1'hx : 1'h0;
+  assign \$procmux$658_Y  = \$531y  ? 4'hx : 4'hf;
+  assign \$procmux$672_Y  = \$531y  ? 32'hxxxxxxxx : 32'd0;
+  assign \$procmux$686_Y  = \$531y  ? 2'h0 : 2'hx;
+  function [5:0] \$procmux$70 ;
     input [5:0] a;
     input [11:0] b;
     input [1:0] s;
     casez (s) // synopsys parallel_case
       2'b?1:
-        \$procmux$84  = b[5:0];
+        \$procmux$70  = b[5:0];
       2'b1?:
-        \$procmux$84  = b[11:6];
+        \$procmux$70  = b[11:6];
       default:
-        \$procmux$84  = a;
+        \$procmux$70  = a;
     endcase
   endfunction
-  assign \u_gpio.u_reg.u_reg_if.rdata_i [9:4] = \$procmux$84 (6'h3f, { \u_gpio.u_reg.u_intr_ctrl_en_input_filter.q , \u_gpio.u_reg.u_intr_ctrl_en_lvllow.q , \u_gpio.u_reg.u_intr_ctrl_en_lvlhigh.q , 6'h00 }, { \u_gpio.u_reg.addr_hit [5], \$auto$opt_reduce.cc:137:opt_pmux$1642  });
-  assign \$procmux$844_CMP  = \u_uart.u_bridge.idx_q  == 2'h1;
-  assign \$procmux$875_Y  = \u_uart.u_bridge.rx_valid_i  ? \$procmux$807_Y  : 2'hx;
-  assign \$procmux$885_Y  = \u_uart.u_bridge.rx_valid_i  ? \$procmux$820_Y  : 3'hx;
-  function [2:0] \$procmux$890 ;
-    input [2:0] a;
-    input [20:0] b;
-    input [6:0] s;
-    casez (s) // synopsys parallel_case
-      7'b??????1:
-        \$procmux$890  = b[2:0];
-      7'b?????1?:
-        \$procmux$890  = b[5:3];
-      7'b????1??:
-        \$procmux$890  = b[8:6];
-      7'b???1???:
-        \$procmux$890  = b[11:9];
-      7'b??1????:
-        \$procmux$890  = b[14:12];
-      7'b?1?????:
-        \$procmux$890  = b[17:15];
-      7'b1??????:
-        \$procmux$890  = b[20:18];
-      default:
-        \$procmux$890  = a;
-    endcase
-  endfunction
-  assign \u_uart.u_bridge.rxf_st_d  = \$procmux$890 (3'hx, { \$procmux$909_Y , \$procmux$885_Y , \$procmux$797_Y , \$procmux$592_Y , 3'h5, \$procmux$494_Y , \$procmux$484_Y  }, { \$procmux$1000_CMP , \$procmux$812_CMP , \$procmux$607_CMP , \$procmux$507_CMP , \$procmux$894_CMP , \$procmux$492_CMP , \$procmux$448_CMP  });
-  assign \$procmux$894_CMP  = \u_uart.u_bridge.rxf_st_q  == 3'h4;
-  assign \$procmux$1000_CMP  = ! \u_uart.u_bridge.rxf_st_q ;
-  assign \$procmux$909_Y  = \$518y  ? 3'h1 : 3'hx;
-  assign \$procmux$914_Y  = \$procmux$448_CMP  ? \$procmux$464_Y  : \u_uart.u_bridge.tx_idx_q ;
-  assign \$procmux$917_Y  = \$procmux$448_CMP  ? \$procmux$469_Y  : \u_uart.u_bridge.tx_st_q ;
-  function [0:0] \$procmux$927 ;
-    input [0:0] a;
-    input [1:0] b;
-    input [1:0] s;
-    casez (s) // synopsys parallel_case
-      2'b?1:
-        \$procmux$927  = b[0:0];
-      2'b1?:
-        \$procmux$927  = b[1:1];
-      default:
-        \$procmux$927  = a;
-    endcase
-  endfunction
-  assign \u_uart.u_bridge.req_d  = \$procmux$927 (1'hx, { 1'h1, \$procmux$489_Y  }, { \$procmux$894_CMP , \$procmux$492_CMP  });
-  function [1:0] \$procmux$93 ;
-    input [1:0] a;
-    input [13:0] b;
-    input [6:0] s;
-    casez (s) // synopsys parallel_case
-      7'b??????1:
-        \$procmux$93  = b[1:0];
-      7'b?????1?:
-        \$procmux$93  = b[3:2];
-      7'b????1??:
-        \$procmux$93  = b[5:4];
-      7'b???1???:
-        \$procmux$93  = b[7:6];
-      7'b??1????:
-        \$procmux$93  = b[9:8];
-      7'b?1?????:
-        \$procmux$93  = b[11:10];
-      7'b1??????:
-        \$procmux$93  = b[13:12];
-      default:
-        \$procmux$93  = a;
-    endcase
-  endfunction
-  assign \u_gpio.u_reg.u_reg_if.rdata_i [1:0] = \$procmux$93 (2'h3, { \u_gpio.u_reg.u_intr_state.q , \u_gpio.u_reg.u_intr_enable.q , 2'h0, \u_gpio.u_reg.u_data_in.q , \u_gpio.cio_gpio_q , \u_gpio.u_reg.u_intr_ctrl_en_rising.q , \u_gpio.u_reg.u_ctrl_en_input_filter.q [1:0] }, { \u_gpio.u_reg.addr_hit [0], \u_gpio.u_reg.addr_hit [1], \u_gpio.u_reg.addr_hit [2], \u_gpio.u_reg.addr_hit [3], \u_gpio.u_reg.addr_hit [4], \u_gpio.u_reg.addr_hit [5], \u_gpio.u_reg.addr_hit [6] });
-  function [0:0] \$procmux$934 ;
-    input [0:0] a;
-    input [2:0] b;
-    input [2:0] s;
-    casez (s) // synopsys parallel_case
-      3'b??1:
-        \$procmux$934  = b[0:0];
-      3'b?1?:
-        \$procmux$934  = b[1:1];
-      3'b1??:
-        \$procmux$934  = b[2:2];
-      default:
-        \$procmux$934  = a;
-    endcase
-  endfunction
-  assign \u_uart.u_bridge.we_d  = \$procmux$934 (1'hx, { 1'h0, \$procmux$743_Y , \$procmux$552_Y  }, { \$procmux$1000_CMP , \$procmux$607_CMP , \$procmux$507_CMP  });
-  function [3:0] \$procmux$944 ;
-    input [3:0] a;
-    input [7:0] b;
-    input [1:0] s;
-    casez (s) // synopsys parallel_case
-      2'b?1:
-        \$procmux$944  = b[3:0];
-      2'b1?:
-        \$procmux$944  = b[7:4];
-      default:
-        \$procmux$944  = a;
-    endcase
-  endfunction
-  assign \u_uart.u_bridge.be_d  = \$procmux$944 (4'hx, { \$procmux$752_Y , \$procmux$560_Y  }, { \$procmux$607_CMP , \$procmux$507_CMP  });
-  function [31:0] \$procmux$952 ;
-    input [31:0] a;
-    input [63:0] b;
-    input [1:0] s;
-    casez (s) // synopsys parallel_case
-      2'b?1:
-        \$procmux$952  = b[31:0];
-      2'b1?:
-        \$procmux$952  = b[63:32];
-      default:
-        \$procmux$952  = a;
-    endcase
-  endfunction
-  assign \u_uart.u_bridge.wdata_d  = \$procmux$952 (32'hxxxxxxxx, { \$procmux$761_Y , \$procmux$568_Y  }, { \$procmux$607_CMP , \$procmux$507_CMP  });
-  function [31:0] \$procmux$983 ;
-    input [31:0] a;
-    input [63:0] b;
-    input [1:0] s;
-    casez (s) // synopsys parallel_case
-      2'b?1:
-        \$procmux$983  = b[31:0];
-      2'b1?:
-        \$procmux$983  = b[63:32];
-      default:
-        \$procmux$983  = a;
-    endcase
-  endfunction
-  assign \u_uart.u_bridge.sh_d  = \$procmux$983 (32'hxxxxxxxx, { 32'h00000000, \$procmux$576_Y  }, { \$procmux$1000_CMP , \$auto$opt_reduce.cc:137:opt_pmux$1656  });
-  function [1:0] \$procmux$993 ;
+  assign \u_gpio.u_reg.u_reg_if.rdata_i [9:4] = \$procmux$70 (6'h3f, { \u_gpio.u_reg.u_intr_ctrl_en_input_filter.q , \u_gpio.u_reg.u_intr_ctrl_en_lvllow.q , \u_gpio.u_reg.u_intr_ctrl_en_lvlhigh.q , 6'h00 }, { \u_gpio.u_reg.addr_hit [2], \$auto$opt_reduce.cc:137:opt_pmux$1607  });
+  assign \$procmux$700_Y  = \$530y  ? \$procmux$644_Y  : 1'hx;
+  assign \$procmux$712_Y  = \$530y  ? \$procmux$658_Y  : 4'hx;
+  assign \$procmux$724_Y  = \$530y  ? \$procmux$672_Y  : 32'hxxxxxxxx;
+  assign \$procmux$748_Y  = \$530y  ? \$procmux$630_Y  : 3'hx;
+  assign \$procmux$759_Y  = \u_uart.u_bridge.rx_valid_i  ? \$procmux$700_Y  : 1'hx;
+  function [1:0] \$procmux$76 ;
     input [1:0] a;
     input [7:0] b;
     input [3:0] s;
     casez (s) // synopsys parallel_case
       4'b???1:
-        \$procmux$993  = b[1:0];
+        \$procmux$76  = b[1:0];
       4'b??1?:
-        \$procmux$993  = b[3:2];
+        \$procmux$76  = b[3:2];
       4'b?1??:
-        \$procmux$993  = b[5:4];
+        \$procmux$76  = b[5:4];
       4'b1???:
-        \$procmux$993  = b[7:6];
+        \$procmux$76  = b[7:6];
       default:
-        \$procmux$993  = a;
+        \$procmux$76  = a;
     endcase
   endfunction
-  assign \u_uart.u_bridge.idx_d  = \$procmux$993 (2'hx, { 2'h0, \$procmux$875_Y , \$procmux$788_Y , \$procmux$584_Y  }, { \$procmux$1000_CMP , \$procmux$812_CMP , \$procmux$607_CMP , \$procmux$507_CMP  });
+  assign \u_gpio.u_reg.u_reg_if.rdata_i [1:0] = \$procmux$76 (2'h3, { \u_gpio.u_reg.u_data_in.q , \u_gpio.cio_gpio_q , \u_gpio.u_reg.u_intr_ctrl_en_rising.q , \u_gpio.u_reg.u_ctrl_en_input_filter.q [1:0] }, { \u_gpio.u_reg.addr_hit [0], \u_gpio.u_reg.addr_hit [1], \u_gpio.u_reg.addr_hit [2], \u_gpio.u_reg.addr_hit [3] });
+  assign \$procmux$768_Y  = \u_uart.u_bridge.rx_valid_i  ? \$procmux$712_Y  : 4'hx;
+  assign \$procmux$777_Y  = \u_uart.u_bridge.rx_valid_i  ? \$procmux$724_Y  : 32'hxxxxxxxx;
+  assign \$procmux$1002_CMP  = \u_uart.u_bridge.rxf_st_q  == 3'h2;
+  assign \$procmux$592_Y  = \u_uart.u_bridge.rx_valid_i  ? { \u_uart.u_bridge.rx_data_i , \u_uart.u_bridge.sh_q [31:8] } : 32'hxxxxxxxx;
+  assign \$procmux$804_Y  = \u_uart.u_bridge.rx_valid_i  ? \$procmux$618_Y  : 2'hx;
+  assign \$procmux$813_Y  = \u_uart.u_bridge.rx_valid_i  ? \$procmux$748_Y  : 3'hx;
+  assign \$procmux$823_Y  = \$522y  ? 2'h0 : \$523y ;
+  assign \$procmux$1014_CMP  = \u_uart.u_bridge.rxf_st_q  == 3'h1;
+  assign \$procmux$836_Y  = \$522y  ? 3'h2 : 3'hx;
+  assign \$522y  = \u_uart.u_bridge.idx_q  == 2'h2;
+  assign \$procmux$860_CMP  = \u_uart.u_bridge.idx_q  == 2'h1;
+  assign \$procmux$891_Y  = \u_uart.u_bridge.rx_valid_i  ? \$procmux$823_Y  : 2'hx;
+  assign \$procmux$901_Y  = \u_uart.u_bridge.rx_valid_i  ? \$procmux$836_Y  : 3'hx;
+  function [2:0] \$procmux$906 ;
+    input [2:0] a;
+    input [20:0] b;
+    input [6:0] s;
+    casez (s) // synopsys parallel_case
+      7'b??????1:
+        \$procmux$906  = b[2:0];
+      7'b?????1?:
+        \$procmux$906  = b[5:3];
+      7'b????1??:
+        \$procmux$906  = b[8:6];
+      7'b???1???:
+        \$procmux$906  = b[11:9];
+      7'b??1????:
+        \$procmux$906  = b[14:12];
+      7'b?1?????:
+        \$procmux$906  = b[17:15];
+      7'b1??????:
+        \$procmux$906  = b[20:18];
+      default:
+        \$procmux$906  = a;
+    endcase
+  endfunction
+  assign \u_uart.u_bridge.rxf_st_d  = \$procmux$906 (3'hx, { \$procmux$925_Y , \$procmux$901_Y , \$procmux$813_Y , \$procmux$608_Y , 3'h5, \$procmux$510_Y , \$procmux$500_Y  }, { \$procmux$1004_CMP , \$procmux$1014_CMP , \$procmux$1002_CMP , \$procmux$1000_CMP , \$procmux$910_CMP , \$procmux$508_CMP , \$procmux$464_CMP  });
+  assign \$procmux$910_CMP  = \u_uart.u_bridge.rxf_st_q  == 3'h4;
+  assign \$procmux$1004_CMP  = ! \u_uart.u_bridge.rxf_st_q ;
+  assign \$procmux$925_Y  = \$518y  ? 3'h1 : 3'hx;
+  assign \$procmux$930_Y  = \$procmux$464_CMP  ? \$procmux$480_Y  : \u_uart.u_bridge.tx_idx_q ;
+  assign \$procmux$933_Y  = \$procmux$464_CMP  ? \$procmux$485_Y  : \u_uart.u_bridge.tx_st_q ;
+  function [0:0] \$procmux$94 ;
+    input [0:0] a;
+    input [2:0] b;
+    input [2:0] s;
+    casez (s) // synopsys parallel_case
+      3'b??1:
+        \$procmux$94  = b[0:0];
+      3'b?1?:
+        \$procmux$94  = b[1:1];
+      3'b1??:
+        \$procmux$94  = b[2:2];
+      default:
+        \$procmux$94  = a;
+    endcase
+  endfunction
+  assign \u_pwm.u_reg.u_reg_if.busy_i  = \$procmux$94 (1'h0, { \u_pwm.u_reg.u_cfg_cdc.src_busy_q , \u_pwm.u_reg.u_pwm_en_cdc.src_busy_q , \u_pwm.u_reg.u_pwm_param_cdc.src_busy_q  }, { \u_gpio.u_reg.addr_hit [0], \u_gpio.u_reg.addr_hit [1], \u_gpio.u_reg.addr_hit [2] });
+  function [0:0] \$procmux$943 ;
+    input [0:0] a;
+    input [1:0] b;
+    input [1:0] s;
+    casez (s) // synopsys parallel_case
+      2'b?1:
+        \$procmux$943  = b[0:0];
+      2'b1?:
+        \$procmux$943  = b[1:1];
+      default:
+        \$procmux$943  = a;
+    endcase
+  endfunction
+  assign \u_uart.u_bridge.req_d  = \$procmux$943 (1'hx, { 1'h1, \$procmux$505_Y  }, { \$procmux$910_CMP , \$procmux$508_CMP  });
+  function [0:0] \$procmux$950 ;
+    input [0:0] a;
+    input [2:0] b;
+    input [2:0] s;
+    casez (s) // synopsys parallel_case
+      3'b??1:
+        \$procmux$950  = b[0:0];
+      3'b?1?:
+        \$procmux$950  = b[1:1];
+      3'b1??:
+        \$procmux$950  = b[2:2];
+      default:
+        \$procmux$950  = a;
+    endcase
+  endfunction
+  assign \u_uart.u_bridge.we_d  = \$procmux$950 (1'hx, { 1'h0, \$procmux$759_Y , \$procmux$568_Y  }, { \$procmux$1004_CMP , \$procmux$1002_CMP , \$procmux$1000_CMP  });
+  function [3:0] \$procmux$960 ;
+    input [3:0] a;
+    input [7:0] b;
+    input [1:0] s;
+    casez (s) // synopsys parallel_case
+      2'b?1:
+        \$procmux$960  = b[3:0];
+      2'b1?:
+        \$procmux$960  = b[7:4];
+      default:
+        \$procmux$960  = a;
+    endcase
+  endfunction
+  assign \u_uart.u_bridge.be_d  = \$procmux$960 (4'hx, { \$procmux$768_Y , \$procmux$576_Y  }, { \$procmux$1002_CMP , \$procmux$1000_CMP  });
+  function [31:0] \$procmux$968 ;
+    input [31:0] a;
+    input [63:0] b;
+    input [1:0] s;
+    casez (s) // synopsys parallel_case
+      2'b?1:
+        \$procmux$968  = b[31:0];
+      2'b1?:
+        \$procmux$968  = b[63:32];
+      default:
+        \$procmux$968  = a;
+    endcase
+  endfunction
+  assign \u_uart.u_bridge.wdata_d  = \$procmux$968 (32'hxxxxxxxx, { \$procmux$777_Y , \$procmux$584_Y  }, { \$procmux$1002_CMP , \$procmux$1000_CMP  });
+  function [31:0] \$procmux$99 ;
+    input [31:0] a;
+    input [95:0] b;
+    input [2:0] s;
+    casez (s) // synopsys parallel_case
+      3'b??1:
+        \$procmux$99  = b[31:0];
+      3'b?1?:
+        \$procmux$99  = b[63:32];
+      3'b1??:
+        \$procmux$99  = b[95:64];
+      default:
+        \$procmux$99  = a;
+    endcase
+  endfunction
+  assign \u_pwm.u_reg.u_reg_if.rdata_i  = \$procmux$99 (32'd4294967295, { \u_pwm.u_reg.u_cfg_cdc.src_q , 31'h00000000, \u_pwm.u_reg.u_pwm_en_cdc.src_q , \u_pwm.u_reg.u_pwm_param_cdc.src_q  }, { \u_gpio.u_reg.addr_hit [0], \u_gpio.u_reg.addr_hit [1], \u_gpio.u_reg.addr_hit [2] });
+  function [31:0] \$procmux$999 ;
+    input [31:0] a;
+    input [63:0] b;
+    input [1:0] s;
+    casez (s) // synopsys parallel_case
+      2'b?1:
+        \$procmux$999  = b[31:0];
+      2'b1?:
+        \$procmux$999  = b[63:32];
+      default:
+        \$procmux$999  = a;
+    endcase
+  endfunction
+  assign \u_uart.u_bridge.sh_d  = \$procmux$999 (32'hxxxxxxxx, { 32'h00000000, \$procmux$592_Y  }, { \$procmux$1004_CMP , \$auto$opt_reduce.cc:137:opt_pmux$1639  });
   assign cio_gpio_en_o = \u_gpio.cio_gpio_en_q ;
   assign cio_gpio_o = \u_gpio.cio_gpio_q ;
   assign cio_pwm_en_o = 1'h1;
   assign cio_pwm_o = \u_pwm.u_pwm_core.gen_chan_insts[0].u_chan.pwm_q ;
   assign cio_tx_en_o = 1'h1;
+  assign gpio_intr = \u_rv_timer.gpio_intr_i ;
   assign tl_gpio_d2h = { \u_gpio.u_reg.u_reg_if.outstanding_q , \u_gpio.u_reg.u_reg_if.rspop_q , 3'h0, \u_gpio.u_reg.u_reg_if.reqsz_q , \u_gpio.u_reg.u_reg_if.reqid_q , 1'h0, \u_gpio.u_reg.u_reg_if.rdata_q , 14'h0000, \u_gpio.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[2].fifo_d.reqfifo.full_o  };
   assign { tl_gpio_h2d[108:24], tl_gpio_h2d[0] } = { \xbar.u_s1n_6.gen_dfifo[2].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_gpio.u_reg.reg_wdata , 1'h1 };
   assign tl_pwm_d2h = { \u_pwm.u_reg.u_reg_if.outstanding_q , \u_pwm.u_reg.u_reg_if.rspop_q , 3'h0, \u_pwm.u_reg.u_reg_if.reqsz_q , \u_pwm.u_reg.u_reg_if.reqid_q , 1'h0, \u_pwm.u_reg.u_reg_if.rdata_q , 14'h0000, \u_pwm.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[1].fifo_d.reqfifo.full_o  };
   assign { tl_pwm_h2d[108:24], tl_pwm_h2d[0] } = { \xbar.u_s1n_6.gen_dfifo[1].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_pwm.u_reg.reg_wdata , 1'h1 };
   assign tl_rv_timer_d2h = { \u_rv_timer.u_reg.u_reg_if.outstanding_q , \u_rv_timer.u_reg.u_reg_if.rspop_q , 3'h0, \u_rv_timer.u_reg.u_reg_if.reqsz_q , \u_rv_timer.u_reg.u_reg_if.reqid_q , 1'h0, \u_rv_timer.u_reg.u_reg_if.rdata_q , 14'h0000, \u_rv_timer.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o  };
-  assign { tl_rv_timer_h2d[108:24], tl_rv_timer_h2d[0] } = { \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd , 1'h1 };
+  assign { tl_rv_timer_h2d[108:24], tl_rv_timer_h2d[0] } = { \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd , 1'h1 };
   assign tl_uart_d2h = { \u_uart.u_reg.u_reg_if.outstanding_q , \u_uart.u_reg.u_reg_if.rspop_q , 3'h0, \u_uart.u_reg.u_reg_if.reqsz_q , \u_uart.u_reg.u_reg_if.reqid_q , 1'h0, \u_uart.u_reg.u_reg_if.rdata_q , 14'h0000, \u_uart.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[0].fifo_d.reqfifo.full_o  };
   assign { tl_uart_h2d[108:24], tl_uart_h2d[0] } = { \xbar.u_s1n_6.gen_dfifo[0].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_uart.u_reg.reg_wdata , 1'h1 };
   assign tl_uart_host_d2h = { \xbar.u_s1n_6.tl_t_p [65:48], \u_uart.rdata_i , \xbar.u_s1n_6.tl_t_p [15:1], \uart_host_adapter.gnt_o  };
@@ -4431,7 +4308,6 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   assign \u_gpio.cio_gpio_o  = \u_gpio.cio_gpio_q ;
   assign \u_gpio.clk_i  = clk_i;
   assign \u_gpio.data_in_d  = { \u_gpio.gen_filter[1].u_filter.filter_o , \u_gpio.gen_filter[0].u_filter.filter_o  };
-  assign \u_gpio.event_intr_combined  = \u_gpio.intr_hw.event_intr_i ;
   assign \u_gpio.gen_filter[0].u_filter.clk_i  = clk_i;
   assign \u_gpio.gen_filter[0].u_filter.enable_i  = \u_gpio.u_reg.u_ctrl_en_input_filter.q [0];
   assign \u_gpio.gen_filter[0].u_filter.filter_i  = cio_gpio_i[0];
@@ -4470,16 +4346,9 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   assign \u_gpio.gen_filter[1].u_filter.gen_async.prim_flop_2sync.unused_sig  = 1'h1;
   assign \u_gpio.gen_filter[1].u_filter.rst_ni  = rst_ni;
   assign \u_gpio.gen_filter[1].u_filter.thresh_i  = 2'h3;
-  assign \u_gpio.hw2reg  = { \u_gpio.u_reg.u_intr_state.wr_en_data_arb.d , \u_gpio.u_reg.u_intr_state.wr_en_data_arb.de , \u_gpio.gen_filter[1].u_filter.filter_o , \u_gpio.gen_filter[0].u_filter.filter_o , 1'h1, \u_gpio.cio_gpio_q , \u_gpio.cio_gpio_en_q  };
-  assign \u_gpio.intr_hw.clk_i  = clk_i;
-  assign \u_gpio.intr_hw.hw2reg_intr_state_d_o  = \u_gpio.u_reg.u_intr_state.wr_en_data_arb.d ;
-  assign \u_gpio.intr_hw.hw2reg_intr_state_de_o  = \u_gpio.u_reg.u_intr_state.wr_en_data_arb.de ;
-  assign \u_gpio.intr_hw.reg2hw_intr_enable_q_i  = \u_gpio.u_reg.u_intr_enable.q ;
-  assign \u_gpio.intr_hw.reg2hw_intr_state_q_i  = \u_gpio.u_reg.u_intr_state.q ;
-  assign \u_gpio.intr_hw.reg2hw_intr_test_q_i  = \u_gpio.u_reg.reg_wdata [1:0];
-  assign \u_gpio.intr_hw.rst_ni  = rst_ni;
-  assign \u_gpio.intr_hw.status  = \u_gpio.u_reg.u_intr_state.q ;
-  assign \u_gpio.reg2hw  = { \u_gpio.u_reg.u_intr_state.q , \u_gpio.u_reg.u_intr_enable.q , \u_gpio.u_reg.reg_wdata [1:0], \u_gpio.intr_hw.reg2hw_intr_test_qe_i , \u_gpio.u_reg.reg_wdata [3:2], \u_gpio.u_reg.direct_qe , \u_gpio.u_reg.reg_wdata [1:0], \u_gpio.u_reg.direct_qe , \u_gpio.u_reg.u_intr_ctrl_en_input_filter.q , \u_gpio.u_reg.u_intr_ctrl_en_lvllow.q , \u_gpio.u_reg.u_intr_ctrl_en_lvlhigh.q , \u_gpio.u_reg.u_intr_ctrl_en_falling.q , \u_gpio.u_reg.u_intr_ctrl_en_rising.q , \u_gpio.u_reg.u_ctrl_en_input_filter.q  };
+  assign \u_gpio.hw2reg  = { \u_gpio.gen_filter[1].u_filter.filter_o , \u_gpio.gen_filter[0].u_filter.filter_o , 1'h1, \u_gpio.cio_gpio_q , \u_gpio.cio_gpio_en_q  };
+  assign \u_gpio.intr_gpio_o  = \u_rv_timer.gpio_intr_i ;
+  assign \u_gpio.reg2hw  = { \u_gpio.u_reg.reg_wdata [3:2], \u_gpio.u_reg.direct_qe , \u_gpio.u_reg.reg_wdata [1:0], \u_gpio.u_reg.direct_qe , \u_gpio.u_reg.u_intr_ctrl_en_input_filter.q , \u_gpio.u_reg.u_intr_ctrl_en_lvllow.q , \u_gpio.u_reg.u_intr_ctrl_en_lvlhigh.q , \u_gpio.u_reg.u_intr_ctrl_en_falling.q , \u_gpio.u_reg.u_intr_ctrl_en_rising.q , \u_gpio.u_reg.u_ctrl_en_input_filter.q  };
   assign \u_gpio.rst_ni  = rst_ni;
   assign \u_gpio.tl_i  = { \xbar.u_s1n_6.gen_dfifo[2].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_gpio.u_reg.reg_wdata , tl_gpio_h2d[23:1], 1'h1 };
   assign \u_gpio.tl_o  = { \u_gpio.u_reg.u_reg_if.outstanding_q , \u_gpio.u_reg.u_reg_if.rspop_q , 3'h0, \u_gpio.u_reg.u_reg_if.reqsz_q , \u_gpio.u_reg.u_reg_if.reqid_q , 1'h0, \u_gpio.u_reg.u_reg_if.rdata_q , 14'h0000, \u_gpio.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[2].fifo_d.reqfifo.full_o  };
@@ -4494,7 +4363,7 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   assign \u_gpio.u_reg.direct_gpio_oe_qs  = \u_gpio.cio_gpio_en_q ;
   assign \u_gpio.u_reg.direct_gpio_oe_wd  = \u_gpio.u_reg.reg_wdata [3:2];
   assign \u_gpio.u_reg.direct_we  = \u_gpio.u_reg.direct_qe ;
-  assign \u_gpio.u_reg.hw2reg  = { \u_gpio.u_reg.u_intr_state.wr_en_data_arb.d , \u_gpio.u_reg.u_intr_state.wr_en_data_arb.de , \u_gpio.gen_filter[1].u_filter.filter_o , \u_gpio.gen_filter[0].u_filter.filter_o , 1'h1, \u_gpio.cio_gpio_q , \u_gpio.cio_gpio_en_q  };
+  assign \u_gpio.u_reg.hw2reg  = { \u_gpio.gen_filter[1].u_filter.filter_o , \u_gpio.gen_filter[0].u_filter.filter_o , 1'h1, \u_gpio.cio_gpio_q , \u_gpio.cio_gpio_en_q  };
   assign \u_gpio.u_reg.intr_ctrl_en_falling_qs  = \u_gpio.u_reg.u_intr_ctrl_en_falling.q ;
   assign \u_gpio.u_reg.intr_ctrl_en_falling_wd  = \u_gpio.u_reg.reg_wdata [3:2];
   assign \u_gpio.u_reg.intr_ctrl_en_input_filter_qs  = \u_gpio.u_reg.u_intr_ctrl_en_input_filter.q ;
@@ -4505,17 +4374,8 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   assign \u_gpio.u_reg.intr_ctrl_en_lvllow_wd  = \u_gpio.u_reg.reg_wdata [7:6];
   assign \u_gpio.u_reg.intr_ctrl_en_rising_qs  = \u_gpio.u_reg.u_intr_ctrl_en_rising.q ;
   assign \u_gpio.u_reg.intr_ctrl_en_rising_wd  = \u_gpio.u_reg.reg_wdata [1:0];
-  assign \u_gpio.u_reg.intr_enable_qs  = \u_gpio.u_reg.u_intr_enable.q ;
-  assign \u_gpio.u_reg.intr_enable_wd  = \u_gpio.u_reg.reg_wdata [1:0];
-  assign \u_gpio.u_reg.intr_state_qs  = \u_gpio.u_reg.u_intr_state.q ;
-  assign \u_gpio.u_reg.intr_state_wd  = \u_gpio.u_reg.reg_wdata [1:0];
-  assign \u_gpio.u_reg.intr_state_we  = \u_gpio.u_reg.u_intr_state.wr_en_data_arb.we ;
-  assign \u_gpio.u_reg.intr_test_flds_we  = \u_gpio.intr_hw.reg2hw_intr_test_qe_i ;
-  assign \u_gpio.u_reg.intr_test_qe  = \u_gpio.intr_hw.reg2hw_intr_test_qe_i ;
-  assign \u_gpio.u_reg.intr_test_wd  = \u_gpio.u_reg.reg_wdata [1:0];
-  assign \u_gpio.u_reg.intr_test_we  = \u_gpio.intr_hw.reg2hw_intr_test_qe_i ;
-  assign \u_gpio.u_reg.reg2hw  = { \u_gpio.u_reg.u_intr_state.q , \u_gpio.u_reg.u_intr_enable.q , \u_gpio.u_reg.reg_wdata [1:0], \u_gpio.intr_hw.reg2hw_intr_test_qe_i , \u_gpio.u_reg.reg_wdata [3:2], \u_gpio.u_reg.direct_qe , \u_gpio.u_reg.reg_wdata [1:0], \u_gpio.u_reg.direct_qe , \u_gpio.u_reg.u_intr_ctrl_en_input_filter.q , \u_gpio.u_reg.u_intr_ctrl_en_lvllow.q , \u_gpio.u_reg.u_intr_ctrl_en_lvlhigh.q , \u_gpio.u_reg.u_intr_ctrl_en_falling.q , \u_gpio.u_reg.u_intr_ctrl_en_rising.q , \u_gpio.u_reg.u_ctrl_en_input_filter.q  };
-  assign \u_gpio.u_reg.reg_addr  = { \u_uart.u_bridge.addr_q [4:2], 2'h0 };
+  assign \u_gpio.u_reg.reg2hw  = { \u_gpio.u_reg.reg_wdata [3:2], \u_gpio.u_reg.direct_qe , \u_gpio.u_reg.reg_wdata [1:0], \u_gpio.u_reg.direct_qe , \u_gpio.u_reg.u_intr_ctrl_en_input_filter.q , \u_gpio.u_reg.u_intr_ctrl_en_lvllow.q , \u_gpio.u_reg.u_intr_ctrl_en_lvlhigh.q , \u_gpio.u_reg.u_intr_ctrl_en_falling.q , \u_gpio.u_reg.u_intr_ctrl_en_rising.q , \u_gpio.u_reg.u_ctrl_en_input_filter.q  };
+  assign \u_gpio.u_reg.reg_addr  = { \u_uart.u_bridge.addr_q [3:2], 2'h0 };
   assign \u_gpio.u_reg.reg_be  = \u_rv_timer.u_reg.reg_be ;
   assign \u_gpio.u_reg.reg_busy  = 1'h0;
   assign \u_gpio.u_reg.reg_rdata  = \u_gpio.u_reg.u_reg_if.rdata_i ;
@@ -4670,47 +4530,8 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   assign \u_gpio.u_reg.u_intr_ctrl_en_rising.wr_en_data_arb.we  = \u_gpio.u_reg.intr_ctrl_we ;
   assign \u_gpio.u_reg.u_intr_ctrl_en_rising.wr_en_data_arb.wr_data  = \u_gpio.u_reg.reg_wdata [1:0];
   assign \u_gpio.u_reg.u_intr_ctrl_en_rising.wr_en_data_arb.wr_en  = \u_gpio.u_reg.intr_ctrl_we ;
-  assign \u_gpio.u_reg.u_intr_enable.clk_i  = clk_i;
-  assign \u_gpio.u_reg.u_intr_enable.d  = 2'h0;
-  assign \u_gpio.u_reg.u_intr_enable.de  = 1'h0;
-  assign \u_gpio.u_reg.u_intr_enable.qe  = \u_gpio.u_reg.intr_enable_we ;
-  assign \u_gpio.u_reg.u_intr_enable.qs  = \u_gpio.u_reg.u_intr_enable.q ;
-  assign \u_gpio.u_reg.u_intr_enable.rst_ni  = rst_ni;
-  assign \u_gpio.u_reg.u_intr_enable.wd  = \u_gpio.u_reg.reg_wdata [1:0];
-  assign \u_gpio.u_reg.u_intr_enable.we  = \u_gpio.u_reg.intr_enable_we ;
-  assign \u_gpio.u_reg.u_intr_enable.wr_data  = \u_gpio.u_reg.reg_wdata [1:0];
-  assign \u_gpio.u_reg.u_intr_enable.wr_en  = \u_gpio.u_reg.intr_enable_we ;
-  assign \u_gpio.u_reg.u_intr_enable.wr_en_data_arb.d  = 2'h0;
-  assign \u_gpio.u_reg.u_intr_enable.wr_en_data_arb.de  = 1'h0;
-  assign \u_gpio.u_reg.u_intr_enable.wr_en_data_arb.gen_w.unused_q  = \u_gpio.u_reg.u_intr_enable.q ;
-  assign \u_gpio.u_reg.u_intr_enable.wr_en_data_arb.q  = \u_gpio.u_reg.u_intr_enable.q ;
-  assign \u_gpio.u_reg.u_intr_enable.wr_en_data_arb.wd  = \u_gpio.u_reg.reg_wdata [1:0];
-  assign \u_gpio.u_reg.u_intr_enable.wr_en_data_arb.we  = \u_gpio.u_reg.intr_enable_we ;
-  assign \u_gpio.u_reg.u_intr_enable.wr_en_data_arb.wr_data  = \u_gpio.u_reg.reg_wdata [1:0];
-  assign \u_gpio.u_reg.u_intr_enable.wr_en_data_arb.wr_en  = \u_gpio.u_reg.intr_enable_we ;
-  assign \u_gpio.u_reg.u_intr_state.clk_i  = clk_i;
-  assign \u_gpio.u_reg.u_intr_state.d  = \u_gpio.u_reg.u_intr_state.wr_en_data_arb.d ;
-  assign \u_gpio.u_reg.u_intr_state.de  = \u_gpio.u_reg.u_intr_state.wr_en_data_arb.de ;
-  assign \u_gpio.u_reg.u_intr_state.qs  = \u_gpio.u_reg.u_intr_state.q ;
-  assign \u_gpio.u_reg.u_intr_state.rst_ni  = rst_ni;
-  assign \u_gpio.u_reg.u_intr_state.wd  = \u_gpio.u_reg.reg_wdata [1:0];
-  assign \u_gpio.u_reg.u_intr_state.we  = \u_gpio.u_reg.u_intr_state.wr_en_data_arb.we ;
-  assign \u_gpio.u_reg.u_intr_state.wr_en  = \u_gpio.u_reg.u_intr_state.qe ;
-  assign \u_gpio.u_reg.u_intr_state.wr_en_data_arb.q  = \u_gpio.u_reg.u_intr_state.q ;
-  assign \u_gpio.u_reg.u_intr_state.wr_en_data_arb.wd  = \u_gpio.u_reg.reg_wdata [1:0];
-  assign \u_gpio.u_reg.u_intr_state.wr_en_data_arb.wr_data  = \u_gpio.u_reg.u_intr_state.wr_data ;
-  assign \u_gpio.u_reg.u_intr_state.wr_en_data_arb.wr_en  = \u_gpio.u_reg.u_intr_state.qe ;
-  assign \u_gpio.u_reg.u_intr_test.d  = 2'h0;
-  assign \u_gpio.u_reg.u_intr_test.ds  = 2'h0;
-  assign \u_gpio.u_reg.u_intr_test.q  = \u_gpio.u_reg.reg_wdata [1:0];
-  assign \u_gpio.u_reg.u_intr_test.qe  = \u_gpio.intr_hw.reg2hw_intr_test_qe_i ;
-  assign \u_gpio.u_reg.u_intr_test.qre  = 1'h0;
-  assign \u_gpio.u_reg.u_intr_test.qs  = 2'h0;
-  assign \u_gpio.u_reg.u_intr_test.re  = 1'h0;
-  assign \u_gpio.u_reg.u_intr_test.wd  = \u_gpio.u_reg.reg_wdata [1:0];
-  assign \u_gpio.u_reg.u_intr_test.we  = \u_gpio.intr_hw.reg2hw_intr_test_qe_i ;
   assign \u_gpio.u_reg.u_reg_if.addr_align_err  = 1'h0;
-  assign \u_gpio.u_reg.u_reg_if.addr_o  = { \u_uart.u_bridge.addr_q [4:2], 2'h0 };
+  assign \u_gpio.u_reg.u_reg_if.addr_o  = { \u_uart.u_bridge.addr_q [3:2], 2'h0 };
   assign \u_gpio.u_reg.u_reg_if.be_o  = \u_rv_timer.u_reg.reg_be ;
   assign \u_gpio.u_reg.u_reg_if.busy_i  = 1'h0;
   assign \u_gpio.u_reg.u_reg_if.clk_i  = clk_i;
@@ -4776,6 +4597,7 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   assign \u_pwm.u_reg._pwm_param_phase_delay_0_qs_int  = \u_pwm.u_reg.u_pwm_param_phase_delay_0.q ;
   assign \u_pwm.u_reg._pwm_param_qs  = { \u_pwm.u_reg.u_pwm_param_duty_cycle_0.q , \u_pwm.u_reg.u_pwm_param_phase_delay_0.q  };
   assign \u_pwm.u_reg._pwm_param_wdata  = \u_pwm.u_reg.u_pwm_param_cdc.src_q ;
+  assign \u_pwm.u_reg.addr_hit  = \u_gpio.u_reg.addr_hit [2:0];
   assign \u_pwm.u_reg.cfg_busy  = \u_pwm.u_reg.u_cfg_cdc.src_busy_q ;
   assign \u_pwm.u_reg.cfg_flds_we  = { \u_pwm.u_reg.u_cfg0_qe.d_i , \u_pwm.u_reg.u_cfg0_qe.d_i , \u_pwm.u_reg.u_cfg0_qe.d_i  };
   assign \u_pwm.u_reg.cfg_qe  = \u_pwm.u_reg.u_cfg0_qe.q_o ;
@@ -5175,106 +4997,103 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   assign \u_pwm.u_reg.u_rsp_intg_gen.tl_i  = { \u_pwm.u_reg.u_reg_if.outstanding_q , \u_pwm.u_reg.u_reg_if.rspop_q , 3'h0, \u_pwm.u_reg.u_reg_if.reqsz_q , \u_pwm.u_reg.u_reg_if.reqid_q , 1'h0, \u_pwm.u_reg.u_reg_if.rdata_q , 14'h0000, \u_pwm.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[1].fifo_d.reqfifo.full_o  };
   assign \u_pwm.u_reg.u_rsp_intg_gen.tl_o  = { \u_pwm.u_reg.u_reg_if.outstanding_q , \u_pwm.u_reg.u_reg_if.rspop_q , 3'h0, \u_pwm.u_reg.u_reg_if.reqsz_q , \u_pwm.u_reg.u_reg_if.reqid_q , 1'h0, \u_pwm.u_reg.u_reg_if.rdata_q , 14'h0000, \u_pwm.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[1].fifo_d.reqfifo.full_o  };
   assign \u_pwm.u_reg.unused__pwm_en_wdata  = \u_pwm.u_reg.u_pwm_en_cdc.src_q ;
-  assign \u_rv_timer.active  = \u_rv_timer.u_reg.u_ctrl.q ;
+  assign \u_rv_timer.active  = \u_rv_timer.gen_harts[0].u_core.active ;
   assign \u_rv_timer.clk_i  = clk_i;
-  assign \u_rv_timer.gen_harts[0].u_core.active  = \u_rv_timer.u_reg.u_ctrl.q ;
   assign \u_rv_timer.gen_harts[0].u_core.clk_i  = clk_i;
   assign \u_rv_timer.gen_harts[0].u_core.intr  = \u_rv_timer.gen_harts[0].u_intr_hw.event_intr_i ;
-  assign \u_rv_timer.gen_harts[0].u_core.mtime  = { \u_rv_timer.u_reg.u_timer_v_upper0.q , \u_rv_timer.u_reg.u_timer_v_lower0.q  };
-  assign \u_rv_timer.gen_harts[0].u_core.mtimecmp  = { \u_rv_timer.u_reg.u_compare_upper0_0.q , \u_rv_timer.u_reg.u_compare_lower0_0.q  };
+  assign \u_rv_timer.gen_harts[0].u_core.mtime  = \u_rv_timer.u_reg.u_timer_v0.q ;
+  assign \u_rv_timer.gen_harts[0].u_core.mtime_d  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.d ;
+  assign \u_rv_timer.gen_harts[0].u_core.mtimecmp  = \u_rv_timer.u_reg.u_compare_v0.q ;
   assign \u_rv_timer.gen_harts[0].u_core.prescaler  = \u_rv_timer.u_reg.u_cfg0_prescale.q ;
   assign \u_rv_timer.gen_harts[0].u_core.rst_ni  = rst_ni;
   assign \u_rv_timer.gen_harts[0].u_core.step  = \u_rv_timer.u_reg.u_cfg0_step.q ;
-  assign \u_rv_timer.gen_harts[0].u_core.tick  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.de ;
+  assign \u_rv_timer.gen_harts[0].u_core.tick  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.de ;
   assign \u_rv_timer.gen_harts[0].u_intr_hw.clk_i  = clk_i;
   assign \u_rv_timer.gen_harts[0].u_intr_hw.hw2reg_intr_state_d_o  = \u_rv_timer.intr_timer_state_d ;
   assign \u_rv_timer.gen_harts[0].u_intr_hw.hw2reg_intr_state_de_o  = \u_rv_timer.gen_harts[0].u_intr_hw.g_intr_event.new_event ;
   assign \u_rv_timer.gen_harts[0].u_intr_hw.reg2hw_intr_enable_q_i  = \u_rv_timer.u_reg.u_intr_enable0.q ;
   assign \u_rv_timer.gen_harts[0].u_intr_hw.reg2hw_intr_state_q_i  = \u_rv_timer.u_reg.u_intr_state0.q ;
-  assign \u_rv_timer.gen_harts[0].u_intr_hw.reg2hw_intr_test_q_i  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [0];
+  assign \u_rv_timer.gen_harts[0].u_intr_hw.reg2hw_intr_test_q_i  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [0];
   assign \u_rv_timer.gen_harts[0].u_intr_hw.rst_ni  = rst_ni;
   assign \u_rv_timer.gen_harts[0].u_intr_hw.status  = \u_rv_timer.u_reg.u_intr_state0.q ;
-  assign \u_rv_timer.hw2reg  = { \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.d , \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.de , \u_rv_timer.gen_harts[0].u_core.mtime_d [31:0], \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.de , \u_rv_timer.gen_harts[0].u_core.mtime_d [63:32], \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.de  };
+  assign \u_rv_timer.hw2reg  = { \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.d , \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.de , \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.d , \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.de  };
   assign \u_rv_timer.intr_timer_en  = \u_rv_timer.u_reg.u_intr_enable0.q ;
   assign \u_rv_timer.intr_timer_set  = \u_rv_timer.gen_harts[0].u_intr_hw.event_intr_i ;
   assign \u_rv_timer.intr_timer_state_de  = \u_rv_timer.gen_harts[0].u_intr_hw.g_intr_event.new_event ;
   assign \u_rv_timer.intr_timer_state_q  = \u_rv_timer.u_reg.u_intr_state0.q ;
-  assign \u_rv_timer.intr_timer_test_q  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [0];
+  assign \u_rv_timer.intr_timer_test_q  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [0];
   assign \u_rv_timer.intr_timer_test_qe  = \u_rv_timer.gen_harts[0].u_intr_hw.reg2hw_intr_test_qe_i ;
-  assign \u_rv_timer.mtime  = { \u_rv_timer.u_reg.u_timer_v_upper0.q , \u_rv_timer.u_reg.u_timer_v_lower0.q  };
-  assign \u_rv_timer.mtime_d  = \u_rv_timer.gen_harts[0].u_core.mtime_d ;
-  assign \u_rv_timer.mtimecmp  = { \u_rv_timer.u_reg.u_compare_upper0_0.q , \u_rv_timer.u_reg.u_compare_lower0_0.q  };
+  assign \u_rv_timer.mtime  = \u_rv_timer.u_reg.u_timer_v0.q ;
+  assign \u_rv_timer.mtime_d  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.d ;
+  assign \u_rv_timer.mtimecmp  = \u_rv_timer.u_reg.u_compare_v0.q ;
+  assign \u_rv_timer.mtimecmp_update  = \u_rv_timer.u_reg.u_compare_v00_qe.q_o ;
   assign \u_rv_timer.prescaler  = \u_rv_timer.u_reg.u_cfg0_prescale.q ;
-  assign \u_rv_timer.reg2hw  = { \u_rv_timer.u_reg.u_ctrl.q , \u_rv_timer.u_reg.u_intr_enable0.q , \u_rv_timer.u_reg.u_intr_state0.q , \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [0], \u_rv_timer.gen_harts[0].u_intr_hw.reg2hw_intr_test_qe_i , \u_rv_timer.u_reg.u_cfg0_step.q , \u_rv_timer.u_reg.u_cfg0_prescale.q , \u_rv_timer.u_reg.u_timer_v_lower0.q , \u_rv_timer.u_reg.u_timer_v_upper0.q , \u_rv_timer.u_reg.u_compare_lower0_0.q , \u_rv_timer.u_reg.u_compare_lower0_00_qe.q_o , \u_rv_timer.u_reg.u_compare_upper0_0.q , \u_rv_timer.u_reg.u_compare_upper0_00_qe.q_o  };
+  assign \u_rv_timer.reg2hw  = { \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.q , \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.q , \u_rv_timer.u_reg.u_ctrl_active_0.q , \u_rv_timer.u_reg.u_intr_enable0.q , \u_rv_timer.u_reg.u_intr_state0.q , \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [0], \u_rv_timer.gen_harts[0].u_intr_hw.reg2hw_intr_test_qe_i , \u_rv_timer.u_reg.u_cfg0_step.q , \u_rv_timer.u_reg.u_cfg0_prescale.q , \u_rv_timer.u_reg.u_timer_v0.q , \u_rv_timer.u_reg.u_compare_v0.q , \u_rv_timer.u_reg.u_compare_v00_qe.q_o  };
   assign \u_rv_timer.rst_ni  = rst_ni;
   assign \u_rv_timer.step  = \u_rv_timer.u_reg.u_cfg0_step.q ;
-  assign \u_rv_timer.tick  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.de ;
-  assign \u_rv_timer.tl_i  = { \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h1 };
+  assign \u_rv_timer.tick  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.de ;
+  assign \u_rv_timer.tl_i  = { \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h1 };
   assign \u_rv_timer.tl_o  = { \u_rv_timer.u_reg.u_reg_if.outstanding_q , \u_rv_timer.u_reg.u_reg_if.rspop_q , 3'h0, \u_rv_timer.u_reg.u_reg_if.reqsz_q , \u_rv_timer.u_reg.u_reg_if.reqid_q , 1'h0, \u_rv_timer.u_reg.u_reg_if.rdata_q , 14'h0000, \u_rv_timer.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o  };
   assign \u_rv_timer.u_reg.cfg0_prescale_qs  = \u_rv_timer.u_reg.u_cfg0_prescale.q ;
-  assign \u_rv_timer.u_reg.cfg0_prescale_wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [11:0];
+  assign \u_rv_timer.u_reg.cfg0_prescale_wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [11:0];
   assign \u_rv_timer.u_reg.cfg0_step_qs  = \u_rv_timer.u_reg.u_cfg0_step.q ;
-  assign \u_rv_timer.u_reg.cfg0_step_wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [23:16];
+  assign \u_rv_timer.u_reg.cfg0_step_wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [23:16];
   assign \u_rv_timer.u_reg.clk_i  = clk_i;
-  assign \u_rv_timer.u_reg.compare_lower0_0_flds_we  = \u_rv_timer.u_reg.u_compare_lower0_00_qe.d_i ;
-  assign \u_rv_timer.u_reg.compare_lower0_0_qe  = \u_rv_timer.u_reg.u_compare_lower0_00_qe.q_o ;
-  assign \u_rv_timer.u_reg.compare_lower0_0_qs  = \u_rv_timer.u_reg.u_compare_lower0_0.q ;
-  assign \u_rv_timer.u_reg.compare_lower0_0_wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd ;
-  assign \u_rv_timer.u_reg.compare_lower0_0_we  = \u_rv_timer.u_reg.u_compare_lower0_00_qe.d_i ;
-  assign \u_rv_timer.u_reg.compare_upper0_0_flds_we  = \u_rv_timer.u_reg.u_compare_upper0_00_qe.d_i ;
-  assign \u_rv_timer.u_reg.compare_upper0_0_qe  = \u_rv_timer.u_reg.u_compare_upper0_00_qe.q_o ;
-  assign \u_rv_timer.u_reg.compare_upper0_0_qs  = \u_rv_timer.u_reg.u_compare_upper0_0.q ;
-  assign \u_rv_timer.u_reg.compare_upper0_0_wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd ;
-  assign \u_rv_timer.u_reg.compare_upper0_0_we  = \u_rv_timer.u_reg.u_compare_upper0_00_qe.d_i ;
-  assign \u_rv_timer.u_reg.ctrl_qs  = \u_rv_timer.u_reg.u_ctrl.q ;
-  assign \u_rv_timer.u_reg.ctrl_wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [0];
+  assign \u_rv_timer.u_reg.compare_v0_flds_we  = \u_rv_timer.u_reg.u_compare_v00_qe.d_i ;
+  assign \u_rv_timer.u_reg.compare_v0_qe  = \u_rv_timer.u_reg.u_compare_v00_qe.q_o ;
+  assign \u_rv_timer.u_reg.compare_v0_qs  = \u_rv_timer.u_reg.u_compare_v0.q ;
+  assign \u_rv_timer.u_reg.compare_v0_wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd ;
+  assign \u_rv_timer.u_reg.compare_v0_we  = \u_rv_timer.u_reg.u_compare_v00_qe.d_i ;
+  assign \u_rv_timer.u_reg.ctrl_active_0_qs  = \u_rv_timer.u_reg.u_ctrl_active_0.q ;
+  assign \u_rv_timer.u_reg.ctrl_active_0_wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [0];
+  assign \u_rv_timer.u_reg.ctrl_gpio_intr_0_0_qs  = \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.q ;
+  assign \u_rv_timer.u_reg.ctrl_gpio_intr_0_0_wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [1];
+  assign \u_rv_timer.u_reg.ctrl_gpio_intr_1_0_qs  = \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.q ;
+  assign \u_rv_timer.u_reg.ctrl_gpio_intr_1_0_wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [2];
   assign \u_rv_timer.u_reg.devmode_i  = 1'h1;
-  assign \u_rv_timer.u_reg.hw2reg  = { \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.d , \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.de , \u_rv_timer.gen_harts[0].u_core.mtime_d [31:0], \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.de , \u_rv_timer.gen_harts[0].u_core.mtime_d [63:32], \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.de  };
+  assign \u_rv_timer.u_reg.hw2reg  = { \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.d , \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.de , \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.d , \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.de  };
   assign \u_rv_timer.u_reg.intr_enable0_qs  = \u_rv_timer.u_reg.u_intr_enable0.q ;
-  assign \u_rv_timer.u_reg.intr_enable0_wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [0];
+  assign \u_rv_timer.u_reg.intr_enable0_wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [0];
   assign \u_rv_timer.u_reg.intr_state0_qs  = \u_rv_timer.u_reg.u_intr_state0.q ;
-  assign \u_rv_timer.u_reg.intr_state0_wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [0];
+  assign \u_rv_timer.u_reg.intr_state0_wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [0];
   assign \u_rv_timer.u_reg.intr_state0_we  = \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.we ;
   assign \u_rv_timer.u_reg.intr_test0_flds_we  = \u_rv_timer.gen_harts[0].u_intr_hw.reg2hw_intr_test_qe_i ;
   assign \u_rv_timer.u_reg.intr_test0_qe  = \u_rv_timer.gen_harts[0].u_intr_hw.reg2hw_intr_test_qe_i ;
-  assign \u_rv_timer.u_reg.intr_test0_wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [0];
+  assign \u_rv_timer.u_reg.intr_test0_wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [0];
   assign \u_rv_timer.u_reg.intr_test0_we  = \u_rv_timer.gen_harts[0].u_intr_hw.reg2hw_intr_test_qe_i ;
-  assign \u_rv_timer.u_reg.reg2hw  = { \u_rv_timer.u_reg.u_ctrl.q , \u_rv_timer.u_reg.u_intr_enable0.q , \u_rv_timer.u_reg.u_intr_state0.q , \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [0], \u_rv_timer.gen_harts[0].u_intr_hw.reg2hw_intr_test_qe_i , \u_rv_timer.u_reg.u_cfg0_step.q , \u_rv_timer.u_reg.u_cfg0_prescale.q , \u_rv_timer.u_reg.u_timer_v_lower0.q , \u_rv_timer.u_reg.u_timer_v_upper0.q , \u_rv_timer.u_reg.u_compare_lower0_0.q , \u_rv_timer.u_reg.u_compare_lower0_00_qe.q_o , \u_rv_timer.u_reg.u_compare_upper0_0.q , \u_rv_timer.u_reg.u_compare_upper0_00_qe.q_o  };
-  assign \u_rv_timer.u_reg.reg_addr  = { \u_uart.u_bridge.addr_q [8:2], 2'h0 };
+  assign \u_rv_timer.u_reg.reg2hw  = { \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.q , \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.q , \u_rv_timer.u_reg.u_ctrl_active_0.q , \u_rv_timer.u_reg.u_intr_enable0.q , \u_rv_timer.u_reg.u_intr_state0.q , \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [0], \u_rv_timer.gen_harts[0].u_intr_hw.reg2hw_intr_test_qe_i , \u_rv_timer.u_reg.u_cfg0_step.q , \u_rv_timer.u_reg.u_cfg0_prescale.q , \u_rv_timer.u_reg.u_timer_v0.q , \u_rv_timer.u_reg.u_compare_v0.q , \u_rv_timer.u_reg.u_compare_v00_qe.q_o  };
+  assign \u_rv_timer.u_reg.reg_addr  = { \u_uart.u_bridge.addr_q [4:2], 2'h0 };
   assign \u_rv_timer.u_reg.reg_busy  = 1'h0;
   assign \u_rv_timer.u_reg.reg_rdata  = \u_rv_timer.u_reg.u_reg_if.rdata_i ;
   assign \u_rv_timer.u_reg.reg_rdata_next  = \u_rv_timer.u_reg.u_reg_if.rdata_i ;
-  assign \u_rv_timer.u_reg.reg_wdata  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd ;
+  assign \u_rv_timer.u_reg.reg_wdata  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd ;
   assign \u_rv_timer.u_reg.rst_ni  = rst_ni;
   assign \u_rv_timer.u_reg.shadow_busy  = 1'h0;
-  assign \u_rv_timer.u_reg.timer_v_lower0_qs  = \u_rv_timer.u_reg.u_timer_v_lower0.q ;
-  assign \u_rv_timer.u_reg.timer_v_lower0_wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd ;
-  assign \u_rv_timer.u_reg.timer_v_lower0_we  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.we ;
-  assign \u_rv_timer.u_reg.timer_v_upper0_qs  = \u_rv_timer.u_reg.u_timer_v_upper0.q ;
-  assign \u_rv_timer.u_reg.timer_v_upper0_wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd ;
-  assign \u_rv_timer.u_reg.timer_v_upper0_we  = \u_rv_timer.u_reg.u_timer_v_upper0.wr_en_data_arb.we ;
-  assign \u_rv_timer.u_reg.tl_i  = { \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h1 };
+  assign \u_rv_timer.u_reg.timer_v0_qs  = \u_rv_timer.u_reg.u_timer_v0.q ;
+  assign \u_rv_timer.u_reg.timer_v0_wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd ;
+  assign \u_rv_timer.u_reg.timer_v0_we  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.we ;
+  assign \u_rv_timer.u_reg.tl_i  = { \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h1 };
   assign \u_rv_timer.u_reg.tl_o  = { \u_rv_timer.u_reg.u_reg_if.outstanding_q , \u_rv_timer.u_reg.u_reg_if.rspop_q , 3'h0, \u_rv_timer.u_reg.u_reg_if.reqsz_q , \u_rv_timer.u_reg.u_reg_if.reqid_q , 1'h0, \u_rv_timer.u_reg.u_reg_if.rdata_q , 14'h0000, \u_rv_timer.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o  };
   assign \u_rv_timer.u_reg.tl_o_pre  = { \u_rv_timer.u_reg.u_reg_if.outstanding_q , \u_rv_timer.u_reg.u_reg_if.rspop_q , 3'h0, \u_rv_timer.u_reg.u_reg_if.reqsz_q , \u_rv_timer.u_reg.u_reg_if.reqid_q , 1'h0, \u_rv_timer.u_reg.u_reg_if.rdata_q , 14'h0000, \u_rv_timer.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o  };
   assign \u_rv_timer.u_reg.tl_reg_d2h  = { \u_rv_timer.u_reg.u_reg_if.outstanding_q , \u_rv_timer.u_reg.u_reg_if.rspop_q , 3'h0, \u_rv_timer.u_reg.u_reg_if.reqsz_q , \u_rv_timer.u_reg.u_reg_if.reqid_q , 1'h0, \u_rv_timer.u_reg.u_reg_if.rdata_q , 14'h0000, \u_rv_timer.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o  };
-  assign \u_rv_timer.u_reg.tl_reg_h2d  = { \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h1 };
+  assign \u_rv_timer.u_reg.tl_reg_h2d  = { \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h1 };
   assign \u_rv_timer.u_reg.u_cfg0_prescale.clk_i  = clk_i;
   assign \u_rv_timer.u_reg.u_cfg0_prescale.d  = 12'h000;
   assign \u_rv_timer.u_reg.u_cfg0_prescale.de  = 1'h0;
   assign \u_rv_timer.u_reg.u_cfg0_prescale.qe  = \u_rv_timer.u_reg.cfg0_we ;
   assign \u_rv_timer.u_reg.u_cfg0_prescale.qs  = \u_rv_timer.u_reg.u_cfg0_prescale.q ;
   assign \u_rv_timer.u_reg.u_cfg0_prescale.rst_ni  = rst_ni;
-  assign \u_rv_timer.u_reg.u_cfg0_prescale.wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [11:0];
+  assign \u_rv_timer.u_reg.u_cfg0_prescale.wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [11:0];
   assign \u_rv_timer.u_reg.u_cfg0_prescale.we  = \u_rv_timer.u_reg.cfg0_we ;
-  assign \u_rv_timer.u_reg.u_cfg0_prescale.wr_data  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [11:0];
+  assign \u_rv_timer.u_reg.u_cfg0_prescale.wr_data  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [11:0];
   assign \u_rv_timer.u_reg.u_cfg0_prescale.wr_en  = \u_rv_timer.u_reg.cfg0_we ;
   assign \u_rv_timer.u_reg.u_cfg0_prescale.wr_en_data_arb.d  = 12'h000;
   assign \u_rv_timer.u_reg.u_cfg0_prescale.wr_en_data_arb.de  = 1'h0;
   assign \u_rv_timer.u_reg.u_cfg0_prescale.wr_en_data_arb.gen_w.unused_q  = \u_rv_timer.u_reg.u_cfg0_prescale.q ;
   assign \u_rv_timer.u_reg.u_cfg0_prescale.wr_en_data_arb.q  = \u_rv_timer.u_reg.u_cfg0_prescale.q ;
-  assign \u_rv_timer.u_reg.u_cfg0_prescale.wr_en_data_arb.wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [11:0];
+  assign \u_rv_timer.u_reg.u_cfg0_prescale.wr_en_data_arb.wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [11:0];
   assign \u_rv_timer.u_reg.u_cfg0_prescale.wr_en_data_arb.we  = \u_rv_timer.u_reg.cfg0_we ;
-  assign \u_rv_timer.u_reg.u_cfg0_prescale.wr_en_data_arb.wr_data  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [11:0];
+  assign \u_rv_timer.u_reg.u_cfg0_prescale.wr_en_data_arb.wr_data  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [11:0];
   assign \u_rv_timer.u_reg.u_cfg0_prescale.wr_en_data_arb.wr_en  = \u_rv_timer.u_reg.cfg0_we ;
   assign \u_rv_timer.u_reg.u_cfg0_step.clk_i  = clk_i;
   assign \u_rv_timer.u_reg.u_cfg0_step.d  = 8'h00;
@@ -5282,117 +5101,133 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   assign \u_rv_timer.u_reg.u_cfg0_step.qe  = \u_rv_timer.u_reg.cfg0_we ;
   assign \u_rv_timer.u_reg.u_cfg0_step.qs  = \u_rv_timer.u_reg.u_cfg0_step.q ;
   assign \u_rv_timer.u_reg.u_cfg0_step.rst_ni  = rst_ni;
-  assign \u_rv_timer.u_reg.u_cfg0_step.wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [23:16];
+  assign \u_rv_timer.u_reg.u_cfg0_step.wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [23:16];
   assign \u_rv_timer.u_reg.u_cfg0_step.we  = \u_rv_timer.u_reg.cfg0_we ;
-  assign \u_rv_timer.u_reg.u_cfg0_step.wr_data  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [23:16];
+  assign \u_rv_timer.u_reg.u_cfg0_step.wr_data  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [23:16];
   assign \u_rv_timer.u_reg.u_cfg0_step.wr_en  = \u_rv_timer.u_reg.cfg0_we ;
   assign \u_rv_timer.u_reg.u_cfg0_step.wr_en_data_arb.d  = 8'h00;
   assign \u_rv_timer.u_reg.u_cfg0_step.wr_en_data_arb.de  = 1'h0;
   assign \u_rv_timer.u_reg.u_cfg0_step.wr_en_data_arb.gen_w.unused_q  = \u_rv_timer.u_reg.u_cfg0_step.q ;
   assign \u_rv_timer.u_reg.u_cfg0_step.wr_en_data_arb.q  = \u_rv_timer.u_reg.u_cfg0_step.q ;
-  assign \u_rv_timer.u_reg.u_cfg0_step.wr_en_data_arb.wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [23:16];
+  assign \u_rv_timer.u_reg.u_cfg0_step.wr_en_data_arb.wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [23:16];
   assign \u_rv_timer.u_reg.u_cfg0_step.wr_en_data_arb.we  = \u_rv_timer.u_reg.cfg0_we ;
-  assign \u_rv_timer.u_reg.u_cfg0_step.wr_en_data_arb.wr_data  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [23:16];
+  assign \u_rv_timer.u_reg.u_cfg0_step.wr_en_data_arb.wr_data  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [23:16];
   assign \u_rv_timer.u_reg.u_cfg0_step.wr_en_data_arb.wr_en  = \u_rv_timer.u_reg.cfg0_we ;
-  assign \u_rv_timer.u_reg.u_compare_lower0_0.clk_i  = clk_i;
-  assign \u_rv_timer.u_reg.u_compare_lower0_0.d  = 32'd0;
-  assign \u_rv_timer.u_reg.u_compare_lower0_0.de  = 1'h0;
-  assign \u_rv_timer.u_reg.u_compare_lower0_0.qe  = \u_rv_timer.u_reg.u_compare_lower0_00_qe.d_i ;
-  assign \u_rv_timer.u_reg.u_compare_lower0_0.qs  = \u_rv_timer.u_reg.u_compare_lower0_0.q ;
-  assign \u_rv_timer.u_reg.u_compare_lower0_0.rst_ni  = rst_ni;
-  assign \u_rv_timer.u_reg.u_compare_lower0_0.wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd ;
-  assign \u_rv_timer.u_reg.u_compare_lower0_0.we  = \u_rv_timer.u_reg.u_compare_lower0_00_qe.d_i ;
-  assign \u_rv_timer.u_reg.u_compare_lower0_0.wr_data  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd ;
-  assign \u_rv_timer.u_reg.u_compare_lower0_0.wr_en  = \u_rv_timer.u_reg.u_compare_lower0_00_qe.d_i ;
-  assign \u_rv_timer.u_reg.u_compare_lower0_0.wr_en_data_arb.d  = 32'd0;
-  assign \u_rv_timer.u_reg.u_compare_lower0_0.wr_en_data_arb.de  = 1'h0;
-  assign \u_rv_timer.u_reg.u_compare_lower0_0.wr_en_data_arb.gen_w.unused_q  = \u_rv_timer.u_reg.u_compare_lower0_0.q ;
-  assign \u_rv_timer.u_reg.u_compare_lower0_0.wr_en_data_arb.q  = \u_rv_timer.u_reg.u_compare_lower0_0.q ;
-  assign \u_rv_timer.u_reg.u_compare_lower0_0.wr_en_data_arb.wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd ;
-  assign \u_rv_timer.u_reg.u_compare_lower0_0.wr_en_data_arb.we  = \u_rv_timer.u_reg.u_compare_lower0_00_qe.d_i ;
-  assign \u_rv_timer.u_reg.u_compare_lower0_0.wr_en_data_arb.wr_data  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd ;
-  assign \u_rv_timer.u_reg.u_compare_lower0_0.wr_en_data_arb.wr_en  = \u_rv_timer.u_reg.u_compare_lower0_00_qe.d_i ;
-  assign \u_rv_timer.u_reg.u_compare_lower0_00_qe.clk_i  = clk_i;
-  assign \u_rv_timer.u_reg.u_compare_lower0_00_qe.rst_ni  = rst_ni;
-  assign \u_rv_timer.u_reg.u_compare_upper0_0.clk_i  = clk_i;
-  assign \u_rv_timer.u_reg.u_compare_upper0_0.d  = 32'd0;
-  assign \u_rv_timer.u_reg.u_compare_upper0_0.de  = 1'h0;
-  assign \u_rv_timer.u_reg.u_compare_upper0_0.qe  = \u_rv_timer.u_reg.u_compare_upper0_00_qe.d_i ;
-  assign \u_rv_timer.u_reg.u_compare_upper0_0.qs  = \u_rv_timer.u_reg.u_compare_upper0_0.q ;
-  assign \u_rv_timer.u_reg.u_compare_upper0_0.rst_ni  = rst_ni;
-  assign \u_rv_timer.u_reg.u_compare_upper0_0.wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd ;
-  assign \u_rv_timer.u_reg.u_compare_upper0_0.we  = \u_rv_timer.u_reg.u_compare_upper0_00_qe.d_i ;
-  assign \u_rv_timer.u_reg.u_compare_upper0_0.wr_data  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd ;
-  assign \u_rv_timer.u_reg.u_compare_upper0_0.wr_en  = \u_rv_timer.u_reg.u_compare_upper0_00_qe.d_i ;
-  assign \u_rv_timer.u_reg.u_compare_upper0_0.wr_en_data_arb.d  = 32'd0;
-  assign \u_rv_timer.u_reg.u_compare_upper0_0.wr_en_data_arb.de  = 1'h0;
-  assign \u_rv_timer.u_reg.u_compare_upper0_0.wr_en_data_arb.gen_w.unused_q  = \u_rv_timer.u_reg.u_compare_upper0_0.q ;
-  assign \u_rv_timer.u_reg.u_compare_upper0_0.wr_en_data_arb.q  = \u_rv_timer.u_reg.u_compare_upper0_0.q ;
-  assign \u_rv_timer.u_reg.u_compare_upper0_0.wr_en_data_arb.wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd ;
-  assign \u_rv_timer.u_reg.u_compare_upper0_0.wr_en_data_arb.we  = \u_rv_timer.u_reg.u_compare_upper0_00_qe.d_i ;
-  assign \u_rv_timer.u_reg.u_compare_upper0_0.wr_en_data_arb.wr_data  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd ;
-  assign \u_rv_timer.u_reg.u_compare_upper0_0.wr_en_data_arb.wr_en  = \u_rv_timer.u_reg.u_compare_upper0_00_qe.d_i ;
-  assign \u_rv_timer.u_reg.u_compare_upper0_00_qe.clk_i  = clk_i;
-  assign \u_rv_timer.u_reg.u_compare_upper0_00_qe.rst_ni  = rst_ni;
-  assign \u_rv_timer.u_reg.u_ctrl.clk_i  = clk_i;
-  assign \u_rv_timer.u_reg.u_ctrl.d  = 1'h0;
-  assign \u_rv_timer.u_reg.u_ctrl.de  = 1'h0;
-  assign \u_rv_timer.u_reg.u_ctrl.qe  = \u_rv_timer.u_reg.ctrl_we ;
-  assign \u_rv_timer.u_reg.u_ctrl.qs  = \u_rv_timer.u_reg.u_ctrl.q ;
-  assign \u_rv_timer.u_reg.u_ctrl.rst_ni  = rst_ni;
-  assign \u_rv_timer.u_reg.u_ctrl.wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [0];
-  assign \u_rv_timer.u_reg.u_ctrl.we  = \u_rv_timer.u_reg.ctrl_we ;
-  assign \u_rv_timer.u_reg.u_ctrl.wr_data  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [0];
-  assign \u_rv_timer.u_reg.u_ctrl.wr_en  = \u_rv_timer.u_reg.ctrl_we ;
-  assign \u_rv_timer.u_reg.u_ctrl.wr_en_data_arb.d  = 1'h0;
-  assign \u_rv_timer.u_reg.u_ctrl.wr_en_data_arb.de  = 1'h0;
-  assign \u_rv_timer.u_reg.u_ctrl.wr_en_data_arb.gen_w.unused_q  = \u_rv_timer.u_reg.u_ctrl.q ;
-  assign \u_rv_timer.u_reg.u_ctrl.wr_en_data_arb.q  = \u_rv_timer.u_reg.u_ctrl.q ;
-  assign \u_rv_timer.u_reg.u_ctrl.wr_en_data_arb.wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [0];
-  assign \u_rv_timer.u_reg.u_ctrl.wr_en_data_arb.we  = \u_rv_timer.u_reg.ctrl_we ;
-  assign \u_rv_timer.u_reg.u_ctrl.wr_en_data_arb.wr_data  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [0];
-  assign \u_rv_timer.u_reg.u_ctrl.wr_en_data_arb.wr_en  = \u_rv_timer.u_reg.ctrl_we ;
+  assign \u_rv_timer.u_reg.u_compare_v0.clk_i  = clk_i;
+  assign \u_rv_timer.u_reg.u_compare_v0.d  = 32'd0;
+  assign \u_rv_timer.u_reg.u_compare_v0.de  = 1'h0;
+  assign \u_rv_timer.u_reg.u_compare_v0.qe  = \u_rv_timer.u_reg.u_compare_v00_qe.d_i ;
+  assign \u_rv_timer.u_reg.u_compare_v0.qs  = \u_rv_timer.u_reg.u_compare_v0.q ;
+  assign \u_rv_timer.u_reg.u_compare_v0.rst_ni  = rst_ni;
+  assign \u_rv_timer.u_reg.u_compare_v0.wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd ;
+  assign \u_rv_timer.u_reg.u_compare_v0.we  = \u_rv_timer.u_reg.u_compare_v00_qe.d_i ;
+  assign \u_rv_timer.u_reg.u_compare_v0.wr_data  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd ;
+  assign \u_rv_timer.u_reg.u_compare_v0.wr_en  = \u_rv_timer.u_reg.u_compare_v00_qe.d_i ;
+  assign \u_rv_timer.u_reg.u_compare_v0.wr_en_data_arb.d  = 32'd0;
+  assign \u_rv_timer.u_reg.u_compare_v0.wr_en_data_arb.de  = 1'h0;
+  assign \u_rv_timer.u_reg.u_compare_v0.wr_en_data_arb.gen_w.unused_q  = \u_rv_timer.u_reg.u_compare_v0.q ;
+  assign \u_rv_timer.u_reg.u_compare_v0.wr_en_data_arb.q  = \u_rv_timer.u_reg.u_compare_v0.q ;
+  assign \u_rv_timer.u_reg.u_compare_v0.wr_en_data_arb.wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd ;
+  assign \u_rv_timer.u_reg.u_compare_v0.wr_en_data_arb.we  = \u_rv_timer.u_reg.u_compare_v00_qe.d_i ;
+  assign \u_rv_timer.u_reg.u_compare_v0.wr_en_data_arb.wr_data  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd ;
+  assign \u_rv_timer.u_reg.u_compare_v0.wr_en_data_arb.wr_en  = \u_rv_timer.u_reg.u_compare_v00_qe.d_i ;
+  assign \u_rv_timer.u_reg.u_compare_v00_qe.clk_i  = clk_i;
+  assign \u_rv_timer.u_reg.u_compare_v00_qe.rst_ni  = rst_ni;
+  assign \u_rv_timer.u_reg.u_ctrl_active_0.clk_i  = clk_i;
+  assign \u_rv_timer.u_reg.u_ctrl_active_0.d  = 1'h0;
+  assign \u_rv_timer.u_reg.u_ctrl_active_0.de  = 1'h0;
+  assign \u_rv_timer.u_reg.u_ctrl_active_0.qe  = \u_rv_timer.u_reg.ctrl_we ;
+  assign \u_rv_timer.u_reg.u_ctrl_active_0.qs  = \u_rv_timer.u_reg.u_ctrl_active_0.q ;
+  assign \u_rv_timer.u_reg.u_ctrl_active_0.rst_ni  = rst_ni;
+  assign \u_rv_timer.u_reg.u_ctrl_active_0.wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [0];
+  assign \u_rv_timer.u_reg.u_ctrl_active_0.we  = \u_rv_timer.u_reg.ctrl_we ;
+  assign \u_rv_timer.u_reg.u_ctrl_active_0.wr_data  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [0];
+  assign \u_rv_timer.u_reg.u_ctrl_active_0.wr_en  = \u_rv_timer.u_reg.ctrl_we ;
+  assign \u_rv_timer.u_reg.u_ctrl_active_0.wr_en_data_arb.d  = 1'h0;
+  assign \u_rv_timer.u_reg.u_ctrl_active_0.wr_en_data_arb.de  = 1'h0;
+  assign \u_rv_timer.u_reg.u_ctrl_active_0.wr_en_data_arb.gen_w.unused_q  = \u_rv_timer.u_reg.u_ctrl_active_0.q ;
+  assign \u_rv_timer.u_reg.u_ctrl_active_0.wr_en_data_arb.q  = \u_rv_timer.u_reg.u_ctrl_active_0.q ;
+  assign \u_rv_timer.u_reg.u_ctrl_active_0.wr_en_data_arb.wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [0];
+  assign \u_rv_timer.u_reg.u_ctrl_active_0.wr_en_data_arb.we  = \u_rv_timer.u_reg.ctrl_we ;
+  assign \u_rv_timer.u_reg.u_ctrl_active_0.wr_en_data_arb.wr_data  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [0];
+  assign \u_rv_timer.u_reg.u_ctrl_active_0.wr_en_data_arb.wr_en  = \u_rv_timer.u_reg.ctrl_we ;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.clk_i  = clk_i;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.d  = 1'h0;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.de  = 1'h0;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.qe  = \u_rv_timer.u_reg.ctrl_we ;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.qs  = \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.q ;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.rst_ni  = rst_ni;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [1];
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.we  = \u_rv_timer.u_reg.ctrl_we ;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.wr_data  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [1];
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.wr_en  = \u_rv_timer.u_reg.ctrl_we ;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.wr_en_data_arb.d  = 1'h0;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.wr_en_data_arb.de  = 1'h0;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.wr_en_data_arb.gen_w.unused_q  = \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.q ;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.wr_en_data_arb.q  = \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.q ;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.wr_en_data_arb.wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [1];
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.wr_en_data_arb.we  = \u_rv_timer.u_reg.ctrl_we ;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.wr_en_data_arb.wr_data  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [1];
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_0_0.wr_en_data_arb.wr_en  = \u_rv_timer.u_reg.ctrl_we ;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.clk_i  = clk_i;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.d  = 1'h0;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.de  = 1'h0;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.qe  = \u_rv_timer.u_reg.ctrl_we ;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.qs  = \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.q ;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.rst_ni  = rst_ni;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [2];
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.we  = \u_rv_timer.u_reg.ctrl_we ;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.wr_data  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [2];
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.wr_en  = \u_rv_timer.u_reg.ctrl_we ;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.wr_en_data_arb.d  = 1'h0;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.wr_en_data_arb.de  = 1'h0;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.wr_en_data_arb.gen_w.unused_q  = \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.q ;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.wr_en_data_arb.q  = \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.q ;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.wr_en_data_arb.wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [2];
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.wr_en_data_arb.we  = \u_rv_timer.u_reg.ctrl_we ;
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.wr_en_data_arb.wr_data  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [2];
+  assign \u_rv_timer.u_reg.u_ctrl_gpio_intr_1_0.wr_en_data_arb.wr_en  = \u_rv_timer.u_reg.ctrl_we ;
   assign \u_rv_timer.u_reg.u_intr_enable0.clk_i  = clk_i;
   assign \u_rv_timer.u_reg.u_intr_enable0.d  = 1'h0;
   assign \u_rv_timer.u_reg.u_intr_enable0.de  = 1'h0;
   assign \u_rv_timer.u_reg.u_intr_enable0.qe  = \u_rv_timer.u_reg.intr_enable0_we ;
   assign \u_rv_timer.u_reg.u_intr_enable0.qs  = \u_rv_timer.u_reg.u_intr_enable0.q ;
   assign \u_rv_timer.u_reg.u_intr_enable0.rst_ni  = rst_ni;
-  assign \u_rv_timer.u_reg.u_intr_enable0.wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [0];
+  assign \u_rv_timer.u_reg.u_intr_enable0.wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [0];
   assign \u_rv_timer.u_reg.u_intr_enable0.we  = \u_rv_timer.u_reg.intr_enable0_we ;
-  assign \u_rv_timer.u_reg.u_intr_enable0.wr_data  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [0];
+  assign \u_rv_timer.u_reg.u_intr_enable0.wr_data  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [0];
   assign \u_rv_timer.u_reg.u_intr_enable0.wr_en  = \u_rv_timer.u_reg.intr_enable0_we ;
   assign \u_rv_timer.u_reg.u_intr_enable0.wr_en_data_arb.d  = 1'h0;
   assign \u_rv_timer.u_reg.u_intr_enable0.wr_en_data_arb.de  = 1'h0;
   assign \u_rv_timer.u_reg.u_intr_enable0.wr_en_data_arb.gen_w.unused_q  = \u_rv_timer.u_reg.u_intr_enable0.q ;
   assign \u_rv_timer.u_reg.u_intr_enable0.wr_en_data_arb.q  = \u_rv_timer.u_reg.u_intr_enable0.q ;
-  assign \u_rv_timer.u_reg.u_intr_enable0.wr_en_data_arb.wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [0];
+  assign \u_rv_timer.u_reg.u_intr_enable0.wr_en_data_arb.wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [0];
   assign \u_rv_timer.u_reg.u_intr_enable0.wr_en_data_arb.we  = \u_rv_timer.u_reg.intr_enable0_we ;
-  assign \u_rv_timer.u_reg.u_intr_enable0.wr_en_data_arb.wr_data  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [0];
+  assign \u_rv_timer.u_reg.u_intr_enable0.wr_en_data_arb.wr_data  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [0];
   assign \u_rv_timer.u_reg.u_intr_enable0.wr_en_data_arb.wr_en  = \u_rv_timer.u_reg.intr_enable0_we ;
   assign \u_rv_timer.u_reg.u_intr_state0.clk_i  = clk_i;
   assign \u_rv_timer.u_reg.u_intr_state0.d  = \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.d ;
   assign \u_rv_timer.u_reg.u_intr_state0.de  = \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.de ;
   assign \u_rv_timer.u_reg.u_intr_state0.qs  = \u_rv_timer.u_reg.u_intr_state0.q ;
   assign \u_rv_timer.u_reg.u_intr_state0.rst_ni  = rst_ni;
-  assign \u_rv_timer.u_reg.u_intr_state0.wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [0];
+  assign \u_rv_timer.u_reg.u_intr_state0.wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [0];
   assign \u_rv_timer.u_reg.u_intr_state0.we  = \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.we ;
   assign \u_rv_timer.u_reg.u_intr_state0.wr_en  = \u_rv_timer.u_reg.u_intr_state0.qe ;
   assign \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.q  = \u_rv_timer.u_reg.u_intr_state0.q ;
-  assign \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [0];
+  assign \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [0];
   assign \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.wr_data  = \u_rv_timer.u_reg.u_intr_state0.wr_data ;
   assign \u_rv_timer.u_reg.u_intr_state0.wr_en_data_arb.wr_en  = \u_rv_timer.u_reg.u_intr_state0.qe ;
   assign \u_rv_timer.u_reg.u_intr_test0.d  = 1'h0;
   assign \u_rv_timer.u_reg.u_intr_test0.ds  = 1'h0;
-  assign \u_rv_timer.u_reg.u_intr_test0.q  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [0];
+  assign \u_rv_timer.u_reg.u_intr_test0.q  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [0];
   assign \u_rv_timer.u_reg.u_intr_test0.qe  = \u_rv_timer.gen_harts[0].u_intr_hw.reg2hw_intr_test_qe_i ;
   assign \u_rv_timer.u_reg.u_intr_test0.qre  = 1'h0;
   assign \u_rv_timer.u_reg.u_intr_test0.qs  = 1'h0;
   assign \u_rv_timer.u_reg.u_intr_test0.re  = 1'h0;
-  assign \u_rv_timer.u_reg.u_intr_test0.wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd [0];
+  assign \u_rv_timer.u_reg.u_intr_test0.wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd [0];
   assign \u_rv_timer.u_reg.u_intr_test0.we  = \u_rv_timer.gen_harts[0].u_intr_hw.reg2hw_intr_test_qe_i ;
   assign \u_rv_timer.u_reg.u_reg_if.addr_align_err  = 1'h0;
-  assign \u_rv_timer.u_reg.u_reg_if.addr_o  = { \u_uart.u_bridge.addr_q [8:2], 2'h0 };
+  assign \u_rv_timer.u_reg.u_reg_if.addr_o  = { \u_uart.u_bridge.addr_q [4:2], 2'h0 };
   assign \u_rv_timer.u_reg.u_reg_if.be_o  = \u_rv_timer.u_reg.reg_be ;
   assign \u_rv_timer.u_reg.u_reg_if.busy_i  = 1'h0;
   assign \u_rv_timer.u_reg.u_reg_if.clk_i  = clk_i;
@@ -5407,7 +5242,7 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   assign \u_rv_timer.u_reg.u_reg_if.rdata  = \u_rv_timer.u_reg.u_reg_if.rdata_q ;
   assign \u_rv_timer.u_reg.u_reg_if.re_o  = \u_rv_timer.u_reg.reg_re ;
   assign \u_rv_timer.u_reg.u_reg_if.rst_ni  = rst_ni;
-  assign \u_rv_timer.u_reg.u_reg_if.tl_i  = { \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h1 };
+  assign \u_rv_timer.u_reg.u_reg_if.tl_i  = { \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h1 };
   assign \u_rv_timer.u_reg.u_reg_if.tl_o  = { \u_rv_timer.u_reg.u_reg_if.outstanding_q , \u_rv_timer.u_reg.u_reg_if.rspop_q , 3'h0, \u_rv_timer.u_reg.u_reg_if.reqsz_q , \u_rv_timer.u_reg.u_reg_if.reqid_q , 1'h0, \u_rv_timer.u_reg.u_reg_if.rdata_q , 14'h0000, \u_rv_timer.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o  };
   assign \u_rv_timer.u_reg.u_reg_if.tl_o_pre  = { \u_rv_timer.u_reg.u_reg_if.outstanding_q , \u_rv_timer.u_reg.u_reg_if.rspop_q , 3'h0, \u_rv_timer.u_reg.u_reg_if.reqsz_q , \u_rv_timer.u_reg.u_reg_if.reqid_q , 1'h0, \u_rv_timer.u_reg.u_reg_if.rdata_q , 14'h0000, \u_rv_timer.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o  };
   assign \u_rv_timer.u_reg.u_reg_if.u_err.clk_i  = clk_i;
@@ -5416,42 +5251,26 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   assign \u_rv_timer.u_reg.u_reg_if.u_err.op_get  = \u_gpio.u_reg.u_reg_if.u_err.op_get ;
   assign \u_rv_timer.u_reg.u_reg_if.u_err.op_partial  = \u_gpio.u_reg.u_reg_if.u_err.op_partial ;
   assign \u_rv_timer.u_reg.u_reg_if.u_err.rst_ni  = rst_ni;
-  assign { \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [108], \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [104:0] } = { \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o , 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h1 };
+  assign { \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [108], \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [104:0] } = { \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o , 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h1 };
   assign \u_rv_timer.u_reg.u_reg_if.u_rsp_intg_gen.tl_i  = { \u_rv_timer.u_reg.u_reg_if.outstanding_q , \u_rv_timer.u_reg.u_reg_if.rspop_q , 3'h0, \u_rv_timer.u_reg.u_reg_if.reqsz_q , \u_rv_timer.u_reg.u_reg_if.reqid_q , 1'h0, \u_rv_timer.u_reg.u_reg_if.rdata_q , 14'h0000, \u_rv_timer.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o  };
   assign \u_rv_timer.u_reg.u_reg_if.u_rsp_intg_gen.tl_o  = { \u_rv_timer.u_reg.u_reg_if.outstanding_q , \u_rv_timer.u_reg.u_reg_if.rspop_q , 3'h0, \u_rv_timer.u_reg.u_reg_if.reqsz_q , \u_rv_timer.u_reg.u_reg_if.reqid_q , 1'h0, \u_rv_timer.u_reg.u_reg_if.rdata_q , 14'h0000, \u_rv_timer.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o  };
-  assign \u_rv_timer.u_reg.u_reg_if.wdata_o  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd ;
+  assign \u_rv_timer.u_reg.u_reg_if.wdata_o  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd ;
   assign \u_rv_timer.u_reg.u_reg_if.we_o  = \u_rv_timer.u_reg.reg_we ;
   assign \u_rv_timer.u_reg.u_reg_if.wr_req  = \u_rv_timer.u_reg.reg_we ;
   assign \u_rv_timer.u_reg.u_rsp_intg_gen.tl_i  = { \u_rv_timer.u_reg.u_reg_if.outstanding_q , \u_rv_timer.u_reg.u_reg_if.rspop_q , 3'h0, \u_rv_timer.u_reg.u_reg_if.reqsz_q , \u_rv_timer.u_reg.u_reg_if.reqid_q , 1'h0, \u_rv_timer.u_reg.u_reg_if.rdata_q , 14'h0000, \u_rv_timer.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o  };
   assign \u_rv_timer.u_reg.u_rsp_intg_gen.tl_o  = { \u_rv_timer.u_reg.u_reg_if.outstanding_q , \u_rv_timer.u_reg.u_reg_if.rspop_q , 3'h0, \u_rv_timer.u_reg.u_reg_if.reqsz_q , \u_rv_timer.u_reg.u_reg_if.reqid_q , 1'h0, \u_rv_timer.u_reg.u_reg_if.rdata_q , 14'h0000, \u_rv_timer.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o  };
-  assign \u_rv_timer.u_reg.u_timer_v_lower0.clk_i  = clk_i;
-  assign \u_rv_timer.u_reg.u_timer_v_lower0.d  = \u_rv_timer.gen_harts[0].u_core.mtime_d [31:0];
-  assign \u_rv_timer.u_reg.u_timer_v_lower0.de  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.de ;
-  assign \u_rv_timer.u_reg.u_timer_v_lower0.qs  = \u_rv_timer.u_reg.u_timer_v_lower0.q ;
-  assign \u_rv_timer.u_reg.u_timer_v_lower0.rst_ni  = rst_ni;
-  assign \u_rv_timer.u_reg.u_timer_v_lower0.wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd ;
-  assign \u_rv_timer.u_reg.u_timer_v_lower0.we  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.we ;
-  assign \u_rv_timer.u_reg.u_timer_v_lower0.wr_en  = \u_rv_timer.u_reg.u_timer_v_lower0.qe ;
-  assign \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.d  = \u_rv_timer.gen_harts[0].u_core.mtime_d [31:0];
-  assign \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.gen_w.unused_q  = \u_rv_timer.u_reg.u_timer_v_lower0.q ;
-  assign \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.q  = \u_rv_timer.u_reg.u_timer_v_lower0.q ;
-  assign \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wr_data  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_data ;
-  assign \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wr_en  = \u_rv_timer.u_reg.u_timer_v_lower0.qe ;
-  assign \u_rv_timer.u_reg.u_timer_v_upper0.clk_i  = clk_i;
-  assign \u_rv_timer.u_reg.u_timer_v_upper0.d  = \u_rv_timer.gen_harts[0].u_core.mtime_d [63:32];
-  assign \u_rv_timer.u_reg.u_timer_v_upper0.de  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.de ;
-  assign \u_rv_timer.u_reg.u_timer_v_upper0.qs  = \u_rv_timer.u_reg.u_timer_v_upper0.q ;
-  assign \u_rv_timer.u_reg.u_timer_v_upper0.rst_ni  = rst_ni;
-  assign \u_rv_timer.u_reg.u_timer_v_upper0.wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd ;
-  assign \u_rv_timer.u_reg.u_timer_v_upper0.we  = \u_rv_timer.u_reg.u_timer_v_upper0.wr_en_data_arb.we ;
-  assign \u_rv_timer.u_reg.u_timer_v_upper0.wr_en  = \u_rv_timer.u_reg.u_timer_v_upper0.qe ;
-  assign \u_rv_timer.u_reg.u_timer_v_upper0.wr_en_data_arb.d  = \u_rv_timer.gen_harts[0].u_core.mtime_d [63:32];
-  assign \u_rv_timer.u_reg.u_timer_v_upper0.wr_en_data_arb.de  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.de ;
-  assign \u_rv_timer.u_reg.u_timer_v_upper0.wr_en_data_arb.gen_w.unused_q  = \u_rv_timer.u_reg.u_timer_v_upper0.q ;
-  assign \u_rv_timer.u_reg.u_timer_v_upper0.wr_en_data_arb.q  = \u_rv_timer.u_reg.u_timer_v_upper0.q ;
-  assign \u_rv_timer.u_reg.u_timer_v_upper0.wr_en_data_arb.wd  = \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd ;
-  assign \u_rv_timer.u_reg.u_timer_v_upper0.wr_en_data_arb.wr_data  = \u_rv_timer.u_reg.u_timer_v_upper0.wr_data ;
-  assign \u_rv_timer.u_reg.u_timer_v_upper0.wr_en_data_arb.wr_en  = \u_rv_timer.u_reg.u_timer_v_upper0.qe ;
+  assign \u_rv_timer.u_reg.u_timer_v0.clk_i  = clk_i;
+  assign \u_rv_timer.u_reg.u_timer_v0.d  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.d ;
+  assign \u_rv_timer.u_reg.u_timer_v0.de  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.de ;
+  assign \u_rv_timer.u_reg.u_timer_v0.qs  = \u_rv_timer.u_reg.u_timer_v0.q ;
+  assign \u_rv_timer.u_reg.u_timer_v0.rst_ni  = rst_ni;
+  assign \u_rv_timer.u_reg.u_timer_v0.wd  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd ;
+  assign \u_rv_timer.u_reg.u_timer_v0.we  = \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.we ;
+  assign \u_rv_timer.u_reg.u_timer_v0.wr_en  = \u_rv_timer.u_reg.u_timer_v0.qe ;
+  assign \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.gen_w.unused_q  = \u_rv_timer.u_reg.u_timer_v0.q ;
+  assign \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.q  = \u_rv_timer.u_reg.u_timer_v0.q ;
+  assign \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wr_data  = \u_rv_timer.u_reg.u_timer_v0.wr_data ;
+  assign \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wr_en  = \u_rv_timer.u_reg.u_timer_v0.qe ;
   assign \u_uart.addr_o  = { \u_uart.u_bridge.addr_q [31:2], 2'h0 };
   assign \u_uart.be_o  = \u_uart.u_bridge.be_q ;
   assign \u_uart.cio_rx_i  = cio_rx_i;
@@ -5487,7 +5306,7 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   assign \u_uart.u_bridge.valid_i  = \xbar.u_s1n_6.tl_t_p [65];
   assign \u_uart.u_bridge.wdata_o  = \u_uart.u_bridge.wdata_q ;
   assign \u_uart.u_bridge.we_o  = \u_uart.u_bridge.we_q ;
-  assign \u_uart.u_reg.addr_hit  = \u_gpio.u_reg.addr_hit [5:0];
+  assign \u_uart.u_reg.addr_hit  = \u_rv_timer.u_reg.addr_hit [5:0];
   assign \u_uart.u_reg.clk_i  = clk_i;
   assign \u_uart.u_reg.ctrl_llpbk_qs  = \u_uart.u_reg.u_ctrl_llpbk.q ;
   assign \u_uart.u_reg.ctrl_llpbk_wd  = \u_uart.u_reg.reg_wdata [5];
@@ -6011,9 +5830,9 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   assign \xbar.tl_pwm_i  = { \u_pwm.u_reg.u_reg_if.outstanding_q , \u_pwm.u_reg.u_reg_if.rspop_q , 3'h0, \u_pwm.u_reg.u_reg_if.reqsz_q , \u_pwm.u_reg.u_reg_if.reqid_q , 1'h0, \u_pwm.u_reg.u_reg_if.rdata_q , 14'h0000, \u_pwm.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[1].fifo_d.reqfifo.full_o  };
   assign \xbar.tl_pwm_o  = { \xbar.u_s1n_6.gen_dfifo[1].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_pwm.u_reg.reg_wdata , tl_pwm_h2d[23:1], 1'h1 };
   assign \xbar.tl_rv_timer_i  = { \u_rv_timer.u_reg.u_reg_if.outstanding_q , \u_rv_timer.u_reg.u_reg_if.rspop_q , 3'h0, \u_rv_timer.u_reg.u_reg_if.reqsz_q , \u_rv_timer.u_reg.u_reg_if.reqid_q , 1'h0, \u_rv_timer.u_reg.u_reg_if.rdata_q , 14'h0000, \u_rv_timer.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o  };
-  assign \xbar.tl_rv_timer_o  = { \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h1 };
+  assign \xbar.tl_rv_timer_o  = { \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h1 };
   assign \xbar.tl_s1n_6_ds_d2h  = { \u_uart.u_reg.u_reg_if.outstanding_q , \u_uart.u_reg.u_reg_if.rspop_q , 3'h0, \u_uart.u_reg.u_reg_if.reqsz_q , \u_uart.u_reg.u_reg_if.reqid_q , 1'h0, \u_uart.u_reg.u_reg_if.rdata_q , 14'h0000, \u_uart.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[0].fifo_d.reqfifo.full_o , \u_pwm.u_reg.u_reg_if.outstanding_q , \u_pwm.u_reg.u_reg_if.rspop_q , 3'h0, \u_pwm.u_reg.u_reg_if.reqsz_q , \u_pwm.u_reg.u_reg_if.reqid_q , 1'h0, \u_pwm.u_reg.u_reg_if.rdata_q , 14'h0000, \u_pwm.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[1].fifo_d.reqfifo.full_o , \u_gpio.u_reg.u_reg_if.outstanding_q , \u_gpio.u_reg.u_reg_if.rspop_q , 3'h0, \u_gpio.u_reg.u_reg_if.reqsz_q , \u_gpio.u_reg.u_reg_if.reqid_q , 1'h0, \u_gpio.u_reg.u_reg_if.rdata_q , 14'h0000, \u_gpio.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[2].fifo_d.reqfifo.full_o , \u_rv_timer.u_reg.u_reg_if.outstanding_q , \u_rv_timer.u_reg.u_reg_if.rspop_q , 3'h0, \u_rv_timer.u_reg.u_reg_if.reqsz_q , \u_rv_timer.u_reg.u_reg_if.reqid_q , 1'h0, \u_rv_timer.u_reg.u_reg_if.rdata_q , 14'h0000, \u_rv_timer.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o  };
-  assign \xbar.tl_s1n_6_ds_h2d  = { \xbar.u_s1n_6.gen_dfifo[0].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_uart.u_reg.reg_wdata , tl_uart_h2d[23:1], 1'h1, \xbar.u_s1n_6.gen_dfifo[1].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_pwm.u_reg.reg_wdata , tl_pwm_h2d[23:1], 1'h1, \xbar.u_s1n_6.gen_dfifo[2].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_gpio.u_reg.reg_wdata , tl_gpio_h2d[23:1], 1'h1, \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h1 };
+  assign \xbar.tl_s1n_6_ds_h2d  = { \xbar.u_s1n_6.gen_dfifo[0].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_uart.u_reg.reg_wdata , tl_uart_h2d[23:1], 1'h1, \xbar.u_s1n_6.gen_dfifo[1].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_pwm.u_reg.reg_wdata , tl_pwm_h2d[23:1], 1'h1, \xbar.u_s1n_6.gen_dfifo[2].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_gpio.u_reg.reg_wdata , tl_gpio_h2d[23:1], 1'h1, \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h1 };
   assign \xbar.tl_s1n_6_us_d2h  = { \xbar.u_s1n_6.tl_t_p [65:48], \u_uart.rdata_i , \xbar.u_s1n_6.tl_t_p [15:1], \uart_host_adapter.gnt_o  };
   assign \xbar.tl_s1n_6_us_h2d  = { \u_uart.u_bridge.req_q , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_uart.u_bridge.wdata_q , 24'h048001 };
   assign \xbar.tl_uart_host_i  = { \u_uart.u_bridge.req_q , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_uart.u_bridge.wdata_q , 24'h048001 };
@@ -6168,10 +5987,10 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   assign \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.depth_o  = 1'h0;
   assign \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.err_o  = 1'h0;
   assign \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.gen_passthru_fifo.unused_clr  = 1'h0;
-  assign \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rdata_o  = { \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h0 };
+  assign \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rdata_o  = { \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h0 };
   assign \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rready_i  = \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o ;
   assign \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rst_ni  = rst_ni;
-  assign \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.wdata_i  = { \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h0 };
+  assign \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.wdata_i  = { \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h0 };
   assign \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.wready_o  = \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o ;
   assign \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.wvalid_i  = \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o ;
   assign \xbar.u_s1n_6.gen_dfifo[3].fifo_d.rspfifo.clk_i  = clk_i;
@@ -6193,8 +6012,8 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   assign \xbar.u_s1n_6.gen_dfifo[3].fifo_d.spare_rsp_i  = 1'h0;
   assign \xbar.u_s1n_6.gen_dfifo[3].fifo_d.spare_rsp_o  = 1'h0;
   assign \xbar.u_s1n_6.gen_dfifo[3].fifo_d.tl_d_i  = { \u_rv_timer.u_reg.u_reg_if.outstanding_q , \u_rv_timer.u_reg.u_reg_if.rspop_q , 3'h0, \u_rv_timer.u_reg.u_reg_if.reqsz_q , \u_rv_timer.u_reg.u_reg_if.reqid_q , 1'h0, \u_rv_timer.u_reg.u_reg_if.rdata_q , 14'h0000, \u_rv_timer.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o  };
-  assign \xbar.u_s1n_6.gen_dfifo[3].fifo_d.tl_d_o  = { \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h1 };
-  assign \xbar.u_s1n_6.gen_dfifo[3].fifo_d.tl_h_i  = { \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h1 };
+  assign \xbar.u_s1n_6.gen_dfifo[3].fifo_d.tl_d_o  = { \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h1 };
+  assign \xbar.u_s1n_6.gen_dfifo[3].fifo_d.tl_h_i  = { \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h1 };
   assign \xbar.u_s1n_6.gen_dfifo[3].fifo_d.tl_h_o  = { \u_rv_timer.u_reg.u_reg_if.outstanding_q , \u_rv_timer.u_reg.u_reg_if.rspop_q , 3'h0, \u_rv_timer.u_reg.u_reg_if.reqsz_q , \u_rv_timer.u_reg.u_reg_if.reqid_q , 1'h0, \xbar.u_s1n_6.gen_dfifo[3].fifo_d.rspfifo.rdata_o [47:16], 14'h0000, \u_rv_timer.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o  };
   assign \xbar.u_s1n_6.gen_err_resp.err_resp.clk_i  = clk_i;
   assign \xbar.u_s1n_6.gen_err_resp.err_resp.rst_ni  = rst_ni;
@@ -6205,14 +6024,14 @@ module soc(clk_i, rst_ni, cio_rx_i, cio_tx_o, cio_tx_en_o, cio_pwm_o, cio_pwm_en
   assign \xbar.u_s1n_6.gen_err_resp.err_resp.u_intg_gen.tl_o  = { \xbar.u_s1n_6.gen_err_resp.err_resp.err_rsp_pending , \xbar.u_s1n_6.gen_err_resp.err_resp.tl_h_o [64:62], 3'h0, \xbar.u_s1n_6.gen_err_resp.err_resp.err_size , \xbar.u_s1n_6.gen_err_resp.err_resp.err_source , 1'h0, \xbar.u_s1n_6.gen_err_resp.err_resp.tl_h_o [47:16], 15'h0001, \xbar.u_s1n_6.gen_err_resp.err_resp.tl_h_o_int [0] };
   assign \xbar.u_s1n_6.rst_ni  = rst_ni;
   assign \xbar.u_s1n_6.tl_d_i  = { \u_uart.u_reg.u_reg_if.outstanding_q , \u_uart.u_reg.u_reg_if.rspop_q , 3'h0, \u_uart.u_reg.u_reg_if.reqsz_q , \u_uart.u_reg.u_reg_if.reqid_q , 1'h0, \u_uart.u_reg.u_reg_if.rdata_q , 14'h0000, \u_uart.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[0].fifo_d.reqfifo.full_o , \u_pwm.u_reg.u_reg_if.outstanding_q , \u_pwm.u_reg.u_reg_if.rspop_q , 3'h0, \u_pwm.u_reg.u_reg_if.reqsz_q , \u_pwm.u_reg.u_reg_if.reqid_q , 1'h0, \u_pwm.u_reg.u_reg_if.rdata_q , 14'h0000, \u_pwm.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[1].fifo_d.reqfifo.full_o , \u_gpio.u_reg.u_reg_if.outstanding_q , \u_gpio.u_reg.u_reg_if.rspop_q , 3'h0, \u_gpio.u_reg.u_reg_if.reqsz_q , \u_gpio.u_reg.u_reg_if.reqid_q , 1'h0, \u_gpio.u_reg.u_reg_if.rdata_q , 14'h0000, \u_gpio.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[2].fifo_d.reqfifo.full_o , \u_rv_timer.u_reg.u_reg_if.outstanding_q , \u_rv_timer.u_reg.u_reg_if.rspop_q , 3'h0, \u_rv_timer.u_reg.u_reg_if.reqsz_q , \u_rv_timer.u_reg.u_reg_if.reqid_q , 1'h0, \u_rv_timer.u_reg.u_reg_if.rdata_q , 14'h0000, \u_rv_timer.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o  };
-  assign \xbar.u_s1n_6.tl_d_o  = { \xbar.u_s1n_6.gen_dfifo[0].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_uart.u_reg.reg_wdata , tl_uart_h2d[23:1], 1'h1, \xbar.u_s1n_6.gen_dfifo[1].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_pwm.u_reg.reg_wdata , tl_pwm_h2d[23:1], 1'h1, \xbar.u_s1n_6.gen_dfifo[2].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_gpio.u_reg.reg_wdata , tl_gpio_h2d[23:1], 1'h1, \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h1 };
+  assign \xbar.u_s1n_6.tl_d_o  = { \xbar.u_s1n_6.gen_dfifo[0].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_uart.u_reg.reg_wdata , tl_uart_h2d[23:1], 1'h1, \xbar.u_s1n_6.gen_dfifo[1].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_pwm.u_reg.reg_wdata , tl_pwm_h2d[23:1], 1'h1, \xbar.u_s1n_6.gen_dfifo[2].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_gpio.u_reg.reg_wdata , tl_gpio_h2d[23:1], 1'h1, \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h1 };
   assign \xbar.u_s1n_6.tl_h_i  = { \u_uart.u_bridge.req_q , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_uart.u_bridge.wdata_q , 24'h048001 };
   assign \xbar.u_s1n_6.tl_h_o  = { \xbar.u_s1n_6.tl_t_p [65:48], \u_uart.rdata_i , \xbar.u_s1n_6.tl_t_p [15:1], \uart_host_adapter.gnt_o  };
   assign \xbar.u_s1n_6.tl_t_i  = { \xbar.u_s1n_6.tl_t_p [65:1], \uart_host_adapter.gnt_o  };
   assign \xbar.u_s1n_6.tl_t_o  = { \u_uart.u_bridge.req_q , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_uart.u_bridge.wdata_q , 24'h048001 };
   assign \xbar.u_s1n_6.tl_u_i  = { \u_uart.u_reg.u_reg_if.outstanding_q , \u_uart.u_reg.u_reg_if.rspop_q , 3'h0, \u_uart.u_reg.u_reg_if.reqsz_q , \u_uart.u_reg.u_reg_if.reqid_q , 1'h0, \xbar.u_s1n_6.gen_dfifo[0].fifo_d.rspfifo.rdata_o [47:16], 14'h0000, \u_uart.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[0].fifo_d.reqfifo.full_o , \u_pwm.u_reg.u_reg_if.outstanding_q , \u_pwm.u_reg.u_reg_if.rspop_q , 3'h0, \u_pwm.u_reg.u_reg_if.reqsz_q , \u_pwm.u_reg.u_reg_if.reqid_q , 1'h0, \xbar.u_s1n_6.gen_dfifo[1].fifo_d.rspfifo.rdata_o [47:16], 14'h0000, \u_pwm.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[1].fifo_d.reqfifo.full_o , \u_gpio.u_reg.u_reg_if.outstanding_q , \u_gpio.u_reg.u_reg_if.rspop_q , 3'h0, \u_gpio.u_reg.u_reg_if.reqsz_q , \u_gpio.u_reg.u_reg_if.reqid_q , 1'h0, \xbar.u_s1n_6.gen_dfifo[2].fifo_d.rspfifo.rdata_o [47:16], 14'h0000, \u_gpio.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[2].fifo_d.reqfifo.full_o , \u_rv_timer.u_reg.u_reg_if.outstanding_q , \u_rv_timer.u_reg.u_reg_if.rspop_q , 3'h0, \u_rv_timer.u_reg.u_reg_if.reqsz_q , \u_rv_timer.u_reg.u_reg_if.reqid_q , 1'h0, \xbar.u_s1n_6.gen_dfifo[3].fifo_d.rspfifo.rdata_o [47:16], 14'h0000, \u_rv_timer.u_reg.u_reg_if.error_q , \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.full_o , \xbar.u_s1n_6.gen_err_resp.err_resp.err_rsp_pending , \xbar.u_s1n_6.gen_err_resp.err_resp.tl_h_o [64:62], 3'h0, \xbar.u_s1n_6.gen_err_resp.err_resp.err_size , \xbar.u_s1n_6.gen_err_resp.err_resp.err_source , 1'h0, \xbar.u_s1n_6.gen_err_resp.err_resp.tl_h_o [47:16], 15'h0001, \xbar.u_s1n_6.gen_err_resp.err_resp.tl_h_o_int [0] };
-  assign \xbar.u_s1n_6.tl_u_o  = { \xbar.u_s1n_6.gen_dfifo[0].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_uart.u_reg.reg_wdata , tl_uart_h2d[23:1], 1'h1, \xbar.u_s1n_6.gen_dfifo[1].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_pwm.u_reg.reg_wdata , tl_pwm_h2d[23:1], 1'h1, \xbar.u_s1n_6.gen_dfifo[2].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_gpio.u_reg.reg_wdata , tl_gpio_h2d[23:1], 1'h1, \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v_lower0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h1, \xbar.u_s1n_6.gen_err_resp.err_resp.tl_h_i [108], \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_uart.u_bridge.wdata_q , 24'h048001 };
+  assign \xbar.u_s1n_6.tl_u_o  = { \xbar.u_s1n_6.gen_dfifo[0].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_uart.u_reg.reg_wdata , tl_uart_h2d[23:1], 1'h1, \xbar.u_s1n_6.gen_dfifo[1].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_pwm.u_reg.reg_wdata , tl_pwm_h2d[23:1], 1'h1, \xbar.u_s1n_6.gen_dfifo[2].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_gpio.u_reg.reg_wdata , tl_gpio_h2d[23:1], 1'h1, \xbar.u_s1n_6.gen_dfifo[3].fifo_d.reqfifo.rvalid_o , \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_rv_timer.u_reg.u_timer_v0.wr_en_data_arb.wd , tl_rv_timer_h2d[23:1], 1'h1, \xbar.u_s1n_6.gen_err_resp.err_resp.tl_h_i [108], \u_rv_timer.u_reg.u_reg_if.u_err.tl_i [107:105], 12'h100, \uart_host_adapter.g_multiple_reqs.source_q , \u_uart.u_bridge.addr_q [31:2], 2'h0, \u_rv_timer.u_reg.reg_be , \u_uart.u_bridge.wdata_q , 24'h048001 };
   assign \xbar.unused_scanmode  = 1'h0;
-  assign \$338y  = \$auto$bmuxmap.cc:84:execute$1970 ;
-  assign \$499y  = \$auto$bmuxmap.cc:84:execute$1989 ;
+  assign \$338y  = \$auto$bmuxmap.cc:84:execute$1951 ;
+  assign \$499y  = \$auto$bmuxmap.cc:84:execute$1970 ;
 endmodule

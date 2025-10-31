@@ -1,37 +1,43 @@
 ## Summary
 
-| Name                                             | Offset   |   Length | Description              |
-|:-------------------------------------------------|:---------|---------:|:-------------------------|
-| rv_timer.[`CTRL`](#ctrl)                         | 0x0      |        4 | Control register         |
-| rv_timer.[`INTR_ENABLE0`](#intr_enable0)         | 0x100    |        4 | Interrupt Enable         |
-| rv_timer.[`INTR_STATE0`](#intr_state0)           | 0x104    |        4 | Interrupt Status         |
-| rv_timer.[`INTR_TEST0`](#intr_test0)             | 0x108    |        4 | Interrupt test register  |
-| rv_timer.[`CFG0`](#cfg0)                         | 0x10c    |        4 | Configuration for Hart 0 |
-| rv_timer.[`TIMER_V_LOWER0`](#timer_v_lower0)     | 0x110    |        4 | Timer value Lower        |
-| rv_timer.[`TIMER_V_UPPER0`](#timer_v_upper0)     | 0x114    |        4 | Timer value Upper        |
-| rv_timer.[`COMPARE_LOWER0_0`](#compare_lower0_0) | 0x118    |        4 | Timer value Lower        |
-| rv_timer.[`COMPARE_UPPER0_0`](#compare_upper0_0) | 0x11c    |        4 | Timer value Upper        |
+| Name                                     | Offset   |   Length | Description              |
+|:-----------------------------------------|:---------|---------:|:-------------------------|
+| rv_timer.[`CTRL`](#ctrl)                 | 0x0      |        4 | Control register         |
+| rv_timer.[`INTR_ENABLE0`](#intr_enable0) | 0x4      |        4 | Interrupt Enable         |
+| rv_timer.[`INTR_STATE0`](#intr_state0)   | 0x8      |        4 | Interrupt Status         |
+| rv_timer.[`INTR_TEST0`](#intr_test0)     | 0xc      |        4 | Interrupt test register  |
+| rv_timer.[`CFG0`](#cfg0)                 | 0x10     |        4 | Configuration for Hart 0 |
+| rv_timer.[`TIMER_V0`](#timer_v0)         | 0x14     |        4 | Timer value              |
+| rv_timer.[`COMPARE_V0`](#compare_v0)     | 0x18     |        4 | Timer value to compare   |
 
 ## CTRL
 Control register
-- Offset: `0x0`
 - Reset default: `0x0`
-- Reset mask: `0x1`
+- Reset mask: `0x7`
+
+### Instances
+
+| Name   | Offset   |
+|:-------|:---------|
+| CTRL   | 0x0      |
+
 
 ### Fields
 
 ```wavejson
-{"reg": [{"name": "active_0", "bits": 1, "attr": ["rw"], "rotate": -90}, {"bits": 31}], "config": {"lanes": 1, "fontsize": 10, "vspace": 100}}
+{"reg": [{"name": "active", "bits": 1, "attr": ["rw"], "rotate": -90}, {"name": "gpio_intr_0", "bits": 1, "attr": ["rw"], "rotate": -90}, {"name": "gpio_intr_1", "bits": 1, "attr": ["rw"], "rotate": -90}, {"bits": 29}], "config": {"lanes": 1, "fontsize": 10, "vspace": 130}}
 ```
 
-|  Bits  |  Type  |  Reset  | Name     | Description          |
-|:------:|:------:|:-------:|:---------|:---------------------|
-|  31:1  |        |         |          | Reserved             |
-|   0    |   rw   |   0x0   | active_0 | If 1, timer operates |
+|  Bits  |  Type  |  Reset  | Name        | Description                   |
+|:------:|:------:|:-------:|:------------|:------------------------------|
+|  31:3  |        |         |             | Reserved                      |
+|   2    |   rw   |   0x0   | gpio_intr_1 | Enable timer from GPIO INTR 1 |
+|   1    |   rw   |   0x0   | gpio_intr_0 | Enable timer from GPIO INTR 0 |
+|   0    |   rw   |   0x0   | active      | If 1, timer operates          |
 
 ## INTR_ENABLE0
 Interrupt Enable
-- Offset: `0x100`
+- Offset: `0x4`
 - Reset default: `0x0`
 - Reset mask: `0x1`
 
@@ -48,7 +54,7 @@ Interrupt Enable
 
 ## INTR_STATE0
 Interrupt Status
-- Offset: `0x104`
+- Offset: `0x8`
 - Reset default: `0x0`
 - Reset mask: `0x1`
 
@@ -65,7 +71,7 @@ Interrupt Status
 
 ## INTR_TEST0
 Interrupt test register
-- Offset: `0x108`
+- Offset: `0xc`
 - Reset default: `0x0`
 - Reset mask: `0x1`
 
@@ -82,7 +88,7 @@ Interrupt test register
 
 ## CFG0
 Configuration for Hart 0
-- Offset: `0x10c`
+- Offset: `0x10`
 - Reset default: `0x10000`
 - Reset mask: `0xff0fff`
 
@@ -99,9 +105,9 @@ Configuration for Hart 0
 | 15:12  |        |         |          | Reserved                        |
 |  11:0  |   rw   |   0x0   | prescale | Prescaler to generate tick      |
 
-## TIMER_V_LOWER0
-Timer value Lower
-- Offset: `0x110`
+## TIMER_V0
+Timer value
+- Offset: `0x14`
 - Reset default: `0x0`
 - Reset mask: `0xffffffff`
 
@@ -115,25 +121,9 @@ Timer value Lower
 |:------:|:------:|:-------:|:-------|:-------------------|
 |  31:0  |   rw   |   0x0   | v      | Timer value [31:0] |
 
-## TIMER_V_UPPER0
-Timer value Upper
-- Offset: `0x114`
-- Reset default: `0x0`
-- Reset mask: `0xffffffff`
-
-### Fields
-
-```wavejson
-{"reg": [{"name": "v", "bits": 32, "attr": ["rw"], "rotate": 0}], "config": {"lanes": 1, "fontsize": 10, "vspace": 80}}
-```
-
-|  Bits  |  Type  |  Reset  | Name   | Description         |
-|:------:|:------:|:-------:|:-------|:--------------------|
-|  31:0  |   rw   |   0x0   | v      | Timer value [63:32] |
-
-## COMPARE_LOWER0_0
-Timer value Lower
-- Offset: `0x118`
+## COMPARE_V0
+Timer value to compare
+- Offset: `0x18`
 - Reset default: `0xffffffff`
 - Reset mask: `0xffffffff`
 
@@ -146,20 +136,4 @@ Timer value Lower
 |  Bits  |  Type  |   Reset    | Name   | Description                |
 |:------:|:------:|:----------:|:-------|:---------------------------|
 |  31:0  |   rw   | 0xffffffff | v      | Timer compare value [31:0] |
-
-## COMPARE_UPPER0_0
-Timer value Upper
-- Offset: `0x11c`
-- Reset default: `0xffffffff`
-- Reset mask: `0xffffffff`
-
-### Fields
-
-```wavejson
-{"reg": [{"name": "v", "bits": 32, "attr": ["rw"], "rotate": 0}], "config": {"lanes": 1, "fontsize": 10, "vspace": 80}}
-```
-
-|  Bits  |  Type  |   Reset    | Name   | Description                 |
-|:------:|:------:|:----------:|:-------|:----------------------------|
-|  31:0  |   rw   | 0xffffffff | v      | Timer compare value [63:32] |
 

@@ -3,6 +3,7 @@ Referring to the [Comportable guideline for peripheral device functionality](htt
 - Other Clocks: *none*
 - Bus Device Interfaces (TL-UL): **`tl`**
 - Bus Host Interfaces (TL-UL): *none*
+- Interrupts: *none*
 - Security Alerts: *none*
 
 ## Peripheral Pins for Chip IO
@@ -16,12 +17,6 @@ Referring to the [Comportable guideline for peripheral device functionality](htt
 | Port Name   | Package::Struct   | Type    | Act   |   Width | Description   |
 |:------------|:------------------|:--------|:------|--------:|:--------------|
 | tl          | tlul_pkg::tl      | req_rsp | rsp   |       1 |               |
-
-## Interrupts
-
-| Interrupt Name   | Type   | Description                                                 |
-|:-----------------|:-------|:------------------------------------------------------------|
-| gpio[1:0]        | Event  | raised if any of GPIO pin detects configured interrupt mode |
 
 ## Security Countermeasures
 

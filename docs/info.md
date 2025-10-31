@@ -1,14 +1,14 @@
-# Processor-Less-SoC
+# PLess-SoC
 
-**Processor-Less-SoC** is a **processor-less System-on-Chip** fully generated through **[FlexSoC](https://github.com/EneaDim/flexsoc)**, an open-source framework for **digital IP development and SoC integration**, built on **OpenTitan primitives**, **Yosys**, and **OpenROAD Flow Scripts (ORFS)**.
+**PLess-SoC** is a **processor-less System-on-Chip** fully generated through **[FlexSoC](https://github.com/EneaDim/flexsoc)**, an open-source framework for **digital IP development and SoC integration**, built on **OpenTitan primitives**, **Yosys**, and **OpenROAD Flow Scripts (ORFS)**.
 
-You can find the RTL files and the whole flow scripts, results and reports **[here](https://github.com/EneaDim/flexsoc/ips/tiny-soc)**.
+You can find the RTL files and the whole flow scripts, results and reports **[here](https://github.com/EneaDim/flexsoc/tree/main/ips/tiny-soc)**.
 
 ---
 
 ## 🚀 Overview
 
-**Processor-Less-SoC** demonstrates a complete SoC architecture without a processor.  
+**PLess-SoC** demonstrates a complete SoC architecture without a processor.  
 All on-chip peripherals are controlled and monitored through **UART**, which acts as the external host interface.
 
 ### Integrated Peripherals
@@ -26,8 +26,8 @@ All IPs are connected via a **TL-UL (TileLink Uncached Lightweight)** interconne
 This SoC does **not** contain a CPU.  
 Instead, the **UART** serves as the main control and communication bridge between the external host and the on-chip peripherals:
 
-1. UART receives serialized commands from the host.  
-2. FlexSoC’s TL-UL interconnect routes read/write transactions to the correct IP.  
+1. UART receives serialized commands and drives the TL-UL as a host.  
+2. TL-UL interconnect routes read/write transactions to the correct IP.  
 3. Peripheral CSRs execute the command or return the data.  
 
 This makes it possible to configure, test, and monitor every peripheral directly over UART.
@@ -38,11 +38,11 @@ This makes it possible to configure, test, and monitor every peripheral directly
 
 - **System Clock:** 50 MHz  
 - **Reset:** Active-low (`rst_n`)  
-- **UART Baud Rate:** ~115,200 baud (8N1)
+- **UART Baud Rate:** ~921,600 baud
 
 > ⚠️ **Important:**  
-> When updating the UART control register, always keep bits **[31:16] = `0x0970`**.  
-> These define the baud-rate divider for 115.2 kbaud at 50 MHz.
+> When updating the UART control register, always keep bits **[31:16] = `0x4B7F`**.  
+> These define the baud-rate divider for 921.6 kbaud at 50 MHz.
 
 ---
 
@@ -74,19 +74,31 @@ All communication and configuration occur through **UART**, enabling full SoC co
 
 ## 🧩 About FlexSoC
 
-**FlexSoC** is an **open-source environment for IP development and SoC integration**,  
-built on **OpenTitan** and **lowRISC** design principles.  
+**FlexSoC** is an open-source framework for designing digital IPs and integrating complete SoCs,
+inspired by the methodologies and best practices of **OpenTitan** and **lowRISC** projects.
 It automates everything from **IP creation to full SoC assembly** and **physical implementation**, combining:
 
 - **OpenTitan TL-UL** interconnect and primitive components  
 - **Yosys** for open-source synthesis  
 - **OpenROAD Flow Scripts (ORFS)** for place & route and GDSII generation  
 
-FlexSoC provides:
-- Automatic CSR and documentation generation  
-- Automated TL-UL or PULP-style register interfaces  
-- Linting, simulation (SystemVerilog & Cocotb), and synthesis analysis  
-- Full RTL-to-GDS flow using only open-source tools  
+All stages are fully automated and open-source:
+
+| Stage | Description |
+|:------|:-------------|
+| 📁 **HJSON Configuration Generation** | Automatic generation of IP/SoC configuration files in *hjson* format |
+| 📄 **Documentation Generation** | Auto-generated documentation and register maps |
+| 🧠 **CSR Generation** | Automatic CSR creation using *lowRISC regtool* with two interface options:<br> - **TL-UL interface** (OpenTitan-style)<br> - **Register interface** (PULP-style) |
+| 🛠️ **RTL Stub & Wrapper Generation** | Automatic RTL module and wrapper generation from *hjson* definitions |
+| 🔍 **RTL Linting & Formatting** | Built-in linting, style checking, and formatting |
+| 🔬 **Functional Simulation** | Supports both **SystemVerilog Testbench** and **Cocotb** simulations |
+| 🏗️ **Synthesis Trials (PPA)** | Open-source synthesis flow with area, timing, and power estimates |
+| ⏱️ **Static Timing Analysis (STA)** | Automated STA using OpenROAD tools |
+| 🧱 **Physical Implementation (RTL-to-GDS)** | Complete OpenROAD-based backend flow producing final **GDSII** |
+| 🔌 **Power Estimation & Analysis** | Early-stage power evaluation integrated into the flow |
+| 🌐 **IP Fetching & Dependency Management** | GitHub-based automatic IP retrieval and dependency handling |
+| 🔀 **Interconnect Generation** | Automatic **XBAR** (crossbar) interconnect generation |
+| 🧩 **SoC Integration** | Modular integration of IPs through **TL-UL** interfaces |
 
 In short: **FlexSoC lets designers focus on IP functionality**, while it handles integration, tooling, and flow automation.
 
@@ -107,7 +119,7 @@ In short: **FlexSoC lets designers focus on IP functionality**, while it handles
 
 1. **Startup**
    - Apply 50 MHz clock and deassert reset.  
-   - Open UART connection at **115,200 baud** (8N1).
+   - Open UART connection at **921,600 baud** (8N1).
    - To driver uart\_rx use ui\_in[0] pin.
    - To read data from the Soc use uart\_tx which is connected to uo\_out[0] pin.
 
